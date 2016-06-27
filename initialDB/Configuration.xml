@@ -1,0 +1,2011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.7.0.6937" ExportMode="AllReferences, Security" PISystem="AFKIT-CLEAN" Database="Configuration" Description="A store for configuration data." Created="2016-06-27T22:45:46.8539284Z" id="dee1a62d-9eac-4945-82e1-4a1e9baa9d8e" ParentKey="879ff101-a614-4ee4-84a2-cf56a2c361af" ExportedObject="Configuration" ExportedType="AFDatabase" Identity="Database" PIPersist="148 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{879ff101-a614-4ee4-84a2-cf56a2c361af}\{dee1a62d-9eac-4945-82e1-4a1e9baa9d8e}*AFKIT-CLEAN\Configuration">
+  <AFSecurityIdentity>
+    <id>04044e48-3f91-498e-956c-95cc73c3f886</id>
+    <Name>Administrators</Name>
+    <Description>Administrator security access</Description>
+  </AFSecurityIdentity>
+  <AFSecurityIdentity>
+    <id>7eb0e507-fe9d-4c32-9ff0-8ff1ac7ad8ea</id>
+    <Name>World</Name>
+    <Description>World security access</Description>
+  </AFSecurityIdentity>
+  <AFSecurityIdentity>
+    <id>1c7f4f6f-6ec8-44ad-bf87-12d121a30e67</id>
+    <Name>NT AUTHORITY\NETWORK SERVICE</Name>
+    <Description />
+  </AFSecurityIdentity>
+  <AFSecurityIdentity>
+    <id>20bdec96-44e8-4730-9714-70f528779fa0</id>
+    <Name>Engineers</Name>
+    <Description>Engineer security access</Description>
+  </AFSecurityIdentity>
+  <UOMDatabase>
+    <id>7b0faa35-160d-45ff-83a5-8eff4229515a</id>
+    <Name>UOMDatabase</Name>
+    <UOMClass>
+      <id>2e723d0b-b352-42a7-a47a-cf95262597e9</id>
+      <Name>Plane Angle</Name>
+      <CanonicalUOM>radian</CanonicalUOM>
+      <CanonicalAbbr>rad</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+      <Name>Time</Name>
+      <CanonicalUOM>second</CanonicalUOM>
+      <CanonicalAbbr>s</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>7cd298f5-4c11-4f96-93a8-3c160ef85ebc</id>
+      <Name>Angular Velocity</Name>
+      <CanonicalUOM>radian per second</CanonicalUOM>
+      <CanonicalAbbr>rad/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>2e723d0b-b352-42a7-a47a-cf95262597e9</id>
+        <Name>Plane Angle</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+      <Name>Length</Name>
+      <CanonicalUOM>meter</CanonicalUOM>
+      <CanonicalAbbr>m</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>a8c148d9-c553-4385-811a-4a44133c6a1a</id>
+      <Name>Area</Name>
+      <CanonicalUOM>square meter</CanonicalUOM>
+      <CanonicalAbbr>m2</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+      <Name>Mass</Name>
+      <CanonicalUOM>kilogram</CanonicalUOM>
+      <CanonicalAbbr>kg</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>09b4d43e-1892-4c4c-a4c9-c70c1f26bb95</id>
+      <Name>Density</Name>
+      <CanonicalUOM>kilogram per cubic meter</CanonicalUOM>
+      <CanonicalAbbr>kg/m3</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>-3</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>df7edd82-73af-4145-bf61-ee35986f1f5c</id>
+      <Name>Dynamic Viscosity</Name>
+      <CanonicalUOM>pascal second</CanonicalUOM>
+      <CanonicalAbbr>Pa*s</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>f247a347-9803-4490-86c0-663ffa7f2c50</id>
+      <Name>Electric Current</Name>
+      <CanonicalUOM>ampere</CanonicalUOM>
+      <CanonicalAbbr>A</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>bc174185-559d-45b3-aba4-03bc32a48b58</id>
+      <Name>Electric Charge</Name>
+      <CanonicalUOM>coulomb</CanonicalUOM>
+      <CanonicalAbbr>C</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>f247a347-9803-4490-86c0-663ffa7f2c50</id>
+        <Name>Electric Current</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>04d07515-0d15-4eb0-a460-ab5d0c4b6af4</id>
+      <Name>Electric Potential</Name>
+      <CanonicalUOM>volt</CanonicalUOM>
+      <CanonicalAbbr>V</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>f247a347-9803-4490-86c0-663ffa7f2c50</id>
+        <Name>Electric Current</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-3</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>c52101f4-91b4-4331-b0e8-5f96c079bc7c</id>
+      <Name>Electric Resistance</Name>
+      <CanonicalUOM>ohm</CanonicalUOM>
+      <CanonicalAbbr>Ω</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>f247a347-9803-4490-86c0-663ffa7f2c50</id>
+        <Name>Electric Current</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-3</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>8d15efb1-c345-433f-8919-ba46912b6ee1</id>
+      <Name>Energy</Name>
+      <CanonicalUOM>joule</CanonicalUOM>
+      <CanonicalAbbr>J</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>5f0f341c-0a5c-41c2-8252-f1893147480b</id>
+      <Name>Temperature (Delta)</Name>
+      <CanonicalUOM>delta kelvin</CanonicalUOM>
+      <CanonicalAbbr>delta K</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>d65f0e31-32ad-4859-9b90-4924fa05c8b5</id>
+      <Name>Entropy, Heat Capacity</Name>
+      <CanonicalUOM>joule per kelvin</CanonicalUOM>
+      <CanonicalAbbr>J/K</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>5f0f341c-0a5c-41c2-8252-f1893147480b</id>
+        <Name>Temperature (Delta)</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>4dcecd09-cd2c-4900-9a4c-0d9a86603c87</id>
+      <Name>Force</Name>
+      <CanonicalUOM>newton</CanonicalUOM>
+      <CanonicalAbbr>N</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>70b48256-7dac-4ba7-8c03-903c2df0492b</id>
+      <Name>Frequency</Name>
+      <CanonicalUOM>hertz</CanonicalUOM>
+      <CanonicalAbbr>Hz</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>bef0bcc0-6a57-4690-a559-1cd853fb728f</id>
+      <Name>Luminous Intensity</Name>
+      <CanonicalUOM>candela</CanonicalUOM>
+      <CanonicalAbbr>cd</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>d57dee6b-faa5-4545-bf39-07941b21b29b</id>
+      <Name>Mass Flow Rate</Name>
+      <CanonicalUOM>kilogram per second</CanonicalUOM>
+      <CanonicalAbbr>kg/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>ca756834-b8f2-40f8-b548-91bf7fc06556</id>
+      <Name>Moles</Name>
+      <CanonicalUOM>mole</CanonicalUOM>
+      <CanonicalAbbr>mol</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>b519467d-4abe-4f21-b54b-116376a10dfe</id>
+      <Name>Molar Flow Rate</Name>
+      <CanonicalUOM>mole per second</CanonicalUOM>
+      <CanonicalAbbr>mol/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>ca756834-b8f2-40f8-b548-91bf7fc06556</id>
+        <Name>Moles</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>d9c6c36f-85e0-465b-901a-a2ba56fcf639</id>
+      <Name>Molecular Weight</Name>
+      <CanonicalUOM>kilogram per mole</CanonicalUOM>
+      <CanonicalAbbr>kg/mol</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>ca756834-b8f2-40f8-b548-91bf7fc06556</id>
+        <Name>Moles</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>b3ddad93-0b80-4b52-84a6-106354777b22</id>
+      <Name>Power</Name>
+      <CanonicalUOM>watt</CanonicalUOM>
+      <CanonicalAbbr>W</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-3</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>03ef2247-c599-457a-bdec-46503f1a3b76</id>
+      <Name>Pressure</Name>
+      <CanonicalUOM>pascal</CanonicalUOM>
+      <CanonicalAbbr>Pa</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>da828211-781c-4d0d-a3ca-01b6fc04f7de</id>
+      <Name>Quantity</Name>
+      <CanonicalUOM>count</CanonicalUOM>
+      <CanonicalAbbr>count</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>d1a0d1bd-c399-42da-9b76-966542504036</id>
+      <Name>Ratio</Name>
+      <CanonicalUOM>percent</CanonicalUOM>
+      <CanonicalAbbr>%</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>fbab136d-c47b-4615-a8f1-6fcd773ba1f6</id>
+      <Name>Specific Energy</Name>
+      <CanonicalUOM>joule per kilogram</CanonicalUOM>
+      <CanonicalAbbr>J/kg</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>69dc7ebf-9b6c-409f-a3aa-0adfcc6ee270</id>
+      <Name>Specific Entropy, Specific Heat Capacity</Name>
+      <CanonicalUOM>joule per kilogram kelvin</CanonicalUOM>
+      <CanonicalAbbr>J/(kg K)</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>5f0f341c-0a5c-41c2-8252-f1893147480b</id>
+        <Name>Temperature (Delta)</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>3125ec13-c639-4ed1-9782-9c026be2ac06</id>
+      <Name>Specific Volume</Name>
+      <CanonicalUOM>cubic meter per kilogram</CanonicalUOM>
+      <CanonicalAbbr>m3/kg</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>3</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>e8051950-e9bf-4390-a040-0875e93085e7</id>
+        <Name>Mass</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>bb258b85-9107-4055-b03c-3abc7f34600c</id>
+      <Name>Speed</Name>
+      <CanonicalUOM>meter per second</CanonicalUOM>
+      <CanonicalAbbr>m/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>60211ebc-d411-47b2-9f7f-656187539732</id>
+      <Name>Temperature</Name>
+      <CanonicalUOM>kelvin</CanonicalUOM>
+      <CanonicalAbbr>K</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <id>bcec4109-5e59-417a-a861-bd1e2bc7cec1</id>
+      <Name>Volume</Name>
+      <CanonicalUOM>cubic meter</CanonicalUOM>
+      <CanonicalAbbr>m3</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>3</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <id>3d767ab7-aef4-4414-a271-407bdb12aad3</id>
+      <Name>Volume Flow Rate</Name>
+      <CanonicalUOM>cubic meter per second</CanonicalUOM>
+      <CanonicalAbbr>m3/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <id>36faefa4-f8b1-4e59-b94f-192c7fb231cf</id>
+        <Name>Length</Name>
+        <BasePower>3</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <id>0745a7b7-5267-4a7a-8236-0a42f8c02766</id>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOM>
+      <id>440d890c-91a3-454c-b343-e4dba2705699</id>
+      <Name>radian</Name>
+      <Abbreviation>rad</Abbreviation>
+      <Class>Plane Angle</Class>
+    </UOM>
+    <UOM>
+      <id>1e45add4-2ab9-4751-9b6f-416431327aad</id>
+      <Name>degree</Name>
+      <Abbreviation>°</Abbreviation>
+      <RefFactor>0.0174532925199433</RefFactor>
+      <RefUOM>radian</RefUOM>
+      <Class>Plane Angle</Class>
+    </UOM>
+    <UOM>
+      <id>263237da-8119-48ea-bd17-7e1c8330102e</id>
+      <Name>revolution</Name>
+      <Abbreviation>r</Abbreviation>
+      <RefFactor>6.28318530717959</RefFactor>
+      <RefUOM>radian</RefUOM>
+      <Class>Plane Angle</Class>
+    </UOM>
+    <UOM>
+      <id>a9d2db2c-cb7b-4969-b540-ef1448dbb2a7</id>
+      <Name>second</Name>
+      <Abbreviation>s</Abbreviation>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <id>a746510e-aab5-46fd-8f65-55d5a8d187a5</id>
+      <Name>minute</Name>
+      <Abbreviation>min</Abbreviation>
+      <RefFactor>60</RefFactor>
+      <RefUOM>second</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <id>d8811772-10de-49c9-94b8-cb6c464bc14c</id>
+      <Name>hour</Name>
+      <Abbreviation>h</Abbreviation>
+      <RefFactor>60</RefFactor>
+      <RefUOM>minute</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <id>8588c9ff-14b4-4df3-8f16-bf57b96320b9</id>
+      <Name>day</Name>
+      <Abbreviation>d</Abbreviation>
+      <RefFactor>24</RefFactor>
+      <RefUOM>hour</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <id>e7ff7b6a-bb79-4cab-9f7f-704a52041968</id>
+      <Name>month</Name>
+      <Abbreviation>month</Abbreviation>
+      <RefFactor>30.4166666666667</RefFactor>
+      <RefUOM>day</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <id>b85c7869-e120-4379-8d9e-3b8caefbd623</id>
+      <Name>week</Name>
+      <Abbreviation>week</Abbreviation>
+      <RefFactor>7</RefFactor>
+      <RefUOM>day</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <id>3c492437-3389-41ce-a5fe-1e822dfa848d</id>
+      <Name>year</Name>
+      <Abbreviation>yr</Abbreviation>
+      <RefFactor>365</RefFactor>
+      <RefUOM>day</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <id>09873b9a-acc6-49c2-bb37-b32a2b645213</id>
+      <Name>radian per second</Name>
+      <Abbreviation>rad/s</Abbreviation>
+      <Class>Angular Velocity</Class>
+    </UOM>
+    <UOM>
+      <id>9e1275a7-8c09-4573-bcee-b32184e56bee</id>
+      <Name>revolution per minute</Name>
+      <Abbreviation>rpm</Abbreviation>
+      <RefFactor>0.10471975511966</RefFactor>
+      <RefUOM>radian per second</RefUOM>
+      <Class>Angular Velocity</Class>
+    </UOM>
+    <UOM>
+      <id>984da825-1670-42f1-b9f1-a769cc83b0d4</id>
+      <Name>meter</Name>
+      <Abbreviation>m</Abbreviation>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>7ad4f646-0487-4fa4-befc-0fb355cb515b</id>
+      <Name>centimeter</Name>
+      <Abbreviation>cm</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>4b4f8a64-4b19-4379-85ea-a788e39f05ba</id>
+      <Name>inch</Name>
+      <Abbreviation>in</Abbreviation>
+      <RefFactor>0.0254</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>e68c045e-179a-42b4-b6a8-89bf86f6fd7f</id>
+      <Name>International nautical mile</Name>
+      <Abbreviation>nmi</Abbreviation>
+      <RefFactor>1852</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>ec8c2023-999d-4b61-876f-1cfe4075cd94</id>
+      <Name>kilometer</Name>
+      <Abbreviation>km</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>af7ea568-09c5-44a8-a498-62ffbae40cf6</id>
+      <Name>millimeter</Name>
+      <Abbreviation>mm</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>23e1db62-3429-43b1-a571-a5e3a1d997e9</id>
+      <Name>foot</Name>
+      <Abbreviation>ft</Abbreviation>
+      <RefFactor>12</RefFactor>
+      <RefUOM>inch</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>a2be399c-1586-4cfe-8d1d-297cd47b3a61</id>
+      <Name>mile</Name>
+      <Abbreviation>mi</Abbreviation>
+      <RefFactor>63360</RefFactor>
+      <RefUOM>inch</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>f488ebc1-df55-4fbb-8b20-a6402ce6a7be</id>
+      <Name>sixteenth of an inch</Name>
+      <Abbreviation>sxi</Abbreviation>
+      <RefFactor>0.0625</RefFactor>
+      <RefUOM>inch</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>d30a4131-9d50-4892-8dfd-2a041ee8eafc</id>
+      <Name>yard</Name>
+      <Abbreviation>yd</Abbreviation>
+      <RefFactor>36</RefFactor>
+      <RefUOM>inch</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <id>4c5ef3a1-343b-4045-b18d-96c8afe47112</id>
+      <Name>square meter</Name>
+      <Abbreviation>m2</Abbreviation>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>ba348574-88ad-4ec7-ab3c-14a9b746ce35</id>
+      <Name>square inch</Name>
+      <Abbreviation>in2</Abbreviation>
+      <RefFactor>0.00064516</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>4b42a7c2-3cd1-49ed-9a2d-4376d2c60d8a</id>
+      <Name>square foot</Name>
+      <Abbreviation>ft2</Abbreviation>
+      <RefFactor>144</RefFactor>
+      <RefUOM>square inch</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>b745d7bc-1f4b-4b2b-9049-55e471e990af</id>
+      <Name>acre</Name>
+      <Abbreviation>acre</Abbreviation>
+      <RefFactor>43560</RefFactor>
+      <RefUOM>square foot</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>74699496-b17b-4798-b108-12d299fb666a</id>
+      <Name>square mile</Name>
+      <Abbreviation>mi2</Abbreviation>
+      <RefFactor>27878400</RefFactor>
+      <RefUOM>square foot</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>9c8c4806-b252-4c0b-a93d-994dc5b3749a</id>
+      <Name>square yard</Name>
+      <Abbreviation>yd2</Abbreviation>
+      <RefFactor>9</RefFactor>
+      <RefUOM>square foot</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>c9f20971-679a-4206-af62-9b8c5da5c377</id>
+      <Name>hectare</Name>
+      <Abbreviation>ha</Abbreviation>
+      <RefFactor>10000</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>97455eba-b388-4f42-895d-b49be83cba8c</id>
+      <Name>square centimeter</Name>
+      <Abbreviation>cm2</Abbreviation>
+      <RefFactor>0.0001</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>eeb1c979-d82b-4796-8ff6-4aa9b25e7a10</id>
+      <Name>square kilometer</Name>
+      <Abbreviation>km2</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>04d15f9c-543a-4efc-848f-2dec970a0799</id>
+      <Name>square millimeter</Name>
+      <Abbreviation>mm2</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <id>e102db3a-c19f-41bf-a2d6-3b71926be4b0</id>
+      <Name>kilogram</Name>
+      <Abbreviation>kg</Abbreviation>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>0fead3ec-3fa4-4a50-9d28-303df9c57c83</id>
+      <Name>pound</Name>
+      <Abbreviation>lb</Abbreviation>
+      <RefFactor>0.45359237</RefFactor>
+      <RefUOM>kilogram</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>12dfb456-de78-44b1-ab2c-dbbc539c7e0e</id>
+      <Name>long ton</Name>
+      <Abbreviation>lton</Abbreviation>
+      <RefFactor>2240</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>79566379-4629-45ab-9e53-f0105b6587b6</id>
+      <Name>million pound</Name>
+      <Abbreviation>MM lb</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>5df09607-0055-4bcf-aae4-5a20df7ce3f1</id>
+      <Name>ounce</Name>
+      <Abbreviation>oz</Abbreviation>
+      <RefFactor>0.0625</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>f2d1588f-873e-4e5e-81fc-8e8521f8a7e0</id>
+      <Name>short ton</Name>
+      <Abbreviation>ston</Abbreviation>
+      <RefFactor>2000</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>1817278a-6520-4afa-a330-5c20d953198c</id>
+      <Name>thousand pound</Name>
+      <Abbreviation>klb</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>fbf57419-b123-4185-b098-562aad195cbf</id>
+      <Name>ton</Name>
+      <Abbreviation>ton</Abbreviation>
+      <RefFactor>2000</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>3d42556f-f986-4483-831f-6fdcf68432c4</id>
+      <Name>gram</Name>
+      <Abbreviation>g</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>kilogram</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>3059ae64-c2d6-4294-8750-e66cbbdbc76a</id>
+      <Name>milligram</Name>
+      <Abbreviation>mg</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>kilogram</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>a91e0c96-38ff-4737-a573-0a5d33557a2e</id>
+      <Name>tonne</Name>
+      <Abbreviation>t</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>kilogram</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <id>b7e0e5ff-a4a4-4a91-a1de-3b120ce7f2b7</id>
+      <Name>kilogram per cubic meter</Name>
+      <Abbreviation>kg/m3</Abbreviation>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <id>9af0a795-8f07-45f0-8216-c2752fe07755</id>
+      <Name>gram per liter</Name>
+      <Abbreviation>g/L</Abbreviation>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <id>f2231af8-64f5-4292-9fb7-8fa1a1fb16c3</id>
+      <Name>kilogram per liter</Name>
+      <Abbreviation>kg/L</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <id>2b785ec6-3344-4de4-b829-8e66a6516b27</id>
+      <Name>pound per barrel</Name>
+      <Abbreviation>lb/bbl</Abbreviation>
+      <RefFactor>2.85301017421182</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <id>a7e058dc-7144-4a0e-8176-70d797f7388e</id>
+      <Name>pound per cubic foot</Name>
+      <Abbreviation>lb/ft3</Abbreviation>
+      <RefFactor>16.0184633739601</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <id>aea71258-973e-46a0-bacf-d7442bbf3912</id>
+      <Name>pound per US gallon</Name>
+      <Abbreviation>lb/US gal</Abbreviation>
+      <RefFactor>119.826427316897</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <id>5ed85056-2093-45ac-8234-c273c9bb2331</id>
+      <Name>tonne per cubic meter</Name>
+      <Abbreviation>t/m3</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <id>28612522-38ab-4f4c-8d5f-1a867f852967</id>
+      <Name>pascal second</Name>
+      <Abbreviation>Pa*s</Abbreviation>
+      <Class>Dynamic Viscosity</Class>
+    </UOM>
+    <UOM>
+      <id>ce7675dd-771b-46b2-b1e2-5cba5cde0bfc</id>
+      <Name>poise</Name>
+      <Abbreviation>P</Abbreviation>
+      <RefFactor>0.1</RefFactor>
+      <RefUOM>pascal second</RefUOM>
+      <Class>Dynamic Viscosity</Class>
+    </UOM>
+    <UOM>
+      <id>865c9f0b-33b4-445a-9183-0c290e74726d</id>
+      <Name>ampere</Name>
+      <Abbreviation>A</Abbreviation>
+      <Class>Electric Current</Class>
+    </UOM>
+    <UOM>
+      <id>82815de9-75ed-49a0-a8f4-45a969c25047</id>
+      <Name>milliampere</Name>
+      <Abbreviation>mA</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>ampere</RefUOM>
+      <Class>Electric Current</Class>
+    </UOM>
+    <UOM>
+      <id>c544d6ab-bdf7-4661-bac4-6e8dddb5fcfb</id>
+      <Name>coulomb</Name>
+      <Abbreviation>C</Abbreviation>
+      <Class>Electric Charge</Class>
+    </UOM>
+    <UOM>
+      <id>604dfdf2-2a02-4147-95d4-d585278a30cb</id>
+      <Name>Ampere hour</Name>
+      <Abbreviation>Ah</Abbreviation>
+      <RefFactor>3600</RefFactor>
+      <RefUOM>coulomb</RefUOM>
+      <Class>Electric Charge</Class>
+    </UOM>
+    <UOM>
+      <id>3265e017-9b68-4dac-9c6b-2ad409ec2164</id>
+      <Name>volt</Name>
+      <Abbreviation>V</Abbreviation>
+      <Class>Electric Potential</Class>
+    </UOM>
+    <UOM>
+      <id>480a5bbf-5c6d-4404-849d-969116f36b9f</id>
+      <Name>kilovolt</Name>
+      <Abbreviation>kV</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>volt</RefUOM>
+      <Class>Electric Potential</Class>
+    </UOM>
+    <UOM>
+      <id>aca33396-7446-44f1-9a44-189a3e5fb7da</id>
+      <Name>ohm</Name>
+      <Abbreviation>Ω</Abbreviation>
+      <Class>Electric Resistance</Class>
+    </UOM>
+    <UOM>
+      <id>5b19d392-0bcc-4dc2-9e64-558065871b26</id>
+      <Name>joule</Name>
+      <Abbreviation>J</Abbreviation>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>060b785b-22c5-4013-be8f-effff58b1213</id>
+      <Name>British thermal unit</Name>
+      <Abbreviation>Btu</Abbreviation>
+      <RefFactor>1055.05585262</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>62b154f9-6e8e-4b66-af8e-e8e5a2ed3ef3</id>
+      <Name>calorie</Name>
+      <Abbreviation>cal</Abbreviation>
+      <RefFactor>4.1868</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>48b7ba55-2bb3-45fe-8805-c8fd6a6eb188</id>
+      <Name>gigajoule</Name>
+      <Abbreviation>GJ</Abbreviation>
+      <RefFactor>1000000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>36b90a5b-5efa-4bf9-955a-0f393d780c9b</id>
+      <Name>kilojoule</Name>
+      <Abbreviation>kJ</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>ff27da67-2939-4182-9610-850c5d4f7ac4</id>
+      <Name>kilowatt hour</Name>
+      <Abbreviation>kWh</Abbreviation>
+      <RefFactor>3600000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>9f40a185-9aae-4310-9ea7-5eb2a6d38b88</id>
+      <Name>megajoule</Name>
+      <Abbreviation>MJ</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>3ee26732-bd88-411e-ad48-a9263ca03e84</id>
+      <Name>watt second</Name>
+      <Abbreviation>Ws</Abbreviation>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>5372e905-a220-4e1b-a0ca-fa5d570fb472</id>
+      <Name>kilocalorie</Name>
+      <Abbreviation>kcal</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>calorie</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>54378ba5-5bae-4b7c-9ce9-4be62ad88707</id>
+      <Name>million calorie</Name>
+      <Abbreviation>MMcal</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>calorie</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>bdad0bd5-4ee2-4634-a03f-61aea3734198</id>
+      <Name>million British thermal unit</Name>
+      <Abbreviation>MM Btu</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>British thermal unit</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>0565ed0f-0fd0-4b8b-bcb2-c60e8b2de49b</id>
+      <Name>watt hour</Name>
+      <Abbreviation>Wh</Abbreviation>
+      <RefFactor>3600</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>0c5c9bf0-5169-439b-9e37-dc956d88a2c5</id>
+      <Name>megawatt hour</Name>
+      <Abbreviation>MWh</Abbreviation>
+      <RefFactor>3600000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>b9d6f13f-1bcc-4524-8f9f-d4ac13cdc56b</id>
+      <Name>gigawatt hour</Name>
+      <Abbreviation>GWh</Abbreviation>
+      <RefFactor>3600000000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <id>9a62e5db-8ef8-461f-aff2-df2ba773629e</id>
+      <Name>delta kelvin</Name>
+      <Abbreviation>delta K</Abbreviation>
+      <Class>Temperature (Delta)</Class>
+    </UOM>
+    <UOM>
+      <id>97afed08-239a-4488-91a8-0700eac05737</id>
+      <Name>delta degree Celsius</Name>
+      <Abbreviation>delta °C</Abbreviation>
+      <RefUOM>delta kelvin</RefUOM>
+      <Class>Temperature (Delta)</Class>
+    </UOM>
+    <UOM>
+      <id>a35b7f6d-b415-4b8a-971c-466beddbca5b</id>
+      <Name>delta degree Fahrenheit</Name>
+      <Abbreviation>delta °F</Abbreviation>
+      <RefFactor>0.555555555555556</RefFactor>
+      <RefUOM>delta degree Celsius</RefUOM>
+      <Class>Temperature (Delta)</Class>
+    </UOM>
+    <UOM>
+      <id>f17cb3ef-4f4a-46da-95f0-f9c18cda1e53</id>
+      <Name>delta degree Rankine</Name>
+      <Abbreviation>delta °R</Abbreviation>
+      <RefFactor>0.555555555555556</RefFactor>
+      <RefUOM>delta degree Celsius</RefUOM>
+      <Class>Temperature (Delta)</Class>
+    </UOM>
+    <UOM>
+      <id>dee2afb1-be9a-46a2-9b2c-894d809ec747</id>
+      <Name>joule per kelvin</Name>
+      <Abbreviation>J/K</Abbreviation>
+      <Class>Entropy, Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>165a5d65-c0a5-4c61-b6e2-745bfc65526f</id>
+      <Name>kilojoule per kelvin</Name>
+      <Abbreviation>kJ/K</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kelvin</RefUOM>
+      <Class>Entropy, Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>4bb3e73c-7ddb-4d94-98f5-c508de7d109e</id>
+      <Name>British thermal unit per degree Fahrenheit</Name>
+      <Abbreviation>Btu/°F</Abbreviation>
+      <RefFactor>1899.100534716</RefFactor>
+      <RefUOM>joule per kelvin</RefUOM>
+      <Class>Entropy, Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>9e55aae0-2896-4da0-a763-b071a4655644</id>
+      <Name>British thermal unit per degree Rankine</Name>
+      <Abbreviation>Btu/°R</Abbreviation>
+      <RefFactor>1899.100534716</RefFactor>
+      <RefUOM>joule per kelvin</RefUOM>
+      <Class>Entropy, Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>6184c891-1af4-4244-b908-72c84c1657a6</id>
+      <Name>newton</Name>
+      <Abbreviation>N</Abbreviation>
+      <Class>Force</Class>
+    </UOM>
+    <UOM>
+      <id>af5f9f79-6b30-4e02-9498-e6908c4b24c9</id>
+      <Name>dyne</Name>
+      <Abbreviation>dyne</Abbreviation>
+      <RefFactor>1E-05</RefFactor>
+      <RefUOM>newton</RefUOM>
+      <Class>Force</Class>
+    </UOM>
+    <UOM>
+      <id>b1e828d3-f76d-47f0-bc81-f900577778f1</id>
+      <Name>kilogram-force</Name>
+      <Abbreviation>kgf</Abbreviation>
+      <RefFactor>9.80665</RefFactor>
+      <RefUOM>newton</RefUOM>
+      <Class>Force</Class>
+    </UOM>
+    <UOM>
+      <id>a8a7b90a-f60c-4006-9a1d-8ba5ff0b171b</id>
+      <Name>pound-force</Name>
+      <Abbreviation>lbf</Abbreviation>
+      <RefFactor>4.44822161526</RefFactor>
+      <RefUOM>newton</RefUOM>
+      <Class>Force</Class>
+    </UOM>
+    <UOM>
+      <id>2af99547-b6ed-4a79-9e6d-ac1026858874</id>
+      <Name>hertz</Name>
+      <Abbreviation>Hz</Abbreviation>
+      <Class>Frequency</Class>
+    </UOM>
+    <UOM>
+      <id>083662aa-63d1-42b6-b404-082ea8b983da</id>
+      <Name>candela</Name>
+      <Abbreviation>cd</Abbreviation>
+      <Class>Luminous Intensity</Class>
+    </UOM>
+    <UOM>
+      <id>35697222-7d1f-43a3-bb0b-7376656b84dd</id>
+      <Name>kilogram per second</Name>
+      <Abbreviation>kg/s</Abbreviation>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>d689e679-116b-45a3-92a7-25f09f0221f5</id>
+      <Name>pound per second</Name>
+      <Abbreviation>lb/s</Abbreviation>
+      <RefFactor>0.45359237</RefFactor>
+      <RefUOM>kilogram per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>671887a6-a654-449f-ac2e-dd7d10858a82</id>
+      <Name>long ton per day</Name>
+      <Abbreviation>lton/d</Abbreviation>
+      <RefFactor>0.0259259259259259</RefFactor>
+      <RefUOM>pound per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>8130a220-62af-467d-87b4-8746214aee6a</id>
+      <Name>million pound per day</Name>
+      <Abbreviation>MMlb/d</Abbreviation>
+      <RefFactor>11.5740740740741</RefFactor>
+      <RefUOM>pound per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>44271c06-1b1c-4441-a822-258535f7983f</id>
+      <Name>short ton per day</Name>
+      <Abbreviation>ston/d</Abbreviation>
+      <RefFactor>0.0231481481481481</RefFactor>
+      <RefUOM>pound per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>3a390e83-15ef-4a2f-9331-a74bee40002f</id>
+      <Name>thousand pound per day</Name>
+      <Abbreviation>klb/d</Abbreviation>
+      <RefFactor>0.0115740740740741</RefFactor>
+      <RefUOM>pound per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>b8793942-7ee7-417b-a755-7e0bf8062815</id>
+      <Name>gram per second</Name>
+      <Abbreviation>g/s</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>kilogram per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>1b294731-8864-448b-9d8f-3f9246661c8c</id>
+      <Name>tonne per day</Name>
+      <Abbreviation>t/d</Abbreviation>
+      <RefFactor>0.0115740740740741</RefFactor>
+      <RefUOM>kilogram per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>333e1511-4cd2-442f-be54-772cdb7a557f</id>
+      <Name>mole</Name>
+      <Abbreviation>mol</Abbreviation>
+      <Class>Moles</Class>
+    </UOM>
+    <UOM>
+      <id>ad091346-4dd4-4e75-b234-9dd0c772d2fb</id>
+      <Name>gram mole</Name>
+      <Abbreviation>gmol</Abbreviation>
+      <RefUOM>mole</RefUOM>
+      <Class>Moles</Class>
+    </UOM>
+    <UOM>
+      <id>415441ca-d365-4c3a-9382-8e2bd1827901</id>
+      <Name>kilogram mole</Name>
+      <Abbreviation>kmol</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>mole</RefUOM>
+      <Class>Moles</Class>
+    </UOM>
+    <UOM>
+      <id>61eecbe1-c4c0-40f3-bbc7-be2fcf35e264</id>
+      <Name>pound mole</Name>
+      <Abbreviation>lbmol</Abbreviation>
+      <RefFactor>453.59237</RefFactor>
+      <RefUOM>mole</RefUOM>
+      <Class>Moles</Class>
+    </UOM>
+    <UOM>
+      <id>50f865bd-b6fb-4100-88e4-e289edc8e7e4</id>
+      <Name>mole per second</Name>
+      <Abbreviation>mol/s</Abbreviation>
+      <Class>Molar Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>d8e119de-11d3-4d89-8292-e660f075cd30</id>
+      <Name>gram mole per second</Name>
+      <Abbreviation>gmol/s</Abbreviation>
+      <RefUOM>mole per second</RefUOM>
+      <Class>Molar Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>f6a33016-c35d-4deb-b4bc-46b5e3a94f48</id>
+      <Name>kilogram mole per second</Name>
+      <Abbreviation>kmol/s</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>mole per second</RefUOM>
+      <Class>Molar Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>cebf6bb9-3f87-4623-be40-042fd5cf5678</id>
+      <Name>pound mole per second</Name>
+      <Abbreviation>lbmol/s</Abbreviation>
+      <RefFactor>453.59237</RefFactor>
+      <RefUOM>mole per second</RefUOM>
+      <Class>Molar Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>7ca0ea3c-d02f-4147-80c6-54f73b74b553</id>
+      <Name>kilogram per mole</Name>
+      <Abbreviation>kg/mol</Abbreviation>
+      <Class>Molecular Weight</Class>
+    </UOM>
+    <UOM>
+      <id>81b8b7f3-6e4a-4c85-9d6d-21a89bfbc130</id>
+      <Name>kilogram per kilogram mole</Name>
+      <Abbreviation>kg/kmol</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>kilogram per mole</RefUOM>
+      <Class>Molecular Weight</Class>
+    </UOM>
+    <UOM>
+      <id>19664268-abe7-4b07-a6c4-30055da18c7f</id>
+      <Name>gram per gram mole</Name>
+      <Abbreviation>g/gmol</Abbreviation>
+      <RefUOM>kilogram per kilogram mole</RefUOM>
+      <Class>Molecular Weight</Class>
+    </UOM>
+    <UOM>
+      <id>9dd5e137-f17b-4f33-9ec4-7860766bb9a3</id>
+      <Name>pound per pound mole</Name>
+      <Abbreviation>lb/lbmol</Abbreviation>
+      <RefUOM>kilogram per kilogram mole</RefUOM>
+      <Class>Molecular Weight</Class>
+    </UOM>
+    <UOM>
+      <id>6c04c325-de39-41a2-9e6a-829588bf736e</id>
+      <Name>watt</Name>
+      <Abbreviation>W</Abbreviation>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>f3c4ae27-5218-489e-a69f-625b26e88212</id>
+      <Name>British thermal unit per hour</Name>
+      <Abbreviation>Btu/h</Abbreviation>
+      <RefFactor>0.29307107017222</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>925b8f73-0081-4835-8c15-fb61b854c71c</id>
+      <Name>million British thermal unit per day</Name>
+      <Abbreviation>MM Btu/d</Abbreviation>
+      <RefFactor>41666.6666666667</RefFactor>
+      <RefUOM>British thermal unit per hour</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>6e19d336-ab41-49fa-8703-a59fd1e4aaf4</id>
+      <Name>million British thermal unit per hour</Name>
+      <Abbreviation>MM Btu/h</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>British thermal unit per hour</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>29e13c1a-7c10-4109-b741-cdec616778f0</id>
+      <Name>calorie per second</Name>
+      <Abbreviation>cal/s</Abbreviation>
+      <RefFactor>4.1868</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>53a1c84f-8bb7-4ea3-8631-282c09d87ea9</id>
+      <Name>horsepower</Name>
+      <Abbreviation>hp</Abbreviation>
+      <RefFactor>745.699871582</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>201cb54e-bd72-4e04-97a0-29b0e6819cc3</id>
+      <Name>joule per second</Name>
+      <Abbreviation>J/s</Abbreviation>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>673bb5be-a0b3-47a4-9005-3280c6263881</id>
+      <Name>kilowatt</Name>
+      <Abbreviation>kW</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>07779308-4e80-42c0-a70b-e26d793c8f07</id>
+      <Name>megajoule per hour</Name>
+      <Abbreviation>MJ/h</Abbreviation>
+      <RefFactor>277.777777777778</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>81346b93-c2c3-49d0-ab8a-28d9506d5bbc</id>
+      <Name>million calorie per hour</Name>
+      <Abbreviation>MMcal/h</Abbreviation>
+      <RefFactor>1163</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>ba5f37a7-01b0-4484-9528-19ed6719847a</id>
+      <Name>megawatt</Name>
+      <Abbreviation>MW</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>667564ea-85f5-4460-a984-8db3266fc260</id>
+      <Name>gigawatt</Name>
+      <Abbreviation>GW</Abbreviation>
+      <RefFactor>1000000000</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <id>5f49b489-0afb-4e2f-9d12-1fa782dcaf39</id>
+      <Name>pascal</Name>
+      <Abbreviation>Pa</Abbreviation>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>dacf284f-7742-4355-b19f-e0014ff49e67</id>
+      <Name>atmosphere</Name>
+      <Abbreviation>atm</Abbreviation>
+      <RefFactor>101325</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>ec28485e-a015-4555-b32d-3da1e94f677f</id>
+      <Name>bar</Name>
+      <Abbreviation>bar</Abbreviation>
+      <RefFactor>100000</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>4a669445-3d67-4d09-8b6e-1cc318e9a0e3</id>
+      <Name>inches of mercury</Name>
+      <Abbreviation>inHg</Abbreviation>
+      <RefFactor>3386.38815789</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>cc5830b7-eb8c-479c-a20c-332735418a16</id>
+      <Name>kilogram-force per square centimeter</Name>
+      <Abbreviation>kgf/cm2</Abbreviation>
+      <RefFactor>98066.5</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>0d9763c3-4b71-4c9d-8285-049145837760</id>
+      <Name>kilogram-force per square meter</Name>
+      <Abbreviation>kgf/m2</Abbreviation>
+      <RefFactor>9.80665</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>641131a5-0539-4078-967e-45184beb29b3</id>
+      <Name>kilopascal</Name>
+      <Abbreviation>kPa</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>b023743e-e8ea-44b7-a36a-9a8beb566ddd</id>
+      <Name>millimeter of mercury</Name>
+      <Abbreviation>mmHg</Abbreviation>
+      <RefFactor>133.322368421</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>4e4427cd-fa40-4731-9ebb-b357652b91a6</id>
+      <Name>newton per square meter</Name>
+      <Abbreviation>N/m2</Abbreviation>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>43f9baa2-a108-4665-bff4-21a77c2c9b56</id>
+      <Name>pound-force per square inch</Name>
+      <Abbreviation>psi</Abbreviation>
+      <RefFactor>6894.75729316836</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>1d33d5b9-3310-4ffe-8124-e3c4535f7f1d</id>
+      <Name>pound-force per square inch (customary)</Name>
+      <Abbreviation>psia</Abbreviation>
+      <RefFactor>6894.75729316836</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>9631cb75-12b8-4791-b230-894a1c16e44f</id>
+      <Name>torr</Name>
+      <Abbreviation>torr</Abbreviation>
+      <RefFactor>133.322368421</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <id>1a438afa-4fe4-427b-8839-835fd572c73c</id>
+      <Name>count</Name>
+      <Abbreviation>count</Abbreviation>
+      <Class>Quantity</Class>
+    </UOM>
+    <UOM>
+      <id>6102e353-5d44-4646-82d2-bff7b005cc9f</id>
+      <Name>percent</Name>
+      <Abbreviation>%</Abbreviation>
+      <Class>Ratio</Class>
+    </UOM>
+    <UOM>
+      <id>28133609-465e-4e91-8830-c776b2458eef</id>
+      <Name>parts per billion</Name>
+      <Abbreviation>ppb</Abbreviation>
+      <RefFactor>1E-07</RefFactor>
+      <RefUOM>percent</RefUOM>
+      <Class>Ratio</Class>
+    </UOM>
+    <UOM>
+      <id>3da6dc48-f819-4424-a6dd-debeac95be92</id>
+      <Name>parts per million</Name>
+      <Abbreviation>ppm</Abbreviation>
+      <RefFactor>0.0001</RefFactor>
+      <RefUOM>percent</RefUOM>
+      <Class>Ratio</Class>
+    </UOM>
+    <UOM>
+      <id>d22afc88-7052-44b8-bab4-7733dc4df896</id>
+      <Name>joule per kilogram</Name>
+      <Abbreviation>J/kg</Abbreviation>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <id>5175d4c8-fa21-4b0e-a07e-649cf6a22357</id>
+      <Name>British thermal unit per pound</Name>
+      <Abbreviation>Btu/lb</Abbreviation>
+      <RefFactor>2326</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <id>8b80e877-d117-442f-8a4a-7c0ef4bbc352</id>
+      <Name>kilocalorie per kilogram</Name>
+      <Abbreviation>kcal/kg</Abbreviation>
+      <RefFactor>4186.8</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <id>e090d2d8-0612-4eaf-9979-4627c1595d8f</id>
+      <Name>kilojoule per kilogram</Name>
+      <Abbreviation>kJ/kg</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <id>33fb0673-af18-4c01-b5c3-b613b03f40b9</id>
+      <Name>kilojoule per pound</Name>
+      <Abbreviation>kJ/lb</Abbreviation>
+      <RefFactor>2204.62262184878</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <id>79a036aa-c6df-4347-b94c-a9d243540b96</id>
+      <Name>joule per gram</Name>
+      <Abbreviation>J/g</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <id>abf1dc36-60bc-4867-be03-2f59f98b7eab</id>
+      <Name>joule per kilogram kelvin</Name>
+      <Abbreviation>J/(kg K)</Abbreviation>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>568cf371-3429-4270-bb5a-6cb1f5e86072</id>
+      <Name>kilojoule per kilogram kelvin</Name>
+      <Abbreviation>kJ/(kg K)</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kilogram kelvin</RefUOM>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>224edeec-ec17-4135-9fdb-ac4e0d64aa9b</id>
+      <Name>joule per gram kelvin</Name>
+      <Abbreviation>J/(g K)</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kilogram kelvin</RefUOM>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>8a6dcdf8-f2eb-4e2d-9072-272760f2f60c</id>
+      <Name>British thermal unit per pound degree Fahrenheit</Name>
+      <Abbreviation>Btu/(lb °F)</Abbreviation>
+      <RefFactor>4186.8</RefFactor>
+      <RefUOM>joule per kilogram kelvin</RefUOM>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>c7f04ee2-2379-4568-bf72-602a6a7681c9</id>
+      <Name>British thermal unit per pound degree Rankine</Name>
+      <Abbreviation>Btu/(lb °R)</Abbreviation>
+      <RefFactor>4186.8</RefFactor>
+      <RefUOM>joule per kilogram kelvin</RefUOM>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <id>4995e77f-cbf9-405b-9c8c-a2b6f931d46a</id>
+      <Name>cubic meter per kilogram</Name>
+      <Abbreviation>m3/kg</Abbreviation>
+      <Class>Specific Volume</Class>
+    </UOM>
+    <UOM>
+      <id>3f56704a-c7eb-4375-b768-ce5ba7f21d70</id>
+      <Name>cubic centimeter per gram</Name>
+      <Abbreviation>cm3/g</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>cubic meter per kilogram</RefUOM>
+      <Class>Specific Volume</Class>
+    </UOM>
+    <UOM>
+      <id>759add8a-1023-4373-bc1d-108bb618f4ca</id>
+      <Name>cubic foot per pound</Name>
+      <Abbreviation>ft3/lb</Abbreviation>
+      <RefFactor>0.0624279605761446</RefFactor>
+      <RefUOM>cubic meter per kilogram</RefUOM>
+      <Class>Specific Volume</Class>
+    </UOM>
+    <UOM>
+      <id>9533041a-62ee-48a4-9ebc-d42a259ccf60</id>
+      <Name>meter per second</Name>
+      <Abbreviation>m/s</Abbreviation>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <id>c2cb0b42-1975-4e88-bcb3-53f78e76e3e3</id>
+      <Name>centimeter per second</Name>
+      <Abbreviation>cm/s</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <id>85179773-ce17-44d2-9c46-b5bac3554b88</id>
+      <Name>foot per second</Name>
+      <Abbreviation>ft/s</Abbreviation>
+      <RefFactor>0.3048</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <id>ad90b747-3ee4-4a8e-a7c1-4613d3282844</id>
+      <Name>International nautical mile per hour</Name>
+      <Abbreviation>nmi/h</Abbreviation>
+      <RefFactor>0.514444444444444</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <id>96b548ec-7d9e-4ece-b8fa-7ef1905bb473</id>
+      <Name>kilometer per hour</Name>
+      <Abbreviation>km/h</Abbreviation>
+      <RefFactor>0.277777777777778</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <id>d0c4cf59-538d-4b35-9113-d40fcb544a79</id>
+      <Name>mile per hour</Name>
+      <Abbreviation>mi/h</Abbreviation>
+      <RefFactor>0.44704</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <id>c5533128-fa7f-45fc-b229-6f1be24d6254</id>
+      <Name>kelvin</Name>
+      <Abbreviation>K</Abbreviation>
+      <Class>Temperature</Class>
+    </UOM>
+    <UOM>
+      <id>59cff3c8-152f-41e4-8cc7-27b7ef96bd36</id>
+      <Name>degree Celsius</Name>
+      <Abbreviation>°C</Abbreviation>
+      <RefOffset>273.15</RefOffset>
+      <RefUOM>kelvin</RefUOM>
+      <Class>Temperature</Class>
+    </UOM>
+    <UOM>
+      <id>1dee251b-eea9-4372-9173-67ae975d7d9e</id>
+      <Name>degree Fahrenheit</Name>
+      <Abbreviation>°F</Abbreviation>
+      <RefFactor>0.555555555555556</RefFactor>
+      <RefOffset>-17.7777777777778</RefOffset>
+      <RefUOM>degree Celsius</RefUOM>
+      <Class>Temperature</Class>
+    </UOM>
+    <UOM>
+      <id>c2aa6526-8dd1-4226-97a2-a7f4145f8271</id>
+      <Name>degree Rankine</Name>
+      <Abbreviation>°R</Abbreviation>
+      <RefOffset>-459.67</RefOffset>
+      <RefUOM>degree Fahrenheit</RefUOM>
+      <Class>Temperature</Class>
+    </UOM>
+    <UOM>
+      <id>1565e60e-4e00-436d-9db3-858710ea8a7b</id>
+      <Name>cubic meter</Name>
+      <Abbreviation>m3</Abbreviation>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>a6da93ca-58a7-48ee-86f1-6d692d21783c</id>
+      <Name>US gallon</Name>
+      <Abbreviation>US gal</Abbreviation>
+      <RefFactor>0.003785411784</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>79e6d6aa-e9c8-4c6c-a6a1-8c547f263a55</id>
+      <Name>barrel</Name>
+      <Abbreviation>bbl</Abbreviation>
+      <RefFactor>42</RefFactor>
+      <RefUOM>US gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>53634c71-ec9d-42c9-b4de-dd1d6c6bfec2</id>
+      <Name>Imperial gallon</Name>
+      <Abbreviation>Imp gal</Abbreviation>
+      <RefFactor>1.20094992550485</RefFactor>
+      <RefUOM>US gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>39675bc7-b6bc-4880-b1ff-fb87be4097a3</id>
+      <Name>million US gallon</Name>
+      <Abbreviation>US Mgal</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>US gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>3aff8190-8ebd-4bcb-bfef-92964a8c0d5d</id>
+      <Name>thousand US gallon</Name>
+      <Abbreviation>US kgal</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>US gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>5a728ad1-94b6-4848-bdef-00107fa20247</id>
+      <Name>cubic centimeter</Name>
+      <Abbreviation>cm3</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>91376f36-b1e7-4906-8cba-974e7c4c023a</id>
+      <Name>cubic foot</Name>
+      <Abbreviation>ft3</Abbreviation>
+      <RefFactor>0.028316846592</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>41a6225b-ba52-4604-a91e-0b5fe3169231</id>
+      <Name>kiloliter</Name>
+      <Abbreviation>kL</Abbreviation>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>d889a253-e706-47ac-9bd4-852411e330c5</id>
+      <Name>liter</Name>
+      <Abbreviation>L</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>bdca6c29-032a-4532-8e6b-dd57f3e0e46b</id>
+      <Name>megaliter</Name>
+      <Abbreviation>M L</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>8f9fb68a-cf8e-4f0c-99f0-483a8730f963</id>
+      <Name>milliliter</Name>
+      <Abbreviation>mL</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>3f96ea36-f35e-4945-bd1c-6bae565632eb</id>
+      <Name>thousand cubic meter</Name>
+      <Abbreviation>k m3</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>60611d72-4f87-4dcc-a515-568f9e79aaf4</id>
+      <Name>million barrel</Name>
+      <Abbreviation>MMbbl</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>barrel</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>00d7d0aa-1223-4ed0-bc0d-9185b3f90358</id>
+      <Name>thousand barrel</Name>
+      <Abbreviation>kbbl</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>barrel</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>e7b7cdaf-7f55-4a4a-b476-4d30db7fcbce</id>
+      <Name>acre foot</Name>
+      <Abbreviation>acre ft</Abbreviation>
+      <RefFactor>43560</RefFactor>
+      <RefUOM>cubic foot</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>8e2567ee-271f-4865-8ba7-533bb3b6f037</id>
+      <Name>million imperial gallon</Name>
+      <Abbreviation>Imp Mgal</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>Imperial gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>b548f218-0d80-4d1f-8357-a5dd928b6be9</id>
+      <Name>thousand imperial gallon</Name>
+      <Abbreviation>Imp kgal</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>Imperial gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <id>be428b58-7724-4fe1-9b18-bb62ff42a139</id>
+      <Name>cubic meter per second</Name>
+      <Abbreviation>m3/s</Abbreviation>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>a1405909-2c35-4dab-8f21-35d1e0057a9c</id>
+      <Name>barrel per day</Name>
+      <Abbreviation>bbl/d</Abbreviation>
+      <RefFactor>1.84013072833333E-06</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>1467c476-293c-47b9-ba0f-7f27315f7e0c</id>
+      <Name>cubic centimeter per second</Name>
+      <Abbreviation>cm3/s</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>270b8b5c-afb7-4af6-aec2-520f299fd5bd</id>
+      <Name>cubic foot per second</Name>
+      <Abbreviation>ft3/s</Abbreviation>
+      <RefFactor>0.028316846592</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>99ee6644-2b21-4fff-a9d3-6e59a1192adc</id>
+      <Name>cubic meter per hour</Name>
+      <Abbreviation>m3/h</Abbreviation>
+      <RefFactor>0.000277777777777778</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>a47bbad6-4868-442f-a5b8-fcf70f2e97a4</id>
+      <Name>Imperial gallon per minute</Name>
+      <Abbreviation>Imp gal/min</Abbreviation>
+      <RefFactor>7.57681666666663E-05</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>aeb339d6-1569-4020-a922-694670b02ee5</id>
+      <Name>liter per second</Name>
+      <Abbreviation>L/s</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <id>95d12779-aca6-4de4-be5c-99d97ddcf3f6</id>
+      <Name>US gallon per minute</Name>
+      <Abbreviation>US gal/min</Abbreviation>
+      <RefFactor>6.30901964E-05</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <SecurityAccessControl>World:A(r)|Administrators:A(r,w,d,x,a)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+  </UOMDatabase>
+  <AFDatabase>
+    <id>dee1a62d-9eac-4945-82e1-4a1e9baa9d8e</id>
+    <Name>Configuration</Name>
+    <Description>A store for configuration data.</Description>
+    <SecurityAccessControl>Administrators:A(r,w,rd,wd,d,x,a,s,so)|World:A(r,w,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+    <SecurityAccessControlAnalysis>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlAnalysis>
+    <SecurityAccessControlAnalysisTemplate>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlAnalysisTemplate>
+    <SecurityAccessControlCategory>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlCategory>
+    <SecurityAccessControlElement>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlElement>
+    <SecurityAccessControlElementTemplate>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlElementTemplate>
+    <SecurityAccessControlEnumerationSet>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlEnumerationSet>
+    <SecurityAccessControlEventFrame>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlEventFrame>
+    <SecurityAccessControlNotification>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlNotification>
+    <SecurityAccessControlReferenceType>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlReferenceType>
+    <SecurityAccessControlTable>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlTable>
+    <SecurityAccessControlTableConnection>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlTableConnection>
+    <SecurityAccessControlTransfer>Administrators:A(r,w,rd,wd,d,x,a,s,so)|Engineers:A(r,w,rd,wd,x,s,so)|World:A(r,rd)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControlTransfer>
+    <AFElement>
+      <id>7c7774c0-6d43-4bf0-8d71-9619b7f2b4a9</id>
+      <Name>OSIsoft</Name>
+      <Description>A store for configuration data for OSI applications.</Description>
+      <VersionID>7c7774c0-6d43-4bf0-8d71-9619b7f2b4a9</VersionID>
+      <AFElement ReferenceType="Parent-Child">
+        <id>441ff7cd-e0bb-4d57-ac05-05d8d913b796</id>
+        <Name>PI SQL</Name>
+        <Description>PI SQL Views and TVFs.</Description>
+        <VersionID>17a5320d-561f-4a40-81bb-259656df5004</VersionID>
+        <AFElement ReferenceType="Parent-Child">
+          <id>aacc6cdb-1df4-40f2-9d22-fd81fa529902</id>
+          <Name>Database Objects</Name>
+          <VersionID>b9736df0-3316-4b63-87ed-30ed748aaa43</VersionID>
+          <SecurityAccessControl>Administrators:A(r,w,x,a)|World:A(r)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+        </AFElement>
+        <SecurityAccessControl>Administrators:A(r,w,x,a)|World:A(r)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <id>150f890d-3cb1-11e6-80c9-001dd9b71e80</id>
+        <Name>PIANO</Name>
+        <VersionID>150f890e-3cb1-11e6-80c9-001dd9b71e80</VersionID>
+        <AFElement ReferenceType="Parent-Child">
+          <id>150f8910-3cb1-11e6-80c9-001dd9b71e80</id>
+          <Name>AnalysisService</Name>
+          <VersionID>150f8911-3cb1-11e6-80c9-001dd9b71e80</VersionID>
+          <AFElement ReferenceType="Parent-Child">
+            <id>deb3462f-3cb3-11e6-80c9-001dd9b71e80</id>
+            <Name>CalculationGroupsConfiguration</Name>
+            <VersionID>deb34630-3cb3-11e6-80c9-001dd9b71e80</VersionID>
+            <AFElement ReferenceType="Parent-Child">
+              <id>deb34632-3cb3-11e6-80c9-001dd9b71e80</id>
+              <Name>Group:default</Name>
+              <VersionID>deb34633-3cb3-11e6-80c9-001dd9b71e80</VersionID>
+              <AFAttribute>
+                <id>3e4a5ffd-8b85-448d-88af-2fb1cc7371fe</id>
+                <Name>CalculationStatus</Name>
+                <IsConfigurationItem>false</IsConfigurationItem>
+                <Type>String</Type>
+                <Value type="String">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ANCalculationGroupStatusDataContract xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/OSIsoft.AN.WCF"&gt;
+  &lt;CalculationGroupName&gt;default&lt;/CalculationGroupName&gt;
+  &lt;HostName&gt;AFKit-Clean.osisoft.int&lt;/HostName&gt;
+  &lt;LatestExecutionTime&gt;2016-06-27T22:44:54.6007701Z&lt;/LatestExecutionTime&gt;
+  &lt;StatusSince&gt;2016-06-27T22:44:56.7663914Z&lt;/StatusSince&gt;
+&lt;/ANCalculationGroupStatusDataContract&gt;</Value>
+              </AFAttribute>
+              <SecurityAccessControl>Administrators:A(r,w,x,a)|World:A(r)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+            </AFElement>
+            <SecurityAccessControl>Administrators:A(r,w,x,a)|World:A(r)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+          </AFElement>
+          <AFElement ReferenceType="Parent-Child">
+            <id>150f8913-3cb1-11e6-80c9-001dd9b71e80</id>
+            <Name>ServiceConfiguration</Name>
+            <VersionID>150f8914-3cb1-11e6-80c9-001dd9b71e80</VersionID>
+            <AFAttribute>
+              <id>67bfbdf7-0d16-4917-9967-8fd5e9c8c4a5</id>
+              <Name>ServiceConfiguration</Name>
+              <Type>String</Type>
+              <Value type="String">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ANServiceConfigurationDataContract xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/OSIsoft.AN.WCF"&gt;
+  &lt;CalculationEngineParameters&gt;
+    &lt;AutoBackfillingEnabled&gt;true&lt;/AutoBackfillingEnabled&gt;
+    &lt;CalculationWaitTimeInSeconds&gt;5&lt;/CalculationWaitTimeInSeconds&gt;
+    &lt;CreateFuturePIPointsForAmbiguousOutputTimes&gt;true&lt;/CreateFuturePIPointsForAmbiguousOutputTimes&gt;
+    &lt;DataCacheConfiguration&gt;
+      &lt;CacheTimeSpanInMinutes&gt;5&lt;/CacheTimeSpanInMinutes&gt;
+      &lt;MaxCacheEventsPerAttribute&gt;1024&lt;/MaxCacheEventsPerAttribute&gt;
+      &lt;MinCacheEventsPerAttribute&gt;1&lt;/MinCacheEventsPerAttribute&gt;
+      &lt;NumberParallelDataPipes&gt;1&lt;/NumberParallelDataPipes&gt;
+    &lt;/DataCacheConfiguration&gt;
+    &lt;DataWriterConfiguration&gt;
+      &lt;NumberDataWriterThreads&gt;1&lt;/NumberDataWriterThreads&gt;
+    &lt;/DataWriterConfiguration&gt;
+    &lt;EvaluationPartitionSize&gt;10000&lt;/EvaluationPartitionSize&gt;
+    &lt;LoadSheddingParameters&gt;
+      &lt;EvaluationsToQueueBeforeSkipping&gt;50&lt;/EvaluationsToQueueBeforeSkipping&gt;
+      &lt;LoadSheddingEnabled&gt;true&lt;/LoadSheddingEnabled&gt;
+    &lt;/LoadSheddingParameters&gt;
+  &lt;/CalculationEngineParameters&gt;
+  &lt;IsTelemetryAllowed&gt;true&lt;/IsTelemetryAllowed&gt;
+  &lt;RegisteredHosts&gt;
+    &lt;ANRegisteredHostDataContract&gt;
+      &lt;HostName&gt;.&lt;/HostName&gt;
+    &lt;/ANRegisteredHostDataContract&gt;
+  &lt;/RegisteredHosts&gt;
+  &lt;Version&gt;1&lt;/Version&gt;
+&lt;/ANServiceConfigurationDataContract&gt;</Value>
+            </AFAttribute>
+            <SecurityAccessControl>Administrators:A(r,w,x,a)|World:A(r)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+          </AFElement>
+          <SecurityAccessControl>Administrators:A(r,w,x,a)|World:A(r)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+        </AFElement>
+        <SecurityAccessControl>Administrators:A(r,w,x,a)|World:A(r)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+      </AFElement>
+      <SecurityAccessControl>Administrators:A(r,w,x,a)|World:A(r)|NT AUTHORITY\NETWORK SERVICE:A(r,w,rd,wd,x)</SecurityAccessControl>
+    </AFElement>
+  </AFDatabase>
+</AF>
