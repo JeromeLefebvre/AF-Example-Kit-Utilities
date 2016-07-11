@@ -1,0 +1,3628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.7.0.6937" ExportMode="AllReferences, NoUniqueID" PISystem="AFKIT-CLEAN" Database="DemoKit Utilities Cost Management Metric" Description="GEN_FULL_Utilities Management System Asset Based PI Example Kit (Metric Units)" Created="2016-07-05T01:27:30.2768216Z" id="1a615a85-8eb4-4e7a-80d9-6b15e3e67327" ParentKey="1a615a85-8eb4-4e7a-80d9-6b15e3e67327" ExportedObject="Elements" ExportedType="AFElements" Identity="Elements">
+  <AFElementCategory>
+    <Name>Asset</Name>
+    <Description>Asset</Description>
+  </AFElementCategory>
+  <AFElementCategory>
+    <Name>Equipment</Name>
+    <Description>Element Equipment</Description>
+  </AFElementCategory>
+  <AFElementCategory>
+    <Name>Base</Name>
+    <Description>Base Specifications Template</Description>
+  </AFElementCategory>
+  <AFEnumerationSet>
+    <Name>Fault Code</Name>
+    <AFEnumerationValue>
+      <Name>Breaker Failure</Name>
+      <Value>1</Value>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Overload</Name>
+      <Value>2</Value>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Comm failure</Name>
+      <Value>3</Value>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Equipment failure</Name>
+      <Value>4</Value>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Running State</Name>
+      <Value>0</Value>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Pump Failure</Name>
+      <Value>5</Value>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Valve Failure</Name>
+      <Value>6</Value>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Pressure Failure</Name>
+      <Value>7</Value>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Turbine overload</Name>
+      <Value>8</Value>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFElementTemplate>
+    <Name>PI Data Archive</Name>
+    <Description>Target PI Data Archive</Description>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <AFElementCategoryRef>Asset</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>Name</Name>
+      <Description>PI Data Archive Name</Description>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <Type>String</Type>
+      <Value type="String">Enter_Your_PIDataArchive_Name</Value>
+      <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+  <AFElementTemplate>
+    <Name>Plant</Name>
+    <Description>Plant Name</Description>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute>Electrical Cost</DefaultAttribute>
+    <AFExtendedProperty>
+      <Name>Override</Name>
+      <Value type="AFObject">Plant</Value>
+    </AFExtendedProperty>
+    <AFElementCategoryRef>Asset</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>Asset Location</Name>
+      <Description>Asset Location</Description>
+      <Type>String</Type>
+      <Value type="String">0</Value>
+      <DataReference>String Builder</DataReference>
+      <ConfigString>"%ElementPath%";</ConfigString>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electrical Cost</Name>
+      <Description>Current Plant Electrical Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electrical Downtime</Name>
+      <Description>Current Plant Electrical Downtime</Description>
+      <DefaultUOM>min</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=min;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electrical Usage</Name>
+      <Description>Current Plant Electrical Usage</Description>
+      <DefaultUOM>kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kWh;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Cost</Name>
+      <Description>Current Plant Gas Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Usage</Name>
+      <Description>Current Plant Gas Usage</Description>
+      <DefaultUOM>Btu</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=Btu;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Latitude</Name>
+      <Description>Plant Latitude</Description>
+      <DefaultUOM>°</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT Latitude FROM [OSIDemo_Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Longitude</Name>
+      <Description>Plant Longitude</Description>
+      <DefaultUOM>°</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT Longitude FROM [OSIDemo_Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Physical Location</Name>
+      <Description>Plant City</Description>
+      <Type>String</Type>
+      <Value type="String">0</Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT [Physical Location] FROM [OSIDemo_Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Cost</Name>
+      <Description>Current Plant Water Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Usage</Name>
+      <Description>Current Plant Water Usage</Description>
+      <DefaultUOM>US gal</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=US gal;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAnalysisTemplate>
+      <Name>Electrical Cost</Name>
+      <Description>Rollup Sum Electrical Cost, units = US Dollar</Description>
+      <Target>Plant</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>ElectricalCost||Electrical Cost;[GUID]||{e82e54a5-a737-42b8-8e69-154b2fdea95f};SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Cost];Sum||Electrical Cost;[GUID]||{e82e54a5-a737-42b8-8e69-154b2fdea95f};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Electrical Downtime</Name>
+      <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+      <Target>Plant</Target>
+      <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Downtime];Sum||Electrical Downtime;[GUID]||{3919d911-100d-46d6-b529-78ba4db7cf59};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Electrical Usage</Name>
+      <Description>Rollup Sum Electrical Usage, units = killowatt hour (kWh)</Description>
+      <Target>Plant</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Usage];Sum||Electrical Usage;[GUID]||{98eb8f84-9b0f-41f3-83d6-815b3fe08ee7};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Gas Cost</Name>
+      <Description>Rollup Sum Gas Cost, units = US Dollar</Description>
+      <Target>Plant</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Cost];Sum||Gas Cost;[GUID]||{0847c3c7-7974-4ed4-82f3-fe715f7441f6};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Gas Usage</Name>
+      <Description>Rollup Sum Gas Usage, units = British Thermal Unit (btu)</Description>
+      <Target>Plant</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Usage];Sum||Gas Usage;[GUID]||{3d5cafd7-686f-46a0-9238-65997b13be97};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Water Cost</Name>
+      <Description>Rollup Sum Water Cost, units = US Dollar</Description>
+      <Target>Plant</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Cost];Sum||Water Cost;[GUID]||{6c88fa98-f73c-4d46-8ebb-f5fae69f8be4};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Water Usage</Name>
+      <Description>Rollup Sum Water Usage, units = US Gallon</Description>
+      <Target>Plant</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Usage];Sum||Water Usage;[GUID]||{840aaedc-e663-49c7-ab10-0dbeff9fad03};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+  </AFElementTemplate>
+  <AFElementTemplate>
+    <Name>Building</Name>
+    <Description>Building name</Description>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute>Electrical Cost</DefaultAttribute>
+    <AFExtendedProperty>
+      <Name>Override</Name>
+      <Value type="AFObject">Plant\Building1</Value>
+    </AFExtendedProperty>
+    <AFExtendedProperty>
+      <Name>ProcessBook.AFDisplayBuilder.UTCChanged</Name>
+      <Value type="Double">1445300987</Value>
+    </AFExtendedProperty>
+    <AFExtendedProperty>
+      <Name>ProcessBook.AFModeler.Graphic</Name>
+      <Value type="String">&lt;?xml version="1.0" standalone="no"?&gt;
+&lt;svg xmlns:svg="OSI_SVG_20090601" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:PB="urn:osisoft-com-pb" xmlns:PBI="urn:osisoft-com-interface" xmlns:PBD="urn:osisoft-com-data" xmlns:xsi="http://www.w3.org/1999/XMLSchema/instance" svg:sid="" xlink:xid="" PB:pid="" width="100%" height="100%" viewBox="0 0 2789 1236" fill="#C0C0C0" image-rendering="optimizeSpeed"&gt;
+	&lt;defs&gt;&lt;/defs&gt;&lt;rect x="0" y="0" width="2789" height="1236" PB:Type="55" PB:DocMajorVersionNum="3" PB:DocMinorVersionNum="26" PB:DocGroup="1" PB:DisplayServerTimeZone="True" PB:wnHeight="527" PB:wnWidth="1091" PB:Zoom="100" PB:wnState="2" PB:LocalID="1033"/&gt;&lt;PB:Dataset id="AF2_DS" PB:Type="57" PB:Context="0" PB:Description="" PB:RefreshInterval="10000" PB:Stepped="False" PB:DSType="3" PB:DSVisible="True"&gt;&lt;PB:DSDatapoint id="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1\Gas User1|Gas Flow_DP"/&gt;&lt;PB:DSDatapoint id="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1\Gas User1|Gas Flow;ft3/s_DP"/&gt;&lt;PB:DSDatapoint id="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Elec Cost_DP"/&gt;&lt;PB:DSDatapoint id="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Gas Cost_DP"/&gt;&lt;/PB:Dataset&gt;&lt;g id="Composite2" PB:Type="0" PB:Visible="True" PB:Scripting="True" PB:IsMultiState="False"&gt;&lt;g id="Trend1" PB:Type="10"&gt;&lt;PB:TrendLogical id="Trend1_Logical" PB:ValueScalePosition="1" PB:BackgroundColor="8421504" PB:CurrentTrace="1" PB:Enabled="True" PB:EnableScript="True" PB:EndTime="*" PB:FillColor="16711680" PB:FontBold="False" PB:FontItalic="False" PB:FontName="Arial" PB:FontSize="10" PB:FontStrikethrough="False" PB:FontUnderline="False" PB:Height="423" PB:IsMultiState="False" PB:Left="-13306" PB:LineColor="16777215" PB:MultipleScales="False" PB:Name="Trend1" PB:Rotation="0" PB:StartTime="*-8 Hour" PB:Top="14947" PB:TraceCount="1" PB:TrendTitle="Plot-0" PB:Visible="True" PB:Width="775" PB:PlotTimeStyle="0" PB:DisplayScaleInside="True" PB:ShowDescription="False" PB:ShowEngUnits="True" PB:ShowGrids="True" PB:ShowTagName="True" PB:ShowTitle="True" PB:ShowTraceMarkers="False" PB:ShowValue="True" PB:ShowServerName="False" PB:Attachments=""&gt;&lt;PB:TraceElem id="PB:TraceElem_1" PB:Trace="AF2.\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Elec Cost" PB:ScaleMin="Autorange" PB:ScaleMax="Autorange" PB:ScaleLogarithmic="False" PB:ShowLinearRegression="False" PB:CanonicalNumberFormat="General" PB:TagInfoType="1" PB:ScaleFormat="General" PB:DisplayDigits="-5"/&gt;&lt;PB:Format id="PB:Format_1" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Horz. Axis"/&gt;&lt;PB:Format id="PB:Format_2" PB:LineColor="8421504" PB:LineStyle="-1" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Background"/&gt;&lt;PB:Format id="PB:Format_3" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Horz. Major Grid"/&gt;&lt;PB:Format id="PB:Format_4" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Horz. Minor Grid"/&gt;&lt;PB:Format id="PB:Format_5" PB:LineColor="65280" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="0" PB:Name="Pen 1"/&gt;&lt;PB:Format id="PB:Format_6" PB:LineColor="16776960" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="1" PB:Name="Pen 2"/&gt;&lt;PB:Format id="PB:Format_7" PB:LineColor="65535" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="2" PB:Name="Pen 3"/&gt;&lt;PB:Format id="PB:Format_8" PB:LineColor="16711935" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="3" PB:Name="Pen 4"/&gt;&lt;PB:Format id="PB:Format_9" PB:LineColor="255" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="4" PB:Name="Pen 5"/&gt;&lt;PB:Format id="PB:Format_10" PB:LineColor="16777215" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="5" PB:Name="Pen 6"/&gt;&lt;PB:Format id="PB:Format_11" PB:LineColor="16711680" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="6" PB:Name="Pen 7"/&gt;&lt;PB:Format id="PB:Format_12" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="7" PB:Name="Pen 8"/&gt;&lt;PB:Format id="PB:Format_13" PB:LineColor="8388608" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="8" PB:Name="Pen 9"/&gt;&lt;PB:Format id="PB:Format_14" PB:LineColor="32768" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="9" PB:Name="Pen 10"/&gt;&lt;PB:Format id="PB:Format_15" PB:LineColor="8388736" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="10" PB:Name="Pen 11"/&gt;&lt;PB:Format id="PB:Format_16" PB:LineColor="8433626" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="11" PB:Name="Pen 12"/&gt;&lt;PB:Format id="PB:Format_17" PB:LineColor="16777215" PB:LineStyle="-1" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Text"/&gt;&lt;PB:Format id="PB:Format_18" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Vert. Axis"/&gt;&lt;PB:Format id="PB:Format_19" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Vert. Major Grid"/&gt;&lt;PB:Format id="PB:Format_20" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Vert. Minor Grid"/&gt;&lt;/PB:TrendLogical&gt;&lt;svg x="1694" y="53" height="423" width="775" id="Trend1_Graphical"&gt;&lt;PB:RefreshData id="Trend1_RefreshData" PB:fXUnits="0.0257291666666666666666666667" PB:iNumXCols="0" PB:bEngUnits="True" PB:bValue="True" PB:bTagname="True" PB:bGrids="True" PB:iMinPerCol="1" PB:iNumTrcs="1" PB:iGrdBegX="6" PB:iGrdBegY="41" PB:iGrdHght="362" PB:iGrdWdth="741" PB:bMarkers="False" PB:bLogarithmic="False" PB:Updateable="True" PB:iSnglLnHght="33" PB:iScaleWidth="0" PB:bOmitScaleText="False" PB:bOmitTimeText="True"/&gt;&lt;rect id="Trend1_Background" x="0" y="0" height="423" width="775" fill="#808080"/&gt;&lt;g id="Trend1_PlotTitleGroup" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;text style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;" x="6" y="33"&gt;Plot-0&lt;/text&gt;&lt;/g&gt;&lt;svg id="Trend1_AxesGroup" height="362" width="741" x="6" y="41"&gt;&lt;rect id="Trend1_GridBackground" height="362" width="741" x="0" y="0" style="fill:#808080;stroke:none;"/&gt;&lt;polyline id="Trend1_VertAxis_1" points="0,0 0,362" style="stroke-width:3;fill:none;stroke:#000000;"/&gt;&lt;polyline points="741,0 741,362" style="stroke-width:3;fill:none;stroke:#000000;stroke-dasharray:10 10 10 10;" id="Trend1_VertAxis_Last"/&gt;&lt;polyline id="Trend1_HorizAxis" points="0,362 741,362" style="stroke-width:3;fill:none;stroke:#000000;"/&gt;&lt;/svg&gt;&lt;svg id="Trend1_GridGroup" height="362" width="741" x="6" y="41"&gt;&lt;path d="M47,0 L47,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M139,0 L139,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M232,0 L232,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M325,0 L325,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M417,0 L417,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M510,0 L510,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M602,0 L602,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M695,0 L695,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M0,362.12 L741,362.12" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,280.34 L741,280.34" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,198.56 L741,198.56" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,116.79 L741,116.79" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,35.01 L741,35.01" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,0 L741,0" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;/svg&gt;&lt;g id="Trend1_XScaleTextGroup" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;text id="Trend1_XScaleTextBegin" x="6" y="407" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;/text&gt;&lt;text id="Trend1_XScaleTextSpan" x="253" y="407" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;/text&gt;&lt;text id="Trend1_XScaleTextEnd" x="500" y="407" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;/text&gt;&lt;/g&gt;&lt;svg id="Trend1_TraceGroup" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;" height="362" width="741" x="6" y="41"&gt;&lt;path id="Trend1_Plot0" PBD:DatasetName="AF2_DS" PBD:DatasetColumn="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Elec Cost" d="M-2.34135416666667,132.867970371768 L0.334479166666667,131.640565599446 L15.7719791666667,129.005449862012 L31.2094791666667,123.487231862886 L38.9282291666667,121.525225970704 L46.6469791666667,120.435278154769 L54.3657291666667,117.340001048633 L62.0844791666667,115.7919382457 L77.5219791666667,111.040364709208 L92.9594791666667,107.853923793762 L100.678229166667,104.301480023857 L131.553229166667,93.3746751819968 L139.271979166667,89.4614942471384 L162.428229166667,83.2197555364016 L170.146979166667,80.3003923891562 L177.865729166667,76.2355795612325 L193.303229166667,72.8371634483386 L201.021979166667,68.9770636584028 L216.459479166667,64.3425830847583 L224.178229166667,61.7535358915306 L231.896979166667,60.3381385170922 L239.615729166667,56.410158748694 L247.334479166667,55.2014209704494 L255.053229166667,52.6778829476127 L262.771979166667,51.4410448547547 L278.209479166667,45.3635657095471 L293.646979166667,38.0873560917431 L301.365729166667,35.0155624634506 L309.084479166667,33.4993433562961 L324.521979166667,25.4704895214161 L339.959479166667,21.6747010198985 L355.396979166667,14.8597508292711 L363.115729166667,10.9282522825776 L386.271979166667,3.17209128764562 L393.990729166667,0 L409.428229166667,329.422976679674 L540.646979166667,324.23960724526 L656.428229166667,320.166658802271 L695.021979166667,318.868501006442 L703,319 M710.459479166667,361.896934578198 L733.615729166667,362 L741,362 " style="font-family:Arial;font-size:33;stroke:#00FF00;fill:none;stroke-width:2;"/&gt;&lt;/svg&gt;&lt;svg id="Trend1_MarkerGroup" style="" height="362" width="741" x="6" y="41"&gt;&lt;circle id="Trend1_0" r="8" cx="703.240729166667" cy="319.368501006442" style="stroke-width:2;stroke:#00FF00;fill:#00FF00;"/&gt;&lt;polyline id="Trend1_0" x="703" y="355" style="stroke-width:2;stroke:#00FF00;fill:none;stroke-width:4;" points="703,355 717,369 710,362 703,369 717,355" transform="rotate(45,703,355) "/&gt;&lt;circle id="Trend1_1" r="8" cx="93.4594791666667" cy="108.353923793762" style="stroke-width:2;stroke:#00FF00;fill:#00FF00;"/&gt;&lt;circle id="Trend1_1" r="8" cx="232.396979166667" cy="60.8381385170922" style="stroke-width:2;stroke:#00FF00;fill:#00FF00;"/&gt;&lt;circle id="Trend1_1" r="8" cx="355.896979166667" cy="15.3597508292711" style="stroke-width:2;stroke:#00FF00;fill:#00FF00;"/&gt;&lt;/svg&gt;&lt;g id="Trend1_YScaleTextGroup" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;" transform="translate(8,41)"&gt;&lt;text x="2" y="33" id="Max_0"&gt;221.408&lt;/text&gt;&lt;text x="2" y="356" id="Min_0"&gt;0.07&lt;/text&gt;&lt;text x="0" y="285.590369000607"&gt;50&lt;/text&gt;&lt;text x="0" y="203.814959652988"&gt;100&lt;/text&gt;&lt;text x="0" y="122.039550305369"&gt;150&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/g&gt;&lt;g id="AF_1822681e861253e836c1524f610ddf11" PB:Type="7" PB:Visible="True" PB:IsMultiState="False" PB:Scripting="True" stroke="none" font-family="Arial" font-size="33.3333320087857" fill="#FFFFFF" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="0" PB:CanonicalNumberFormat="General" PB:TagInfoType="1" PB:NumberFormat="General" PB:ShowUOM="True" PBD:DatasetName="AF2_DS" PBD:DatasetColumn="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Gas Cost" PB:PtTagValue="0.1541 " PB:PtTagTime="10/20/2015 12:29:40 AM" PB:PtTagStatus="0"&gt;&lt;rect id="AF_1822681e861253e836c1524f610ddf11_pbTextBoundingRectEl" x="2023" y="626" width="143" height="42" stroke-width="0" fill="#C0C0C0"/&gt;&lt;text id="AF_1822681e861253e836c1524f610ddf11_pbTextEl" y="658" x="2094" text-anchor="middle" stroke="none" font-family="Arial" font-size="33.3333320087857" fill="#FFFFFF" PBD:Property="value"&gt;0.1541 &lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;
+</Value>
+    </AFExtendedProperty>
+    <AFElementCategoryRef>Asset</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>Asset Location</Name>
+      <Description>Asset Location</Description>
+      <Type>String</Type>
+      <Value type="String">0</Value>
+      <DataReference>String Builder</DataReference>
+      <ConfigString>"%ElementPath%";</ConfigString>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Average Electric Cost</Name>
+      <Description>Building Daily Average Electric Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Average Electric Usage</Name>
+      <Description>Building Daily Average Electric Usage</Description>
+      <DefaultUOM>kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kWh;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Average Gas Cost</Name>
+      <Description>Building Daily Average Gas Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Average Gas Usage</Name>
+      <Description>Building Daily Average Gas Usage</Description>
+      <DefaultUOM>kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kWh;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Average Water Cost</Name>
+      <Description>Building Daily Average Water Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Average Water Usage</Name>
+      <Description>Building Daily Average Water Usage</Description>
+      <DefaultUOM>US gal</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=US gal;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BTU Factor</Name>
+      <Description>Building Gas BTU Factor</Description>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <Type>Single</Type>
+      <Value type="Single">1.028</Value>
+      <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electric Rate</Name>
+      <Description>Building Electrical Rate</Description>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <DefaultUOM>$/kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0.18</Value>
+      <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electrical Cost</Name>
+      <Description>Building Daily Total Electric Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electrical Downtime</Name>
+      <Description>Building Downtime in minutes</Description>
+      <DefaultUOM>min</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=min;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electrical Usage</Name>
+      <Description>Building Daily Total Electric Usage</Description>
+      <DefaultUOM>kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kWh;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Cost</Name>
+      <Description>Building Daily Total Gas Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Rate</Name>
+      <Description>Building Gas Rate</Description>
+      <DefaultUOM>$/kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">1361.44</Value>
+      <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Usage</Name>
+      <Description>Building Daily Total Gas Usage</Description>
+      <DefaultUOM>Btu</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=Btu;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Cost</Name>
+      <Description>Building Daily Total Water Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Rate</Name>
+      <Description>Building Water Rate</Description>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <DefaultUOM>$/US Gal</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0.012</Value>
+      <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Usage</Name>
+      <Description>Building Daily Total Water Usage</Description>
+      <DefaultUOM>US gal</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=US gal;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAnalysisTemplate>
+      <Name>Building Electrical Cost</Name>
+      <Description>Rollup Sum and Average Electrical Cost, units = US Dollar</Description>
+      <Target>Building</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Cost];Sum||Electrical Cost;[GUID]||{83ad5bba-0384-4a04-80b3-700368b7c121};Average||Average Electric Cost;[GUID]||{a4adbc9f-e7d2-463d-87cd-14bb5435d826};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Building Electrical Usage</Name>
+      <Description>Rollup Sum and Average Electrical Usage, units = killowatt hour</Description>
+      <Target>Building</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Usage];Average||Average Electric Usage;[GUID]||{6880232f-4fc4-48a4-8ce3-58c228c52670};Sum||Electrical Usage;[GUID]||{72d3bfea-3c3d-4386-a12b-685e7fc8963b};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Building Gas Cost</Name>
+      <Description>Rollup Sum and Average Gas Cost, units = US Dollar</Description>
+      <Target>Building</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Cost];Sum||Gas Cost;[GUID]||{5bb3026c-11a0-453e-a64f-c508553c56fd};Average||Average Gas Cost;[GUID]||{5e079a60-763e-4ac5-a1ee-73e4e939d1f5};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Building Gas Usage</Name>
+      <Description>Rollup Sum and Average Gas Usage, units = British Thermal Unit (btu)</Description>
+      <Target>Building</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Consumed];Average||Average Gas Usage;[GUID]||{277914c6-7055-49b1-9a28-3c6fc666ddbe};Sum||Gas Usage;[GUID]||{71677e04-f956-406a-a716-fe9e83c2479d};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Building Water Cost</Name>
+      <Description>Rollup Sum and Average Water Cost, units = US Dollar</Description>
+      <Target>Building</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Cost];Sum||Water Cost;[GUID]||{9ba72c73-fa90-4768-aefb-8bbadcb4e0dc};Average||Average Water Cost;[GUID]||{b308b29f-af31-4cf1-9877-41000d0c3f48};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Building Water Usage</Name>
+      <Description>Rollup Sum and Average Water Usage, units = US Gallon</Description>
+      <Target>Building</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Usage];Average||Average Water Usage;[GUID]||{7c4f6456-3b4c-4353-989e-a0ada6cd996d};Sum||Water Usage;[GUID]||{f50003fc-0e50-44d2-bcab-e7d3880e94ab};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Electrical Downtime</Name>
+      <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+      <Target>Building</Target>
+      <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>Rollup</AFPlugIn>
+        <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Downtime Duration];Sum||Electrical Downtime;[GUID]||{ada99a23-a26a-4ea0-a055-d2678235e40a};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+  </AFElementTemplate>
+  <AFElementTemplate>
+    <Name>Generic Equipment</Name>
+    <Description>Equipment Specifications</Description>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute>Equipment Type</DefaultAttribute>
+    <AFExtendedProperty>
+      <Name>Override</Name>
+      <Type>Object</Type>
+      <Value />
+    </AFExtendedProperty>
+    <AFElementCategoryRef>Base</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>Asset Location</Name>
+      <Description>Asset Location</Description>
+      <Type>String</Type>
+      <Value type="String">0</Value>
+      <DataReference>String Builder</DataReference>
+      <ConfigString>"%ElementPath%";</ConfigString>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Equipment Type</Name>
+      <Description>Generic Equipment Type</Description>
+      <Type>String</Type>
+      <Value type="String"></Value>
+      <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Installation Date</Name>
+      <Description>Date of installation</Description>
+      <Type>DateTime</Type>
+      <Value type="DateTime">2015-12-16T00:00:00Z</Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT [Installation Date] FROM [OSIDemo_Generic Specifications] WHERE [Serial Number] = @[Serial Number]</ConfigString>
+      <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Manufacturer</Name>
+      <Description>Manufacturer of Equipment</Description>
+      <Type>String</Type>
+      <Value type="String"></Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT Manufacturer FROM [OSIDemo_Generic Specifications] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+      <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Product</Name>
+      <Description>Name of Product</Description>
+      <Type>String</Type>
+      <Value type="String"></Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT Product FROM [OSIDemo_Generic Specifications] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+      <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Serial Number</Name>
+      <Description>Serial Number of Equipment </Description>
+      <Type>String</Type>
+      <Value type="String"></Value>
+      <DataReference>String Builder</DataReference>
+      <ConfigString>"%Element%";</ConfigString>
+      <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+  <AFElementTemplate>
+    <Name>Electric User</Name>
+    <Description>Electrical Equipment Name</Description>
+    <BaseTemplate>Generic Equipment</BaseTemplate>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute>Electrical Usage</DefaultAttribute>
+    <AFExtendedProperty>
+      <Name>Override</Name>
+      <Value type="AFObject">Plant\Building1\Electric User1</Value>
+    </AFExtendedProperty>
+    <AFElementCategoryRef>Equipment</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>Amps</Name>
+      <Description>Current Amperage (A)</Description>
+      <DefaultUOM>A</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=A;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>AvgPowerLoad</Name>
+      <Description>Today's Avg Power Usage</Description>
+      <DefaultUOM>kW</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kW;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Downtime Duration</Name>
+      <Description>Today's Duration of Downtime (min)</Description>
+      <DefaultUOM>min</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=min;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electrical Cost</Name>
+      <Description>Today's Electrical Cost</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Electrical Usage</Name>
+      <Description>Today's Total Electrical Usage (kWh)</Description>
+      <DefaultUOM>kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kWh;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Fault Code</Name>
+      <Description>Last Downtime Fault Code</Description>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointtype=String;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>PeakPowerLoad</Name>
+      <Description>Today's Peak Power Usage</Description>
+      <DefaultUOM>kW</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kW;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>PowerLoad</Name>
+      <Description>Current Power Load</Description>
+      <DefaultUOM>kW</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kW;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>RunTime</Name>
+      <Description>Today's Electrical Runtime (hours)</Description>
+      <DefaultUOM>h</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=h;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>State</Name>
+      <Description>Electrical Equipment State</Description>
+      <Type>String</Type>
+      <Value type="String">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointtype=String;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Voltage</Name>
+      <Description>Equipment voltage specification</Description>
+      <DefaultUOM>V</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">120</Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT Volts FROM [OSIDemo_Electric Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAnalysisTemplate>
+      <Name>Electric Downtime</Name>
+      <Description>Event Frame generation for Electrical Downtime</Description>
+      <Target>Electric User</Target>
+      <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>EventFrame</AFPlugIn>
+        <ConfigString>EFTGUID=1a8ba81c-3d37-44e9-aa24-972b24e6f919;EFTNAME=OSIDemo_DownTime</ConfigString>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>StartTrigger := '{529a555e-d773-4f06-939e-f8df596c265a};State'= "NoPower";
+EndTrigger := '{529a555e-d773-4f06-939e-f8df596c265a};State'= "Power";</ConfigString>
+        </AFAnalysisRule>
+        <AFAnalysisRule>
+          <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
+          <ConfigString>TimeTrueValue=0</ConfigString>
+        </AFAnalysisRule>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Electric Usage</Name>
+      <Target>Electric User</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>RunTime := TimeEq('{6d6f5e4c-bc75-4abc-b432-1c64eef5e7d9};State','t','*',"Power")/3600;
+InstantaneousPower := (('{c56cfbc7-2699-4902-b7ff-53fcd154f74f};Amps'*'{a0bb3d07-1293-4922-b3e4-fce0c5f6ec75};Voltage')/1000);
+ElectricalUsage := TagTot('{77407bbe-4bb1-48ee-b157-7aba14d59b47};PowerLoad','t','*');
+MaxPowerLoad := TagMax('{77407bbe-4bb1-48ee-b157-7aba14d59b47};PowerLoad','t','*');
+AvgPowerLoad := TagAvg('{77407bbe-4bb1-48ee-b157-7aba14d59b47};PowerLoad','t','*');
+DowntimeDuration := TimeEq('{6d6f5e4c-bc75-4abc-b432-1c64eef5e7d9};State','t','*',"NoPower")/60;</ConfigString>
+        <VariableMapping>Energy 1H||Kilowatts Cost 1 Hour;Energy Cost 1H||Kilowatts Cost 1 Hour;CurrentDayEnergyUsage||PowerLoad;[GUID]||{77407bbe-4bb1-48ee-b157-7aba14d59b47};CurrentDayEnergyCost||Electrical Cost;[GUID]||{bfe43319-245c-4b10-8e4b-14c7dec3decf};SearchCriteria||Attributes;RunTime||RunTime;[GUID]||{4d7ab584-9de2-489f-a8a8-22f45b5a1327};DowntimeDuration||Downtime Duration;[GUID]||{29674c51-b9e8-4154-b958-173d6f9dd4f7};ElectricalUsage||Electrical Usage;[GUID]||{dd1ed932-31c5-4225-92dc-3ba1c1c0f8e6};Instantaneous Power||PowerLoad;[GUID]||{77407bbe-4bb1-48ee-b157-7aba14d59b47};InstantaneousPower||PowerLoad;[GUID]||{77407bbe-4bb1-48ee-b157-7aba14d59b47};AvgPowerLoad||AvgPowerLoad;[GUID]||{0eff4838-d1c0-454c-a5d2-fffdd0e71940};MaxPowerLoad||PeakPowerLoad;[GUID]||{b89aa512-82fc-46a0-8481-1d90528befe8};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Electrical Cost</Name>
+      <Description>Calculates Electrical Cost, units = US Dollar</Description>
+      <Target>Electric User</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>ElectricalCost := '{c07e0b1d-141c-44a2-8f1c-4f39e36a582a};Electrical Usage'*'..\|Electric Rate';
+</ConfigString>
+        <VariableMapping>Electrical Cost||Electrical Cost;[GUID]||{3074562b-6303-4365-9eeb-bb0c9eb00429};ElectricalCost||Electrical Cost;[GUID]||{3074562b-6303-4365-9eeb-bb0c9eb00429};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>High Amperage</Name>
+      <Description>Event Frame generation for High Amperage Downtime</Description>
+      <Target>Electric User</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>EventFrame</AFPlugIn>
+        <ConfigString>EFTGUID=4448356e-4e32-4e7c-a924-b0ffdf68bb1a;EFTNAME=OSIDemo_High Amperage</ConfigString>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>StartTrigger := '{8190f2ca-217b-4356-a5f0-44af40a05ee4};Amps'&gt; 180;
+EndTrigger := '{8190f2ca-217b-4356-a5f0-44af40a05ee4};Amps'&lt; 180;</ConfigString>
+        </AFAnalysisRule>
+        <AFAnalysisRule>
+          <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
+          <ConfigString>TimeTrueValue=30</ConfigString>
+        </AFAnalysisRule>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>OSIDemo_Random Data</Name>
+      <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+      <Target>Electric User</Target>
+      <AFAnalysisCategoryRef>Random Data</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>State := If Minute('*') &gt;= 15 and  Minute('*') &lt;= 20 or Minute('*') &gt;= 45 and  Minute('*') &lt;= 50 then "NoPower" else "Power";
+Amps := If '{529a555e-d773-4f06-939e-f8df596c265a};State'= "Power" then Abs ((Rand(1.25,1.26))*100) else 0;
+FaultCode := If Minute('*') &gt;= 15 and Minute('*') &lt;= 20 then 8 Else If Minute('*') &gt;= 45 and Minute('*') &lt;= 50 then 2 else PrevVal('{ddd7b756-1213-4333-b56e-60f994ed747c};Fault Code', '*');
+</ConfigString>
+        <VariableMapping>Amps||Amps;[GUID]||{8190f2ca-217b-4356-a5f0-44af40a05ee4};State||State;[GUID]||{529a555e-d773-4f06-939e-f8df596c265a};FaultCode||Fault Code;[GUID]||{ddd7b756-1213-4333-b56e-60f994ed747c};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Periodic</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+  </AFElementTemplate>
+  <AFElementTemplate>
+    <Name>Gas User</Name>
+    <Description>Gas Equipment Name</Description>
+    <BaseTemplate>Generic Equipment</BaseTemplate>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute>Total Gas Consumed</DefaultAttribute>
+    <AFExtendedProperty>
+      <Name>Override</Name>
+      <Value type="AFObject">Plant\Building1\Gas User1</Value>
+    </AFExtendedProperty>
+    <AFElementCategoryRef>Equipment</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>Avg Gas Flow</Name>
+      <Description>Today's Average Gas Flow</Description>
+      <DefaultUOM>m3/s</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=m3/s;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Fault Code</Name>
+      <Description>Last Downtime Fault Code</Description>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointtype=String;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Consumed</Name>
+      <Description>Current BTU Usage</Description>
+      <DefaultUOM>kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kWh;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Cost</Name>
+      <Description>Today's Cost of Gas</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Flow</Name>
+      <Description>Gas Flowrate (m3/s)</Description>
+      <DefaultUOM>m3/s</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=m3/s;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gas Flow time</Name>
+      <Description>Today's Gas flow time (sec)</Description>
+      <DefaultUOM>s</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=s;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Max Gas Flow</Name>
+      <Description>Today's Maximum Gas Flow</Description>
+      <DefaultUOM>m3/s</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=m3/s;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Pressure Factor</Name>
+      <Description>Gas Flow pressure factor</Description>
+      <Type>Single</Type>
+      <Value type="Single">1</Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT [Pressure Factor] FROM [OSIDemo_Gas Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>State</Name>
+      <Description>Gas Equipment State</Description>
+      <Type>String</Type>
+      <Value type="String">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointtype=String;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Total Gas Consumed</Name>
+      <Description>Today's Total Gas Usage (Btu)</Description>
+      <DefaultUOM>kWh</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=kWh;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAnalysisTemplate>
+      <Name>Gas Consumption</Name>
+      <Target>Gas User</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>GasFlowTime := TimeEq('{1b6870d2-a7b0-474b-a430-b583f6c48401};State','t','*',"GasFlow");
+GasConsumed := ('{83df9708-d168-40d9-ab9e-74ad4edbc527};Gas Flow'*'{14155513-4f29-47a2-83ad-d072b8ae907e};Gas Flow time'*'{5c222f11-ec55-48c3-bcac-c52d1b44e323};Pressure Factor'*'..\|BTU Factor');
+GasConsumedWithUnits := Convert(GasConsumed,"Btu/h");
+GasUsage := TagTot('{fd1afb99-dcf2-4737-a303-313cb1914dfe};Gas Consumed','t','*');
+MaxGasFlow := TagMax('{83df9708-d168-40d9-ab9e-74ad4edbc527};Gas Flow','t','*');
+AvgGasFlow := TagAvg('{83df9708-d168-40d9-ab9e-74ad4edbc527};Gas Flow','t','*');
+GasUsageWithUnits := Convert(Convert(GasUsage,"Btu"),"kWh");
+MaxGasFlowWithUnits := Convert(Convert(MaxGasFlow,"ft3/s"),"m3/s");
+AvgGasFlowWithUnits := Convert(Convert(AvgGasFlow,"ft3/s"),"m3/s");</ConfigString>
+        <VariableMapping>GasFlowTime||Gas Flow time;[GUID]||{14155513-4f29-47a2-83ad-d072b8ae907e};GasConsumedWithUnits||Gas Consumed;[GUID]||{fd1afb99-dcf2-4737-a303-313cb1914dfe};GasUsageWithUnits||Total Gas Consumed;[GUID]||{2c9c9aad-e752-4266-a3b7-8728e78bc87f};MaxGasFlowWithUnits||Max Gas Flow;[GUID]||{18b51229-2f41-4d09-bc97-5a61f163b783};AvgGasFlowWithUnits||Avg Gas Flow;[GUID]||{1035f57e-d13f-4c62-88f3-f92eec72a8d2};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Gas Cost</Name>
+      <Description>Calculates Gas Cost, units = US Dollar</Description>
+      <Target>Gas User</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>GasCost := '{9f134f83-f228-4072-b3e6-306f6656f44c};Gas Consumed'*'..\|Gas Rate';</ConfigString>
+        <VariableMapping>GasCost||Gas Cost;[GUID]||{5bd2e89f-924f-4733-94ab-315f17c6e3da};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Gas Downtime</Name>
+      <Description>Event Frame generation for Gas Downtime</Description>
+      <Target>Gas User</Target>
+      <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>EventFrame</AFPlugIn>
+        <ConfigString>EFTGUID=1a8ba81c-3d37-44e9-aa24-972b24e6f919;EFTNAME=OSIDemo_DownTime</ConfigString>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>StartTrigger := '{41106d8b-aac2-40a8-a8f5-a0bcabc854ff};State'= "NoGasFlow";
+EndTrigger := '{41106d8b-aac2-40a8-a8f5-a0bcabc854ff};State'= "GasFlow";</ConfigString>
+        </AFAnalysisRule>
+        <AFAnalysisRule>
+          <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
+          <ConfigString>TimeTrueValue=0</ConfigString>
+        </AFAnalysisRule>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>OSIDemo_Random Data</Name>
+      <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic metres per second), and Fault Code (no units)</Description>
+      <Target>Gas User</Target>
+      <AFAnalysisCategoryRef>Random Data</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>State := If Minute('*') &gt;= 13 and  Minute('*') &lt;= 19 or Minute('*') &gt;= 33 and  Minute('*') &lt;= 39 or Minute('*') &gt;= 52 and  Minute('*') &lt;= 56 then "NoGasFlow" else "GasFlow";
+GasFlow := If '{1b6870d2-a7b0-474b-a430-b583f6c48401};State' = "GasFlow" then Abs(Rand(.013,.017)) else 0;
+FaultCode := If Minute('*') &gt;= 23 and Minute('*') &lt;= 29 then 3 Else If Minute('*') &gt;= 33 and Minute('*') &lt;= 39 then 6 Else If Minute('*') &gt;= 42 and Minute('*') &lt;= 46 then 4 else PrevVal('{afc69fa0-faae-46bc-b61e-a2ca7abeb6cc};Fault Code', '*');
+GasFlowWithUnits := Convert(Convert(GasFlow,"ft3/s"),"m3/s");</ConfigString>
+        <VariableMapping>FaultCode||Fault Code;[GUID]||{afc69fa0-faae-46bc-b61e-a2ca7abeb6cc};State||State;[GUID]||{1b6870d2-a7b0-474b-a430-b583f6c48401};GasFlowWithUnits||Gas Flow;[GUID]||{83df9708-d168-40d9-ab9e-74ad4edbc527};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Periodic</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+  </AFElementTemplate>
+  <AFElementTemplate>
+    <Name>Water User</Name>
+    <Description>Water Equipment Name</Description>
+    <BaseTemplate>Generic Equipment</BaseTemplate>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute>Water Usage</DefaultAttribute>
+    <AFExtendedProperty>
+      <Name>Override</Name>
+      <Value type="AFObject">Plant\Building1\Water User1</Value>
+    </AFExtendedProperty>
+    <AFElementCategoryRef>Equipment</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>Avg Water Flow</Name>
+      <Description>Today's Average Water Flowrate</Description>
+      <DefaultUOM>L/s</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=L/s;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Fault Code</Name>
+      <Description>Last Downtime Fault Code</Description>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointsource=OSIDemo_AFAnalysis;pointtype=String;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Tagname</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Flow Rate Factor</Name>
+      <Description>Flow Rate Factor Specification</Description>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT [Flow Rate Factor] FROM [OSIDemo_Water Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+      <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Flowrate Maximum</Name>
+      <Description>Maximum Equipment Water Flowrate specification</Description>
+      <DefaultUOM>L/s</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>Table Lookup</DataReference>
+      <ConfigString>SELECT [Max Flow] FROM [OSIDemo_Water Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Gallons</Name>
+      <Description>Gallons of Water</Description>
+      <DefaultUOM>L</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=L;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Max Water Flow</Name>
+      <Description>Today's Maximum Water Flowrate</Description>
+      <DefaultUOM>L/s</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=L/s;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>State</Name>
+      <Description>Water Equipment State</Description>
+      <Type>String</Type>
+      <Value type="String">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointsource=OSIDemo_AFAnalysis;pointtype=String;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Cost</Name>
+      <Description>Today's Cost of Water</Description>
+      <DefaultUOM>$</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=$;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Flow Rate</Name>
+      <Description>Current Water Flow Rate</Description>
+      <DefaultUOM>L/s</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=L/s;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Flow Time</Name>
+      <Description>Today's Water flow time (minutes)</Description>
+      <DefaultUOM>min</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=min;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Water Usage</Name>
+      <Description>Today's Water Usage (gallons)</Description>
+      <DefaultUOM>L</DefaultUOM>
+      <Type>Single</Type>
+      <Value type="Single">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=L;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>TagName</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAnalysisTemplate>
+      <Name>OSIDemo_Random Data</Name>
+      <Description>Random Data Generation for State (no units), Water Flow Rate (unit = litres per second), and Fault Code (no units)</Description>
+      <Target>Water User</Target>
+      <AFAnalysisCategoryRef>Random Data</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>State := If Minute('*') &gt;= 11 and  Minute('*') &lt;= 16 or Minute('*') &gt;= 31 and  Minute('*') &lt;= 35 or Minute('*') &gt;= 42 and Minute('*') &lt;= 46 then "NoWaterFlow" else "WaterFlow";
+WaterFlowRate := IF '{8986f011-13a7-4aee-9a57-1425561a3155};State' = "WaterFlow" then Abs (((Rand(.083,.171))*100)+8) else 0;
+FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Minute('*') &gt;= 30 and Minute('*') &lt;= 34 then 6 Else If Minute('*') &gt;= 41 and Minute('*') &lt;= 45 then 7 else PrevVal('{8ef3462a-32d6-4eca-aea5-8bb65ba2f42e};Fault Code', '*');
+WaterFlowRateWithUnits := Convert(Convert(WaterFlowRate,"US gal/min"),"L/s");</ConfigString>
+        <VariableMapping>State||State;[GUID]||{8986f011-13a7-4aee-9a57-1425561a3155};FaultCode||Fault Code;[GUID]||{8ef3462a-32d6-4eca-aea5-8bb65ba2f42e};WaterFlowRateWithUnits||Water Flow Rate;[GUID]||{c8769b65-279a-427a-b58e-a96d90f4bb20};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Periodic</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Water Cost</Name>
+      <Description>Calculates Water Cost, units = US Dollar</Description>
+      <Target>Water User</Target>
+      <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>WaterCost := ('{edeff356-29fa-43d8-9748-129f97c4c851};Water Usage'*'..\|Water Rate');</ConfigString>
+        <VariableMapping>WaterCost||Water Cost;[GUID]||{be4a9fea-bf12-43d7-8466-1011fb2af317};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Water Downtime</Name>
+      <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+      <Target>Water User</Target>
+      <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>EventFrame</AFPlugIn>
+        <ConfigString>EFTGUID=1a8ba81c-3d37-44e9-aa24-972b24e6f919;EFTNAME=OSIDemo_DownTime</ConfigString>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>StartTrigger := '{451b0577-aba1-4257-9a2a-06458207a38c};State'="NoWaterFlow";
+EndTrigger := '{451b0577-aba1-4257-9a2a-06458207a38c};State'="WaterFlow";</ConfigString>
+        </AFAnalysisRule>
+        <AFAnalysisRule>
+          <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
+          <ConfigString>TimeTrueValue=0</ConfigString>
+        </AFAnalysisRule>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Water Usage</Name>
+      <Target>Water User</Target>
+      <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>WaterFlowTime := TimeEq('{8986f011-13a7-4aee-9a57-1425561a3155};State','t','*',"Waterflow")/60;
+Gallons := '{c8769b65-279a-427a-b58e-a96d90f4bb20};Water Flow Rate'*'{51968f29-c6f5-4265-af0e-b6ae3938b3ac};Water Flow Time'*'{2bd37fdf-cea7-4cab-9b76-efce02d28a76};Flow Rate Factor';
+GallonsWithUnits := Convert(Gallons,"L");
+WaterUsage := TagTot('{7ab723c8-7c60-4afb-a187-05da9ad94738};Gallons','t','*');
+WaterUsageWithUnits := Convert(Convert(WaterUsage,"US gal"),"L");
+MaxWaterFlow := TagMax('{c8769b65-279a-427a-b58e-a96d90f4bb20};Water Flow Rate','t','*');
+AvgWaterFlow := TagAvg('{c8769b65-279a-427a-b58e-a96d90f4bb20};Water Flow Rate','t','*');
+</ConfigString>
+        <VariableMapping>Total Water||Gallons;[GUID]||{7ab723c8-7c60-4afb-a187-05da9ad94738};Water Total||Gallons;[GUID]||{7ab723c8-7c60-4afb-a187-05da9ad94738};WaterFlowTime||Water Flow Time;[GUID]||{51968f29-c6f5-4265-af0e-b6ae3938b3ac};GallonsWithUnits||Gallons;[GUID]||{7ab723c8-7c60-4afb-a187-05da9ad94738};WaterUsageWithUnits||Water Usage;[GUID]||{84687889-d8b7-4686-b913-e16780235a09};AvgWaterFlow||Avg Water Flow;[GUID]||{2f26add9-8648-46c7-9a29-8318ada17e20};MaxWaterFlow||Max Water Flow;[GUID]||{00ad0905-820d-429a-80b8-b487ed207a27};[GUID]||[UNSET];</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+  </AFElementTemplate>
+  <AFReferenceType>
+    <Name>Parent-Child</Name>
+    <ChildName>Child</ChildName>
+    <ParentName>Parent</ParentName>
+    <Strength>Strong</Strength>
+  </AFReferenceType>
+  <AFElement>
+    <Name>PI Data Archive</Name>
+    <Description>Target PI Data Archive</Description>
+    <Template>PI Data Archive</Template>
+    <AFAttribute>
+      <Name>Name</Name>
+      <Value type="String">AFKit-Clean</Value>
+      <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+    </AFAttribute>
+  </AFElement>
+  <AFElement>
+    <Name>Plant</Name>
+    <Description>Plant Name</Description>
+    <Template>Plant</Template>
+    <AFExtendedProperty>
+      <Name>ProcessBook.AFDisplayBuilder.UTCChanged</Name>
+      <Value type="Double">1444930146</Value>
+    </AFExtendedProperty>
+    <AFExtendedProperty>
+      <Name>ProcessBook.AFModeler.Graphic</Name>
+      <Value type="String">&lt;?xml version="1.0" standalone="no"?&gt;
+&lt;svg xmlns:svg="OSI_SVG_20090601" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:PB="urn:osisoft-com-pb" xmlns:PBI="urn:osisoft-com-interface" xmlns:PBD="urn:osisoft-com-data" xmlns:xsi="http://www.w3.org/1999/XMLSchema/instance" svg:sid="" xlink:xid="" PB:pid="" width="100%" height="100%" viewBox="0 0 2360 1154" fill="#C0C0C0" image-rendering="optimizeSpeed"&gt;
+	&lt;defs&gt;&lt;/defs&gt;&lt;rect x="0" y="0" width="2360" height="1154" PB:Type="55" PB:DocMajorVersionNum="3" PB:DocMinorVersionNum="26" PB:DocGroup="1" PB:DisplayServerTimeZone="True" PB:wnHeight="496" PB:wnWidth="929" PB:Zoom="100" PB:wnState="2" PB:LocalID="1033"/&gt;&lt;PB:Dataset id="E_DS_DS" PB:Type="57" PB:Context="0" PB:Description="" PB:RefreshInterval="5000" PB:Stepped="False" PB:DSType="3" PB:DSVisible="False"&gt;&lt;PB:DSDatapoint id="ElementName_DP"/&gt;&lt;/PB:Dataset&gt;&lt;g id="Value1" PB:Type="7" PB:Visible="True" PB:IsMultiState="False" PB:Scripting="True" stroke="none" font-family="Arial" font-size="33.3333320087857" fill="#FFFFFF" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="0" PB:CanonicalNumberFormat="General" PB:TagInfoType="2" PB:NumberFormat="General" PB:ShowUOM="False" PBD:PtTagName="e.elementname" PB:PersistString="" PB:PtTagValue="Building2" PB:PtTagTime="10/15/2015 5:27:48 PM" PB:PtTagStatus="0"&gt;&lt;rect id="Value1_pbTextBoundingRectEl" x="722" y="40" width="151" height="42" stroke-width="0" fill="#C0C0C0"/&gt;&lt;text id="Value1_pbTextEl" y="72" x="798" text-anchor="middle" stroke="none" font-family="Arial" font-size="33.3333320087857" fill="#FFFFFF" PBD:Property="value"&gt;Building2&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;
+</Value>
+    </AFExtendedProperty>
+    <AFAttribute>
+      <Name>Asset Location</Name>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Electrical Cost</Name>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Plant.Electrical Cost.c1d9a38d-fdc8-564d-18c2-52027b6af687?601;UOM=$;ReadOnly=False</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Electrical Downtime</Name>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Plant.Electrical Downtime.8e9a258e-efaf-5caa-3762-de5e755019d9?610;UOM=min;ReadOnly=False</ConfigString>
+      <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Electrical Usage</Name>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Plant.Electrical Usage.b88f2a90-0a32-5105-3122-c551e19a1ca4?611;UOM=kWh;ReadOnly=False</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Gas Cost</Name>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Plant.Gas Cost.4497aba4-c0f3-51f1-0e42-fbb6327e9738?612;UOM=$;ReadOnly=False</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Gas Usage</Name>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Plant.Gas Usage.9165e38e-a9d9-59db-293b-1828d7993f80?613;UOM=Btu;ReadOnly=False</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Latitude</Name>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Longitude</Name>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Physical Location</Name>
+      <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Water Cost</Name>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Plant.Water Cost.21c551ee-9395-59dd-3c63-fbff07431c22?614;UOM=$;ReadOnly=False</ConfigString>
+      <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFAttribute>
+      <Name>Water Usage</Name>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Plant.Water Usage.386f21af-a94c-5764-044c-28bcf2dfba4e?615;UOM=US gal;ReadOnly=False</ConfigString>
+      <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+    </AFAttribute>
+    <AFElement ReferenceType="Parent-Child">
+      <Name>Building1</Name>
+      <Description>Building name</Description>
+      <Template>Building</Template>
+      <AFAttribute>
+        <Name>Asset Location</Name>
+        <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Electric Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Average Electric Cost.86a3d6aa-2656-5b0b-3755-476239ae1091?616;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Electric Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Average Electric Usage.74838704-be44-5709-04eb-0b7a6a4510bd?617;UOM=kWh;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Gas Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Average Gas Cost.d8fc7641-bfef-59c6-2510-e2ae5bb1b94e?618;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Gas Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Average Gas Usage.99bafd81-6ec9-5b1e-202c-128348372c6f?619;UOM=kWh;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Water Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Average Water Cost.f1d69a69-a96b-575a-0659-72311bcd46f9?620;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Water Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Average Water Usage.2323aff5-0b1f-5791-3429-953d8ab6759c?621;UOM=US gal;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>BTU Factor</Name>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Electric Rate</Name>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Electrical Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Electrical Cost.5a439208-7165-59bf-215d-1769fe4f730c?622;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Electrical Downtime</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Electrical Downtime.6d6f77c7-714c-544c-1743-8d559bf66933?623;UOM=min;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Electrical Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Electrical Usage.61889711-99da-53e9-2846-4dbaabe81cae?624;UOM=kWh;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Gas Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Gas Cost.c43d63df-d69b-56c0-33c3-387858c6cd41?625;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Gas Rate</Name>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Gas Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Gas Usage.be08fe21-5bcb-5960-0485-0a58c27ea80f?626;UOM=Btu;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Water Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Water Cost.faad0eaf-0f95-5171-37a8-d074b9fd728d?627;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Water Rate</Name>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Water Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building1.Water Usage.85bdbe38-538e-566c-185b-5e34c5cf0ac3?628;UOM=US gal;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Electric User1</Name>
+        <Description>Electrical Equipment Name</Description>
+        <Template>Electric User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Amps</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.Amps.752d5563-e19c-5800-02de-9fa67261ab67?602;UOM=A;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>AvgPowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\"OSIDEMO_Electric User1.AvgPowerLoad.31a370ea-b925-50a3-3a5e-0c59ea2f382b"?901;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Downtime Duration</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.Downtime Duration.98b9682f-ab03-529a-180c-dd856cb55084?630;UOM=min;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Electrical Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.Electrical Cost.ed26c949-4c80-5cd7-3f78-e3dc064c89d7?631;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Electrical Usage</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.Electrical Usage.48c1e83e-526c-56c1-24f7-6aa5165a56f4?635;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">EPump</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.Fault Code.3058ecb3-40dc-54e5-25d7-af8ebeeff56e?648</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>PeakPowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.PeakPowerLoad.3e8e9128-a379-5cf4-3348-490da32b5487?899;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>PowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.Powe Load.baae7863-a9df-5162-21df-7e7218ecbeec?898;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunTime</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.RunTime.9dd0e98c-6946-5b04-28d1-5fdcd02edf8a?682;UOM=h;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User1.State.c268c365-136f-5358-01b3-14bae46ad76f?693</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Voltage</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>Electric Downtime</Name>
+          <Description>Event Frame generation for Electrical Downtime</Description>
+          <Template>Electric Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electric Usage</Name>
+          <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+          <Template>Electric Usage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electrical Cost</Name>
+          <Description>Calculates Electrical Cost, units = US Dollar</Description>
+          <Template>Electrical Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>High Amperage</Name>
+          <Description>Event Frame generation for High Amperage Downtime</Description>
+          <Template>High Amperage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Electric User2</Name>
+        <Description>Electrical Equipment Name</Description>
+        <Template>Electric User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Amps</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User2.Amps.752d555b-e19c-5800-02de-9fa67261ab67?603;UOM=A;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>AvgPowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\"OSIDEMO_Electric User2.AvgPowerLoad.31a370d2-b925-50a3-3a5e-0c59ea2f382b"?902;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Downtime Duration</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User2.Downtime Duration.98b96817-ab03-529a-180c-dd856cb55084?704;UOM=min;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Electrical Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User2.Electrical Cost.ed26c971-4c80-5cd7-3f78-e3dc064c89d7?705;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Electrical Usage</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User2.Electrical Usage.48c1e806-526c-56c1-24f7-6aa5165a56f4?706;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">EMotor</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User2.Fault Code.3058ec8b-40dc-54e5-25d7-af8ebeeff56e?716</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>PeakPowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\"OSIDEMO_Electric User2.PeakPowerLoad.3e8e9110-a379-5cf4-3348-490da32b5487"?903;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>PowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User2.Powe Load.baae785b-a9df-5162-21df-7e7218ecbeec?897;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunTime</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User2.RunTime.9dd0e9b4-6946-5b04-28d1-5fdcd02edf8a?739;UOM=h;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User2.State.c268c35d-136f-5358-01b3-14bae46ad76f?745</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Voltage</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>Electric Downtime</Name>
+          <Description>Event Frame generation for Electrical Downtime</Description>
+          <Template>Electric Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electric Usage</Name>
+          <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+          <Template>Electric Usage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electrical Cost</Name>
+          <Description>Calculates Electrical Cost, units = US Dollar</Description>
+          <Template>Electrical Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>High Amperage</Name>
+          <Description>Event Frame generation for High Amperage Downtime</Description>
+          <Template>High Amperage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Electric User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Gas User1</Name>
+        <Description>Gas Equipment Name</Description>
+        <Template>Gas User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Avg Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.Avg Gas Flow.dd6449b5-65b8-554f-1e29-e99c48f00281?714;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">GPump</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.Fault Code.ff98f4d9-814b-533b-3c06-8c5e421f9f74?708</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Consumed</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.Gas Consumed.24f58ce3-a325-5f51-1ee6-f088a52014dc?711;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.Gas Cost.0895da26-d81e-5ab4-2300-cfd8405b8ec1?715;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.Gas Flow.56353b05-88d5-52fa-24db-6e7632883f97?709;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Flow time</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.Gas Flow time.b774af7a-c8fa-5213-35e8-a832af6343ad?710;UOM=s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Max Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.Max Gas Flow.786efe43-34d3-5b7e-3fe2-1fe62de52699?713;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pressure Factor</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.State.70e909b0-51cd-5458-3e19-ac5a458f99d9?707</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Gas Consumed</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User1.Total Gas Consumed.d2d69459-fa5f-5299-0389-49c600c991c1?712;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>Gas Consumption</Name>
+          <Description>Calculates Gas Flow Time (units = seconds), Gas Consumed (units= btu), Total Gas Consumed (units = btu), and Maximum and Average Gas Flow (units = cubic feet per second)</Description>
+          <Template>Gas Consumption</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Gas User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Gas Cost</Name>
+          <Description>Calculates Gas Cost, units = US Dollar</Description>
+          <Template>Gas Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Gas User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Gas Downtime</Name>
+          <Description>Event Frame generation for Gas Downtime</Description>
+          <Template>Gas Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Gas User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic feet per second), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Gas User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Gas User2</Name>
+        <Description>Gas Equipment Name</Description>
+        <Template>Gas User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Avg Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.Avg Gas Flow.dd6449b2-65b8-554f-1e29-e99c48f00281?724;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">GMotor</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.Fault Code.ff98f4de-814b-533b-3c06-8c5e421f9f74?727</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Consumed</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.Gas Consumed.24f58ce4-a325-5f51-1ee6-f088a52014dc?720;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.Gas Cost.0895da21-d81e-5ab4-2300-cfd8405b8ec1?725;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.Gas Flow.56353b02-88d5-52fa-24db-6e7632883f97?728;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Flow time</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.Gas Flow time.b774af7d-c8fa-5213-35e8-a832af6343ad?719;UOM=s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Max Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.Max Gas Flow.786efe44-34d3-5b7e-3fe2-1fe62de52699?723;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pressure Factor</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.State.70e909b7-51cd-5458-3e19-ac5a458f99d9?726</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Gas Consumed</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User2.Total Gas Consumed.d2d6945e-fa5f-5299-0389-49c600c991c1?721;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>Gas Consumption</Name>
+          <Description>Calculates Gas Flow Time (units = seconds), Gas Consumed (units= btu), Total Gas Consumed (units = btu), and Maximum and Average Gas Flow (units = cubic feet per second)</Description>
+          <Template>Gas Consumption</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Gas User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Gas Cost</Name>
+          <Description>Calculates Gas Cost, units = US Dollar</Description>
+          <Template>Gas Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Gas User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Gas Downtime</Name>
+          <Description>Event Frame generation for Gas Downtime</Description>
+          <Template>Gas Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Gas User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic feet per second), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Gas User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Water User1</Name>
+        <Description>Water Equipment Name</Description>
+        <Template>Water User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Avg Water Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.Avg Water Flow.7301f5f2-dd94-5a6f-30f7-1fcb5ec4add0?604;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">WPump</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.Fault Code.62fe711d-5727-52fb-39d7-e98af4598dcc?730</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flow Rate Factor</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flowrate Maximum</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gallons</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.Gallons.5beeb26b-60a1-5184-3555-f4e35c182c7b?734;UOM=L;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Max Water Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.Max Water Flow.cc56d63d-fed9-5b5f-1e21-3a43c14921a1?736;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.State.90694329-6aed-58b1-1526-b5966be7fbca?729</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.Water Cost.9b897678-5e98-575c-1435-566abf112d90?718;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Flow Rate</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.Water Flow Rate.9cb483cf-1a7d-5a65-36db-432704828657?732;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Flow Time</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.Water Flow Time.52427008-df76-582a-38c8-72c0debe3f3a?733;UOM=min;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Usage</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User1.Water Usage.dd9171e2-d055-52ca-1208-a2732de602a9?735;UOM=L;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Water Flow Rate (unit = US Gallons per minute), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Water User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Cost</Name>
+          <Description>Calculates Water Cost, units = US Dollar</Description>
+          <Template>Water Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Water User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Downtime</Name>
+          <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+          <Template>Water Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Water User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Usage</Name>
+          <Description>Random Data Generation for WaterFlowYime(units = second), Gallons (unit = US Gallons), WaterUsage (unit = US Gallons), MaxWaterFlow (unit = US Gallons), AvgWaterFlow (unit = US Gallons)</Description>
+          <Template>Water Usage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Water User1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Water User2</Name>
+        <Description>Water Equipment Name</Description>
+        <Template>Water User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Avg Water Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.Avg Water Flow.7301f5f9-dd94-5a6f-30f7-1fcb5ec4add0?605;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">WMotor</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.Fault Code.62fe7116-5727-52fb-39d7-e98af4598dcc?738</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flow Rate Factor</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flowrate Maximum</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gallons</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.Gallons.5beeb260-60a1-5184-3555-f4e35c182c7b?742;UOM=L;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Max Water Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.Max Water Flow.cc56d636-fed9-5b5f-1e21-3a43c14921a1?744;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.State.90694322-6aed-58b1-1526-b5966be7fbca?737</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.Water Cost.9b897673-5e98-575c-1435-566abf112d90?717;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Flow Rate</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.Water Flow Rate.9cb483c4-1a7d-5a65-36db-432704828657?740;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Flow Time</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.Water Flow Time.52427003-df76-582a-38c8-72c0debe3f3a?741;UOM=min;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Usage</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User2.Water Usage.dd9171e9-d055-52ca-1208-a2732de602a9?743;UOM=L;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Water Flow Rate (unit = US Gallons per minute), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Water User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Cost</Name>
+          <Description>Calculates Water Cost, units = US Dollar</Description>
+          <Template>Water Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Water User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Downtime</Name>
+          <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+          <Template>Water Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Water User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Usage</Name>
+          <Description>Random Data Generation for WaterFlowYime(units = second), Gallons (unit = US Gallons), WaterUsage (unit = US Gallons), MaxWaterFlow (unit = US Gallons), AvgWaterFlow (unit = US Gallons)</Description>
+          <Template>Water Usage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building1\Water User2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFAnalysis>
+        <Name>Building Electrical Cost</Name>
+        <Description>Rollup Sum and Average Electrical Cost, units = US Dollar</Description>
+        <Template>Building Electrical Cost</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building1</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Electrical Usage</Name>
+        <Description>Rollup Sum and Average Electrical Usage, units = killowatt hour</Description>
+        <Template>Building Electrical Usage</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building1</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Gas Cost</Name>
+        <Description>Rollup Sum and Average Gas Cost, units = US Dollar</Description>
+        <Template>Building Gas Cost</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building1</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Gas Usage</Name>
+        <Description>Rollup Sum and Average Gas Usage, units = British Thermal Unit (btu)</Description>
+        <Template>Building Gas Usage</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building1</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Water Cost</Name>
+        <Description>Rollup Sum and Average Water Cost, units = US Dollar</Description>
+        <Template>Building Water Cost</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building1</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Water Usage</Name>
+        <Description>Rollup Sum and Average Water Usage, units = US Gallon</Description>
+        <Template>Building Water Usage</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building1</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Electrical Downtime</Name>
+        <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+        <Template>Electrical Downtime</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building1</AFElementRef>
+        </Target>
+      </AFAnalysis>
+    </AFElement>
+    <AFElement ReferenceType="Parent-Child">
+      <Name>Building2</Name>
+      <Description>Building name</Description>
+      <Template>Building</Template>
+      <AFAttribute>
+        <Name>Asset Location</Name>
+        <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Electric Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Average Electric Cost.86a3d6f4-2656-5b0b-3755-476239ae1091?636;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Electric Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Average Electric Usage.7483875a-be44-5709-04eb-0b7a6a4510bd?638;UOM=kWh;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Gas Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Average Gas Cost.d8fc761f-bfef-59c6-2510-e2ae5bb1b94e?640;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Gas Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Average Gas Usage.99bafddf-6ec9-5b1e-202c-128348372c6f?644;UOM=kWh;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Water Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Average Water Cost.f1d69a37-a96b-575a-0659-72311bcd46f9?653;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Water Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Average Water Usage.2323afab-0b1f-5791-3429-953d8ab6759c?642;UOM=US gal;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>BTU Factor</Name>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Electric Rate</Name>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Electrical Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Electrical Cost.5a439256-7165-59bf-215d-1769fe4f730c?637;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Electrical Downtime</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Electrical Downtime.6d6f7799-714c-544c-1743-8d559bf66933?646;UOM=min;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Electrical Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Electrical Usage.6188974f-99da-53e9-2846-4dbaabe81cae?639;UOM=kWh;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Gas Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Gas Cost.c43d6381-d69b-56c0-33c3-387858c6cd41?641;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Gas Rate</Name>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Gas Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Gas Usage.be08fe7f-5bcb-5960-0485-0a58c27ea80f?645;UOM=Btu;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Water Cost</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Water Cost.faad0ef1-0f95-5171-37a8-d074b9fd728d?654;UOM=$;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Water Rate</Name>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Water Usage</Name>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Building2.Water Usage.85bdbe66-538e-566c-185b-5e34c5cf0ac3?643;UOM=US gal;ReadOnly=False</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Electric User3</Name>
+        <Description>Electrical Equipment Name</Description>
+        <Template>Electric User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Amps</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User3.Amps.752d5535-e19c-5800-02de-9fa67261ab67?606;UOM=A;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>AvgPowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\"OSIDEMO_Electric User3.AvgPowerLoad.31a370bc-b925-50a3-3a5e-0c59ea2f382b"?904;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Downtime Duration</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User3.Downtime Duration.98b96879-ab03-529a-180c-dd856cb55084?702;UOM=min;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Electrical Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User3.Electrical Cost.ed26c91f-4c80-5cd7-3f78-e3dc064c89d7?696;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Electrical Usage</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User3.Electrical Usage.48c1e868-526c-56c1-24f7-6aa5165a56f4?699;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">ECompressor</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User3.Fault Code.3058ece5-40dc-54e5-25d7-af8ebeeff56e?695</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>PeakPowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\"OSIDEMO_Electric User3.PeakPowerLoad.3e8e917e-a379-5cf4-3348-490da32b5487"?905;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>PowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User3.Powe Load.baae7835-a9df-5162-21df-7e7218ecbeec?896;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunTime</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User3.RunTime.9dd0e9da-6946-5b04-28d1-5fdcd02edf8a?697;UOM=h;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User3.State.c268c333-136f-5358-01b3-14bae46ad76f?694</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Voltage</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>Electric Downtime</Name>
+          <Description>Event Frame generation for Electrical Downtime</Description>
+          <Template>Electric Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electric Usage</Name>
+          <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+          <Template>Electric Usage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electrical Cost</Name>
+          <Description>Calculates Electrical Cost, units = US Dollar</Description>
+          <Template>Electrical Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>High Amperage</Name>
+          <Description>Event Frame generation for High Amperage Downtime</Description>
+          <Template>High Amperage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Electric User4</Name>
+        <Description>Electrical Equipment Name</Description>
+        <Template>Electric User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Amps</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User4.Amps.752d552d-e19c-5800-02de-9fa67261ab67?607;UOM=A;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>AvgPowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\"OSIDEMO_Electric User4.AvgPowerLoad.31a370a4-b925-50a3-3a5e-0c59ea2f382b"?906;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Downtime Duration</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User4.Downtime Duration.98b96861-ab03-529a-180c-dd856cb55084?692;UOM=min;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Electrical Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User4.Electrical Cost.ed26c907-4c80-5cd7-3f78-e3dc064c89d7?686;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Electrical Usage</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User4.Electrical Usage.48c1e870-526c-56c1-24f7-6aa5165a56f4?689;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">EHVAC</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User4.Fault Code.3058ecfd-40dc-54e5-25d7-af8ebeeff56e?685</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>PeakPowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\"OSIDEMO_Electric User4.PeakPowerLoad.3e8e9166-a379-5cf4-3348-490da32b5487"?907;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>PowerLoad</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User4.Powe Load.baae782d-a9df-5162-21df-7e7218ecbeec?895;UOM=kW;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunTime</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User4.RunTime.9dd0e9c2-6946-5b04-28d1-5fdcd02edf8a?687;UOM=h;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Electric User4.State.c268c32b-136f-5358-01b3-14bae46ad76f?684</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Voltage</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>Electric Downtime</Name>
+          <Description>Event Frame generation for Electrical Downtime</Description>
+          <Template>Electric Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electric Usage</Name>
+          <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+          <Template>Electric Usage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electrical Cost</Name>
+          <Description>Calculates Electrical Cost, units = US Dollar</Description>
+          <Template>Electrical Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>High Amperage</Name>
+          <Description>Event Frame generation for High Amperage Downtime</Description>
+          <Template>High Amperage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Electric User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Gas User3</Name>
+        <Description>Gas Equipment Name</Description>
+        <Template>Gas User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Avg Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.Avg Gas Flow.dd6449c3-65b8-554f-1e29-e99c48f00281?681;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">GCompressor</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.Fault Code.ff98f4af-814b-533b-3c06-8c5e421f9f74?675</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Consumed</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.Gas Consumed.24f58c95-a325-5f51-1ee6-f088a52014dc?678;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.Gas Cost.0895da50-d81e-5ab4-2300-cfd8405b8ec1?683;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.Gas Flow.56353b73-88d5-52fa-24db-6e7632883f97?676;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Flow time</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.Gas Flow time.b774af0c-c8fa-5213-35e8-a832af6343ad?677;UOM=s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Max Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.Max Gas Flow.786efe35-34d3-5b7e-3fe2-1fe62de52699?680;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pressure Factor</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.State.70e909c6-51cd-5458-3e19-ac5a458f99d9?674</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Gas Consumed</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User3.Total Gas Consumed.d2d6942f-fa5f-5299-0389-49c600c991c1?679;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>Gas Consumption</Name>
+          <Description>Calculates Gas Flow Time (units = seconds), Gas Consumed (units= btu), Total Gas Consumed (units = btu), and Maximum and Average Gas Flow (units = cubic feet per second)</Description>
+          <Template>Gas Consumption</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Gas User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Gas Cost</Name>
+          <Description>Calculates Gas Cost, units = US Dollar</Description>
+          <Template>Gas Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Gas User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Gas Downtime</Name>
+          <Description>Event Frame generation for Gas Downtime</Description>
+          <Template>Gas Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Gas User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic feet per second), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Gas User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Gas User4</Name>
+        <Description>Gas Equipment Name</Description>
+        <Template>Gas User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Avg Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.Avg Gas Flow.dd6449f8-65b8-554f-1e29-e99c48f00281?672;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">GHVAC</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.Fault Code.ff98f494-814b-533b-3c06-8c5e421f9f74?665</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Consumed</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.Gas Consumed.24f58cae-a325-5f51-1ee6-f088a52014dc?668;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.Gas Cost.0895da6b-d81e-5ab4-2300-cfd8405b8ec1?673;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.Gas Flow.56353b48-88d5-52fa-24db-6e7632883f97?666;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gas Flow time</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.Gas Flow time.b774af37-c8fa-5213-35e8-a832af6343ad?667;UOM=s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Max Gas Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.Max Gas Flow.786efe0e-34d3-5b7e-3fe2-1fe62de52699?670;UOM=m3/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pressure Factor</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.State.70e909fd-51cd-5458-3e19-ac5a458f99d9?664</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Gas Consumed</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Gas User4.Total Gas Consumed.d2d69414-fa5f-5299-0389-49c600c991c1?669;UOM=kWh;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>Gas Consumption</Name>
+          <Description>Calculates Gas Flow Time (units = seconds), Gas Consumed (units= btu), Total Gas Consumed (units = btu), and Maximum and Average Gas Flow (units = cubic feet per second)</Description>
+          <Template>Gas Consumption</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Gas User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Gas Cost</Name>
+          <Description>Calculates Gas Cost, units = US Dollar</Description>
+          <Template>Gas Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Gas User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Gas Downtime</Name>
+          <Description>Event Frame generation for Gas Downtime</Description>
+          <Template>Gas Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Gas User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic feet per second), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Gas User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Water User3</Name>
+        <Description>Water Equipment Name</Description>
+        <Template>Water User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Avg Water Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.Avg Water Flow.7301f5a8-dd94-5a6f-30f7-1fcb5ec4add0?608;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">WCompressor</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.Fault Code.62fe7147-5727-52fb-39d7-e98af4598dcc?656</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flow Rate Factor</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flowrate Maximum</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gallons</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.Gallons.5beeb231-60a1-5184-3555-f4e35c182c7b?661;UOM=L;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Max Water Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.Max Water Flow.cc56d667-fed9-5b5f-1e21-3a43c14921a1?663;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.State.90694373-6aed-58b1-1526-b5966be7fbca?655</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.Water Cost.9b897622-5e98-575c-1435-566abf112d90?658;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Flow Rate</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.Water Flow Rate.9cb48395-1a7d-5a65-36db-432704828657?657;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Flow Time</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.Water Flow Time.52427052-df76-582a-38c8-72c0debe3f3a?660;UOM=min;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Usage</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User3.Water Usage.dd9171b8-d055-52ca-1208-a2732de602a9?662;UOM=L;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Water Flow Rate (unit = US Gallons per minute), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Water User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Cost</Name>
+          <Description>Calculates Water Cost, units = US Dollar</Description>
+          <Template>Water Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Water User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Downtime</Name>
+          <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+          <Template>Water Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Water User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Usage</Name>
+          <Description>Random Data Generation for WaterFlowYime(units = second), Gallons (unit = US Gallons), WaterUsage (unit = US Gallons), MaxWaterFlow (unit = US Gallons), AvgWaterFlow (unit = US Gallons)</Description>
+          <Template>Water Usage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Water User3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Water User4</Name>
+        <Description>Water Equipment Name</Description>
+        <Template>Water User</Template>
+        <AFElementCategoryRef>Base</AFElementCategoryRef>
+        <AFAttribute>
+          <Name>Asset Location</Name>
+          <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Avg Water Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.Avg Water Flow.7301f5b7-dd94-5a6f-30f7-1fcb5ec4add0?609;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Equipment Type</Name>
+          <Value type="String">WHVAC</Value>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Fault Code</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.Fault Code.62fe7158-5727-52fb-39d7-e98af4598dcc?633</ConfigString>
+          <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flow Rate Factor</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Flowrate Maximum</Name>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Gallons</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.Gallons.5beeb22e-60a1-5184-3555-f4e35c182c7b?650;UOM=L;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Max Water Flow</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.Max Water Flow.cc56d678-fed9-5b5f-1e21-3a43c14921a1?652;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Product</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>State</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.State.9069436c-6aed-58b1-1526-b5966be7fbca?632</ConfigString>
+          <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Cost</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.Water Cost.9b89763d-5e98-575c-1435-566abf112d90?647;UOM=$;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Cost</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Flow Rate</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.Water Flow Rate.9cb4838a-1a7d-5a65-36db-432704828657?634;UOM=L/s;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Flow Time</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.Water Flow Time.5242704d-df76-582a-38c8-72c0debe3f3a?649;UOM=min;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Water Usage</Name>
+          <DataReference>PI Point</DataReference>
+          <ConfigString>\\afkit-clean?2d8b4e94-08ef-4823-8299-626251c0c0f0\OSIDEMO_Water User4.Water Usage.dd9171a7-d055-52ca-1208-a2732de602a9?651;UOM=L;ReadOnly=False</ConfigString>
+          <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>OSIDemo_Random Data</Name>
+          <Description>Random Data Generation for State (no units), Water Flow Rate (unit = US Gallons per minute), and Fault Code (no units)</Description>
+          <Template>OSIDemo_Random Data</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Water User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Cost</Name>
+          <Description>Calculates Water Cost, units = US Dollar</Description>
+          <Template>Water Cost</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Water User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Downtime</Name>
+          <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+          <Template>Water Downtime</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Water User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Water Usage</Name>
+          <Description>Random Data Generation for WaterFlowYime(units = second), Gallons (unit = US Gallons), WaterUsage (unit = US Gallons), MaxWaterFlow (unit = US Gallons), AvgWaterFlow (unit = US Gallons)</Description>
+          <Template>Water Usage</Template>
+          <Status>Enabled</Status>
+          <Target>
+            <AFElementRef>.\Plant\Building2\Water User4</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFAnalysis>
+        <Name>Building Electrical Cost</Name>
+        <Description>Rollup Sum and Average Electrical Cost, units = US Dollar</Description>
+        <Template>Building Electrical Cost</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building2</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Electrical Usage</Name>
+        <Description>Rollup Sum and Average Electrical Usage, units = killowatt hour</Description>
+        <Template>Building Electrical Usage</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building2</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Gas Cost</Name>
+        <Description>Rollup Sum and Average Gas Cost, units = US Dollar</Description>
+        <Template>Building Gas Cost</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building2</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Gas Usage</Name>
+        <Description>Rollup Sum and Average Gas Usage, units = British Thermal Unit (btu)</Description>
+        <Template>Building Gas Usage</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building2</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Water Cost</Name>
+        <Description>Rollup Sum and Average Water Cost, units = US Dollar</Description>
+        <Template>Building Water Cost</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building2</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Building Water Usage</Name>
+        <Description>Rollup Sum and Average Water Usage, units = US Gallon</Description>
+        <Template>Building Water Usage</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building2</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Electrical Downtime</Name>
+        <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+        <Template>Electrical Downtime</Template>
+        <Status>Enabled</Status>
+        <Target>
+          <AFElementRef>.\Plant\Building2</AFElementRef>
+        </Target>
+      </AFAnalysis>
+    </AFElement>
+    <AFAnalysis>
+      <Name>Electrical Cost</Name>
+      <Description>Rollup Sum Electrical Cost, units = US Dollar</Description>
+      <Template>Electrical Cost</Template>
+      <Status>Enabled</Status>
+      <Target>
+        <AFElementRef>.\Plant</AFElementRef>
+      </Target>
+    </AFAnalysis>
+    <AFAnalysis>
+      <Name>Electrical Downtime</Name>
+      <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+      <Template>Electrical Downtime</Template>
+      <Status>Enabled</Status>
+      <Target>
+        <AFElementRef>.\Plant</AFElementRef>
+      </Target>
+    </AFAnalysis>
+    <AFAnalysis>
+      <Name>Electrical Usage</Name>
+      <Description>Rollup Sum Electrical Usage, units = killowatt hour (kWh)</Description>
+      <Template>Electrical Usage</Template>
+      <Status>Enabled</Status>
+      <Target>
+        <AFElementRef>.\Plant</AFElementRef>
+      </Target>
+    </AFAnalysis>
+    <AFAnalysis>
+      <Name>Gas Cost</Name>
+      <Description>Rollup Sum Gas Cost, units = US Dollar</Description>
+      <Template>Gas Cost</Template>
+      <Status>Enabled</Status>
+      <Target>
+        <AFElementRef>.\Plant</AFElementRef>
+      </Target>
+    </AFAnalysis>
+    <AFAnalysis>
+      <Name>Gas Usage</Name>
+      <Description>Rollup Sum Gas Usage, units = British Thermal Unit (btu)</Description>
+      <Template>Gas Usage</Template>
+      <Status>Enabled</Status>
+      <Target>
+        <AFElementRef>.\Plant</AFElementRef>
+      </Target>
+    </AFAnalysis>
+    <AFAnalysis>
+      <Name>Water Cost</Name>
+      <Description>Rollup Sum Water Cost, units = US Dollar</Description>
+      <Template>Water Cost</Template>
+      <Status>Enabled</Status>
+      <Target>
+        <AFElementRef>.\Plant</AFElementRef>
+      </Target>
+    </AFAnalysis>
+    <AFAnalysis>
+      <Name>Water Usage</Name>
+      <Description>Rollup Sum Water Usage, units = US Gallon</Description>
+      <Template>Water Usage</Template>
+      <Status>Enabled</Status>
+      <Target>
+        <AFElementRef>.\Plant</AFElementRef>
+      </Target>
+    </AFAnalysis>
+  </AFElement>
+</AF>

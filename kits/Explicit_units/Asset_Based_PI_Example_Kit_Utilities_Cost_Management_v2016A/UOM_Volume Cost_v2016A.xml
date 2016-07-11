@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.7.5.7166" ExportMode="NoUniqueID" PISystem="CSSSQLAF2" Created="2016-05-09T12:49:06.1172847Z" id="7589480d-bcb7-4727-b487-6f19df512aa7" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Volume Cost" ExportedType="UOMClass" Identity="UOMClass" PIPersist="192 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{b8ac1265-8ab5-42ec-9a30-2735eba9ffe5}\UOMDatabase\UOMClasses[{7589480d-bcb7-4727-b487-6f19df512aa7}]*CSSSQLAF2\UOMDatabase\UOMClasses[Volume Cost]">
+  <UOMClass>
+    <Name>Volume Cost</Name>
+    <Description>Oil Fuel Cost</Description>
+    <CanonicalUOM>US Dollar/Cubic Meter</CanonicalUOM>
+    <CanonicalAbbr>$/m3</CanonicalAbbr>
+  </UOMClass>
+  <UOM>
+    <Name>US Dollar/Cubic Meter</Name>
+    <Abbreviation>$/m3</Abbreviation>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US Dollar/Barrel</Name>
+    <Abbreviation>$/bbl</Abbreviation>
+    <RefFactor>6.28981077043211</RefFactor>
+    <RefUOM>US Dollar/Cubic Meter</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US Dollar/Cubic Feet</Name>
+    <Abbreviation>$/ft3</Abbreviation>
+    <RefFactor>35.3146667214886</RefFactor>
+    <RefUOM>US Dollar/Cubic Meter</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US Dollar/US Gallon</Name>
+    <Abbreviation>$/US Gal</Abbreviation>
+    <RefFactor>264.172052358148</RefFactor>
+    <RefUOM>US Dollar/Cubic Meter</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US Dollar/Kilo Cubic Feet</Name>
+    <Abbreviation>$/KCF</Abbreviation>
+    <RefFactor>0.0353146667214886</RefFactor>
+    <RefUOM>US Dollar/Cubic Meter</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US Dollar/Thousand Cubic Feet</Name>
+    <Abbreviation>$/MCF</Abbreviation>
+    <RefFactor>0.0353146667214886</RefFactor>
+    <RefUOM>US Dollar/Cubic Meter</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US Dollar/Million Cubic Feet</Name>
+    <Abbreviation>$/MMCF</Abbreviation>
+    <RefFactor>3.53146667214886E-05</RefFactor>
+    <RefUOM>US Dollar/Cubic Meter</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US Cent/US Gallon</Name>
+    <Abbreviation>¢/US Gal</Abbreviation>
+    <RefFactor>2.64172052358148</RefFactor>
+    <RefUOM>US Dollar/Cubic Meter</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+</AF>

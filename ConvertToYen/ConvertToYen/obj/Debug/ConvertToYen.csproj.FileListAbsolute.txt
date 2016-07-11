@@ -1,0 +1,8 @@
+c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\bin\Debug\ConvertToYen.exe.config
+c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\bin\Debug\ConvertToYen.exe
+c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\bin\Debug\ConvertToYen.pdb
+c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\bin\Debug\OSIsoft.AFSDK.dll
+c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\bin\Debug\OSIsoft.AFSDK.xml
+c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.csprojResolveAssemblyReference.cache
+c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.exe
+c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.pdb

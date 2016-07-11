@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.7.5.7166" ExportMode="NoUniqueID" PISystem="CSSSQLAF2" Created="2016-04-21T01:40:30.5043761Z" id="35358dc3-dbea-42e4-9953-f6b9ad62b05f" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="US Currency" ExportedType="UOMClass" Identity="UOMClass" PIPersist="192 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{b8ac1265-8ab5-42ec-9a30-2735eba9ffe5}\UOMDatabase\UOMClasses[{35358dc3-dbea-42e4-9953-f6b9ad62b05f}]*CSSSQLAF2\UOMDatabase\UOMClasses[US Currency]">
+  <UOMClass>
+    <Name>US Currency</Name>
+    <Description>The Money class is based on the US Dollar. Please note that other currencies cannot have a simple conversion to the dollar, a the value compared to the dollar changes with time.</Description>
+    <CanonicalUOM>US Dollar</CanonicalUOM>
+    <CanonicalAbbr>$</CanonicalAbbr>
+  </UOMClass>
+  <UOM>
+    <Name>US Dollar</Name>
+    <Abbreviation>$</Abbreviation>
+    <Class>US Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>US Cent</Name>
+    <Abbreviation>¢</Abbreviation>
+    <RefFactor>0.01</RefFactor>
+    <RefUOM>US Dollar</RefUOM>
+    <Class>US Currency</Class>
+  </UOM>
+</AF>
