@@ -1,6 +1,6 @@
 # AF Example Kit Utilities - Refresh all analysis mapping
 
-This is a collection of scripts, programs and documentation that can help when dealing designing, consuming and translating PI AF Example Kits and more generally any AF Databases. This particular script is used to refresh all analysis mappings, that is it forces a refresh of the information in AF that states which attributes is the output attributes of a particular calculation. This information can get in a bad state if the XML export of an AF Database is imported on a system other than the one that created it.
+This is a collection of scripts, programs and documentation that can help when dealing designing, consuming and translating PI AF Example Kits and more generally any AF Databases. This particular script is used to refresh all analysis mappings, that is it forces a refresh of the information in AF that states which attributes is the output attributes of a particular calculation. This information can get in a bad state if the XML export of an AF Database is imported on a system other than the one that created it. For example, if an attribute is no longer the output of an analysis after it is renamed, the mapping may need to be refreshed before any renaming occurs.
 
 ## Contents
 
