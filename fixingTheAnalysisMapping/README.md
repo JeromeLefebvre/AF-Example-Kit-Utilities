@@ -4,7 +4,7 @@ This is a collection of scripts, programs and documentation that can help when d
 
 ## Contents
 
-* `RefreshMappings` A PowerShell script that makes use of PI AF SDK to refresh a specified database or all databases in a PI System.
+* `RefreshMappings.ps1` A PowerShell script that makes use of PI AF SDK to refresh a specified database or all databases in a PI System.
 
 ## Getting Started
 
