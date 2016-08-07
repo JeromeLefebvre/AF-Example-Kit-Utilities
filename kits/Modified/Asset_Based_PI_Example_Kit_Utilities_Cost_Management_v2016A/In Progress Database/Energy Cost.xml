@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.1.7549" ExportMode="NoUniqueID" PISystem="AFKIT-CLEAN" Created="2016-07-22T08:49:34.9580275Z" id="df9217bb-0166-4d4e-a91b-ed0b7bac6d63" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Energy Cost" ExportedType="UOMClass" Identity="UOMClass" PIPersist="194 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{879ff101-a614-4ee4-84a2-cf56a2c361af}\UOMDatabase\UOMClasses[{df9217bb-0166-4d4e-a91b-ed0b7bac6d63}]*AFKIT-CLEAN\UOMDatabase\UOMClasses[Energy Cost]">
+  <UOMClass>
+    <Name>Energy Cost</Name>
+    <Description>Dollars per Btu</Description>
+    <CanonicalUOM>$/kWh</CanonicalUOM>
+    <CanonicalAbbr>$/kWh</CanonicalAbbr>
+    <UOMBaseClass>
+      <Name>Length</Name>
+      <BasePower>-2</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Mass</Name>
+      <BasePower>-1</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Time</Name>
+      <BasePower>2</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>US Currency</Name>
+      <BasePower>1</BasePower>
+    </UOMBaseClass>
+  </UOMClass>
+  <UOM>
+    <Name>$/kWh</Name>
+    <Abbreviation>$/kWh</Abbreviation>
+    <Class>Energy Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/J</Name>
+    <Abbreviation>$/J</Abbreviation>
+    <RefUOM>$/kWh</RefUOM>
+    <Class>Energy Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/Btu</Name>
+    <Abbreviation>$/Btu</Abbreviation>
+    <RefFactor>0.000947817120313317</RefFactor>
+    <RefUOM>$/J</RefUOM>
+    <Class>Energy Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/kJ</Name>
+    <Abbreviation>$/kJ</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>$/J</RefUOM>
+    <Class>Energy Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/MMBtu</Name>
+    <Abbreviation>$/MMBtu</Abbreviation>
+    <RefFactor>9.47817120313317E-10</RefFactor>
+    <RefUOM>$/J</RefUOM>
+    <Class>Energy Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/MWh</Name>
+    <Abbreviation>$/MWh</Abbreviation>
+    <Description>Dollars per MWh</Description>
+    <RefFactor>2.77777777777778E-10</RefFactor>
+    <RefUOM>$/J</RefUOM>
+    <Class>Energy Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US$/Btu</Name>
+    <Abbreviation>US$/Btu</Abbreviation>
+    <RefUOM>$/kWh</RefUOM>
+    <Class>Energy Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>US$/MMBtu</Name>
+    <Abbreviation>US$/MMBtu</Abbreviation>
+    <RefFactor>1E-06</RefFactor>
+    <RefUOM>US$/Btu</RefUOM>
+    <Class>Energy Cost</Class>
+  </UOM>
+</AF>
