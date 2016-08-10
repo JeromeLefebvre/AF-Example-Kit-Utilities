@@ -1,0 +1,3236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="AllReferences, NoUniqueID" PISystem="JLEFEBVRENEW" Database="source" Description="GEN_FULL_Utilities Management System Asset Based PI Example Kit" Created="2016-08-10T20:14:36.8451194Z" id="abf7a965-926f-46f1-887c-733fb98954ab" ParentKey="705d2a73-06fe-4696-8840-bdc575f73adc" ExportedObject="source" ExportedType="AFDatabase" Identity="Database" PIPersist="142 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\{abf7a965-926f-46f1-887c-733fb98954ab}*JLEFEBVRENEW\source">
+  <UOMDatabase>
+    <Name>UOMDatabase</Name>
+    <UOMClass>
+      <Name>Plane Angle</Name>
+      <CanonicalUOM>radian</CanonicalUOM>
+      <CanonicalAbbr>rad</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Time</Name>
+      <CanonicalUOM>second</CanonicalUOM>
+      <CanonicalAbbr>s</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Angular Velocity</Name>
+      <CanonicalUOM>radian per second</CanonicalUOM>
+      <CanonicalAbbr>rad/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Plane Angle</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Length</Name>
+      <CanonicalUOM>meter</CanonicalUOM>
+      <CanonicalAbbr>m</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Area</Name>
+      <CanonicalUOM>square meter</CanonicalUOM>
+      <CanonicalAbbr>m2</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Mass</Name>
+      <CanonicalUOM>kilogram</CanonicalUOM>
+      <CanonicalAbbr>kg</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Density</Name>
+      <CanonicalUOM>kilogram per cubic meter</CanonicalUOM>
+      <CanonicalAbbr>kg/m3</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>-3</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Dummy</Name>
+      <CanonicalUOM>American Money</CanonicalUOM>
+      <CanonicalAbbr>USD$</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Dynamic Viscosity</Name>
+      <CanonicalUOM>pascal second</CanonicalUOM>
+      <CanonicalAbbr>Pa*s</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Electric Current</Name>
+      <CanonicalUOM>ampere</CanonicalUOM>
+      <CanonicalAbbr>A</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Electric Charge</Name>
+      <CanonicalUOM>coulomb</CanonicalUOM>
+      <CanonicalAbbr>C</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Electric Current</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Electric Potential</Name>
+      <CanonicalUOM>volt</CanonicalUOM>
+      <CanonicalAbbr>V</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Electric Current</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-3</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Electric Resistance</Name>
+      <CanonicalUOM>ohm</CanonicalUOM>
+      <CanonicalAbbr>Ω</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Electric Current</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-3</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Energy</Name>
+      <CanonicalUOM>joule</CanonicalUOM>
+      <CanonicalAbbr>J</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>US Currency</Name>
+      <Description>The Money class is based on the US Dollar. Please note that other currencies cannot have a simple conversion to the dollar, a the value compared to the dollar changes with time.</Description>
+      <CanonicalUOM>$</CanonicalUOM>
+      <CanonicalAbbr>$</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Energy Cost</Name>
+      <Description>Dollars per Btu</Description>
+      <CanonicalUOM>$/kWh</CanonicalUOM>
+      <CanonicalAbbr>$/kWh</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>US Currency</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Energy per Volume</Name>
+      <CanonicalUOM>joules per cubic meter</CanonicalUOM>
+      <CanonicalAbbr>J/m3</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Temperature (Delta)</Name>
+      <CanonicalUOM>delta kelvin</CanonicalUOM>
+      <CanonicalAbbr>delta K</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Entropy, Heat Capacity</Name>
+      <CanonicalUOM>joule per kelvin</CanonicalUOM>
+      <CanonicalAbbr>J/K</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Temperature (Delta)</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Force</Name>
+      <CanonicalUOM>newton</CanonicalUOM>
+      <CanonicalAbbr>N</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Frequency</Name>
+      <CanonicalUOM>hertz</CanonicalUOM>
+      <CanonicalAbbr>Hz</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>JP Currency</Name>
+      <CanonicalUOM>円</CanonicalUOM>
+      <CanonicalAbbr>円</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Luminous Intensity</Name>
+      <CanonicalUOM>candela</CanonicalUOM>
+      <CanonicalAbbr>cd</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Mass Flow Rate</Name>
+      <CanonicalUOM>kilogram per second</CanonicalUOM>
+      <CanonicalAbbr>kg/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Mass per Energy</Name>
+      <Description>Units of mass per units of energy</Description>
+      <CanonicalUOM>kilogram per joule</CanonicalUOM>
+      <CanonicalAbbr>kg/J</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Moles</Name>
+      <CanonicalUOM>mole</CanonicalUOM>
+      <CanonicalAbbr>mol</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Molar Flow Rate</Name>
+      <CanonicalUOM>mole per second</CanonicalUOM>
+      <CanonicalAbbr>mol/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Moles</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Molecular Weight</Name>
+      <CanonicalUOM>kilogram per mole</CanonicalUOM>
+      <CanonicalAbbr>kg/mol</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Moles</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Oil Fuel Cost</Name>
+      <Description>Oil Fuel Cost</Description>
+      <CanonicalUOM>$/m3</CanonicalUOM>
+      <CanonicalAbbr>$/m3</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Power</Name>
+      <CanonicalUOM>watt</CanonicalUOM>
+      <CanonicalAbbr>W</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-3</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Pressure</Name>
+      <CanonicalUOM>pascal</CanonicalUOM>
+      <CanonicalAbbr>Pa</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Quantity</Name>
+      <CanonicalUOM>count</CanonicalUOM>
+      <CanonicalAbbr>count</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Ratio</Name>
+      <CanonicalUOM>percent</CanonicalUOM>
+      <CanonicalAbbr>%</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Shift</Name>
+      <CanonicalUOM>Base</CanonicalUOM>
+      <CanonicalAbbr>base</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Specific Energy</Name>
+      <CanonicalUOM>joule per kilogram</CanonicalUOM>
+      <CanonicalAbbr>J/kg</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Specific Entropy, Specific Heat Capacity</Name>
+      <CanonicalUOM>joule per kilogram kelvin</CanonicalUOM>
+      <CanonicalAbbr>J/(kg K)</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Temperature (Delta)</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Specific Volume</Name>
+      <CanonicalUOM>cubic meter per kilogram</CanonicalUOM>
+      <CanonicalAbbr>m3/kg</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>3</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Speed</Name>
+      <CanonicalUOM>meter per second</CanonicalUOM>
+      <CanonicalAbbr>m/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>1</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Temperature</Name>
+      <CanonicalUOM>kelvin</CanonicalUOM>
+      <CanonicalAbbr>K</CanonicalAbbr>
+    </UOMClass>
+    <UOMClass>
+      <Name>Volume</Name>
+      <CanonicalUOM>cubic meter</CanonicalUOM>
+      <CanonicalAbbr>m3</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>3</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Volume Flow Rate</Name>
+      <CanonicalUOM>cubic meter per second</CanonicalUOM>
+      <CanonicalAbbr>m3/s</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>3</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Time</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Volume per Distance</Name>
+      <Description>Unit of volume per unit of mass per unit of length</Description>
+      <CanonicalUOM>cubic meter per meter</CanonicalUOM>
+      <CanonicalAbbr>m3/m</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOMClass>
+      <Name>Volume per Mass per Distance</Name>
+      <Description>Unit of volume per unit of mass per unit of length</Description>
+      <CanonicalUOM>cubic meter per kilogram per meter</CanonicalUOM>
+      <CanonicalAbbr>m3/(kg m)</CanonicalAbbr>
+      <UOMBaseClass>
+        <Name>Length</Name>
+        <BasePower>2</BasePower>
+      </UOMBaseClass>
+      <UOMBaseClass>
+        <Name>Mass</Name>
+        <BasePower>-1</BasePower>
+      </UOMBaseClass>
+    </UOMClass>
+    <UOM>
+      <Name>radian</Name>
+      <Abbreviation>rad</Abbreviation>
+      <Class>Plane Angle</Class>
+    </UOM>
+    <UOM>
+      <Name>degree</Name>
+      <Abbreviation>°</Abbreviation>
+      <RefFactor>0.0174532925199433</RefFactor>
+      <RefUOM>radian</RefUOM>
+      <Class>Plane Angle</Class>
+    </UOM>
+    <UOM>
+      <Name>revolution</Name>
+      <Abbreviation>r</Abbreviation>
+      <RefFactor>6.28318530717959</RefFactor>
+      <RefUOM>radian</RefUOM>
+      <Class>Plane Angle</Class>
+    </UOM>
+    <UOM>
+      <Name>second</Name>
+      <Abbreviation>s</Abbreviation>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <Name>minute</Name>
+      <Abbreviation>min</Abbreviation>
+      <RefFactor>60</RefFactor>
+      <RefUOM>second</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <Name>hour</Name>
+      <Abbreviation>h</Abbreviation>
+      <RefFactor>60</RefFactor>
+      <RefUOM>minute</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <Name>day</Name>
+      <Abbreviation>d</Abbreviation>
+      <RefFactor>24</RefFactor>
+      <RefUOM>hour</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <Name>month</Name>
+      <Abbreviation>month</Abbreviation>
+      <RefFactor>30.4166666666667</RefFactor>
+      <RefUOM>day</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <Name>week</Name>
+      <Abbreviation>week</Abbreviation>
+      <RefFactor>7</RefFactor>
+      <RefUOM>day</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <Name>year</Name>
+      <Abbreviation>yr</Abbreviation>
+      <RefFactor>365</RefFactor>
+      <RefUOM>day</RefUOM>
+      <Class>Time</Class>
+    </UOM>
+    <UOM>
+      <Name>radian per second</Name>
+      <Abbreviation>rad/s</Abbreviation>
+      <Class>Angular Velocity</Class>
+    </UOM>
+    <UOM>
+      <Name>revolution per minute</Name>
+      <Abbreviation>rpm</Abbreviation>
+      <RefFactor>0.10471975511966</RefFactor>
+      <RefUOM>radian per second</RefUOM>
+      <Class>Angular Velocity</Class>
+    </UOM>
+    <UOM>
+      <Name>meter</Name>
+      <Abbreviation>m</Abbreviation>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>centimeter</Name>
+      <Abbreviation>cm</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>inch</Name>
+      <Abbreviation>in</Abbreviation>
+      <RefFactor>0.0254</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>foot</Name>
+      <Abbreviation>ft</Abbreviation>
+      <RefFactor>12</RefFactor>
+      <RefUOM>inch</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>International nautical mile</Name>
+      <Abbreviation>nmi</Abbreviation>
+      <RefFactor>1852</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>kilometer</Name>
+      <Abbreviation>km</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>mile</Name>
+      <Abbreviation>mi</Abbreviation>
+      <RefFactor>63360</RefFactor>
+      <RefUOM>inch</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>millimeter</Name>
+      <Abbreviation>mm</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>meter</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>sixteenth of an inch</Name>
+      <Abbreviation>sxi</Abbreviation>
+      <RefFactor>0.0625</RefFactor>
+      <RefUOM>inch</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>yard</Name>
+      <Abbreviation>yd</Abbreviation>
+      <RefFactor>36</RefFactor>
+      <RefUOM>inch</RefUOM>
+      <Class>Length</Class>
+    </UOM>
+    <UOM>
+      <Name>square meter</Name>
+      <Abbreviation>m2</Abbreviation>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>square inch</Name>
+      <Abbreviation>in2</Abbreviation>
+      <RefFactor>0.00064516</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>square foot</Name>
+      <Abbreviation>ft2</Abbreviation>
+      <RefFactor>144</RefFactor>
+      <RefUOM>square inch</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>acre</Name>
+      <Abbreviation>acre</Abbreviation>
+      <RefFactor>43560</RefFactor>
+      <RefUOM>square foot</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>hectare</Name>
+      <Abbreviation>ha</Abbreviation>
+      <RefFactor>10000</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>square centimeter</Name>
+      <Abbreviation>cm2</Abbreviation>
+      <RefFactor>0.0001</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>square kilometer</Name>
+      <Abbreviation>km2</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>square mile</Name>
+      <Abbreviation>mi2</Abbreviation>
+      <RefFactor>27878400</RefFactor>
+      <RefUOM>square foot</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>square millimeter</Name>
+      <Abbreviation>mm2</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>square meter</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>square yard</Name>
+      <Abbreviation>yd2</Abbreviation>
+      <RefFactor>9</RefFactor>
+      <RefUOM>square foot</RefUOM>
+      <Class>Area</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram</Name>
+      <Abbreviation>kg</Abbreviation>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>gram</Name>
+      <Abbreviation>g</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>kilogram</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>pound</Name>
+      <Abbreviation>lb</Abbreviation>
+      <RefFactor>0.45359237</RefFactor>
+      <RefUOM>kilogram</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>long ton</Name>
+      <Abbreviation>lton</Abbreviation>
+      <RefFactor>2240</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>milligram</Name>
+      <Abbreviation>mg</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>kilogram</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>million pound</Name>
+      <Abbreviation>MM lb</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>ounce</Name>
+      <Abbreviation>oz</Abbreviation>
+      <RefFactor>0.0625</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>short ton</Name>
+      <Abbreviation>ston</Abbreviation>
+      <RefFactor>2000</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>thousand pound</Name>
+      <Abbreviation>klb</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>ton</Name>
+      <Abbreviation>ton</Abbreviation>
+      <RefFactor>2000</RefFactor>
+      <RefUOM>pound</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>tonne</Name>
+      <Abbreviation>t</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>kilogram</RefUOM>
+      <Class>Mass</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram per cubic meter</Name>
+      <Abbreviation>kg/m3</Abbreviation>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <Name>gram per liter</Name>
+      <Abbreviation>g/L</Abbreviation>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram per liter</Name>
+      <Abbreviation>kg/L</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <Name>pound per barrel</Name>
+      <Abbreviation>lb/bbl</Abbreviation>
+      <RefFactor>2.85301017421182</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <Name>pound per cubic foot</Name>
+      <Abbreviation>lb/ft3</Abbreviation>
+      <RefFactor>16.0184633739601</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <Name>pound per US gallon</Name>
+      <Abbreviation>lb/US gal</Abbreviation>
+      <RefFactor>119.826427316897</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <Name>tonne per cubic meter</Name>
+      <Abbreviation>t/m3</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>kilogram per cubic meter</RefUOM>
+      <Class>Density</Class>
+    </UOM>
+    <UOM>
+      <Name>American Money</Name>
+      <Abbreviation>USD$</Abbreviation>
+      <Class>Dummy</Class>
+    </UOM>
+    <UOM>
+      <Name>UOM3</Name>
+      <Abbreviation>UOM3</Abbreviation>
+      <RefUOM>American Money</RefUOM>
+      <Class>Dummy</Class>
+    </UOM>
+    <UOM>
+      <Name>Yen</Name>
+      <Abbreviation>\</Abbreviation>
+      <RefFactor>112.8</RefFactor>
+      <RefUOM>American Money</RefUOM>
+      <Class>Dummy</Class>
+    </UOM>
+    <UOM>
+      <Name>pascal second</Name>
+      <Abbreviation>Pa*s</Abbreviation>
+      <Class>Dynamic Viscosity</Class>
+    </UOM>
+    <UOM>
+      <Name>poise</Name>
+      <Abbreviation>P</Abbreviation>
+      <RefFactor>0.1</RefFactor>
+      <RefUOM>pascal second</RefUOM>
+      <Class>Dynamic Viscosity</Class>
+    </UOM>
+    <UOM>
+      <Name>ampere</Name>
+      <Abbreviation>A</Abbreviation>
+      <Class>Electric Current</Class>
+    </UOM>
+    <UOM>
+      <Name>milliampere</Name>
+      <Abbreviation>mA</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>ampere</RefUOM>
+      <Class>Electric Current</Class>
+    </UOM>
+    <UOM>
+      <Name>coulomb</Name>
+      <Abbreviation>C</Abbreviation>
+      <Class>Electric Charge</Class>
+    </UOM>
+    <UOM>
+      <Name>Ampere hour</Name>
+      <Abbreviation>Ah</Abbreviation>
+      <RefFactor>3600</RefFactor>
+      <RefUOM>coulomb</RefUOM>
+      <Class>Electric Charge</Class>
+    </UOM>
+    <UOM>
+      <Name>volt</Name>
+      <Abbreviation>V</Abbreviation>
+      <Class>Electric Potential</Class>
+    </UOM>
+    <UOM>
+      <Name>kilovolt</Name>
+      <Abbreviation>kV</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>volt</RefUOM>
+      <Class>Electric Potential</Class>
+    </UOM>
+    <UOM>
+      <Name>megavolt</Name>
+      <Abbreviation>MV</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>volt</RefUOM>
+      <Class>Electric Potential</Class>
+    </UOM>
+    <UOM>
+      <Name>ohm</Name>
+      <Abbreviation>Ω</Abbreviation>
+      <Class>Electric Resistance</Class>
+    </UOM>
+    <UOM>
+      <Name>joule</Name>
+      <Abbreviation>J</Abbreviation>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit</Name>
+      <Abbreviation>Btu</Abbreviation>
+      <RefFactor>1055.05585262</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>calorie</Name>
+      <Abbreviation>cal</Abbreviation>
+      <RefFactor>4.1868</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>gigajoule</Name>
+      <Abbreviation>GJ</Abbreviation>
+      <RefFactor>1000000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>gigawatt hour</Name>
+      <Abbreviation>GWh</Abbreviation>
+      <RefFactor>3600000000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>kilocalorie</Name>
+      <Abbreviation>kcal</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>calorie</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>kilojoule</Name>
+      <Abbreviation>kJ</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>kilowatt hour</Name>
+      <Abbreviation>kWh</Abbreviation>
+      <RefFactor>3600000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>megajoule</Name>
+      <Abbreviation>MJ</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>megawatt hour</Name>
+      <Abbreviation>MWh</Abbreviation>
+      <RefFactor>3600000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>megawatt second</Name>
+      <Abbreviation>MWs</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>million British thermal unit</Name>
+      <Abbreviation>MM Btu</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>British thermal unit</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>million calorie</Name>
+      <Abbreviation>MMcal</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>calorie</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>watt hour</Name>
+      <Abbreviation>Wh</Abbreviation>
+      <RefFactor>3600</RefFactor>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>watt second</Name>
+      <Abbreviation>Ws</Abbreviation>
+      <RefUOM>joule</RefUOM>
+      <Class>Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>$</Name>
+      <Abbreviation>$</Abbreviation>
+      <Class>US Currency</Class>
+    </UOM>
+    <UOM>
+      <Name>¢</Name>
+      <Abbreviation>¢</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>$</RefUOM>
+      <Class>US Currency</Class>
+    </UOM>
+    <UOM>
+      <Name>€</Name>
+      <Abbreviation>€</Abbreviation>
+      <RefUOM>$</RefUOM>
+      <Class>US Currency</Class>
+    </UOM>
+    <UOM>
+      <Name>USDollar</Name>
+      <Abbreviation>US$</Abbreviation>
+      <RefUOM>$</RefUOM>
+      <Class>US Currency</Class>
+    </UOM>
+    <UOM>
+      <Name>$/kWh</Name>
+      <Abbreviation>$/kWh</Abbreviation>
+      <Class>Energy Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/J</Name>
+      <Abbreviation>$/J</Abbreviation>
+      <RefUOM>$/kWh</RefUOM>
+      <Class>Energy Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/Btu</Name>
+      <Abbreviation>$/Btu</Abbreviation>
+      <RefFactor>0.000947817120313317</RefFactor>
+      <RefUOM>$/J</RefUOM>
+      <Class>Energy Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/kJ</Name>
+      <Abbreviation>$/kJ</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>$/J</RefUOM>
+      <Class>Energy Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/MMBtu</Name>
+      <Abbreviation>$/MMBtu</Abbreviation>
+      <RefFactor>9.47817120313317E-10</RefFactor>
+      <RefUOM>$/J</RefUOM>
+      <Class>Energy Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/MWh</Name>
+      <Abbreviation>$/MWh</Abbreviation>
+      <Description>Dollars per MWh</Description>
+      <RefFactor>2.77777777777778E-10</RefFactor>
+      <RefUOM>$/J</RefUOM>
+      <Class>Energy Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>US$/Btu</Name>
+      <Abbreviation>US$/Btu</Abbreviation>
+      <RefUOM>$/kWh</RefUOM>
+      <Class>Energy Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>US$/MMBtu</Name>
+      <Abbreviation>US$/MMBtu</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>US$/Btu</RefUOM>
+      <Class>Energy Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>joules per cubic meter</Name>
+      <Abbreviation>J/m3</Abbreviation>
+      <Class>Energy per Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit per cubic foot</Name>
+      <Abbreviation>Btu/ft3</Abbreviation>
+      <RefFactor>37258.9</RefFactor>
+      <RefUOM>joules per cubic meter</RefUOM>
+      <Class>Energy per Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>kilojoules per cubic meter</Name>
+      <Abbreviation>kJ/m3</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joules per cubic meter</RefUOM>
+      <Class>Energy per Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>megajoules per cubic meter</Name>
+      <Abbreviation>MJ/m3</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>joules per cubic meter</RefUOM>
+      <Class>Energy per Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>million british thermal units per cubic foot</Name>
+      <Abbreviation>MM Btu/ft3</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>British thermal unit per cubic foot</RefUOM>
+      <Class>Energy per Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>delta kelvin</Name>
+      <Abbreviation>delta K</Abbreviation>
+      <Class>Temperature (Delta)</Class>
+    </UOM>
+    <UOM>
+      <Name>delta degree Celsius</Name>
+      <Abbreviation>delta °C</Abbreviation>
+      <RefUOM>delta kelvin</RefUOM>
+      <Class>Temperature (Delta)</Class>
+    </UOM>
+    <UOM>
+      <Name>delta degree Fahrenheit</Name>
+      <Abbreviation>delta °F</Abbreviation>
+      <RefFactor>0.555555555555556</RefFactor>
+      <RefUOM>delta degree Celsius</RefUOM>
+      <Class>Temperature (Delta)</Class>
+    </UOM>
+    <UOM>
+      <Name>delta degree Rankine</Name>
+      <Abbreviation>delta °R</Abbreviation>
+      <RefFactor>0.555555555555556</RefFactor>
+      <RefUOM>delta degree Celsius</RefUOM>
+      <Class>Temperature (Delta)</Class>
+    </UOM>
+    <UOM>
+      <Name>joule per kelvin</Name>
+      <Abbreviation>J/K</Abbreviation>
+      <Class>Entropy, Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit per degree Fahrenheit</Name>
+      <Abbreviation>Btu/°F</Abbreviation>
+      <RefFactor>1899.100534716</RefFactor>
+      <RefUOM>joule per kelvin</RefUOM>
+      <Class>Entropy, Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit per degree Rankine</Name>
+      <Abbreviation>Btu/°R</Abbreviation>
+      <RefFactor>1899.100534716</RefFactor>
+      <RefUOM>joule per kelvin</RefUOM>
+      <Class>Entropy, Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>kilojoule per kelvin</Name>
+      <Abbreviation>kJ/K</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kelvin</RefUOM>
+      <Class>Entropy, Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>newton</Name>
+      <Abbreviation>N</Abbreviation>
+      <Class>Force</Class>
+    </UOM>
+    <UOM>
+      <Name>dyne</Name>
+      <Abbreviation>dyne</Abbreviation>
+      <RefFactor>1E-05</RefFactor>
+      <RefUOM>newton</RefUOM>
+      <Class>Force</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram-force</Name>
+      <Abbreviation>kgf</Abbreviation>
+      <RefFactor>9.80665</RefFactor>
+      <RefUOM>newton</RefUOM>
+      <Class>Force</Class>
+    </UOM>
+    <UOM>
+      <Name>pound-force</Name>
+      <Abbreviation>lbf</Abbreviation>
+      <RefFactor>4.44822161526</RefFactor>
+      <RefUOM>newton</RefUOM>
+      <Class>Force</Class>
+    </UOM>
+    <UOM>
+      <Name>hertz</Name>
+      <Abbreviation>Hz</Abbreviation>
+      <Class>Frequency</Class>
+    </UOM>
+    <UOM>
+      <Name>円</Name>
+      <Abbreviation>円</Abbreviation>
+      <Class>JP Currency</Class>
+    </UOM>
+    <UOM>
+      <Name>candela</Name>
+      <Abbreviation>cd</Abbreviation>
+      <Class>Luminous Intensity</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram per second</Name>
+      <Abbreviation>kg/s</Abbreviation>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>gram per second</Name>
+      <Abbreviation>g/s</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>kilogram per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>pound per second</Name>
+      <Abbreviation>lb/s</Abbreviation>
+      <RefFactor>0.45359237</RefFactor>
+      <RefUOM>kilogram per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>long ton per day</Name>
+      <Abbreviation>lton/d</Abbreviation>
+      <RefFactor>0.0259259259259259</RefFactor>
+      <RefUOM>pound per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>million pound per day</Name>
+      <Abbreviation>MMlb/d</Abbreviation>
+      <RefFactor>11.5740740740741</RefFactor>
+      <RefUOM>pound per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>short ton per day</Name>
+      <Abbreviation>ston/d</Abbreviation>
+      <RefFactor>0.0231481481481481</RefFactor>
+      <RefUOM>pound per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>thousand pound per day</Name>
+      <Abbreviation>klb/d</Abbreviation>
+      <RefFactor>0.0115740740740741</RefFactor>
+      <RefUOM>pound per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>tonne per day</Name>
+      <Abbreviation>t/d</Abbreviation>
+      <RefFactor>0.0115740740740741</RefFactor>
+      <RefUOM>kilogram per second</RefUOM>
+      <Class>Mass Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram per joule</Name>
+      <Abbreviation>kg/J</Abbreviation>
+      <Class>Mass per Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram per kilowatt hour</Name>
+      <Abbreviation>kg/kWh</Abbreviation>
+      <Description>kilogram per kilowatt hour</Description>
+      <RefFactor>2.77777777777778E-07</RefFactor>
+      <RefUOM>kilogram per joule</RefUOM>
+      <Class>Mass per Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>pound per British thermal unit</Name>
+      <Abbreviation>lb/Btu</Abbreviation>
+      <RefFactor>0.000429922613929493</RefFactor>
+      <RefUOM>kilogram per joule</RefUOM>
+      <Class>Mass per Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>pounds per horsepower hour</Name>
+      <Abbreviation>lb/(hp h)</Abbreviation>
+      <Description>pounds per horsepower hour</Description>
+      <RefFactor>1.68965941067217E-07</RefFactor>
+      <RefUOM>kilogram per joule</RefUOM>
+      <Class>Mass per Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>mole</Name>
+      <Abbreviation>mol</Abbreviation>
+      <Class>Moles</Class>
+    </UOM>
+    <UOM>
+      <Name>gram mole</Name>
+      <Abbreviation>gmol</Abbreviation>
+      <RefUOM>mole</RefUOM>
+      <Class>Moles</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram mole</Name>
+      <Abbreviation>kmol</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>mole</RefUOM>
+      <Class>Moles</Class>
+    </UOM>
+    <UOM>
+      <Name>pound mole</Name>
+      <Abbreviation>lbmol</Abbreviation>
+      <RefFactor>453.59237</RefFactor>
+      <RefUOM>mole</RefUOM>
+      <Class>Moles</Class>
+    </UOM>
+    <UOM>
+      <Name>mole per second</Name>
+      <Abbreviation>mol/s</Abbreviation>
+      <Class>Molar Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>gram mole per second</Name>
+      <Abbreviation>gmol/s</Abbreviation>
+      <RefUOM>mole per second</RefUOM>
+      <Class>Molar Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram mole per second</Name>
+      <Abbreviation>kmol/s</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>mole per second</RefUOM>
+      <Class>Molar Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>pound mole per second</Name>
+      <Abbreviation>lbmol/s</Abbreviation>
+      <RefFactor>453.59237</RefFactor>
+      <RefUOM>mole per second</RefUOM>
+      <Class>Molar Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram per mole</Name>
+      <Abbreviation>kg/mol</Abbreviation>
+      <Class>Molecular Weight</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram per kilogram mole</Name>
+      <Abbreviation>kg/kmol</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>kilogram per mole</RefUOM>
+      <Class>Molecular Weight</Class>
+    </UOM>
+    <UOM>
+      <Name>gram per gram mole</Name>
+      <Abbreviation>g/gmol</Abbreviation>
+      <RefUOM>kilogram per kilogram mole</RefUOM>
+      <Class>Molecular Weight</Class>
+    </UOM>
+    <UOM>
+      <Name>pound per pound mole</Name>
+      <Abbreviation>lb/lbmol</Abbreviation>
+      <RefUOM>kilogram per kilogram mole</RefUOM>
+      <Class>Molecular Weight</Class>
+    </UOM>
+    <UOM>
+      <Name>$/m3</Name>
+      <Abbreviation>$/m3</Abbreviation>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/bbl</Name>
+      <Abbreviation>$/bbl</Abbreviation>
+      <RefFactor>6.28981077043211</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/ft3</Name>
+      <Abbreviation>$/ft3</Abbreviation>
+      <RefFactor>35.3146667214886</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/Gal</Name>
+      <Abbreviation>$/Gal</Abbreviation>
+      <RefFactor>264.172052358148</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/KCF</Name>
+      <Abbreviation>$/KCF</Abbreviation>
+      <RefFactor>0.0353146667214886</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/MCF</Name>
+      <Abbreviation>$/MCF</Abbreviation>
+      <RefFactor>0.0353146667214886</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/MMCF</Name>
+      <Abbreviation>$/MMCF</Abbreviation>
+      <RefFactor>3.53146667214886E-05</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>$/US Gal</Name>
+      <Abbreviation>$/US Gal</Abbreviation>
+      <RefFactor>264.172052358148</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>¢/Gal</Name>
+      <Abbreviation>¢/Gal</Abbreviation>
+      <RefFactor>2.64172052358148</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>¢/US Gal</Name>
+      <Abbreviation>¢/US Gal</Abbreviation>
+      <RefFactor>2.64172052358148</RefFactor>
+      <RefUOM>$/m3</RefUOM>
+      <Class>Oil Fuel Cost</Class>
+    </UOM>
+    <UOM>
+      <Name>watt</Name>
+      <Abbreviation>W</Abbreviation>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit per day</Name>
+      <Abbreviation>Btu/d</Abbreviation>
+      <RefFactor>0.01221129458977421</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit per hour</Name>
+      <Abbreviation>Btu/h</Abbreviation>
+      <RefFactor>0.29307107017222</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>calorie per second</Name>
+      <Abbreviation>cal/s</Abbreviation>
+      <RefFactor>4.1868</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>gigawatt</Name>
+      <Abbreviation>GW</Abbreviation>
+      <RefFactor>1000000000</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>horsepower</Name>
+      <Abbreviation>hp</Abbreviation>
+      <RefFactor>745.699871582</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>joule per day</Name>
+      <Abbreviation>J/d</Abbreviation>
+      <RefFactor>1.15740740740741E-05</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>joule per second</Name>
+      <Abbreviation>J/s</Abbreviation>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>kilovolt-ampere reactive</Name>
+      <Abbreviation>kVAR</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>kilowatt</Name>
+      <Abbreviation>kW</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>megajoule per hour</Name>
+      <Abbreviation>MJ/h</Abbreviation>
+      <RefFactor>277.777777777778</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>megavolt-ampere reactive</Name>
+      <Abbreviation>MVAR</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>megawatt</Name>
+      <Abbreviation>MW</Abbreviation>
+      <Description>Generated Power</Description>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>million British thermal unit per day</Name>
+      <Abbreviation>MM Btu/d</Abbreviation>
+      <RefFactor>41666.6666666667</RefFactor>
+      <RefUOM>British thermal unit per hour</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>million British thermal unit per hour</Name>
+      <Abbreviation>MM Btu/h</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>British thermal unit per hour</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>million calorie per hour</Name>
+      <Abbreviation>MMcal/h</Abbreviation>
+      <RefFactor>1163</RefFactor>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>volt-ampere reactive</Name>
+      <Abbreviation>VAR</Abbreviation>
+      <Description>Reactive Power</Description>
+      <RefUOM>watt</RefUOM>
+      <Class>Power</Class>
+    </UOM>
+    <UOM>
+      <Name>pascal</Name>
+      <Abbreviation>Pa</Abbreviation>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>atmosphere</Name>
+      <Abbreviation>atm</Abbreviation>
+      <RefFactor>101325</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>bar</Name>
+      <Abbreviation>bar</Abbreviation>
+      <RefFactor>100000</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>inches of mercury</Name>
+      <Abbreviation>inHg</Abbreviation>
+      <RefFactor>3386.38815789</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram-force per square centimeter</Name>
+      <Abbreviation>kgf/cm2</Abbreviation>
+      <RefFactor>98066.5</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>kilogram-force per square meter</Name>
+      <Abbreviation>kgf/m2</Abbreviation>
+      <RefFactor>9.80665</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>kilopascal</Name>
+      <Abbreviation>kPa</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>millimeter of mercury</Name>
+      <Abbreviation>mmHg</Abbreviation>
+      <RefFactor>133.322368421</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>newton per square meter</Name>
+      <Abbreviation>N/m2</Abbreviation>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>pound-force per square inch</Name>
+      <Abbreviation>psi</Abbreviation>
+      <RefFactor>6894.75729316836</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>pound-force per square inch (customary)</Name>
+      <Abbreviation>psia</Abbreviation>
+      <RefFactor>6894.75729316836</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>torr</Name>
+      <Abbreviation>torr</Abbreviation>
+      <RefFactor>133.322368421</RefFactor>
+      <RefUOM>pascal</RefUOM>
+      <Class>Pressure</Class>
+    </UOM>
+    <UOM>
+      <Name>count</Name>
+      <Abbreviation>count</Abbreviation>
+      <Class>Quantity</Class>
+    </UOM>
+    <UOM>
+      <Name>percent</Name>
+      <Abbreviation>%</Abbreviation>
+      <Class>Ratio</Class>
+    </UOM>
+    <UOM>
+      <Name>parts per billion</Name>
+      <Abbreviation>ppb</Abbreviation>
+      <RefFactor>1E-07</RefFactor>
+      <RefUOM>percent</RefUOM>
+      <Class>Ratio</Class>
+    </UOM>
+    <UOM>
+      <Name>parts per million</Name>
+      <Abbreviation>ppm</Abbreviation>
+      <RefFactor>0.0001</RefFactor>
+      <RefUOM>percent</RefUOM>
+      <Class>Ratio</Class>
+    </UOM>
+    <UOM>
+      <Name>Base</Name>
+      <Abbreviation>base</Abbreviation>
+      <Class>Shift</Class>
+    </UOM>
+    <UOM>
+      <Name>Shift</Name>
+      <Abbreviation>shift</Abbreviation>
+      <RefFormulaFrom>base - 100</RefFormulaFrom>
+      <RefFormulaTo>shift + 100</RefFormulaTo>
+      <RefUOM>Base</RefUOM>
+      <Class>Shift</Class>
+    </UOM>
+    <UOM>
+      <Name>joule per kilogram</Name>
+      <Abbreviation>J/kg</Abbreviation>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit per pound</Name>
+      <Abbreviation>Btu/lb</Abbreviation>
+      <RefFactor>2326</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>joule per gram</Name>
+      <Abbreviation>J/g</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>kilocalorie per kilogram</Name>
+      <Abbreviation>kcal/kg</Abbreviation>
+      <RefFactor>4186.8</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>kilojoule per kilogram</Name>
+      <Abbreviation>kJ/kg</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>kilojoule per pound</Name>
+      <Abbreviation>kJ/lb</Abbreviation>
+      <RefFactor>2204.62262184878</RefFactor>
+      <RefUOM>joule per kilogram</RefUOM>
+      <Class>Specific Energy</Class>
+    </UOM>
+    <UOM>
+      <Name>joule per kilogram kelvin</Name>
+      <Abbreviation>J/(kg K)</Abbreviation>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit per pound degree Fahrenheit</Name>
+      <Abbreviation>Btu/(lb °F)</Abbreviation>
+      <RefFactor>4186.8</RefFactor>
+      <RefUOM>joule per kilogram kelvin</RefUOM>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>British thermal unit per pound degree Rankine</Name>
+      <Abbreviation>Btu/(lb °R)</Abbreviation>
+      <RefFactor>4186.8</RefFactor>
+      <RefUOM>joule per kilogram kelvin</RefUOM>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>joule per gram kelvin</Name>
+      <Abbreviation>J/(g K)</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kilogram kelvin</RefUOM>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>kilojoule per kilogram kelvin</Name>
+      <Abbreviation>kJ/(kg K)</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>joule per kilogram kelvin</RefUOM>
+      <Class>Specific Entropy, Specific Heat Capacity</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic meter per kilogram</Name>
+      <Abbreviation>m3/kg</Abbreviation>
+      <Class>Specific Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic centimeter per gram</Name>
+      <Abbreviation>cm3/g</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>cubic meter per kilogram</RefUOM>
+      <Class>Specific Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic foot per pound</Name>
+      <Abbreviation>ft3/lb</Abbreviation>
+      <RefFactor>0.0624279605761446</RefFactor>
+      <RefUOM>cubic meter per kilogram</RefUOM>
+      <Class>Specific Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>meter per second</Name>
+      <Abbreviation>m/s</Abbreviation>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <Name>centimeter per second</Name>
+      <Abbreviation>cm/s</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <Name>foot per second</Name>
+      <Abbreviation>ft/s</Abbreviation>
+      <RefFactor>0.3048</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <Name>International nautical mile per hour</Name>
+      <Abbreviation>nmi/h</Abbreviation>
+      <RefFactor>0.514444444444444</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <Name>kilometer per hour</Name>
+      <Abbreviation>km/h</Abbreviation>
+      <RefFactor>0.277777777777778</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <Name>mile per hour</Name>
+      <Abbreviation>mi/h</Abbreviation>
+      <RefFactor>0.44704</RefFactor>
+      <RefUOM>meter per second</RefUOM>
+      <Class>Speed</Class>
+    </UOM>
+    <UOM>
+      <Name>kelvin</Name>
+      <Abbreviation>K</Abbreviation>
+      <Class>Temperature</Class>
+    </UOM>
+    <UOM>
+      <Name>degree Celsius</Name>
+      <Abbreviation>°C</Abbreviation>
+      <RefOffset>273.15</RefOffset>
+      <RefUOM>kelvin</RefUOM>
+      <Class>Temperature</Class>
+    </UOM>
+    <UOM>
+      <Name>degree Fahrenheit</Name>
+      <Abbreviation>°F</Abbreviation>
+      <RefFactor>0.555555555555556</RefFactor>
+      <RefOffset>-17.7777777777778</RefOffset>
+      <RefUOM>degree Celsius</RefUOM>
+      <Class>Temperature</Class>
+    </UOM>
+    <UOM>
+      <Name>degree Rankine</Name>
+      <Abbreviation>°R</Abbreviation>
+      <RefOffset>-459.67</RefOffset>
+      <RefUOM>degree Fahrenheit</RefUOM>
+      <Class>Temperature</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic meter</Name>
+      <Abbreviation>m3</Abbreviation>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic foot</Name>
+      <Abbreviation>ft3</Abbreviation>
+      <RefFactor>0.028316846592</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>acre foot</Name>
+      <Abbreviation>acre ft</Abbreviation>
+      <RefFactor>43560</RefFactor>
+      <RefUOM>cubic foot</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon</Name>
+      <Abbreviation>US gal</Abbreviation>
+      <RefFactor>0.003785411784</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>barrel</Name>
+      <Abbreviation>bbl</Abbreviation>
+      <RefFactor>42</RefFactor>
+      <RefUOM>US gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic centimeter</Name>
+      <Abbreviation>cm3</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>Imperial gallon</Name>
+      <Abbreviation>Imp gal</Abbreviation>
+      <RefFactor>1.20094992550485</RefFactor>
+      <RefUOM>US gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>kiloliter</Name>
+      <Abbreviation>kL</Abbreviation>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>liter</Name>
+      <Abbreviation>L</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>megaliter</Name>
+      <Abbreviation>M L</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>milliliter</Name>
+      <Abbreviation>mL</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>million barrel</Name>
+      <Abbreviation>MMbbl</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>barrel</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>million imperial gallon</Name>
+      <Abbreviation>Imp Mgal</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>Imperial gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>million US gallon</Name>
+      <Abbreviation>US Mgal</Abbreviation>
+      <RefFactor>1000000</RefFactor>
+      <RefUOM>US gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>thousand barrel</Name>
+      <Abbreviation>kbbl</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>barrel</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>thousand cubic meter</Name>
+      <Abbreviation>k m3</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>cubic meter</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>thousand imperial gallon</Name>
+      <Abbreviation>Imp kgal</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>Imperial gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>thousand US gallon</Name>
+      <Abbreviation>US kgal</Abbreviation>
+      <RefFactor>1000</RefFactor>
+      <RefUOM>US gallon</RefUOM>
+      <Class>Volume</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic meter per second</Name>
+      <Abbreviation>m3/s</Abbreviation>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>barrel per day</Name>
+      <Abbreviation>bbl/d</Abbreviation>
+      <RefFactor>1.84013072833333E-06</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic centimeter per second</Name>
+      <Abbreviation>cm3/s</Abbreviation>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic foot per second</Name>
+      <Abbreviation>ft3/s</Abbreviation>
+      <RefFactor>0.028316846592</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic meter per hour</Name>
+      <Abbreviation>m3/h</Abbreviation>
+      <RefFactor>0.000277777777777778</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>Imperial gallon per minute</Name>
+      <Abbreviation>Imp gal/min</Abbreviation>
+      <RefFactor>7.57681666666663E-05</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>liter per second</Name>
+      <Abbreviation>L/s</Abbreviation>
+      <RefFactor>0.001</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per hour</Name>
+      <Abbreviation>US gal/h</Abbreviation>
+      <RefFactor>1.0515E-06</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per day</Name>
+      <Abbreviation>US gal/d</Abbreviation>
+      <Description>Use: 4.381263638889E-08</Description>
+      <RefFormulaFrom>US gal/h / 24</RefFormulaFrom>
+      <RefFormulaTo>24 * US gal/d</RefFormulaTo>
+      <RefUOM>US gallon per hour</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per day1</Name>
+      <Abbreviation>US gal/d1</Abbreviation>
+      <Description>Use: 4.381263638889E-08</Description>
+      <RefFactor>4.381263638889E-08</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per minute</Name>
+      <Abbreviation>US gal/min</Abbreviation>
+      <RefFactor>6.30901964E-05</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per seconds</Name>
+      <Abbreviation>US gal/s</Abbreviation>
+      <RefFactor>0.00378541</RefFactor>
+      <RefUOM>cubic meter per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic meter per meter</Name>
+      <Abbreviation>m3/m</Abbreviation>
+      <Class>Volume per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>liter per kilometer</Name>
+      <Abbreviation>L/km</Abbreviation>
+      <Description>liter per kilometer</Description>
+      <RefFactor>1E-06</RefFactor>
+      <RefUOM>cubic meter per meter</RefUOM>
+      <Class>Volume per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>liter per hundred kilometers</Name>
+      <Abbreviation>L/100 km</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>liter per kilometer</RefUOM>
+      <Class>Volume per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per mile</Name>
+      <Abbreviation>US gal/mi</Abbreviation>
+      <RefFactor>2.35214583333333E-06</RefFactor>
+      <RefUOM>cubic meter per meter</RefUOM>
+      <Class>Volume per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per hundred miles</Name>
+      <Abbreviation>US gal/100 mi</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>US gallon per mile</RefUOM>
+      <Class>Volume per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>cubic meter per kilogram per meter</Name>
+      <Abbreviation>m3/(kg m)</Abbreviation>
+      <Class>Volume per Mass per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>liter per tonne per kilometer</Name>
+      <Abbreviation>L/(t km)</Abbreviation>
+      <RefFactor>1E-09</RefFactor>
+      <RefUOM>cubic meter per kilogram per meter</RefUOM>
+      <Class>Volume per Mass per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>liter per tonne per hundred kilometers</Name>
+      <Abbreviation>L/(t 100km)</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>liter per tonne per kilometer</RefUOM>
+      <Class>Volume per Mass per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per ton per mile</Name>
+      <Abbreviation>US gal(ton mi)</Abbreviation>
+      <RefFactor>2.592796957027E-09</RefFactor>
+      <RefUOM>cubic meter per kilogram per meter</RefUOM>
+      <Class>Volume per Mass per Distance</Class>
+    </UOM>
+    <UOM>
+      <Name>US gallon per ton per hundred miles</Name>
+      <Abbreviation>US gal/(ton 100 mi)</Abbreviation>
+      <RefFactor>0.01</RefFactor>
+      <RefUOM>US gallon per ton per mile</RefUOM>
+      <Class>Volume per Mass per Distance</Class>
+    </UOM>
+  </UOMDatabase>
+  <AFDatabase>
+    <Name>source</Name>
+    <Description>GEN_FULL_Utilities Management System Asset Based PI Example Kit</Description>
+    <AFAnalysisCategory>
+      <Name>Cost</Name>
+      <Description>Utility Cost</Description>
+    </AFAnalysisCategory>
+    <AFAnalysisCategory>
+      <Name>Downtime</Name>
+      <Description>Downtime Event</Description>
+    </AFAnalysisCategory>
+    <AFAnalysisCategory>
+      <Name>Random Data</Name>
+      <Description>Random Data generation</Description>
+    </AFAnalysisCategory>
+    <AFAnalysisCategory>
+      <Name>Usage</Name>
+      <Description>Energy and Utility Usage</Description>
+    </AFAnalysisCategory>
+    <AFAttributeCategory>
+      <Name>Availability</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Cost</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Downtime</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Location</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Random Data</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Specification</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Tagname</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Usage</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Utilities Price</Name>
+    </AFAttributeCategory>
+    <AFElementCategory>
+      <Name>Asset</Name>
+      <Description>Asset</Description>
+    </AFElementCategory>
+    <AFElementCategory>
+      <Name>Base</Name>
+      <Description>Base Specifications Template</Description>
+    </AFElementCategory>
+    <AFElementCategory>
+      <Name>Downtime</Name>
+      <Description>Element Downtime</Description>
+    </AFElementCategory>
+    <AFElementCategory>
+      <Name>Equipment</Name>
+      <Description>Element Equipment</Description>
+    </AFElementCategory>
+    <AFTableCategory>
+      <Name>Conversion Table</Name>
+    </AFTableCategory>
+    <AFTableCategory>
+      <Name>Specifications</Name>
+    </AFTableCategory>
+    <AFTable>
+      <Name>OSIDemo_Asset Location</Name>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="OSIDemo_Asset_x0020_LocationDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OSIDemo_Asset_x0020_LocationDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OSIDemo_Asset_x0020_Location">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Asset_x0020_Location" type="xs:string" minOccurs="0" />
+              <xs:element name="Physical_x0020_Location" type="xs:string" minOccurs="0" />
+              <xs:element name="Latitude" type="xs:float" default="0" minOccurs="0" />
+              <xs:element name="Longitude" type="xs:float" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><OSIDemo_Asset_x0020_LocationDataSet>&#xD;
+  <OSIDemo_Asset_x0020_Location>&#xD;
+    <Asset_x0020_Location>Plant</Asset_x0020_Location>&#xD;
+    <Physical_x0020_Location>San Leandro</Physical_x0020_Location>&#xD;
+    <Latitude>37.72229</Latitude>&#xD;
+    <Longitude>-122.162827</Longitude>&#xD;
+  </OSIDemo_Asset_x0020_Location>&#xD;
+  <OSIDemo_Asset_x0020_Location>&#xD;
+    <Asset_x0020_Location>Plant1</Asset_x0020_Location>&#xD;
+    <Physical_x0020_Location>Cleveland</Physical_x0020_Location>&#xD;
+    <Latitude>41.50377</Latitude>&#xD;
+    <Longitude>-81.46719</Longitude>&#xD;
+  </OSIDemo_Asset_x0020_Location>&#xD;
+  <OSIDemo_Asset_x0020_Location>&#xD;
+    <Asset_x0020_Location>Plant2</Asset_x0020_Location>&#xD;
+    <Physical_x0020_Location>Johnson City</Physical_x0020_Location>&#xD;
+    <Latitude>36.2975</Latitude>&#xD;
+    <Longitude>-82.3846</Longitude>&#xD;
+  </OSIDemo_Asset_x0020_Location>&#xD;
+</OSIDemo_Asset_x0020_LocationDataSet></DataTable>
+      <AFTableCategoryRef>Specifications</AFTableCategoryRef>
+    </AFTable>
+    <AFTable>
+      <Name>OSIDemo_Electric Specs</Name>
+      <Description>Electrical Specifications Table</Description>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="OSIDemo_Electric_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OSIDemo_Electric_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OSIDemo_Electric_x0020_Specs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Volts" type="xs:float" default="0" minOccurs="0" />
+              <xs:element name="KWatts" type="xs:float" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><OSIDemo_Electric_x0020_SpecsDataSet>&#xD;
+  <OSIDemo_Electric_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>EPump</Equipment_x0020_Type>&#xD;
+    <Volts>120</Volts>&#xD;
+    <KWatts>1500</KWatts>&#xD;
+  </OSIDemo_Electric_x0020_Specs>&#xD;
+  <OSIDemo_Electric_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>EMotor</Equipment_x0020_Type>&#xD;
+    <Volts>120</Volts>&#xD;
+    <KWatts>1800</KWatts>&#xD;
+  </OSIDemo_Electric_x0020_Specs>&#xD;
+  <OSIDemo_Electric_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>ECompressor</Equipment_x0020_Type>&#xD;
+    <Volts>240</Volts>&#xD;
+    <KWatts>4080</KWatts>&#xD;
+  </OSIDemo_Electric_x0020_Specs>&#xD;
+  <OSIDemo_Electric_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>EHVAC</Equipment_x0020_Type>&#xD;
+    <Volts>240</Volts>&#xD;
+    <KWatts>4800</KWatts>&#xD;
+  </OSIDemo_Electric_x0020_Specs>&#xD;
+</OSIDemo_Electric_x0020_SpecsDataSet></DataTable>
+      <EffectiveDate>2015-01-01T05:00:00Z</EffectiveDate>
+      <AFTableCategoryRef>Specifications</AFTableCategoryRef>
+    </AFTable>
+    <AFTable>
+      <Name>OSIDemo_Gas Specs</Name>
+      <Description>Gas Specifications Table</Description>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="OSIDemo_Gas_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OSIDemo_Gas_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OSIDemo_Gas_x0020_Specs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="BTU_x0020_Rating" type="xs:float" default="0" minOccurs="0" />
+              <xs:element name="Pressure_x0020_Factor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><OSIDemo_Gas_x0020_SpecsDataSet>&#xD;
+  <OSIDemo_Gas_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>GPump</Equipment_x0020_Type>&#xD;
+    <BTU_x0020_Rating>15000</BTU_x0020_Rating>&#xD;
+    <Pressure_x0020_Factor>1.000</Pressure_x0020_Factor>&#xD;
+  </OSIDemo_Gas_x0020_Specs>&#xD;
+  <OSIDemo_Gas_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>GMotor</Equipment_x0020_Type>&#xD;
+    <BTU_x0020_Rating>18000</BTU_x0020_Rating>&#xD;
+    <Pressure_x0020_Factor>1.005</Pressure_x0020_Factor>&#xD;
+  </OSIDemo_Gas_x0020_Specs>&#xD;
+  <OSIDemo_Gas_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>GCompressor</Equipment_x0020_Type>&#xD;
+    <BTU_x0020_Rating>25000</BTU_x0020_Rating>&#xD;
+    <Pressure_x0020_Factor>1.010</Pressure_x0020_Factor>&#xD;
+  </OSIDemo_Gas_x0020_Specs>&#xD;
+  <OSIDemo_Gas_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>GHVAC</Equipment_x0020_Type>&#xD;
+    <BTU_x0020_Rating>35000</BTU_x0020_Rating>&#xD;
+    <Pressure_x0020_Factor>1.025</Pressure_x0020_Factor>&#xD;
+  </OSIDemo_Gas_x0020_Specs>&#xD;
+</OSIDemo_Gas_x0020_SpecsDataSet></DataTable>
+      <EffectiveDate>2015-01-01T05:00:00Z</EffectiveDate>
+      <AFTableCategoryRef>Specifications</AFTableCategoryRef>
+    </AFTable>
+    <AFTable>
+      <Name>OSIDemo_Generic Specifications</Name>
+      <Description>Generic Equipment Specifications</Description>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="OSIDemo_Generic_x0020_SpecificationsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OSIDemo_Generic_x0020_SpecificationsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OSIDemo_Generic_x0020_Specifications">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Serial_x0020_Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Installation_x0020_Date" msdata:DateTimeMode="Local" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Product" type="xs:string" minOccurs="0" />
+              <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><OSIDemo_Generic_x0020_SpecificationsDataSet>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>EPump</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Electric User1</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2015-06-01T09:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>P-100</Product>&#xD;
+    <Manufacturer>Pumpworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>EMotor</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Electric User2</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2015-05-05T15:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>M-100</Product>&#xD;
+    <Manufacturer>Motorworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>GPump</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Gas User1</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2015-01-01T08:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>GasP-100</Product>&#xD;
+    <Manufacturer>Pumpworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>GMotor</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Gas User2</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2015-09-10T11:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>GasM-100</Product>&#xD;
+    <Manufacturer>Motorworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>WPump</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Water User1</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2015-04-08T00:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>H2OP-100</Product>&#xD;
+    <Manufacturer>Pumpworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>WMotor</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Water User2</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2015-04-20T16:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>H2OM-100</Product>&#xD;
+    <Manufacturer>Motorworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>GCompressor</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Gas User3</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2014-09-30T00:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>GasC-100</Product>&#xD;
+    <Manufacturer>Compworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>GHvac</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Gas User4</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2013-10-13T00:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>GasH-100</Product>&#xD;
+    <Manufacturer>HVACworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>ECompressor</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Electric User3</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2014-10-13T00:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>C-100</Product>&#xD;
+    <Manufacturer>Compworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>EHvac</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Electric User4</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2013-10-16T00:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>H-100</Product>&#xD;
+    <Manufacturer>HVACworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>WCompressor</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Water User3</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2015-01-16T00:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>H2OC-100</Product>&#xD;
+    <Manufacturer>Compworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+  <OSIDemo_Generic_x0020_Specifications>&#xD;
+    <Equipment_x0020_Type>WHvac</Equipment_x0020_Type>&#xD;
+    <Serial_x0020_Number>Water User4</Serial_x0020_Number>&#xD;
+    <Installation_x0020_Date>2015-05-16T00:00:00+00:00</Installation_x0020_Date>&#xD;
+    <Product>H2OH-100</Product>&#xD;
+    <Manufacturer>HVACworld</Manufacturer>&#xD;
+  </OSIDemo_Generic_x0020_Specifications>&#xD;
+</OSIDemo_Generic_x0020_SpecificationsDataSet></DataTable>
+      <AFTableCategoryRef>Specifications</AFTableCategoryRef>
+    </AFTable>
+    <AFTable>
+      <Name>OSIDemo_Water Specs</Name>
+      <Description>Water Specifications Table</Description>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="OSIDemo_Water_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OSIDemo_Water_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OSIDemo_Water_x0020_Specs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Max_x0020_Flow" type="xs:float" default="0" minOccurs="0" />
+              <xs:element name="Flow_x0020_Rate_x0020_Factor" type="xs:float" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><OSIDemo_Water_x0020_SpecsDataSet>&#xD;
+  <OSIDemo_Water_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>WPump</Equipment_x0020_Type>&#xD;
+    <Max_x0020_Flow>28</Max_x0020_Flow>&#xD;
+    <Flow_x0020_Rate_x0020_Factor>0.75</Flow_x0020_Rate_x0020_Factor>&#xD;
+  </OSIDemo_Water_x0020_Specs>&#xD;
+  <OSIDemo_Water_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>WMotor</Equipment_x0020_Type>&#xD;
+    <Max_x0020_Flow>30</Max_x0020_Flow>&#xD;
+    <Flow_x0020_Rate_x0020_Factor>0.71</Flow_x0020_Rate_x0020_Factor>&#xD;
+  </OSIDemo_Water_x0020_Specs>&#xD;
+  <OSIDemo_Water_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>WCompressor</Equipment_x0020_Type>&#xD;
+    <Max_x0020_Flow>33</Max_x0020_Flow>&#xD;
+    <Flow_x0020_Rate_x0020_Factor>0.69</Flow_x0020_Rate_x0020_Factor>&#xD;
+  </OSIDemo_Water_x0020_Specs>&#xD;
+  <OSIDemo_Water_x0020_Specs>&#xD;
+    <Equipment_x0020_Type>WHVAC</Equipment_x0020_Type>&#xD;
+    <Max_x0020_Flow>35</Max_x0020_Flow>&#xD;
+    <Flow_x0020_Rate_x0020_Factor>0.6</Flow_x0020_Rate_x0020_Factor>&#xD;
+  </OSIDemo_Water_x0020_Specs>&#xD;
+</OSIDemo_Water_x0020_SpecsDataSet></DataTable>
+      <EffectiveDate>2015-01-01T05:00:00Z</EffectiveDate>
+      <AFTableCategoryRef>Specifications</AFTableCategoryRef>
+    </AFTable>
+    <AFEnumerationSet>
+      <Name>Fault Code</Name>
+      <AFEnumerationValue>
+        <Name>Breaker Failure</Name>
+        <Value>1</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Overload</Name>
+        <Value>2</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Comm failure</Name>
+        <Value>3</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Equipment failure</Name>
+        <Value>4</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Running State</Name>
+        <Value>0</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Pump Failure</Name>
+        <Value>5</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Valve Failure</Name>
+        <Value>6</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Pressure Failure</Name>
+        <Value>7</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Turbine overload</Name>
+        <Value>8</Value>
+      </AFEnumerationValue>
+    </AFEnumerationSet>
+    <AFElementTemplate>
+      <Name>Building</Name>
+      <Description>Building name</Description>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFElement">Plant\Building1</Value>
+      </AFExtendedProperty>
+      <AFExtendedProperty>
+        <Name>ProcessBook.AFDisplayBuilder.UTCChanged</Name>
+        <Value type="Double">1445300987</Value>
+      </AFExtendedProperty>
+      <AFExtendedProperty>
+        <Name>ProcessBook.AFModeler.Graphic</Name>
+        <Value type="String">&lt;?xml version="1.0" standalone="no"?&gt;&#xD;
+&lt;svg xmlns:svg="OSI_SVG_20090601" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:PB="urn:osisoft-com-pb" xmlns:PBI="urn:osisoft-com-interface" xmlns:PBD="urn:osisoft-com-data" xmlns:xsi="http://www.w3.org/1999/XMLSchema/instance" svg:sid="" xlink:xid="" PB:pid="" width="100%" height="100%" viewBox="0 0 2789 1236" fill="#C0C0C0" image-rendering="optimizeSpeed"&gt;&#xD;
+	&lt;defs&gt;&lt;/defs&gt;&lt;rect x="0" y="0" width="2789" height="1236" PB:Type="55" PB:DocMajorVersionNum="3" PB:DocMinorVersionNum="26" PB:DocGroup="1" PB:DisplayServerTimeZone="True" PB:wnHeight="527" PB:wnWidth="1091" PB:Zoom="100" PB:wnState="2" PB:LocalID="1033"/&gt;&lt;PB:Dataset id="AF2_DS" PB:Type="57" PB:Context="0" PB:Description="" PB:RefreshInterval="10000" PB:Stepped="False" PB:DSType="3" PB:DSVisible="True"&gt;&lt;PB:DSDatapoint id="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1\Gas User1|Gas Flow_DP"/&gt;&lt;PB:DSDatapoint id="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1\Gas User1|Gas Flow;ft3/s_DP"/&gt;&lt;PB:DSDatapoint id="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Elec Cost_DP"/&gt;&lt;PB:DSDatapoint id="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Gas Cost_DP"/&gt;&lt;/PB:Dataset&gt;&lt;g id="Composite2" PB:Type="0" PB:Visible="True" PB:Scripting="True" PB:IsMultiState="False"&gt;&lt;g id="Trend1" PB:Type="10"&gt;&lt;PB:TrendLogical id="Trend1_Logical" PB:ValueScalePosition="1" PB:BackgroundColor="8421504" PB:CurrentTrace="1" PB:Enabled="True" PB:EnableScript="True" PB:EndTime="*" PB:FillColor="16711680" PB:FontBold="False" PB:FontItalic="False" PB:FontName="Arial" PB:FontSize="10" PB:FontStrikethrough="False" PB:FontUnderline="False" PB:Height="423" PB:IsMultiState="False" PB:Left="-13306" PB:LineColor="16777215" PB:MultipleScales="False" PB:Name="Trend1" PB:Rotation="0" PB:StartTime="*-8 Hour" PB:Top="14947" PB:TraceCount="1" PB:TrendTitle="Plot-0" PB:Visible="True" PB:Width="775" PB:PlotTimeStyle="0" PB:DisplayScaleInside="True" PB:ShowDescription="False" PB:ShowEngUnits="True" PB:ShowGrids="True" PB:ShowTagName="True" PB:ShowTitle="True" PB:ShowTraceMarkers="False" PB:ShowValue="True" PB:ShowServerName="False" PB:Attachments=""&gt;&lt;PB:TraceElem id="PB:TraceElem_1" PB:Trace="AF2.\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Elec Cost" PB:ScaleMin="Autorange" PB:ScaleMax="Autorange" PB:ScaleLogarithmic="False" PB:ShowLinearRegression="False" PB:CanonicalNumberFormat="General" PB:TagInfoType="1" PB:ScaleFormat="General" PB:DisplayDigits="-5"/&gt;&lt;PB:Format id="PB:Format_1" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Horz. Axis"/&gt;&lt;PB:Format id="PB:Format_2" PB:LineColor="8421504" PB:LineStyle="-1" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Background"/&gt;&lt;PB:Format id="PB:Format_3" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Horz. Major Grid"/&gt;&lt;PB:Format id="PB:Format_4" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Horz. Minor Grid"/&gt;&lt;PB:Format id="PB:Format_5" PB:LineColor="65280" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="0" PB:Name="Pen 1"/&gt;&lt;PB:Format id="PB:Format_6" PB:LineColor="16776960" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="1" PB:Name="Pen 2"/&gt;&lt;PB:Format id="PB:Format_7" PB:LineColor="65535" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="2" PB:Name="Pen 3"/&gt;&lt;PB:Format id="PB:Format_8" PB:LineColor="16711935" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="3" PB:Name="Pen 4"/&gt;&lt;PB:Format id="PB:Format_9" PB:LineColor="255" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="4" PB:Name="Pen 5"/&gt;&lt;PB:Format id="PB:Format_10" PB:LineColor="16777215" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="5" PB:Name="Pen 6"/&gt;&lt;PB:Format id="PB:Format_11" PB:LineColor="16711680" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="6" PB:Name="Pen 7"/&gt;&lt;PB:Format id="PB:Format_12" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="7" PB:Name="Pen 8"/&gt;&lt;PB:Format id="PB:Format_13" PB:LineColor="8388608" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="8" PB:Name="Pen 9"/&gt;&lt;PB:Format id="PB:Format_14" PB:LineColor="32768" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="9" PB:Name="Pen 10"/&gt;&lt;PB:Format id="PB:Format_15" PB:LineColor="8388736" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="10" PB:Name="Pen 11"/&gt;&lt;PB:Format id="PB:Format_16" PB:LineColor="8433626" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="11" PB:Name="Pen 12"/&gt;&lt;PB:Format id="PB:Format_17" PB:LineColor="16777215" PB:LineStyle="-1" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Text"/&gt;&lt;PB:Format id="PB:Format_18" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Vert. Axis"/&gt;&lt;PB:Format id="PB:Format_19" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Vert. Major Grid"/&gt;&lt;PB:Format id="PB:Format_20" PB:LineColor="0" PB:LineStyle="0" PB:LineWidth="1" PB:MarkerStyle="-1" PB:Name="Vert. Minor Grid"/&gt;&lt;/PB:TrendLogical&gt;&lt;svg x="1694" y="53" height="423" width="775" id="Trend1_Graphical"&gt;&lt;PB:RefreshData id="Trend1_RefreshData" PB:fXUnits="0.0257291666666666666666666667" PB:iNumXCols="0" PB:bEngUnits="True" PB:bValue="True" PB:bTagname="True" PB:bGrids="True" PB:iMinPerCol="1" PB:iNumTrcs="1" PB:iGrdBegX="6" PB:iGrdBegY="41" PB:iGrdHght="362" PB:iGrdWdth="741" PB:bMarkers="False" PB:bLogarithmic="False" PB:Updateable="True" PB:iSnglLnHght="33" PB:iScaleWidth="0" PB:bOmitScaleText="False" PB:bOmitTimeText="True"/&gt;&lt;rect id="Trend1_Background" x="0" y="0" height="423" width="775" fill="#808080"/&gt;&lt;g id="Trend1_PlotTitleGroup" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;text style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;" x="6" y="33"&gt;Plot-0&lt;/text&gt;&lt;/g&gt;&lt;svg id="Trend1_AxesGroup" height="362" width="741" x="6" y="41"&gt;&lt;rect id="Trend1_GridBackground" height="362" width="741" x="0" y="0" style="fill:#808080;stroke:none;"/&gt;&lt;polyline id="Trend1_VertAxis_1" points="0,0 0,362" style="stroke-width:3;fill:none;stroke:#000000;"/&gt;&lt;polyline points="741,0 741,362" style="stroke-width:3;fill:none;stroke:#000000;stroke-dasharray:10 10 10 10;" id="Trend1_VertAxis_Last"/&gt;&lt;polyline id="Trend1_HorizAxis" points="0,362 741,362" style="stroke-width:3;fill:none;stroke:#000000;"/&gt;&lt;/svg&gt;&lt;svg id="Trend1_GridGroup" height="362" width="741" x="6" y="41"&gt;&lt;path d="M47,0 L47,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M139,0 L139,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M232,0 L232,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M325,0 L325,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M417,0 L417,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M510,0 L510,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M602,0 L602,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M695,0 L695,362" id="Trend1_HorizGridLine" style="stroke-width:2;stroke:#000000;"/&gt;&lt;path d="M0,362.12 L741,362.12" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,280.34 L741,280.34" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,198.56 L741,198.56" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,116.79 L741,116.79" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,35.01 L741,35.01" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;path d="M0,0 L741,0" id="Trend1_VertGridLine" style="stroke-width:2;stroke:#000000"/&gt;&lt;/svg&gt;&lt;g id="Trend1_XScaleTextGroup" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;text id="Trend1_XScaleTextBegin" x="6" y="407" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;/text&gt;&lt;text id="Trend1_XScaleTextSpan" x="253" y="407" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;/text&gt;&lt;text id="Trend1_XScaleTextEnd" x="500" y="407" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;"&gt;&lt;/text&gt;&lt;/g&gt;&lt;svg id="Trend1_TraceGroup" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;" height="362" width="741" x="6" y="41"&gt;&lt;path id="Trend1_Plot0" PBD:DatasetName="AF2_DS" PBD:DatasetColumn="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Elec Cost" d="M-2.34135416666667,132.867970371768 L0.334479166666667,131.640565599446 L15.7719791666667,129.005449862012 L31.2094791666667,123.487231862886 L38.9282291666667,121.525225970704 L46.6469791666667,120.435278154769 L54.3657291666667,117.340001048633 L62.0844791666667,115.7919382457 L77.5219791666667,111.040364709208 L92.9594791666667,107.853923793762 L100.678229166667,104.301480023857 L131.553229166667,93.3746751819968 L139.271979166667,89.4614942471384 L162.428229166667,83.2197555364016 L170.146979166667,80.3003923891562 L177.865729166667,76.2355795612325 L193.303229166667,72.8371634483386 L201.021979166667,68.9770636584028 L216.459479166667,64.3425830847583 L224.178229166667,61.7535358915306 L231.896979166667,60.3381385170922 L239.615729166667,56.410158748694 L247.334479166667,55.2014209704494 L255.053229166667,52.6778829476127 L262.771979166667,51.4410448547547 L278.209479166667,45.3635657095471 L293.646979166667,38.0873560917431 L301.365729166667,35.0155624634506 L309.084479166667,33.4993433562961 L324.521979166667,25.4704895214161 L339.959479166667,21.6747010198985 L355.396979166667,14.8597508292711 L363.115729166667,10.9282522825776 L386.271979166667,3.17209128764562 L393.990729166667,0 L409.428229166667,329.422976679674 L540.646979166667,324.23960724526 L656.428229166667,320.166658802271 L695.021979166667,318.868501006442 L703,319 M710.459479166667,361.896934578198 L733.615729166667,362 L741,362 " style="font-family:Arial;font-size:33;stroke:#00FF00;fill:none;stroke-width:2;"/&gt;&lt;/svg&gt;&lt;svg id="Trend1_MarkerGroup" style="" height="362" width="741" x="6" y="41"&gt;&lt;circle id="Trend1_0" r="8" cx="703.240729166667" cy="319.368501006442" style="stroke-width:2;stroke:#00FF00;fill:#00FF00;"/&gt;&lt;polyline id="Trend1_0" x="703" y="355" style="stroke-width:2;stroke:#00FF00;fill:none;stroke-width:4;" points="703,355 717,369 710,362 703,369 717,355" transform="rotate(45,703,355) "/&gt;&lt;circle id="Trend1_1" r="8" cx="93.4594791666667" cy="108.353923793762" style="stroke-width:2;stroke:#00FF00;fill:#00FF00;"/&gt;&lt;circle id="Trend1_1" r="8" cx="232.396979166667" cy="60.8381385170922" style="stroke-width:2;stroke:#00FF00;fill:#00FF00;"/&gt;&lt;circle id="Trend1_1" r="8" cx="355.896979166667" cy="15.3597508292711" style="stroke-width:2;stroke:#00FF00;fill:#00FF00;"/&gt;&lt;/svg&gt;&lt;g id="Trend1_YScaleTextGroup" style="font-family:Arial;font-size:33;stroke:#FFFFFF;fill:#FFFFFF;" transform="translate(8,41)"&gt;&lt;text x="2" y="33" id="Max_0"&gt;221.408&lt;/text&gt;&lt;text x="2" y="356" id="Min_0"&gt;0.07&lt;/text&gt;&lt;text x="0" y="285.590369000607"&gt;50&lt;/text&gt;&lt;text x="0" y="203.814959652988"&gt;100&lt;/text&gt;&lt;text x="0" y="122.039550305369"&gt;150&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/g&gt;&lt;g id="AF_1822681e861253e836c1524f610ddf11" PB:Type="7" PB:Visible="True" PB:IsMultiState="False" PB:Scripting="True" stroke="none" font-family="Arial" font-size="33.3333320087857" fill="#FFFFFF" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="0" PB:CanonicalNumberFormat="General" PB:TagInfoType="1" PB:NumberFormat="General" PB:ShowUOM="True" PBD:DatasetName="AF2_DS" PBD:DatasetColumn="\\CSSSQLAF2\GEN_EMS_DEV_CPresha\Plant\Building1|Building Avg Gas Cost" PB:PtTagValue="0.1541 " PB:PtTagTime="10/20/2015 12:29:40 AM" PB:PtTagStatus="0"&gt;&lt;rect id="AF_1822681e861253e836c1524f610ddf11_pbTextBoundingRectEl" x="2023" y="626" width="143" height="42" stroke-width="0" fill="#C0C0C0"/&gt;&lt;text id="AF_1822681e861253e836c1524f610ddf11_pbTextEl" y="658" x="2094" text-anchor="middle" stroke="none" font-family="Arial" font-size="33.3333320087857" fill="#FFFFFF" PBD:Property="value"&gt;0.1541 &lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&#xD;
+</Value>
+      </AFExtendedProperty>
+      <AFElementCategoryRef>Asset</AFElementCategoryRef>
+      <AFAnalysisTemplate>
+        <Name>Building Electrical Cost</Name>
+        <Description>Rollup Sum and Average Electrical Cost, units = US Dollar</Description>
+        <Target>Building</Target>
+        <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Cost];Sum||Electrical Cost;[GUID]||{83ad5bba-0384-4a04-80b3-700368b7c121};Average||Average Electric Cost;[GUID]||{a4adbc9f-e7d2-463d-87cd-14bb5435d826};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Building Electrical Usage</Name>
+        <Description>Rollup Sum and Average Electrical Usage, units = killowatt hour</Description>
+        <Target>Building</Target>
+        <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Usage];Average||Average Electric Usage;[GUID]||{6880232f-4fc4-48a4-8ce3-58c228c52670};Sum||Electrical Usage;[GUID]||{72d3bfea-3c3d-4386-a12b-685e7fc8963b};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Building Gas Cost</Name>
+        <Description>Rollup Sum and Average Gas Cost, units = US Dollar</Description>
+        <Target>Building</Target>
+        <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Cost];Sum||Gas Cost;[GUID]||{5bb3026c-11a0-453e-a64f-c508553c56fd};Average||Average Gas Cost;[GUID]||{5e079a60-763e-4ac5-a1ee-73e4e939d1f5};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Building Gas Usage</Name>
+        <Description>Rollup Sum and Average Gas Usage, units = British Thermal Unit (btu)</Description>
+        <Target>Building</Target>
+        <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Consumed];Average||Average Gas Usage;[GUID]||{277914c6-7055-49b1-9a28-3c6fc666ddbe};Sum||Gas Usage;[GUID]||{71677e04-f956-406a-a716-fe9e83c2479d};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Building Water Cost</Name>
+        <Description>Rollup Sum and Average Water Cost, units = US Dollar</Description>
+        <Target>Building</Target>
+        <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Cost];Sum||Water Cost;[GUID]||{9ba72c73-fa90-4768-aefb-8bbadcb4e0dc};Average||Average Water Cost;[GUID]||{b308b29f-af31-4cf1-9877-41000d0c3f48};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Building Water Usage</Name>
+        <Description>Rollup Sum and Average Water Usage, units = US Gallon</Description>
+        <Target>Building</Target>
+        <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Usage];Average||Average Water Usage;[GUID]||{7c4f6456-3b4c-4353-989e-a0ada6cd996d};Sum||Water Usage;[GUID]||{f50003fc-0e50-44d2-bcab-e7d3880e94ab};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Electrical Downtime</Name>
+        <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+        <Target>Building</Target>
+        <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Downtime Duration];Sum||Electrical Downtime;[GUID]||{ada99a23-a26a-4ea0-a055-d2678235e40a};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Generic Equipment</Name>
+      <Description>Equipment Specifications</Description>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute>Equipment Type</DefaultAttribute>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Type>Object</Type>
+        <Value />
+      </AFExtendedProperty>
+      <AFElementCategoryRef>Base</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Asset Location</Name>
+        <Description>Asset Location</Description>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>"%ElementPath%";</ConfigString>
+        <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Equipment Type</Name>
+        <Description>Generic Equipment Type</Description>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Installation Date</Name>
+        <Description>Date of installation</Description>
+        <Type>DateTime</Type>
+        <Value type="DateTime">2015-12-16T00:00:00Z</Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT [Installation Date] FROM [OSIDemo_Generic Specifications] WHERE [Serial Number] = @[Serial Number]</ConfigString>
+        <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Manufacturer</Name>
+        <Description>Manufacturer of Equipment</Description>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT Manufacturer FROM [OSIDemo_Generic Specifications] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+        <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Product</Name>
+        <Description>Name of Product</Description>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT Product FROM [OSIDemo_Generic Specifications] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+        <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Serial Number</Name>
+        <Description>Serial Number of Equipment </Description>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>"%Element%";</ConfigString>
+        <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Electric User</Name>
+      <Description>Electrical Equipment Name</Description>
+      <BaseTemplate>Generic Equipment</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFElement">Plant\Building1\Electric User1</Value>
+      </AFExtendedProperty>
+      <AFElementCategoryRef>Equipment</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Amps</Name>
+        <Description>Current Amperage (A)</Description>
+        <DefaultUOM>A</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;UOM=A;ReadOnly=False;pointtype=Float32;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDEMO_;%Element%.;%..|Attribute%.%ID%;</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Voltage</Name>
+        <Description>Equipment voltage specification</Description>
+        <DefaultUOM>V</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">120</Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT Volts FROM [OSIDemo_Electric Specs] WHERE [Equipment Type] = @[Equipment Type];UOM=V</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>Electric Downtime</Name>
+        <Description>Event Frame generation for Electrical Downtime</Description>
+        <Target>Electric User</Target>
+        <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=1a8ba81c-3d37-44e9-aa24-972b24e6f919;EFTNAME=OSIDemo_DownTime</ConfigString>
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>StartTrigger := '{529a555e-d773-4f06-939e-f8df596c265a};State'= "NoPower";&#xD;
+EndTrigger := '{529a555e-d773-4f06-939e-f8df596c265a};State'= "Power";</ConfigString>
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=0</ConfigString>
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Electric Usage</Name>
+        <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+        <Target>Electric User</Target>
+        <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>RunTime := TimeEq('{aa4aff32-2111-4e74-af4c-2b3cff2e0771};State','t','*',"Power")/3600;&#xD;
+KillowattHours := (('{5d7bf505-4d26-4d0d-9295-0728ce793491};Amps'*'{a5bf37ea-451f-4d63-a758-d18982b6feb7};Voltage')/1000) *'{772feb30-ce0e-4c90-bc92-7d909d8fdd4f};RunTime';&#xD;
+ElectricalUsage := TagTot('{307a34d1-99ed-4566-a114-a5e0ebfab71e};KilowattHours','t','*');&#xD;
+MaxKilowattHours := TagMax('{307a34d1-99ed-4566-a114-a5e0ebfab71e};KilowattHours','t','*');&#xD;
+AvgKilowattHours := TagAvg('{307a34d1-99ed-4566-a114-a5e0ebfab71e};KilowattHours','t','*');&#xD;
+DowntimeDuration := TimeEq('{aa4aff32-2111-4e74-af4c-2b3cff2e0771};State','t','*',"NoPower")/60;</ConfigString>
+          <VariableMapping>Energy 1H||Kilowatts Cost 1 Hour;Energy Cost 1H||Kilowatts Cost 1 Hour;CurrentDayEnergyUsage||KilowattHours;[GUID]||{307a34d1-99ed-4566-a114-a5e0ebfab71e};CurrentDayEnergyCost||Electrical Cost;[GUID]||{dffec96d-9a39-45e1-b9d6-9cb5b9f244b7};SearchCriteria||Attributes;KillowattHours||KilowattHours;[GUID]||{307a34d1-99ed-4566-a114-a5e0ebfab71e};RunTime||RunTime;[GUID]||{772feb30-ce0e-4c90-bc92-7d909d8fdd4f};MaxKilowattHours||MaxKilowattHours;[GUID]||{7362d380-b254-494e-ad7e-65041a557cd4};AvgKilowattHours||AvgKilowattHours;[GUID]||{69e6a8bb-b7c4-48e6-ac9b-48e00a36af80};DowntimeDuration||Downtime Duration;[GUID]||{51f41d23-6281-402d-9a8a-7dcfb0d0af7e};ElectricalUsage||Electrical Usage;[GUID]||{678a6a96-b017-4847-855d-56fc7a3d9985};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Electrical Cost</Name>
+        <Description>Calculates Electrical Cost, units = US Dollar</Description>
+        <Target>Electric User</Target>
+        <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>ElectricalCost := '{678a6a96-b017-4847-855d-56fc7a3d9985};Electrical Usage'*'..\|Electric Rate';&#xD;
+</ConfigString>
+          <VariableMapping>Electrical Cost||Electrical Cost;[GUID]||{dffec96d-9a39-45e1-b9d6-9cb5b9f244b7};ElectricalCost||Electrical Cost;[GUID]||{dffec96d-9a39-45e1-b9d6-9cb5b9f244b7};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>High Amperage</Name>
+        <Description>Event Frame generation for High Amperage Downtime</Description>
+        <Target>Electric User</Target>
+        <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=4448356e-4e32-4e7c-a924-b0ffdf68bb1a;EFTNAME=OSIDemo_High Amperage</ConfigString>
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>StartTrigger := '{8190f2ca-217b-4356-a5f0-44af40a05ee4};Amps'&gt; 180;&#xD;
+EndTrigger := '{8190f2ca-217b-4356-a5f0-44af40a05ee4};Amps'&lt; 180;</ConfigString>
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=30</ConfigString>
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>OSIDemo_Random Data</Name>
+        <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+        <Target>Electric User</Target>
+        <AFAnalysisCategoryRef>Random Data</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>State := If Minute('*') &gt;= 15 and  Minute('*') &lt;= 20 or Minute('*') &gt;= 45 and  Minute('*') &lt;= 50 then "NoPower" else "Power";&#xD;
+Amps := If '{529a555e-d773-4f06-939e-f8df596c265a};State'= "Power" then Abs ((Rand(1.25,1.26))*100) else 0;&#xD;
+FaultCode := If Minute('*') &gt;= 15 and Minute('*') &lt;= 20 then 8 Else If Minute('*') &gt;= 45 and Minute('*') &lt;= 50 then 2 else PrevVal('{ddd7b756-1213-4333-b56e-60f994ed747c};Fault Code', '*');&#xD;
+</ConfigString>
+          <VariableMapping>Amps||Amps;[GUID]||{8190f2ca-217b-4356-a5f0-44af40a05ee4};State||State;[GUID]||{529a555e-d773-4f06-939e-f8df596c265a};FaultCode||Fault Code;[GUID]||{ddd7b756-1213-4333-b56e-60f994ed747c};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>OSIDemo_DownTime</Name>
+      <Description>Equipment Downtime</Description>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute>State</DefaultAttribute>
+      <NamingPattern>OSIDEMO_%ELEMENT%_DownTime_%STARTTIME:yyyy-MM-dd HH:mm:ss%</NamingPattern>
+      <AFElementCategoryRef>Downtime</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Duration</Name>
+        <Description>Duration of downtime event</Description>
+        <DefaultUOM>min</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|State;TimeMethod=NotSupported;TimeRangeMethod=Count;UOM=s</ConfigString>
+        <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Fault Code</Name>
+        <Description>Reason for Downtime</Description>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
+        <Value type="AFEnumerationValue">ec7ead6c-658d-4cee-9c09-0a174c69879d?0?Running State</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Fault Code;TimeRangeMethod=StartTime</ConfigString>
+        <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>State</Name>
+        <Description>State of running equipment</Description>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|State;TimeRangeMethod=StartTime</ConfigString>
+        <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>OSIDemo_High Amperage</Name>
+      <Description>Electrical High Amperage Downtime</Description>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute>Amps</DefaultAttribute>
+      <NamingPattern>OSIDEMO_%ELEMENT%_High Usage_%STARTTIME:yyyy-MM-dd HH:mm:ss%</NamingPattern>
+      <AFElementCategoryRef>Downtime</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Amps</Name>
+        <DefaultUOM>A</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Amps;TimeRangeMethod=StartTime</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Duration</Name>
+        <Description>Duration of high usage</Description>
+        <DefaultUOM>min</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Amps;TimeMethod=NotSupported;TimeRangeMethod=Count;UOM=s</ConfigString>
+        <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>PI Data Archive</Name>
+      <Description>Target PI Data Archive</Description>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFElementCategoryRef>Asset</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Name</Name>
+        <Description>PI Data Archive Name</Description>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String">Enter_Your_PIDataArchive_Name</Value>
+        <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Plant</Name>
+      <Description>Plant Name</Description>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFElement">Plant</Value>
+      </AFExtendedProperty>
+      <AFElementCategoryRef>Asset</AFElementCategoryRef>
+      <AFAnalysisTemplate>
+        <Name>Electrical Cost</Name>
+        <Description>Rollup Sum Electrical Cost, units = US Dollar</Description>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>ElectricalCost||Electrical Cost;[GUID]||{e82e54a5-a737-42b8-8e69-154b2fdea95f};SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Cost];Sum||Electrical Cost;[GUID]||{e82e54a5-a737-42b8-8e69-154b2fdea95f};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Electrical Downtime</Name>
+        <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Downtime];Sum||Electrical Downtime;[GUID]||{3919d911-100d-46d6-b529-78ba4db7cf59};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Electrical Usage</Name>
+        <Description>Rollup Sum Electrical Usage, units = killowatt hour (kWh)</Description>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Usage];Sum||Electrical Usage;[GUID]||{98eb8f84-9b0f-41f3-83d6-815b3fe08ee7};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Gas Cost</Name>
+        <Description>Rollup Sum Gas Cost, units = US Dollar</Description>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Cost];Sum||Gas Cost;[GUID]||{0847c3c7-7974-4ed4-82f3-fe715f7441f6};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Gas Usage</Name>
+        <Description>Rollup Sum Gas Usage, units = British Thermal Unit (btu)</Description>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Usage];Sum||Gas Usage;[GUID]||{3d5cafd7-686f-46a0-9238-65997b13be97};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Water Cost</Name>
+        <Description>Rollup Sum Water Cost, units = US Dollar</Description>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Cost];Sum||Water Cost;[GUID]||{6c88fa98-f73c-4d46-8ebb-f5fae69f8be4};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Water Usage</Name>
+        <Description>Rollup Sum Water Usage, units = US Gallon</Description>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Usage];Sum||Water Usage;[GUID]||{840aaedc-e663-49c7-ab10-0dbeff9fad03};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElement>
+      <Name>Plant</Name>
+      <Description>Plant Name</Description>
+      <Template>Plant</Template>
+      <AFExtendedProperty>
+        <Name>ProcessBook.AFDisplayBuilder.UTCChanged</Name>
+        <Value type="Double">1444930146</Value>
+      </AFExtendedProperty>
+      <AFExtendedProperty>
+        <Name>ProcessBook.AFModeler.Graphic</Name>
+        <Value type="String">&lt;?xml version="1.0" standalone="no"?&gt;&#xD;
+&lt;svg xmlns:svg="OSI_SVG_20090601" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:PB="urn:osisoft-com-pb" xmlns:PBI="urn:osisoft-com-interface" xmlns:PBD="urn:osisoft-com-data" xmlns:xsi="http://www.w3.org/1999/XMLSchema/instance" svg:sid="" xlink:xid="" PB:pid="" width="100%" height="100%" viewBox="0 0 2360 1154" fill="#C0C0C0" image-rendering="optimizeSpeed"&gt;&#xD;
+	&lt;defs&gt;&lt;/defs&gt;&lt;rect x="0" y="0" width="2360" height="1154" PB:Type="55" PB:DocMajorVersionNum="3" PB:DocMinorVersionNum="26" PB:DocGroup="1" PB:DisplayServerTimeZone="True" PB:wnHeight="496" PB:wnWidth="929" PB:Zoom="100" PB:wnState="2" PB:LocalID="1033"/&gt;&lt;PB:Dataset id="E_DS_DS" PB:Type="57" PB:Context="0" PB:Description="" PB:RefreshInterval="5000" PB:Stepped="False" PB:DSType="3" PB:DSVisible="False"&gt;&lt;PB:DSDatapoint id="ElementName_DP"/&gt;&lt;/PB:Dataset&gt;&lt;g id="Value1" PB:Type="7" PB:Visible="True" PB:IsMultiState="False" PB:Scripting="True" stroke="none" font-family="Arial" font-size="33.3333320087857" fill="#FFFFFF" PB:DisplayPointName="9" PB:DisplayTimeStamp="9" PB:HorzAlign="0" PB:CanonicalNumberFormat="General" PB:TagInfoType="2" PB:NumberFormat="General" PB:ShowUOM="False" PBD:PtTagName="e.elementname" PB:PersistString="" PB:PtTagValue="Building2" PB:PtTagTime="10/15/2015 5:27:48 PM" PB:PtTagStatus="0"&gt;&lt;rect id="Value1_pbTextBoundingRectEl" x="722" y="40" width="151" height="42" stroke-width="0" fill="#C0C0C0"/&gt;&lt;text id="Value1_pbTextEl" y="72" x="798" text-anchor="middle" stroke="none" font-family="Arial" font-size="33.3333320087857" fill="#FFFFFF" PBD:Property="value"&gt;Building2&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;&#xD;
+</Value>
+      </AFExtendedProperty>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Building1</Name>
+        <Description>Building name</Description>
+        <Template>Building</Template>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Electric User1</Name>
+          <Description>Electrical Equipment Name</Description>
+          <Template>Electric User</Template>
+          <AFElementCategoryRef>Base</AFElementCategoryRef>
+          <AFAttribute>
+            <Name>Amps</Name>
+            <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Asset Location</Name>
+            <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Equipment Type</Name>
+            <Value type="String">EPump</Value>
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Installation Date</Name>
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Product</Name>
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Serial Number</Name>
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Voltage</Name>
+            <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>Electric Downtime</Name>
+            <Description>Event Frame generation for Electrical Downtime</Description>
+            <Template>Electric Downtime</Template>
+            <Status>Error</Status>
+            <Target>
+              <AFElementRef>Plant\Building1\Electric User1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Electric Usage</Name>
+            <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+            <Template>Electric Usage</Template>
+            <Status>Error</Status>
+            <Target>
+              <AFElementRef>Plant\Building1\Electric User1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Electrical Cost</Name>
+            <Description>Calculates Electrical Cost, units = US Dollar</Description>
+            <Template>Electrical Cost</Template>
+            <Status>Error</Status>
+            <Target>
+              <AFElementRef>Plant\Building1\Electric User1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>High Amperage</Name>
+            <Description>Event Frame generation for High Amperage Downtime</Description>
+            <Template>High Amperage</Template>
+            <Status>Error</Status>
+            <Target>
+              <AFElementRef>Plant\Building1\Electric User1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>OSIDemo_Random Data</Name>
+            <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+            <Template>OSIDemo_Random Data</Template>
+            <Status>Error</Status>
+            <Target>
+              <AFElementRef>Plant\Building1\Electric User1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFAnalysis>
+          <Name>Building Electrical Cost</Name>
+          <Description>Rollup Sum and Average Electrical Cost, units = US Dollar</Description>
+          <Template>Building Electrical Cost</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>Plant\Building1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Building Electrical Usage</Name>
+          <Description>Rollup Sum and Average Electrical Usage, units = killowatt hour</Description>
+          <Template>Building Electrical Usage</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>Plant\Building1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Building Gas Cost</Name>
+          <Description>Rollup Sum and Average Gas Cost, units = US Dollar</Description>
+          <Template>Building Gas Cost</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>Plant\Building1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Building Gas Usage</Name>
+          <Description>Rollup Sum and Average Gas Usage, units = British Thermal Unit (btu)</Description>
+          <Template>Building Gas Usage</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>Plant\Building1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Building Water Cost</Name>
+          <Description>Rollup Sum and Average Water Cost, units = US Dollar</Description>
+          <Template>Building Water Cost</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>Plant\Building1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Building Water Usage</Name>
+          <Description>Rollup Sum and Average Water Usage, units = US Gallon</Description>
+          <Template>Building Water Usage</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>Plant\Building1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>Electrical Downtime</Name>
+          <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+          <Template>Electrical Downtime</Template>
+          <Status>Error</Status>
+          <Target>
+            <AFElementRef>Plant\Building1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFAnalysis>
+        <Name>Electrical Cost</Name>
+        <Description>Rollup Sum Electrical Cost, units = US Dollar</Description>
+        <Template>Electrical Cost</Template>
+        <Status>Error</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Electrical Downtime</Name>
+        <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+        <Template>Electrical Downtime</Template>
+        <Status>Error</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Electrical Usage</Name>
+        <Description>Rollup Sum Electrical Usage, units = killowatt hour (kWh)</Description>
+        <Template>Electrical Usage</Template>
+        <Status>Error</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Gas Cost</Name>
+        <Description>Rollup Sum Gas Cost, units = US Dollar</Description>
+        <Template>Gas Cost</Template>
+        <Status>Error</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Gas Usage</Name>
+        <Description>Rollup Sum Gas Usage, units = British Thermal Unit (btu)</Description>
+        <Template>Gas Usage</Template>
+        <Status>Error</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Water Cost</Name>
+        <Description>Rollup Sum Water Cost, units = US Dollar</Description>
+        <Template>Water Cost</Template>
+        <Status>Error</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Water Usage</Name>
+        <Description>Rollup Sum Water Usage, units = US Gallon</Description>
+        <Template>Water Usage</Template>
+        <Status>Error</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+    </AFElement>
+  </AFDatabase>
+</AF>
