@@ -15,7 +15,8 @@ namespace ResetToTemplate
         static void Main(string[] args)
         {
             PISystem local = PISystem.CreatePISystem("localhost");
-            AFDatabaseEditsCheck.runTests(local, resetToTemplate);
+            resetToTemplate(local.Databases["Kit"]);
+            //AFDatabaseEditsCheck.runTests(local, resetToTemplate);
             Console.ReadLine();
         }
 
