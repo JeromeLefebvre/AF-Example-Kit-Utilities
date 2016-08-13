@@ -17,7 +17,7 @@ namespace AllNamesAndDescriptions
     {
         private static TranslateService service = new TranslateService(new BaseClientService.Initializer()
         {
-            ApiKey = "AIzaSyDwFN_wQqfrf_m79ek8UAraSYA2rRbRohI", // your API key, that you get from Google Developer Console
+            ApiKey = "", // your API key, that you get from Google Developer Console
                                                                 //ApplicationName = "jlefebvrenew" // your application name, that you get form Google Developer Console
         });
         static void Main(string[] args)
