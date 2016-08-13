@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OSIsoft.AF;
-using OSIsoft.AF.PI;
+using OSIsoft.AF.Analysis;
 using OSIsoft.AF.Asset;
-
 
 namespace ResetToTemplate
 {
@@ -14,10 +9,9 @@ namespace ResetToTemplate
     {
         static void Main(string[] args)
         {
-            PISystem local = PISystem.CreatePISystem("localhost");
-            resetToTemplate(local.Databases["Kit"]);
+            PISystem local = new PISystems().DefaultPISystem;
+            resetToTemplate(local.Databases.DefaultDatabase);
             //AFDatabaseEditsCheck.runTests(local, resetToTemplate);
-            Console.ReadLine();
         }
 
         public static bool resetToTemplate(AFDatabase db)
@@ -29,29 +23,30 @@ namespace ResetToTemplate
                     attr.ResetToTemplate();
 
             foreach(AFElement elem in db.Elements)
-            {
                 resetElement(elem);
-            }
             return true;
         }
         public static void resetElement(AFElement elem)
         {
             foreach(AFAttribute attr in elem.Attributes)
-            {
                 if (!attr.Template.IsConfigurationItem)
                     resetAttribute(attr);
-            }
-            elem.CheckIn();
             foreach (AFElement child in elem.Elements)
                 resetElement(child);
+            foreach (AFAnalysis analysis in elem.Analyses)
+                resetAnalysis(analysis);
+            elem.CheckIn();
         }
         public static void resetAttribute(AFAttribute attr)
         {
             attr.ResetToTemplate();
             foreach(AFAttribute childAttr in attr.Attributes)
-            {
                 resetAttribute(childAttr);
-            }
+        }
+        public static void resetAnalysis(AFAnalysis analysis)
+        {
+            analysis.Description = analysis.Template.Description;
+            analysis.CheckIn();
         }
     }
 }

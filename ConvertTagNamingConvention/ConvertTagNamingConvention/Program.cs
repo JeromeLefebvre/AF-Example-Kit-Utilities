@@ -8,8 +8,8 @@ namespace ConvertTagNamingConvention
     {
         static void Main(string[] args)
         {
-            PISystem local = PISystem.CreatePISystem("localhost");
-            AFDatabase db = local.Databases["Database84"];
+            PISystem local = new PISystems().DefaultPISystem;
+            AFDatabase db = local.Databases.DefaultDatabase;
             convertTagNaming(db);
         }
 
@@ -67,7 +67,7 @@ namespace ConvertTagNamingConvention
         public static int lookUpDepth(AFElementTemplate template)
         {
             try { 
-            return (int)template.ExtendedProperties["Depth"];
+                return (int)template.ExtendedProperties["Depth"];
             }
             catch
             {

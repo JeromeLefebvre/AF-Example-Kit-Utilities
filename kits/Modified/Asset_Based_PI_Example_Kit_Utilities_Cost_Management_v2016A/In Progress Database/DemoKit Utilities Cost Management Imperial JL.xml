@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="AllReferences, NoUniqueID" PISystem="JLEFEBVRENEW" Database="Database71" Description="GEN_FULL_Utilities Management System Asset Based PI Example Kit" Created="2016-08-11T02:51:27.603168Z" id="7ae5058f-2d55-4d68-9cac-5e73f481375b" ParentKey="705d2a73-06fe-4696-8840-bdc575f73adc" ExportedObject="Database71" ExportedType="AFDatabase" Identity="Database" PIPersist="146 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\{7ae5058f-2d55-4d68-9cac-5e73f481375b}*JLEFEBVRENEW\Database71">
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="AllReferences, NoUniqueID" PISystem="JLEFEBVRENEW" Database="Database99" Description="Utilities Management System Asset Based PI Example Kit" Created="2016-08-13T06:42:28.5063058Z" id="fdd3b69d-c097-4b60-a80e-e392e1548c14" ParentKey="705d2a73-06fe-4696-8840-bdc575f73adc" ExportedObject="Database99" ExportedType="AFDatabase" Identity="Database" PIPersist="146 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\{fdd3b69d-c097-4b60-a80e-e392e1548c14}*JLEFEBVRENEW\Database99">
   <UOMDatabase>
     <Name>UOMDatabase</Name>
     <UOMClass>
@@ -2105,8 +2105,8 @@
     </UOM>
   </UOMDatabase>
   <AFDatabase>
-    <Name>Database71</Name>
-    <Description>GEN_FULL_Utilities Management System Asset Based PI Example Kit</Description>
+    <Name>Database99</Name>
+    <Description>Utilities Management System Asset Based PI Example Kit</Description>
     <AFAnalysisCategory>
       <Name>Cost</Name>
       <Description>Utility Cost</Description>
@@ -2173,14 +2173,14 @@
       <Name>Specifications</Name>
     </AFTableCategory>
     <AFTable>
-      <Name>OSIDemo_Asset Location</Name>
+      <Name>Asset Location</Name>
       <ExternalPersist>false</ExternalPersist>
       <Schema>
-<xs:schema id="OSIDemo_Asset_x0020_LocationDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-  <xs:element name="OSIDemo_Asset_x0020_LocationDataSet" msdata:IsDataSet="true" msdata:Locale="">
+<xs:schema id="Asset_x0020_LocationDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Asset_x0020_LocationDataSet" msdata:IsDataSet="true" msdata:Locale="">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OSIDemo_Asset_x0020_Location">
+        <xs:element name="Asset_x0020_Location">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Asset_x0020_Location" type="xs:string" minOccurs="0" />
@@ -2194,38 +2194,19 @@
     </xs:complexType>
   </xs:element>
 </xs:schema></Schema>
-      <DataTable><OSIDemo_Asset_x0020_LocationDataSet>&#xD;&#xD;
-  <OSIDemo_Asset_x0020_Location>&#xD;&#xD;
-    <Asset_x0020_Location>Plant</Asset_x0020_Location>&#xD;&#xD;
-    <Physical_x0020_Location>San Leandro</Physical_x0020_Location>&#xD;&#xD;
-    <Latitude>37.72229</Latitude>&#xD;&#xD;
-    <Longitude>-122.162827</Longitude>&#xD;&#xD;
-  </OSIDemo_Asset_x0020_Location>&#xD;&#xD;
-  <OSIDemo_Asset_x0020_Location>&#xD;&#xD;
-    <Asset_x0020_Location>Plant1</Asset_x0020_Location>&#xD;&#xD;
-    <Physical_x0020_Location>Cleveland</Physical_x0020_Location>&#xD;&#xD;
-    <Latitude>41.50377</Latitude>&#xD;&#xD;
-    <Longitude>-81.46719</Longitude>&#xD;&#xD;
-  </OSIDemo_Asset_x0020_Location>&#xD;&#xD;
-  <OSIDemo_Asset_x0020_Location>&#xD;&#xD;
-    <Asset_x0020_Location>Plant2</Asset_x0020_Location>&#xD;&#xD;
-    <Physical_x0020_Location>Johnson City</Physical_x0020_Location>&#xD;&#xD;
-    <Latitude>36.2975</Latitude>&#xD;&#xD;
-    <Longitude>-82.3846</Longitude>&#xD;&#xD;
-  </OSIDemo_Asset_x0020_Location>&#xD;&#xD;
-</OSIDemo_Asset_x0020_LocationDataSet></DataTable>
+      <DataTable><Asset_x0020_LocationDataSet><Asset_x0020_Location><Asset_x0020_Location>Plant</Asset_x0020_Location><Physical_x0020_Location>San Leandro</Physical_x0020_Location><Latitude>37.72229</Latitude><Longitude>-122.162827</Longitude></Asset_x0020_Location><Asset_x0020_Location><Asset_x0020_Location>Plant1</Asset_x0020_Location><Physical_x0020_Location>Cleveland</Physical_x0020_Location><Latitude>41.50377</Latitude><Longitude>-81.46719</Longitude></Asset_x0020_Location><Asset_x0020_Location><Asset_x0020_Location>Plant2</Asset_x0020_Location><Physical_x0020_Location>Johnson City</Physical_x0020_Location><Latitude>36.2975</Latitude><Longitude>-82.3846</Longitude></Asset_x0020_Location></Asset_x0020_LocationDataSet></DataTable>
       <AFTableCategoryRef>Specifications</AFTableCategoryRef>
     </AFTable>
     <AFTable>
-      <Name>OSIDemo_Electric Specs</Name>
+      <Name>Electric Specs</Name>
       <Description>Electrical Specifications Table</Description>
       <ExternalPersist>false</ExternalPersist>
       <Schema>
-<xs:schema id="OSIDemo_Electric_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-  <xs:element name="OSIDemo_Electric_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+<xs:schema id="Electric_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Electric_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OSIDemo_Electric_x0020_Specs">
+        <xs:element name="Electric_x0020_Specs">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
@@ -2238,41 +2219,20 @@
     </xs:complexType>
   </xs:element>
 </xs:schema></Schema>
-      <DataTable><OSIDemo_Electric_x0020_SpecsDataSet>&#xD;&#xD;
-  <OSIDemo_Electric_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>EPump</Equipment_x0020_Type>&#xD;&#xD;
-    <Volts>120</Volts>&#xD;&#xD;
-    <KWatts>1500</KWatts>&#xD;&#xD;
-  </OSIDemo_Electric_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Electric_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>EMotor</Equipment_x0020_Type>&#xD;&#xD;
-    <Volts>120</Volts>&#xD;&#xD;
-    <KWatts>1800</KWatts>&#xD;&#xD;
-  </OSIDemo_Electric_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Electric_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>ECompressor</Equipment_x0020_Type>&#xD;&#xD;
-    <Volts>240</Volts>&#xD;&#xD;
-    <KWatts>4080</KWatts>&#xD;&#xD;
-  </OSIDemo_Electric_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Electric_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>EHVAC</Equipment_x0020_Type>&#xD;&#xD;
-    <Volts>240</Volts>&#xD;&#xD;
-    <KWatts>4800</KWatts>&#xD;&#xD;
-  </OSIDemo_Electric_x0020_Specs>&#xD;&#xD;
-</OSIDemo_Electric_x0020_SpecsDataSet></DataTable>
+      <DataTable><Electric_x0020_SpecsDataSet><Electric_x0020_Specs><Equipment_x0020_Type>EPump</Equipment_x0020_Type><Volts>120</Volts><KWatts>1500</KWatts></Electric_x0020_Specs><Electric_x0020_Specs><Equipment_x0020_Type>EMotor</Equipment_x0020_Type><Volts>120</Volts><KWatts>1800</KWatts></Electric_x0020_Specs><Electric_x0020_Specs><Equipment_x0020_Type>ECompressor</Equipment_x0020_Type><Volts>240</Volts><KWatts>4080</KWatts></Electric_x0020_Specs><Electric_x0020_Specs><Equipment_x0020_Type>EHVAC</Equipment_x0020_Type><Volts>240</Volts><KWatts>4800</KWatts></Electric_x0020_Specs></Electric_x0020_SpecsDataSet></DataTable>
       <EffectiveDate>2015-01-01T05:00:00Z</EffectiveDate>
       <AFTableCategoryRef>Specifications</AFTableCategoryRef>
     </AFTable>
     <AFTable>
-      <Name>OSIDemo_Gas Specs</Name>
+      <Name>Gas Specs</Name>
       <Description>Gas Specifications Table</Description>
       <ExternalPersist>false</ExternalPersist>
       <Schema>
-<xs:schema id="OSIDemo_Gas_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-  <xs:element name="OSIDemo_Gas_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+<xs:schema id="Gas_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Gas_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OSIDemo_Gas_x0020_Specs">
+        <xs:element name="Gas_x0020_Specs">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
@@ -2285,41 +2245,20 @@
     </xs:complexType>
   </xs:element>
 </xs:schema></Schema>
-      <DataTable><OSIDemo_Gas_x0020_SpecsDataSet>&#xD;&#xD;
-  <OSIDemo_Gas_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>GPump</Equipment_x0020_Type>&#xD;&#xD;
-    <BTU_x0020_Rating>15000</BTU_x0020_Rating>&#xD;&#xD;
-    <Pressure_x0020_Factor>1.000</Pressure_x0020_Factor>&#xD;&#xD;
-  </OSIDemo_Gas_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Gas_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>GMotor</Equipment_x0020_Type>&#xD;&#xD;
-    <BTU_x0020_Rating>18000</BTU_x0020_Rating>&#xD;&#xD;
-    <Pressure_x0020_Factor>1.005</Pressure_x0020_Factor>&#xD;&#xD;
-  </OSIDemo_Gas_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Gas_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>GCompressor</Equipment_x0020_Type>&#xD;&#xD;
-    <BTU_x0020_Rating>25000</BTU_x0020_Rating>&#xD;&#xD;
-    <Pressure_x0020_Factor>1.010</Pressure_x0020_Factor>&#xD;&#xD;
-  </OSIDemo_Gas_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Gas_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>GHVAC</Equipment_x0020_Type>&#xD;&#xD;
-    <BTU_x0020_Rating>35000</BTU_x0020_Rating>&#xD;&#xD;
-    <Pressure_x0020_Factor>1.025</Pressure_x0020_Factor>&#xD;&#xD;
-  </OSIDemo_Gas_x0020_Specs>&#xD;&#xD;
-</OSIDemo_Gas_x0020_SpecsDataSet></DataTable>
+      <DataTable><Gas_x0020_SpecsDataSet><Gas_x0020_Specs><Equipment_x0020_Type>GPump</Equipment_x0020_Type><BTU_x0020_Rating>15000</BTU_x0020_Rating><Pressure_x0020_Factor>1.000</Pressure_x0020_Factor></Gas_x0020_Specs><Gas_x0020_Specs><Equipment_x0020_Type>GMotor</Equipment_x0020_Type><BTU_x0020_Rating>18000</BTU_x0020_Rating><Pressure_x0020_Factor>1.005</Pressure_x0020_Factor></Gas_x0020_Specs><Gas_x0020_Specs><Equipment_x0020_Type>GCompressor</Equipment_x0020_Type><BTU_x0020_Rating>25000</BTU_x0020_Rating><Pressure_x0020_Factor>1.010</Pressure_x0020_Factor></Gas_x0020_Specs><Gas_x0020_Specs><Equipment_x0020_Type>GHVAC</Equipment_x0020_Type><BTU_x0020_Rating>35000</BTU_x0020_Rating><Pressure_x0020_Factor>1.025</Pressure_x0020_Factor></Gas_x0020_Specs></Gas_x0020_SpecsDataSet></DataTable>
       <EffectiveDate>2015-01-01T05:00:00Z</EffectiveDate>
       <AFTableCategoryRef>Specifications</AFTableCategoryRef>
     </AFTable>
     <AFTable>
-      <Name>OSIDemo_Generic Specifications</Name>
+      <Name>Generic Specifications</Name>
       <Description>Generic Equipment Specifications</Description>
       <ExternalPersist>false</ExternalPersist>
       <Schema>
-<xs:schema id="OSIDemo_Generic_x0020_SpecificationsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-  <xs:element name="OSIDemo_Generic_x0020_SpecificationsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+<xs:schema id="Generic_x0020_SpecificationsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Generic_x0020_SpecificationsDataSet" msdata:IsDataSet="true" msdata:Locale="">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OSIDemo_Generic_x0020_Specifications">
+        <xs:element name="Generic_x0020_Specifications">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
@@ -2334,139 +2273,7 @@
     </xs:complexType>
   </xs:element>
 </xs:schema></Schema>
-      <DataTable><OSIDemo_Generic_x0020_SpecificationsDataSet>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>EPump</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Electric User1</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2015-06-01T09:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>P-100</Product>&#xD;&#xD;
-    <Manufacturer>Pumpworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>EMotor</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Electric User2</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2015-05-05T15:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>M-100</Product>&#xD;&#xD;
-    <Manufacturer>Motorworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>GPump</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Gas User1</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2015-01-01T08:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>GasP-100</Product>&#xD;&#xD;
-    <Manufacturer>Pumpworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>GMotor</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Gas User2</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2015-09-10T11:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>GasM-100</Product>&#xD;&#xD;
-    <Manufacturer>Motorworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>WPump</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Water User1</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2015-04-08T00:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>H2OP-100</Product>&#xD;&#xD;
-    <Manufacturer>Pumpworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>WMotor</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Water User2</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2015-04-20T16:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>H2OM-100</Product>&#xD;&#xD;
-    <Manufacturer>Motorworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>GCompressor</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Gas User3</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2014-09-30T00:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>GasC-100</Product>&#xD;&#xD;
-    <Manufacturer>Compworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>GHvac</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Gas User4</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2013-10-13T00:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>GasH-100</Product>&#xD;&#xD;
-    <Manufacturer>HVACworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>ECompressor</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Electric User3</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2014-10-13T00:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>C-100</Product>&#xD;&#xD;
-    <Manufacturer>Compworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>EHvac</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Electric User4</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2013-10-16T00:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>H-100</Product>&#xD;&#xD;
-    <Manufacturer>HVACworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>WCompressor</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Water User3</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2015-01-16T00:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>H2OC-100</Product>&#xD;&#xD;
-    <Manufacturer>Compworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-  <OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-    <Equipment_x0020_Type>WHvac</Equipment_x0020_Type>&#xD;&#xD;
-    <Serial_x0020_Number>Water User4</Serial_x0020_Number>&#xD;&#xD;
-    <Installation_x0020_Date>2015-05-16T00:00:00+00:00</Installation_x0020_Date>&#xD;&#xD;
-    <Product>H2OH-100</Product>&#xD;&#xD;
-    <Manufacturer>HVACworld</Manufacturer>&#xD;&#xD;
-  </OSIDemo_Generic_x0020_Specifications>&#xD;&#xD;
-</OSIDemo_Generic_x0020_SpecificationsDataSet></DataTable>
-      <AFTableCategoryRef>Specifications</AFTableCategoryRef>
-    </AFTable>
-    <AFTable>
-      <Name>OSIDemo_Water Specs</Name>
-      <Description>Water Specifications Table</Description>
-      <ExternalPersist>false</ExternalPersist>
-      <Schema>
-<xs:schema id="OSIDemo_Water_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-  <xs:element name="OSIDemo_Water_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
-    <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OSIDemo_Water_x0020_Specs">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
-              <xs:element name="Max_x0020_Flow" type="xs:float" default="0" minOccurs="0" />
-              <xs:element name="Flow_x0020_Rate_x0020_Factor" type="xs:float" default="0" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-</xs:schema></Schema>
-      <DataTable><OSIDemo_Water_x0020_SpecsDataSet>&#xD;&#xD;
-  <OSIDemo_Water_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>WPump</Equipment_x0020_Type>&#xD;&#xD;
-    <Max_x0020_Flow>28</Max_x0020_Flow>&#xD;&#xD;
-    <Flow_x0020_Rate_x0020_Factor>0.75</Flow_x0020_Rate_x0020_Factor>&#xD;&#xD;
-  </OSIDemo_Water_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Water_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>WMotor</Equipment_x0020_Type>&#xD;&#xD;
-    <Max_x0020_Flow>30</Max_x0020_Flow>&#xD;&#xD;
-    <Flow_x0020_Rate_x0020_Factor>0.71</Flow_x0020_Rate_x0020_Factor>&#xD;&#xD;
-  </OSIDemo_Water_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Water_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>WCompressor</Equipment_x0020_Type>&#xD;&#xD;
-    <Max_x0020_Flow>33</Max_x0020_Flow>&#xD;&#xD;
-    <Flow_x0020_Rate_x0020_Factor>0.69</Flow_x0020_Rate_x0020_Factor>&#xD;&#xD;
-  </OSIDemo_Water_x0020_Specs>&#xD;&#xD;
-  <OSIDemo_Water_x0020_Specs>&#xD;&#xD;
-    <Equipment_x0020_Type>WHVAC</Equipment_x0020_Type>&#xD;&#xD;
-    <Max_x0020_Flow>35</Max_x0020_Flow>&#xD;&#xD;
-    <Flow_x0020_Rate_x0020_Factor>0.6</Flow_x0020_Rate_x0020_Factor>&#xD;&#xD;
-  </OSIDemo_Water_x0020_Specs>&#xD;&#xD;
-</OSIDemo_Water_x0020_SpecsDataSet></DataTable>
-      <EffectiveDate>2015-01-01T05:00:00Z</EffectiveDate>
+      <DataTable><Generic_x0020_SpecificationsDataSet><Generic_x0020_Specifications><Equipment_x0020_Type>EPump</Equipment_x0020_Type><Serial_x0020_Number>Electric User1</Serial_x0020_Number><Installation_x0020_Date>2015-06-01T18:00:00+09:00</Installation_x0020_Date><Product>P-100</Product><Manufacturer>Pumpworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>EMotor</Equipment_x0020_Type><Serial_x0020_Number>Electric User2</Serial_x0020_Number><Installation_x0020_Date>2015-05-06T00:00:00+09:00</Installation_x0020_Date><Product>M-100</Product><Manufacturer>Motorworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>GPump</Equipment_x0020_Type><Serial_x0020_Number>Gas User1</Serial_x0020_Number><Installation_x0020_Date>2015-01-01T17:00:00+09:00</Installation_x0020_Date><Product>GasP-100</Product><Manufacturer>Pumpworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>GMotor</Equipment_x0020_Type><Serial_x0020_Number>Gas User2</Serial_x0020_Number><Installation_x0020_Date>2015-09-10T20:00:00+09:00</Installation_x0020_Date><Product>GasM-100</Product><Manufacturer>Motorworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>WPump</Equipment_x0020_Type><Serial_x0020_Number>Water User1</Serial_x0020_Number><Installation_x0020_Date>2015-04-08T09:00:00+09:00</Installation_x0020_Date><Product>H2OP-100</Product><Manufacturer>Pumpworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>WMotor</Equipment_x0020_Type><Serial_x0020_Number>Water User2</Serial_x0020_Number><Installation_x0020_Date>2015-04-21T01:00:00+09:00</Installation_x0020_Date><Product>H2OM-100</Product><Manufacturer>Motorworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>GCompressor</Equipment_x0020_Type><Serial_x0020_Number>Gas User3</Serial_x0020_Number><Installation_x0020_Date>2014-09-30T09:00:00+09:00</Installation_x0020_Date><Product>GasC-100</Product><Manufacturer>Compworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>GHvac</Equipment_x0020_Type><Serial_x0020_Number>Gas User4</Serial_x0020_Number><Installation_x0020_Date>2013-10-13T09:00:00+09:00</Installation_x0020_Date><Product>GasH-100</Product><Manufacturer>HVACworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>ECompressor</Equipment_x0020_Type><Serial_x0020_Number>Electric User3</Serial_x0020_Number><Installation_x0020_Date>2014-10-13T09:00:00+09:00</Installation_x0020_Date><Product>C-100</Product><Manufacturer>Compworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>EHvac</Equipment_x0020_Type><Serial_x0020_Number>Electric User4</Serial_x0020_Number><Installation_x0020_Date>2013-10-16T09:00:00+09:00</Installation_x0020_Date><Product>H-100</Product><Manufacturer>HVACworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>WCompressor</Equipment_x0020_Type><Serial_x0020_Number>Water User3</Serial_x0020_Number><Installation_x0020_Date>2015-01-16T09:00:00+09:00</Installation_x0020_Date><Product>H2OC-100</Product><Manufacturer>Compworld</Manufacturer></Generic_x0020_Specifications><Generic_x0020_Specifications><Equipment_x0020_Type>WHvac</Equipment_x0020_Type><Serial_x0020_Number>Water User4</Serial_x0020_Number><Installation_x0020_Date>2015-05-16T09:00:00+09:00</Installation_x0020_Date><Product>H2OH-100</Product><Manufacturer>HVACworld</Manufacturer></Generic_x0020_Specifications></Generic_x0020_SpecificationsDataSet></DataTable>
       <AFTableCategoryRef>Specifications</AFTableCategoryRef>
     </AFTable>
     <AFTable>
@@ -2490,7 +2297,33 @@
     </xs:complexType>
   </xs:element>
 </xs:schema></Schema>
-      <DataTable><TranslationsDataSet><Translations><English>PI Data Archive</English><Japanese>PI Data Archive</Japanese><Check>true</Check></Translations><Translations><English>Target PI Data Archive</English><Japanese>対象のPI Data Archive</Japanese><Check>false</Check></Translations><Translations><English>Name</English><Japanese>名</Japanese><Check>false</Check></Translations><Translations><English>PI Data Archive Name</English><Japanese>PIデータアーカイブ名</Japanese><Check>false</Check></Translations><Translations><English>Language</English><Japanese>言語</Japanese><Check>false</Check></Translations><Translations><English>The language use for tag lookup</English><Japanese>タグ検索用の言語使用</Japanese><Check>false</Check></Translations><Translations><English>Plant</English><Japanese>工場</Japanese><Check>true</Check></Translations><Translations><English>Plant Name</English><Japanese>工場名</Japanese><Check>true</Check></Translations><Translations><English>Water Usage</English><Japanese>水の利用量</Japanese><Check>false</Check></Translations><Translations><English>Current Plant Water Usage</English><Japanese>現在のプラント水使用</Japanese><Check>false</Check></Translations><Translations><English>Tagname</English><Japanese>タグ名</Japanese><Check>true</Check></Translations><Translations><English></English><Check>false</Check></Translations><Translations><English>Water Cost</English><Japanese>水のコスト</Japanese><Check>false</Check></Translations><Translations><English>Current Plant Water Cost</English><Japanese>現在のプラント水のコスト</Japanese><Check>false</Check></Translations><Translations><English>Physical Location</English><Japanese>物理的な位置</Japanese><Check>false</Check></Translations><Translations><English>Plant City</English><Japanese>工場の所在地</Japanese><Check>true</Check></Translations><Translations><English>Longitude</English><Japanese>経度</Japanese><Check>false</Check></Translations><Translations><English>Plant Longitude</English><Japanese>工場の経度</Japanese><Check>true</Check></Translations><Translations><English>Latitude</English><Japanese>緯度</Japanese><Check>false</Check></Translations><Translations><English>Plant Latitude</English><Japanese>工場の緯度</Japanese><Check>true</Check></Translations><Translations><English>Gas Usage</English><Japanese>ガスの使用法</Japanese><Check>false</Check></Translations><Translations><English>Current Plant Gas Usage</English><Japanese>現在のプラントのガス使用量</Japanese><Check>false</Check></Translations><Translations><English>Gas Cost</English><Japanese>ガスコスト</Japanese><Check>false</Check></Translations><Translations><English>Current Plant Gas Cost</English><Japanese>現在のプラントガスコスト</Japanese><Check>false</Check></Translations><Translations><English>Electrical Usage</English><Japanese>電気消費量</Japanese><Check>false</Check></Translations><Translations><English>Current Plant Electrical Usage</English><Japanese>現在のプラント電気使用状況</Japanese><Check>false</Check></Translations><Translations><English>Electrical Downtime</English><Japanese>電気ダウンタイム</Japanese><Check>false</Check></Translations><Translations><English>Current Plant Electrical Downtime</English><Japanese>現在のプラント電気ダウンタイム</Japanese><Check>false</Check></Translations><Translations><English>Electrical Cost</English><Japanese>電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Current Plant Electrical Cost</English><Japanese>現在のプラント電気のコスト</Japanese><Check>false</Check></Translations><Translations><English>Asset Location</English><Japanese>資産の場所</Japanese><Check>false</Check></Translations><Translations><English>Building1</English><Japanese>ビル1</Japanese><Check>false</Check></Translations><Translations><English>Building name</English><Japanese>ビル名</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Total Water Usage</English><Japanese>ビルデイリー水の総使用量</Japanese><Check>false</Check></Translations><Translations><English>Water Rate</English><Japanese>水道料金</Japanese><Check>false</Check></Translations><Translations><English>Building Water Rate</English><Japanese>ビルウォーターレート</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Total Water Cost</English><Japanese>ビルデイリー水の総コスト</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Total Gas Usage</English><Japanese>ビルデイリー総ガス使用量</Japanese><Check>false</Check></Translations><Translations><English>Gas Rate</English><Japanese>ガス料金</Japanese><Check>false</Check></Translations><Translations><English>Building Gas Rate</English><Japanese>本ビルのガス料金</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Total Gas Cost</English><Japanese>ビルデイリーガス総コスト</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Total Electric Usage</English><Japanese>ビルデイリー総電気使用量</Japanese><Check>false</Check></Translations><Translations><English>Building Downtime in minutes</English><Japanese>数分でダウンタイムを構築</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Total Electric Cost</English><Japanese>ビルデイリー総電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Electric Rate</English><Japanese>電気料金</Japanese><Check>false</Check></Translations><Translations><English>Building Electrical Rate</English><Japanese>ビルの電気料金</Japanese><Check>false</Check></Translations><Translations><English>Heat Content</English><Japanese>熱容量</Japanese><Check>false</Check></Translations><Translations><English>Building heat content of natural gas </English><Japanese>天然ガスの建物の熱含量</Japanese><Check>false</Check></Translations><Translations><English>Average Water Usage</English><Japanese>平均水使用</Japanese><Check>false</Check></Translations><Translations><English>Building average water usage so far today</English><Japanese>今日これまでの平均水使用量の構築</Japanese><Check>false</Check></Translations><Translations><English>Average Water Cost</English><Japanese>平均水のコスト</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Average Water Cost</English><Japanese>ビル日平均給水コスト</Japanese><Check>false</Check></Translations><Translations><English>Average Gas Usage</English><Japanese>平均ガス使用量</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Average Gas Usage</English><Japanese>ビルデイリー平均ガス使用量</Japanese><Check>false</Check></Translations><Translations><English>Average Gas Cost</English><Japanese>平均ガスコスト</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Average Gas Cost</English><Japanese>ビルデイリー平均ガスコスト</Japanese><Check>false</Check></Translations><Translations><English>Average Electric Usage</English><Japanese>平均電気使用量</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Average Electric Usage</English><Japanese>ビルデイリー平均電気使用量</Japanese><Check>false</Check></Translations><Translations><English>Average Electric Cost</English><Japanese>平均電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Building Daily Average Electric Cost</English><Japanese>ビルデイリー平均電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Electric User1</English><Japanese>電力需要設備1</Japanese><Check>true</Check></Translations><Translations><English>Electrical Equipment Name</English><Japanese>電気機器名</Japanese><Check>false</Check></Translations><Translations><English>Voltage</English><Japanese>電圧</Japanese><Check>false</Check></Translations><Translations><English>Equipment voltage specification</English><Japanese>機器の電圧仕様</Japanese><Check>false</Check></Translations><Translations><English>State</English><Japanese>状態</Japanese><Check>false</Check></Translations><Translations><English>Electrical Equipment State</English><Japanese>電気機器の状態</Japanese><Check>false</Check></Translations><Translations><English>TagName</English><Japanese>TagNameは</Japanese><Check>false</Check></Translations><Translations><English>RunTime</English><Japanese>ランタイム</Japanese><Check>false</Check></Translations><Translations><English>Today's Electrical Runtime</English><Japanese>今日の電気ランタイム</Japanese><Check>false</Check></Translations><Translations><English>Peak Power Load</English><Japanese>ピーク電力負荷</Japanese><Check>false</Check></Translations><Translations><English>Today's Max Electricty Usage</English><Japanese>今日の最大電気使用量</Japanese><Check>false</Check></Translations><Translations><English>Current Electricity Usage</English><Japanese>現在の電気使用</Japanese><Check>false</Check></Translations><Translations><English>To Days</English><Japanese>日へ</Japanese><Check>false</Check></Translations><Translations><English>Fault Code</English><Japanese>コー​​ドの障害</Japanese><Check>false</Check></Translations><Translations><English>Last Downtime Fault Code</English><Japanese>最後のダウンタイムフォルトコード</Japanese><Check>false</Check></Translations><Translations><English>Today's Electrical Usage</English><Japanese>今日の電気使用状況</Japanese><Check>false</Check></Translations><Translations><English>Today's Electrical Cost</English><Japanese>今日の電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Downtime Duration</English><Japanese>ダウンタイム期間</Japanese><Check>false</Check></Translations><Translations><English>Today's Duration of Downtime</English><Japanese>ダウンタイムの今日の持続時間</Japanese><Check>false</Check></Translations><Translations><English>Average Power Load</English><Japanese>平均電力負荷</Japanese><Check>false</Check></Translations><Translations><English>Today's Average Load</English><Japanese>今日の平均荷重</Japanese><Check>false</Check></Translations><Translations><English>Amps</English><Japanese>アンペア</Japanese><Check>false</Check></Translations><Translations><English>Current Amperage</English><Japanese>現在のアンペア数</Japanese><Check>false</Check></Translations><Translations><English>Serial Number</English><Japanese>シリアルナンバー</Japanese><Check>true</Check></Translations><Translations><English>Serial Number of Equipment </English><Japanese>機器のシリアル番号</Japanese><Check>false</Check></Translations><Translations><English>Product</English><Japanese>製品</Japanese><Check>false</Check></Translations><Translations><English>Name of Product</English><Japanese>製品名</Japanese><Check>true</Check></Translations><Translations><English>Manufacturer</English><Japanese>メーカー</Japanese><Check>false</Check></Translations><Translations><English>Manufacturer of Equipment</English><Japanese>機器のメーカー</Japanese><Check>false</Check></Translations><Translations><English>Installation Date</English><Japanese>設置日</Japanese><Check>false</Check></Translations><Translations><English>Date of installation</English><Japanese>設置日</Japanese><Check>false</Check></Translations><Translations><English>Equipment Type</English><Japanese>装置種別</Japanese><Check>false</Check></Translations><Translations><English>Generic Equipment Type</English><Japanese>一般的な機器タイプ</Japanese><Check>false</Check></Translations><Translations><English>Electric User2</English><Japanese>電力需要設備2</Japanese><Check>true</Check></Translations><Translations><English>Gas User1</English><Japanese>ガス需要設備1</Japanese><Check>true</Check></Translations><Translations><English>Gas Equipment Name</English><Japanese>ガス機器名</Japanese><Check>false</Check></Translations><Translations><English>Total Gas Consumed</English><Japanese>総ガスが消費されます</Japanese><Check>false</Check></Translations><Translations><English>Today's total gas usage</English><Japanese>今日の全ガス使用量</Japanese><Check>false</Check></Translations><Translations><English>Gas equipment state</English><Japanese>ガス機器の状態</Japanese><Check>false</Check></Translations><Translations><English>Pressure Factor</English><Japanese>圧力係数</Japanese><Check>false</Check></Translations><Translations><English>Gas flow pressure factor</English><Japanese>ガス流の圧力係数</Japanese><Check>false</Check></Translations><Translations><English>Peak Gas Flow</English><Japanese>ピークガスフロー</Japanese><Check>false</Check></Translations><Translations><English>Today's peak gas flow</English><Japanese>今日のピークガス流量</Japanese><Check>false</Check></Translations><Translations><English>Gas Flow</English><Japanese>気体流</Japanese><Check>false</Check></Translations><Translations><English>Gas flow rate</English><Japanese>ガス流量</Japanese><Check>false</Check></Translations><Translations><English>Today's cost of gas</English><Japanese>本日のガス料金</Japanese><Check>false</Check></Translations><Translations><English>Gas Consumed</English><Japanese>ガスの消費量</Japanese><Check>false</Check></Translations><Translations><English>Current Energy Usage</English><Japanese>現在のエネルギー使用量</Japanese><Check>false</Check></Translations><Translations><English>Last downtime fault code</English><Japanese>最後のダウンタイムの故障コード</Japanese><Check>false</Check></Translations><Translations><English>Average Gas Flow</English><Japanese>平均ガス流量</Japanese><Check>false</Check></Translations><Translations><English>Today's average gas flow</English><Japanese>今日の平均ガス流量</Japanese><Check>false</Check></Translations><Translations><English>Gas User2</English><Japanese>ガス需要設備2</Japanese><Check>true</Check></Translations><Translations><English>Water User1</English><Japanese>水需要設備1</Japanese><Check>true</Check></Translations><Translations><English>Water Equipment Name</English><Japanese>水機器名</Japanese><Check>false</Check></Translations><Translations><English>Today's total water usage</English><Japanese>今日の水の総使用量</Japanese><Check>false</Check></Translations><Translations><English>Water Flow Time</English><Japanese>水の流れの時間</Japanese><Check>false</Check></Translations><Translations><English>Total time that water has flown so far today</English><Japanese>水は今日これまでに流入したことを合計時間</Japanese><Check>false</Check></Translations><Translations><English>Water Flow Rate</English><Japanese>水の流量</Japanese><Check>false</Check></Translations><Translations><English>The current water flow rate</English><Japanese>現在の水の流量</Japanese><Check>false</Check></Translations><Translations><English>Today's total cost of water</English><Japanese>水の今日の総コスト</Japanese><Check>false</Check></Translations><Translations><English>The water equipment's state</English><Japanese>水設備の状態</Japanese><Check>false</Check></Translations><Translations><English>Max Water Flow Rate</English><Japanese>最大水流量</Japanese><Check>false</Check></Translations><Translations><English>Today's maximum water flow rate</English><Japanese>今日の最大水流量</Japanese><Check>false</Check></Translations><Translations><English>Adjusted Flow Rate</English><Japanese>調整後フローレート</Japanese><Check>false</Check></Translations><Translations><English>Flow rate adjusted using the flow rate factor</English><Japanese>流量は流量係数を使用して調整</Japanese><Check>false</Check></Translations><Translations><English>Adjusted flow rate normalized per day</English><Japanese>一日あたりの正規化し調整した流量</Japanese><Check>false</Check></Translations><Translations><English>Flow Rate Maximum</English><Japanese>フローレート最大</Japanese><Check>false</Check></Translations><Translations><English>The equipment's maximum flow rate specification</English><Japanese>機器の最大流量仕様</Japanese><Check>false</Check></Translations><Translations><English>Flow Rate Factor</English><Japanese>流量係数</Japanese><Check>false</Check></Translations><Translations><English>The flow rate factor specification</English><Japanese>流量係数仕様</Japanese><Check>false</Check></Translations><Translations><English>Average Water Flow Rate</English><Japanese>平均水の流量</Japanese><Check>false</Check></Translations><Translations><English>Today's average water flow rate</English><Japanese>今日の平均的な水の流量</Japanese><Check>false</Check></Translations><Translations><English>Water User2</English><Japanese>水需要設備2</Japanese><Check>true</Check></Translations><Translations><English>Building2</English><Japanese>ビル2</Japanese><Check>true</Check></Translations><Translations><English>Electric User3</English><Japanese>電力需要設備3</Japanese><Check>true</Check></Translations><Translations><English>Electric User4</English><Japanese>電力需要設備4</Japanese><Check>true</Check></Translations><Translations><English>Gas User3</English><Japanese>ガス需要設備3</Japanese><Check>true</Check></Translations><Translations><English>Gas User4</English><Japanese>ガス需要設備4</Japanese><Check>true</Check></Translations><Translations><English>Water User3</English><Japanese>水需要設備3</Japanese><Check>true</Check></Translations><Translations><English>Water User4</English><Japanese>水需要設備4</Japanese><Check>true</Check></Translations><Translations><English>Volts</English><Japanese>ボルト</Japanese><Check>false</Check></Translations><Translations><English>KWatts</English><Japanese>キロワット</Japanese><Check>false</Check></Translations><Translations><English>BTU Rating</English><Japanese>BTU評価</Japanese><Check>false</Check></Translations><Translations><English>Max Flow</English><Japanese>マックスフロー</Japanese><Check>false</Check></Translations><Translations><English>Building</English><Japanese>ビル</Japanese><Check>true</Check></Translations><Translations><English>Electric User</English><Japanese>電力需要設備</Japanese><Check>true</Check></Translations><Translations><English>Gas User</English><Japanese>ガス需要設備</Japanese><Check>true</Check></Translations><Translations><English>Generic Equipment</English><Japanese>一般的な機器</Japanese><Check>false</Check></Translations><Translations><English>OSIDemo_DownTime</English><Japanese>OSIDemo_DownTime</Japanese><Check>false</Check></Translations><Translations><English>OSIDEMO_%ELEMENT%_DownTime_%STARTTIME:yyyy-MM-dd HH:mm:ss%</English><Japanese>OSIDEMO_%ELEMENT%_DownTime_%STARTTIME:yyyy-MM-dd HH:mm:ss%</Japanese><Check>false</Check></Translations><Translations><English>OSIDemo_High Amperage</English><Japanese>OSIDemo_High Amperage</Japanese><Check>false</Check></Translations><Translations><English>OSIDEMO_%ELEMENT%_High Power Usage_%STARTTIME:yyyy-MM-dd HH:mm:ss%</English><Japanese>OSIDEMO_%ELEMENT%_High Usage_%STARTTIME:yyyy-MM-dd HH:mm:ss%</Japanese><Check>false</Check></Translations><Translations><English>Water User</English><Japanese>水需要設備</Japanese><Check>true</Check></Translations></TranslationsDataSet></DataTable>
+      <DataTable><TranslationsDataSet><Translations><English>PI Data Archive</English><Japanese>PI Data Archive</Japanese><Check>true</Check></Translations><Translations><English>Plant</English><Japanese>工場</Japanese><Check>true</Check></Translations><Translations><English>Plant Name</English><Japanese>工場名</Japanese><Check>true</Check></Translations><Translations><English>Tagname</English><Japanese>タグ名</Japanese><Check>true</Check></Translations><Translations><English>Plant City</English><Japanese>工場の所在地</Japanese><Check>true</Check></Translations><Translations><English>Plant Longitude</English><Japanese>工場の経度</Japanese><Check>true</Check></Translations><Translations><English>Plant Latitude</English><Japanese>工場の緯度</Japanese><Check>true</Check></Translations><Translations><English>Electric User1</English><Japanese>電力需要設備1</Japanese><Check>true</Check></Translations><Translations><English>Serial Number</English><Japanese>シリアルナンバー</Japanese><Check>true</Check></Translations><Translations><English>Name of Product</English><Japanese>製品名</Japanese><Check>true</Check></Translations><Translations><English>Electric User2</English><Japanese>電力需要設備2</Japanese><Check>true</Check></Translations><Translations><English>Gas User1</English><Japanese>ガス需要設備1</Japanese><Check>true</Check></Translations><Translations><English>Gas User2</English><Japanese>ガス需要設備2</Japanese><Check>true</Check></Translations><Translations><English>Water User1</English><Japanese>水需要設備1</Japanese><Check>true</Check></Translations><Translations><English>Water User2</English><Japanese>水需要設備2</Japanese><Check>true</Check></Translations><Translations><English>Building2</English><Japanese>ビル2</Japanese><Check>true</Check></Translations><Translations><English>Electric User3</English><Japanese>電力需要設備3</Japanese><Check>true</Check></Translations><Translations><English>Electric User4</English><Japanese>電力需要設備4</Japanese><Check>true</Check></Translations><Translations><English>Gas User3</English><Japanese>ガス需要設備3</Japanese><Check>true</Check></Translations><Translations><English>Gas User4</English><Japanese>ガス需要設備4</Japanese><Check>true</Check></Translations><Translations><English>Water User3</English><Japanese>水需要設備3</Japanese><Check>true</Check></Translations><Translations><English>Water User4</English><Japanese>水需要設備4</Japanese><Check>true</Check></Translations><Translations><English>Building</English><Japanese>ビル</Japanese><Check>true</Check></Translations><Translations><English>Electric User</English><Japanese>電力需要設備</Japanese><Check>true</Check></Translations><Translations><English>Gas User</English><Japanese>ガス需要設備</Japanese><Check>true</Check></Translations><Translations><English>Water User</English><Japanese>水需要設備</Japanese><Check>true</Check></Translations><Translations><English>Target PI Data Archive</English><Japanese>ターゲットPIデータアーカイブ</Japanese><Check>false</Check></Translations><Translations><English>Name</English><Japanese>名</Japanese><Check>false</Check></Translations><Translations><English>PI Data Archive Name</English><Japanese>PIデータアーカイブ名</Japanese><Check>false</Check></Translations><Translations><English>Asset Location</English><Japanese>資産の場所</Japanese><Check>false</Check></Translations><Translations><English>Asset location</English><Japanese>資産の場所</Japanese><Check>false</Check></Translations><Translations><English>Electrical Downtime</English><Japanese>電気ダウンタイム</Japanese><Check>false</Check></Translations><Translations><English>Current plant electrical downtime</English><Japanese>現在のプラント電気ダウンタイム</Japanese><Check>false</Check></Translations><Translations><English>Latitude</English><Japanese>緯度</Japanese><Check>false</Check></Translations><Translations><English>Plant latitude</English><Japanese>植物緯度</Japanese><Check>false</Check></Translations><Translations><English>Longitude</English><Japanese>経度</Japanese><Check>false</Check></Translations><Translations><English>Plant longitude</English><Japanese>プラント経度</Japanese><Check>false</Check></Translations><Translations><English>Physical Location</English><Japanese>物理的な位置</Japanese><Check>false</Check></Translations><Translations><English>Plant city</English><Japanese>植物の都市</Japanese><Check>false</Check></Translations><Translations><English>Total Electrical Cost</English><Japanese>総電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Current plant electrical cost</English><Japanese>現在のプラントの電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Total Electrical Usage</English><Japanese>総電気使用量</Japanese><Check>false</Check></Translations><Translations><English>Total plant electrical usage</English><Japanese>プラント全体の電気使用量</Japanese><Check>false</Check></Translations><Translations><English>Total Gas Cost</English><Japanese>総ガスコスト</Japanese><Check>false</Check></Translations><Translations><English>Current plant gas cost</English><Japanese>現在のプラントガスコスト</Japanese><Check>false</Check></Translations><Translations><English>Total Gas Usage</English><Japanese>全ガス使用量</Japanese><Check>false</Check></Translations><Translations><English>Total plant gas usage</English><Japanese>総プラントガスの使用</Japanese><Check>false</Check></Translations><Translations><English>Total Water Cost</English><Japanese>水の総コスト</Japanese><Check>false</Check></Translations><Translations><English>Current plant water cost</English><Japanese>現在の植物水費</Japanese><Check>false</Check></Translations><Translations><English>Total Water Usage</English><Japanese>水の総使用量</Japanese><Check>false</Check></Translations><Translations><English>Total plant water usage</English><Japanese>プラント全体の水利用</Japanese><Check>false</Check></Translations><Translations><English>Building1</English><Japanese>ビル1</Japanese><Check>true</Check></Translations><Translations><English>Building name</English><Japanese>ビル名</Japanese><Check>false</Check></Translations><Translations><English>Average Electric Cost</English><Japanese>平均電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Building daily average electric cost</English><Japanese>毎日の平均電気コストの構築</Japanese><Check>false</Check></Translations><Translations><English>Average Electrical Usage</English><Japanese>平均電気使用量</Japanese><Check>false</Check></Translations><Translations><English>Building daily average electric usage</English><Japanese>毎日の平均電気使用量の構築</Japanese><Check>false</Check></Translations><Translations><English>Average Gas Cost</English><Japanese>平均ガスコスト</Japanese><Check>false</Check></Translations><Translations><English>Building daily average gas cost</English><Japanese>毎日の平均ガスコストの構築</Japanese><Check>false</Check></Translations><Translations><English>Average Gas Usage</English><Japanese>平均ガス使用量</Japanese><Check>false</Check></Translations><Translations><English>Building daily average gas usage</English><Japanese>毎日の平均ガス使用量の構築</Japanese><Check>false</Check></Translations><Translations><English>average water cost</English><Japanese>平均水費</Japanese><Check>false</Check></Translations><Translations><English>Building daily average water cost</English><Japanese>日平均水費の構築</Japanese><Check>false</Check></Translations><Translations><English>Average Water Usage</English><Japanese>平均水使用</Japanese><Check>false</Check></Translations><Translations><English>Building daily average water usage</English><Japanese>毎日の平均水使用量の構築</Japanese><Check>false</Check></Translations><Translations><English>BTU Factor</English><Japanese>BTUファクター</Japanese><Check>false</Check></Translations><Translations><English>Building gas BTU factor</English><Japanese>ビルガスBTU因子</Japanese><Check>false</Check></Translations><Translations><English>Electrical downtime</English><Japanese>電気のダウンタイム</Japanese><Check>false</Check></Translations><Translations><English>Building downtime in minutes</English><Japanese>数分でダウンタイムを構築</Japanese><Check>false</Check></Translations><Translations><English>Electricity Price</English><Japanese>電気料金</Japanese><Check>false</Check></Translations><Translations><English>Building electrical price</English><Japanese>電気価格の構築</Japanese><Check>false</Check></Translations><Translations><English>Gas Price</English><Japanese>ガソリン価格</Japanese><Check>false</Check></Translations><Translations><English>Building gas price</English><Japanese>建物のガス価格</Japanese><Check>false</Check></Translations><Translations><English>Heat Content</English><Japanese>熱容量</Japanese><Check>false</Check></Translations><Translations><English>Building heat content of natural gas </English><Japanese>天然ガスの建物の熱含量</Japanese><Check>false</Check></Translations><Translations><English>Building daily total electric cost</English><Japanese>毎日の総電気コストの構築</Japanese><Check>false</Check></Translations><Translations><English>Building daily total electric usage</English><Japanese>毎日の総電気使用量の構築</Japanese><Check>false</Check></Translations><Translations><English>Building daily total gas cost</English><Japanese>毎日の総ガスコストの構築</Japanese><Check>false</Check></Translations><Translations><English>Building daily total gas usage</English><Japanese>毎日全ガス使用量の構築</Japanese><Check>false</Check></Translations><Translations><English>Building daily total water cost</English><Japanese>毎日水の総コストを構築</Japanese><Check>false</Check></Translations><Translations><English>Building daily total water usage</English><Japanese>毎日水の総使用量の構築</Japanese><Check>false</Check></Translations><Translations><English>Water Price</English><Japanese>水価格</Japanese><Check>false</Check></Translations><Translations><English>Building water price</English><Japanese>建物の水の価格</Japanese><Check>false</Check></Translations><Translations><English>Electrical Equipment Name</English><Japanese>電気機器名</Japanese><Check>false</Check></Translations><Translations><English>Amps</English><Japanese>アンペア</Japanese><Check>false</Check></Translations><Translations><English>Current amperage</English><Japanese>現在のアンペア数</Japanese><Check>false</Check></Translations><Translations><English>Average Power Load</English><Japanese>平均電力負荷</Japanese><Check>false</Check></Translations><Translations><English>Average power load since midnight this morning</English><Japanese>深夜以降の平均電力負荷今朝</Japanese><Check>false</Check></Translations><Translations><English>Current Electricity Load</English><Japanese>現在の電気負荷</Japanese><Check>false</Check></Translations><Translations><English>Current rate of electricity usage</English><Japanese>電気使用量の現在のレート</Japanese><Check>false</Check></Translations><Translations><English>To Days</English><Japanese>日へ</Japanese><Check>false</Check></Translations><Translations><English>TagTot expects rates in units per day. Details: https://livelibrary.osisoft.com/LiveLibrary/content/en/server-v6/GUID-0EE9266C-10D1-40B5-9896-895C0D44F5A0</English><Japanese>TagTotは一日あたりの単位でレートを想定しています。詳細： https://livelibrary.osisoft.com/LiveLibrary/content/en/server-v6/GUID-0EE9266C-10D1-40B5-9896-895C0D44F5A0</Japanese><Check>false</Check></Translations><Translations><English>Downtime Duration</English><Japanese>ダウンタイム期間</Japanese><Check>false</Check></Translations><Translations><English>Total downtime duration since midnight this morning</English><Japanese>真夜中から合計ダウンタイムの期間今朝</Japanese><Check>false</Check></Translations><Translations><English>Electrical Cost</English><Japanese>電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Total electrical cost since midnight this morning</English><Japanese>真夜中朝から総電気コスト</Japanese><Check>false</Check></Translations><Translations><English>Fault Code</English><Japanese>コードの障害</Japanese><Check>false</Check></Translations><Translations><English>The current fault code if any</English><Japanese>もしあれば、現在の故障コード</Japanese><Check>false</Check></Translations><Translations><English>Peak Power Load</English><Japanese>ピーク電力負荷</Japanese><Check>false</Check></Translations><Translations><English>Today's peak electricty usage</English><Japanese>今日のピーク電気使用量</Japanese><Check>false</Check></Translations><Translations><English>RunTime</English><Japanese>ランタイム</Japanese><Check>false</Check></Translations><Translations><English>Today's electrical runtime</English><Japanese>今日の電気ランタイム</Japanese><Check>false</Check></Translations><Translations><English>State</English><Japanese>状態</Japanese><Check>false</Check></Translations><Translations><English>Electrical equipment state</English><Japanese>電気機器の状態</Japanese><Check>false</Check></Translations><Translations><English>Today's total electrical energy usage</English><Japanese>今日の総電気エネルギー使用量</Japanese><Check>false</Check></Translations><Translations><English>Voltage</English><Japanese>電圧</Japanese><Check>false</Check></Translations><Translations><English>Equipment voltage specification</English><Japanese>機器の電圧仕様</Japanese><Check>false</Check></Translations><Translations><English>Equipment Type</English><Japanese>装置種別</Japanese><Check>false</Check></Translations><Translations><English>Generic equipment type</English><Japanese>一般的な機器の種類</Japanese><Check>false</Check></Translations><Translations><English>Installation Date</English><Japanese>設置日</Japanese><Check>false</Check></Translations><Translations><English>Date of installation</English><Japanese>設置日</Japanese><Check>false</Check></Translations><Translations><English>Manufacturer</English><Japanese>メーカー</Japanese><Check>false</Check></Translations><Translations><English>Manufacturer of equipment</English><Japanese>機器のメーカー</Japanese><Check>false</Check></Translations><Translations><English>Product</English><Japanese>製品</Japanese><Check>false</Check></Translations><Translations><English>Name of product</English><Japanese>品名</Japanese><Check>false</Check></Translations><Translations><English>Serial number of equipment </English><Japanese>機器のシリアル番号</Japanese><Check>false</Check></Translations><Translations><English>Gas Equipment Name</English><Japanese>ガス機器名</Japanese><Check>false</Check></Translations><Translations><English>Average Gas Flow</English><Japanese>平均ガス流量</Japanese><Check>false</Check></Translations><Translations><English>Today's average gas flow</English><Japanese>今日の平均ガス流量</Japanese><Check>false</Check></Translations><Translations><English>Last downtime fault code</English><Japanese>最後のダウンタイムの故障コード</Japanese><Check>false</Check></Translations><Translations><English>Gas Cost</English><Japanese>ガスコスト</Japanese><Check>false</Check></Translations><Translations><English>Today's cost of gas</English><Japanese>ガスの今日のコスト</Japanese><Check>false</Check></Translations><Translations><English>Gas Energy Usage Rate</English><Japanese>ガスエネルギー利用率</Japanese><Check>false</Check></Translations><Translations><English>Current gas energy usage rate</English><Japanese>現在のガスエネルギー利用率</Japanese><Check>false</Check></Translations><Translations><English>Gas Flow</English><Japanese>気体流</Japanese><Check>false</Check></Translations><Translations><English>Current gas flowrate</English><Japanese>現在のガス流量</Japanese><Check>false</Check></Translations><Translations><English>Gas Flow time</English><Japanese>ガス流通時間</Japanese><Check>false</Check></Translations><Translations><English>Today's gas flow time</English><Japanese>今日のガス流通時間</Japanese><Check>false</Check></Translations><Translations><English>Peak Gas Flow</English><Japanese>ピークガスフロー</Japanese><Check>false</Check></Translations><Translations><English>Today's peak gas flow</English><Japanese>今日のピークガス流量</Japanese><Check>false</Check></Translations><Translations><English>Pressure Factor</English><Japanese>圧力係数</Japanese><Check>false</Check></Translations><Translations><English>Gas flow pressure factor</English><Japanese>ガス流の圧力係数</Japanese><Check>false</Check></Translations><Translations><English>Gas equipment state</English><Japanese>ガス機器の状態</Japanese><Check>false</Check></Translations><Translations><English>Total Gas Consumed</English><Japanese>総ガスが消費されます</Japanese><Check>false</Check></Translations><Translations><English>Today's total gas energy usage</English><Japanese>今日のガス総エネルギー使用量</Japanese><Check>false</Check></Translations><Translations><English>Water Equipment Name</English><Japanese>水機器名</Japanese><Check>false</Check></Translations><Translations><English>Adjusted Flow Rate</English><Japanese>調整後フローレート</Japanese><Check>false</Check></Translations><Translations><English>Flow rate adjusted using the flow rate factor</English><Japanese>流量は流量係数を使用して調整</Japanese><Check>false</Check></Translations><Translations><English>Average Water Flow</English><Japanese>平均水の流れ</Japanese><Check>false</Check></Translations><Translations><English>Today's average water flowrate</English><Japanese>今日の平均的な水の流量</Japanese><Check>false</Check></Translations><Translations><English>Flow Rate Factor</English><Japanese>流量係数</Japanese><Check>false</Check></Translations><Translations><English>Flow rate factor specification</English><Japanese>流量係数仕様</Japanese><Check>false</Check></Translations><Translations><English>Flow Rate Maximum</English><Japanese>フローレート最大</Japanese><Check>false</Check></Translations><Translations><English>The equipment's maximum flow rate specification</English><Japanese>機器の最大流量仕様</Japanese><Check>false</Check></Translations><Translations><English>Peak Water Flow Rate</English><Japanese>ピーク水の流量</Japanese><Check>false</Check></Translations><Translations><English>Today's maximum water flowrate</English><Japanese>今日の最大の水の流量</Japanese><Check>false</Check></Translations><Translations><English>Water equipment state</English><Japanese>水設備の状態</Japanese><Check>false</Check></Translations><Translations><English>Today's water usage</English><Japanese>今日の水使用量</Japanese><Check>false</Check></Translations><Translations><English>Water Cost</English><Japanese>水のコスト</Japanese><Check>false</Check></Translations><Translations><English>Today's cost of water</English><Japanese>水の今日のコスト</Japanese><Check>false</Check></Translations><Translations><English>Water Flow Rate</English><Japanese>水の流量</Japanese><Check>false</Check></Translations><Translations><English>Current water flow rate</English><Japanese>現在の水の流量</Japanese><Check>false</Check></Translations><Translations><English>Volts</English><Japanese>ボルト</Japanese><Check>false</Check></Translations><Translations><English>KWatts</English><Japanese>キロワット</Japanese><Check>false</Check></Translations><Translations><English>BTU Rating</English><Japanese>BTU評価</Japanese><Check>false</Check></Translations><Translations><English>Max Flow</English><Japanese>マックスフロー</Japanese><Check>false</Check></Translations><Translations><English></English><Japanese></Japanese><Check>true</Check></Translations><Translations><English>Generic Equipment</English><Japanese>一般的な機器</Japanese><Check>false</Check></Translations><Translations><English>Cost</English><Japanese>コスト</Japanese><Check>false</Check></Translations><Translations><English>Utility Cost</English><Japanese>光熱費</Japanese><Check>false</Check></Translations><Translations><English>Downtime</English><Japanese>ダウンタイム</Japanese><Check>false</Check></Translations><Translations><English>Downtime Event</English><Japanese>ダウンタイムイベント</Japanese><Check>false</Check></Translations><Translations><English>Random Data</English><Japanese>ランダムデータ</Japanese><Check>false</Check></Translations><Translations><English>Random Data generation</English><Japanese>ランダムデータの生成</Japanese><Check>false</Check></Translations><Translations><English>Usage</English><Japanese>使用法</Japanese><Check>false</Check></Translations><Translations><English>Energy and Utility Usage</English><Japanese>エネルギー・ユーティリティの使用方法</Japanese><Check>false</Check></Translations><Translations><English>Asset</English><Japanese>資産</Japanese><Check>false</Check></Translations><Translations><English>Base</English><Japanese>ベース</Japanese><Check>false</Check></Translations><Translations><English>Base Specifications Template</English><Japanese>基本仕様テンプレート</Japanese><Check>false</Check></Translations><Translations><English>Element Downtime</English><Japanese>要素のダウンタイム</Japanese><Check>false</Check></Translations><Translations><English>Equipment</English><Japanese>装置</Japanese><Check>false</Check></Translations><Translations><English>Element Equipment</English><Japanese>要素機器</Japanese><Check>false</Check></Translations><Translations><English>Availability</English><Japanese>可用性</Japanese><Check>false</Check></Translations><Translations><English>Location</English><Japanese>ロケーション</Japanese><Check>false</Check></Translations><Translations><English>Specification</English><Japanese>仕様</Japanese><Check>false</Check></Translations><Translations><English>Utilities Price</English><Japanese>ユーティリティ価格</Japanese><Check>false</Check></Translations></TranslationsDataSet></DataTable>
+    </AFTable>
+    <AFTable>
+      <Name>Water Specs</Name>
+      <Description>Water Specifications Table</Description>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="Water_x0020_SpecsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Water_x0020_SpecsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Water_x0020_Specs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipment_x0020_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Max_x0020_Flow" type="xs:float" default="0" minOccurs="0" />
+              <xs:element name="Flow_x0020_Rate_x0020_Factor" type="xs:float" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><Water_x0020_SpecsDataSet><Water_x0020_Specs><Equipment_x0020_Type>WPump</Equipment_x0020_Type><Max_x0020_Flow>28</Max_x0020_Flow><Flow_x0020_Rate_x0020_Factor>0.75</Flow_x0020_Rate_x0020_Factor></Water_x0020_Specs><Water_x0020_Specs><Equipment_x0020_Type>WMotor</Equipment_x0020_Type><Max_x0020_Flow>30</Max_x0020_Flow><Flow_x0020_Rate_x0020_Factor>0.71</Flow_x0020_Rate_x0020_Factor></Water_x0020_Specs><Water_x0020_Specs><Equipment_x0020_Type>WCompressor</Equipment_x0020_Type><Max_x0020_Flow>33</Max_x0020_Flow><Flow_x0020_Rate_x0020_Factor>0.69</Flow_x0020_Rate_x0020_Factor></Water_x0020_Specs><Water_x0020_Specs><Equipment_x0020_Type>WHVAC</Equipment_x0020_Type><Max_x0020_Flow>35</Max_x0020_Flow><Flow_x0020_Rate_x0020_Factor>0.6</Flow_x0020_Rate_x0020_Factor></Water_x0020_Specs></Water_x0020_SpecsDataSet></DataTable>
+      <EffectiveDate>2015-01-01T05:00:00Z</EffectiveDate>
+      <AFTableCategoryRef>Specifications</AFTableCategoryRef>
     </AFTable>
     <AFEnumerationSet>
       <Name>Fault Code</Name>
@@ -2839,6 +2672,7 @@
       <AFAttributeTemplate>
         <Name>Water Price</Name>
         <Description>Building water price</Description>
+        <IsConfigurationItem>true</IsConfigurationItem>
         <DefaultUOM>$/US Gal</DefaultUOM>
         <Type>Single</Type>
         <Value type="Single">0.012</Value>
@@ -2851,7 +2685,7 @@
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Cost];Sum||Total Electrical Cost;[GUID]||{77008e29-61ba-4d94-8317-07ab53d43ce6};Average||Average Electric Cost;[GUID]||{a4adbc9f-e7d2-463d-87cd-14bb5435d826};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Cost];Sum||Total Electrical Cost;[GUID]||{3bad341e-ba86-485f-87d1-2ec889b965e0};Average||Average Electric Cost;[GUID]||{678033fb-c44c-4b6d-a92a-9e5bbd980b2f};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -2864,7 +2698,7 @@
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Average||Average Electrical Usage;[GUID]||{8d1577f1-943d-4ba9-9769-692944899497};Sum||Total Electrical Usage;[GUID]||{c0ed8f50-f58f-4019-a27d-a98d165217f5};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Average||Average Electrical Usage;[GUID]||{9c7fc6d6-ab97-4f9f-ad85-6de8398eb8d5};Sum||Total Electrical Usage;[GUID]||{b4b88774-4516-4553-8dc0-e38d3f83cbc7};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -2877,7 +2711,7 @@
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Cost];Sum||Total Gas Cost;[GUID]||{956591e5-d8ad-4b78-90a8-8053d87952fa};Average||Average Gas Cost;[GUID]||{5e079a60-763e-4ac5-a1ee-73e4e939d1f5};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Gas Cost];Sum||Total Gas Cost;[GUID]||{f6667ee2-ebde-4c91-b8db-ef2bfe935e3d};Average||Average Gas Cost;[GUID]||{01389174-ed37-4c1a-a01d-0116f1e406b9};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -2890,7 +2724,7 @@
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Consumed];Average||Average Gas Usage;[GUID]||{24bcd311-e4de-4aba-9c14-58a8ef834cd1};Sum||Total Gas Usage;[GUID]||{a629945f-4317-4964-911a-f5f3d454e603};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Consumed];Average||Average Gas Usage;[GUID]||{0ef25590-d8c1-4146-a171-97e3b0ebd8d8};Sum||Total Gas Usage;[GUID]||{e6f9eee1-9aca-41c4-ae82-19e1f8d590b3};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -2903,7 +2737,7 @@
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Cost];Sum||Total Water Cost;[GUID]||{9ecb0019-e531-456a-8d9e-8a6cb212887e};Average||Average Water Cost;[GUID]||{b308b29f-af31-4cf1-9877-41000d0c3f48};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Water Cost];Sum||Total Water Cost;[GUID]||{e3f03dc0-ef0f-4c2c-87ec-e7a5d6b0fc74};Average||average water cost;[GUID]||{b7b1386b-dc48-42a1-b605-43bdfce169f2};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -2916,7 +2750,7 @@
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Usage];Average||Average Water Usage;[GUID]||{101ffbbf-337a-472c-bdde-f0726f69778e};Sum||Total Water Usage;[GUID]||{1ddd629c-80cb-4fea-909d-31a0e4b820aa};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Usage];Average||Average Water Usage;[GUID]||{6020f5c0-73ab-4f48-a2a4-12fc27b74e99};Sum||Total Water Usage;[GUID]||{729887a0-8b12-4133-96ab-6cf99b952ee2};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -2929,12 +2763,51 @@
         <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Downtime Duration];Sum||Electrical Downtime;[GUID]||{ada99a23-a26a-4ea0-a055-d2678235e40a};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Downtime Duration];Sum||Electrical downtime;[GUID]||{e32fd8cb-8a77-46e6-9f46-cc658c91ae97};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
         </AFTimeRule>
       </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>DownTime</Name>
+      <Description>Equipment Downtime</Description>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute>State</DefaultAttribute>
+      <NamingPattern>%ELEMENT%_DownTime_%STARTTIME:yyyy-MM-dd HH:mm:ss%</NamingPattern>
+      <AFElementCategoryRef>Downtime</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Duration</Name>
+        <Description>Duration of downtime event</Description>
+        <DefaultUOM>min</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|State;TimeMethod=NotSupported;TimeRangeMethod=Count;UOM=s</ConfigString>
+        <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Fault Code</Name>
+        <Description>Reason for Downtime</Description>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
+        <Value type="AFEnumerationValue">2b4f5c35-40ff-4010-895a-dc19ef3dac47?0?Running State</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Fault Code;TimeRangeMethod=StartTime</ConfigString>
+        <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>State</Name>
+        <Description>State of running equipment</Description>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|State;TimeRangeMethod=StartTime</ConfigString>
+        <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
     </AFElementTemplate>
     <AFElementTemplate>
       <Name>Generic Equipment</Name>
@@ -2972,7 +2845,7 @@
         <Type>DateTime</Type>
         <Value type="DateTime">2015-12-16T00:00:00Z</Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT [Installation Date] FROM [OSIDemo_Generic Specifications] WHERE [Serial Number] = @[Serial Number]</ConfigString>
+        <ConfigString>SELECT [Installation Date] FROM [Generic Specifications] WHERE [Serial Number] = @[Serial Number]</ConfigString>
         <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -2981,7 +2854,7 @@
         <Type>String</Type>
         <Value type="String"></Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT Manufacturer FROM [OSIDemo_Generic Specifications] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+        <ConfigString>SELECT Manufacturer FROM [Generic Specifications] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
         <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -2990,7 +2863,7 @@
         <Type>String</Type>
         <Value type="String"></Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT Product FROM [OSIDemo_Generic Specifications] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+        <ConfigString>SELECT Product FROM [Generic Specifications] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
         <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -3124,7 +2997,7 @@
         <Description>The current fault code if any</Description>
         <Type>AFEnumerationValue</Type>
         <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
-        <Value type="AFEnumerationValue">EnumerationSets[Fault Code]\Running State</Value>
+        <Value type="AFEnumerationValue">2b4f5c35-40ff-4010-895a-dc19ef3dac47?0?Running State</Value>
         <DataReference>PI Point</DataReference>
         <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointtype=String;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
         <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
@@ -3215,7 +3088,7 @@
         <Type>Single</Type>
         <Value type="Single">120</Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT Volts FROM [OSIDemo_Electric Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+        <ConfigString>SELECT Volts FROM [Electric Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
         <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAnalysisTemplate>
@@ -3225,15 +3098,14 @@
         <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>EventFrame</AFPlugIn>
-          <ConfigString>EFTGUID=1a8ba81c-3d37-44e9-aa24-972b24e6f919;EFTNAME=OSIDemo_DownTime</ConfigString>
+          <ConfigString>EFTGUID=17aaacfb-bef7-4200-be01-eb7940ab6c60;EFTNAME=DownTime</ConfigString>
           <AFAnalysisRule>
             <AFPlugIn>PerformanceEquation</AFPlugIn>
-            <ConfigString>StartTrigger := '{529a555e-d773-4f06-939e-f8df596c265a};State'= "NoPower";&#xD;&#xD;
-EndTrigger := '{529a555e-d773-4f06-939e-f8df596c265a};State'= "Power";</ConfigString>
-          </AFAnalysisRule>
-          <AFAnalysisRule>
-            <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
-            <ConfigString>TimeTrueValue=0</ConfigString>
+            <ConfigString>@group("Start triggers")&#xD;
+StartTrigger := '{ff83c535-f601-418e-ad7f-66c834c9c06a};State'= "NoPower";&#xD;
+&#xD;
+@group("End triggers")&#xD;
+EndTrigger := '{ff83c535-f601-418e-ad7f-66c834c9c06a};State'= "Power";</ConfigString>
           </AFAnalysisRule>
         </AFAnalysisRule>
         <AFTimeRule>
@@ -3247,16 +3119,16 @@ EndTrigger := '{529a555e-d773-4f06-939e-f8df596c265a};State'= "Power";</ConfigSt
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>RunTime := TimeEq('{26e1adde-16b0-4495-9f3f-e4412fea0430};State','t','*',"Power");&#xD;&#xD;
+          <ConfigString>RunTime := TimeEq('{ff83c535-f601-418e-ad7f-66c834c9c06a};State','t','*',"Power");&#xD;&#xD;
 RunTimeUnits := Convert(RunTime,"s");&#xD;&#xD;
-ElectricalPower := '{7746406c-8ba0-4df0-be51-f2d4786bc074};Amps'*'{4ad49fdd-e773-4234-b9e4-07dd9ef47575};Voltage'; //Rate of Electrical Energy consumed&#xD;&#xD;
+ElectricalPower := '{9712fdab-0a74-47b6-8859-06d771b3165f};Amps'*'{c3b9f139-2bcf-4bf5-a6e8-d1b883f407d2};Voltage'; //Rate of Electrical Energy consumed&#xD;&#xD;
 ElectricalPowerUnits := Convert(ElectricalPower,"W");&#xD;&#xD;
-ElectricalUsage := TagTot('{ce070eea-30dd-4666-bcfb-dc35f96f9371};Current Electricity Load|{ef1a26da-3c30-46cf-878f-607852e494bd};To Days', 't', '*'); //Total Energy Usage so far between 00:00 today and now&#xD;&#xD;
-MaxPower := TagMax('{ce070eea-30dd-4666-bcfb-dc35f96f9371};Current Electricity Load','t','*');&#xD;&#xD;
-AvgPower := TagAvg('{ce070eea-30dd-4666-bcfb-dc35f96f9371};Current Electricity Load','t','*');&#xD;&#xD;
-DowntimeDuration := TimeEq('{26e1adde-16b0-4495-9f3f-e4412fea0430};State','t','*',"NoPower");&#xD;&#xD;
+ElectricalUsage := TagTot('{b9b44c82-fb8d-44a1-8aa4-9385f79b4a27};Current Electricity Load|{b241ee96-ef99-4e65-be3c-846c5be4faed};To Days', 't', '*'); //Total Energy Usage so far between 00:00 today and now&#xD;&#xD;
+MaxPower := TagMax('{b9b44c82-fb8d-44a1-8aa4-9385f79b4a27};Current Electricity Load','t','*');&#xD;&#xD;
+AvgPower := TagAvg('{b9b44c82-fb8d-44a1-8aa4-9385f79b4a27};Current Electricity Load','t','*');&#xD;&#xD;
+DowntimeDuration := TimeEq('{ff83c535-f601-418e-ad7f-66c834c9c06a};State','t','*',"NoPower");&#xD;&#xD;
 DowntimeDurationUnits := Convert(DowntimeDuration,"s");</ConfigString>
-          <VariableMapping>Energy 1H||Kilowatts Cost 1 Hour;Energy Cost 1H||Kilowatts Cost 1 Hour;CurrentDayEnergyUsage||KilowattHours;CurrentDayEnergyCost||Electrical Cost;[GUID]||{b18070d5-9e66-4914-9a37-9e93cd960014};SearchCriteria||Attributes;RunTimeUnits||RunTime;[GUID]||{427984b1-1a93-4eac-8fe9-1bc908c0bdeb};DowntimeDurationUnits||Downtime Duration;[GUID]||{f598e950-70e2-436b-ab34-a54a3955672e};MaxPower||Peak Power Load;[GUID]||{26aeffcf-8da4-4816-bc47-6730ba5ef4fd};AvgPower||Average Power Load;[GUID]||{665c8eae-e3f4-4fee-82c5-e69b956f6ca1};ElectricalPowerUnits||Current Electricity Load;[GUID]||{ce070eea-30dd-4666-bcfb-dc35f96f9371};ElectricalUsage||Total Electrical Usage;[GUID]||{744be81f-4746-4877-bb3a-f9cda5f064a0};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>Energy 1H||Kilowatts Cost 1 Hour;Energy Cost 1H||Kilowatts Cost 1 Hour;CurrentDayEnergyUsage||KilowattHours;CurrentDayEnergyCost||Electrical Cost;[GUID]||{bc925984-ebba-49e8-afb6-19a4c843e157};SearchCriteria||Attributes;RunTimeUnits||RunTime;[GUID]||{039d6688-1fa7-4ab6-90ab-b958f21a6ad7};DowntimeDurationUnits||Downtime Duration;[GUID]||{e341ce08-3dc5-482b-957e-64a4631fff8f};MaxPower||Peak Power Load;[GUID]||{4d191d72-c5b7-49f0-b78b-526f6b252faf};AvgPower||Average Power Load;[GUID]||{90ac1bb7-43da-47fa-ad8e-bd55e5222f37};ElectricalPowerUnits||Current Electricity Load;[GUID]||{b9b44c82-fb8d-44a1-8aa4-9385f79b4a27};ElectricalUsage||Total Electrical Usage;[GUID]||{e5ae53ad-ffe9-4b9f-b0fd-9eb1b5682b67};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3269,8 +3141,8 @@ DowntimeDurationUnits := Convert(DowntimeDuration,"s");</ConfigString>
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>ElectricalCost := '{744be81f-4746-4877-bb3a-f9cda5f064a0};Total Electrical Usage'*'..\|Electricity Price';</ConfigString>
-          <VariableMapping>Electrical Cost||Electrical Cost;[GUID]||{b18070d5-9e66-4914-9a37-9e93cd960014};ElectricalCost||Electrical Cost;[GUID]||{b18070d5-9e66-4914-9a37-9e93cd960014};[GUID]||[UNSET];</VariableMapping>
+          <ConfigString>ElectricalCost := '{e5ae53ad-ffe9-4b9f-b0fd-9eb1b5682b67};Total Electrical Usage'*'..\|Electricity Price';</ConfigString>
+          <VariableMapping>Electrical Cost||Electrical Cost;[GUID]||{bc925984-ebba-49e8-afb6-19a4c843e157};ElectricalCost||Electrical Cost;[GUID]||{bc925984-ebba-49e8-afb6-19a4c843e157};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3283,15 +3155,14 @@ DowntimeDurationUnits := Convert(DowntimeDuration,"s");</ConfigString>
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>EventFrame</AFPlugIn>
-          <ConfigString>EFTGUID=4448356e-4e32-4e7c-a924-b0ffdf68bb1a;EFTNAME=OSIDemo_High Amperage</ConfigString>
+          <ConfigString>EFTGUID=915646a5-7332-4473-bb86-0738dfe1e8d6;EFTNAME=High Amperage</ConfigString>
           <AFAnalysisRule>
             <AFPlugIn>PerformanceEquation</AFPlugIn>
-            <ConfigString>StartTrigger := '{8190f2ca-217b-4356-a5f0-44af40a05ee4};Amps'&gt; 180;&#xD;&#xD;
-EndTrigger := '{8190f2ca-217b-4356-a5f0-44af40a05ee4};Amps'&lt; 180;</ConfigString>
-          </AFAnalysisRule>
-          <AFAnalysisRule>
-            <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
-            <ConfigString>TimeTrueValue=30</ConfigString>
+            <ConfigString>@group("Start triggers") @timetrue("30") @timetruetype("clock")&#xD;
+StartTrigger := '{9712fdab-0a74-47b6-8859-06d771b3165f};Amps'&gt; 180;&#xD;
+&#xD;
+@group("End triggers")&#xD;
+EndTrigger := '{9712fdab-0a74-47b6-8859-06d771b3165f};Amps'&lt; 180;</ConfigString>
           </AFAnalysisRule>
         </AFAnalysisRule>
         <AFTimeRule>
@@ -3306,9 +3177,9 @@ EndTrigger := '{8190f2ca-217b-4356-a5f0-44af40a05ee4};Amps'&lt; 180;</ConfigStri
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
           <ConfigString>State := If Minute('*') &gt;= 15 and  Minute('*') &lt;= 20 or Minute('*') &gt;= 45 and  Minute('*') &lt;= 50 then "NoPower" else "Power";&#xD;&#xD;
-Amps := If '{694da010-fb53-4e6a-be37-ff2f529dcda7};State'= "Power" then Abs ((Rand(1.25,1.26))*20) else 0;&#xD;&#xD;
+Amps := If '{ff83c535-f601-418e-ad7f-66c834c9c06a};State'= "Power" then Abs ((Rand(1.25,1.26))*20) else 0;&#xD;&#xD;
 FaultCode := If Minute('*') &gt;= 15 and Minute('*') &lt;= 20 then "Turbine overload" Else If Minute('*') &gt;= 45 and Minute('*') &lt;= 50 then "Overload" else "Running State";</ConfigString>
-          <VariableMapping>Amps||Amps;[GUID]||{4cff0b79-78ce-4b41-90d8-570eabcfb1a1};State||State;[GUID]||{694da010-fb53-4e6a-be37-ff2f529dcda7};FaultCode||Fault Code;[GUID]||{0ce5be62-185c-4349-b6bb-95f15c3c1e31};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>Amps||Amps;[GUID]||{9712fdab-0a74-47b6-8859-06d771b3165f};State||State;[GUID]||{ff83c535-f601-418e-ad7f-66c834c9c06a};FaultCode||Fault Code;[GUID]||{ef195e32-4ab8-4f46-934b-1b4f65df59b0};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Periodic</AFPlugIn>
@@ -3470,7 +3341,7 @@ FaultCode := If Minute('*') &gt;= 15 and Minute('*') &lt;= 20 then "Turbine over
         <Type>Single</Type>
         <Value type="Single">1</Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT [Pressure Factor] FROM [OSIDemo_Gas Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+        <ConfigString>SELECT [Pressure Factor] FROM [Gas Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
         <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -3515,15 +3386,15 @@ FaultCode := If Minute('*') &gt;= 15 and Minute('*') &lt;= 20 then "Turbine over
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>GasFlowTime := TimeEq('{cf40dabf-f7b2-4109-9839-a904a23f1eff};State','t','*',"GasFlow");&#xD;&#xD;
+          <ConfigString>GasFlowTime := TimeEq('{476dc20b-5bc6-4723-a41b-363338f67915};State','t','*',"GasFlow");&#xD;&#xD;
 GasFlowTimeUnits := Convert(GasFlowTime,"s");&#xD;&#xD;
-GasEnergyUsageRate := '{84d630f4-6102-4afd-9d03-867ae3807e22};Gas Flow'*'{66b0d11b-2f64-48fe-b12f-ffda92229c91};Pressure Factor'*'..\|BTU Factor'*'..\|Heat Content'*3600; //Gas energy usage rate as a prodcut of Gas Flow, Pressure Factor, BTU Factor, and Heat Content in Btu/h&#xD;&#xD;
+GasEnergyUsageRate := '{44ba8aeb-d599-4409-b381-914f6ac7752e};Gas Flow'*'{71c037e8-3923-4f32-8119-7a175d03d613};Pressure Factor'*'..\|BTU Factor'*'..\|Heat Content'*3600; //Gas energy usage rate as a prodcut of Gas Flow, Pressure Factor, BTU Factor, and Heat Content in Btu/h&#xD;&#xD;
 GasEnergyUsageRateUnits := Convert(GasEnergyUsageRate, "Btu/h");&#xD;&#xD;
-TotalGasConsumed := TagTot('{c54e408e-9fa5-4663-82e9-d26c65028e56};Gas Energy Usage Rate|{d29dae94-131f-4c20-a186-c4d14135d43e};To Days','t','*');&#xD;&#xD;
+TotalGasConsumed := TagTot('{590bb8aa-99a5-4a4c-a9e4-56455c4f564f};Gas Energy Usage Rate|{16550561-7707-4bd4-9c06-491dcb408a51};To Days','t','*');&#xD;&#xD;
 TotalGasConsumedUnits := Convert(TotalGasConsumed,"Btu");&#xD;&#xD;
-PeakGasFlow := TagMax('{84d630f4-6102-4afd-9d03-867ae3807e22};Gas Flow','t','*');&#xD;&#xD;
-AvgGasFlow := TagAvg('{84d630f4-6102-4afd-9d03-867ae3807e22};Gas Flow','t','*');</ConfigString>
-          <VariableMapping>AvgGasFlow||Average Gas Flow;[GUID]||{5771fdb4-454d-406a-92b3-4cb857b7639f};PeakGasFlow||Peak Gas Flow;[GUID]||{ac9f0be6-1076-4107-aef7-b638d425ec2a};GasEnergyUsageRateUnits||Gas Energy Usage Rate;[GUID]||{c54e408e-9fa5-4663-82e9-d26c65028e56};GasFlowTimeUnits||Gas Flow time;[GUID]||{2faca2c4-91d3-4b06-bd17-3230b25881e4};TotalGasConsumedUnits||Total Gas Consumed;[GUID]||{74804c05-e6c0-4ff9-b89c-d4ab79557a74};[GUID]||[UNSET];</VariableMapping>
+PeakGasFlow := TagMax('{44ba8aeb-d599-4409-b381-914f6ac7752e};Gas Flow','t','*');&#xD;&#xD;
+AvgGasFlow := TagAvg('{44ba8aeb-d599-4409-b381-914f6ac7752e};Gas Flow','t','*');</ConfigString>
+          <VariableMapping>AvgGasFlow||Average Gas Flow;[GUID]||{0180c77c-404e-4111-b514-6242e31df0c5};PeakGasFlow||Peak Gas Flow;[GUID]||{14141b23-5403-41de-b1a1-56c7cc66f145};GasEnergyUsageRateUnits||Gas Energy Usage Rate;[GUID]||{590bb8aa-99a5-4a4c-a9e4-56455c4f564f};GasFlowTimeUnits||Gas Flow time;[GUID]||{b4e67048-a1da-4fe6-9939-a17e82589cce};TotalGasConsumedUnits||Total Gas Consumed;[GUID]||{3b5798f9-2fe9-43f8-8a0a-f4f232a9f172};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3537,9 +3408,8 @@ AvgGasFlow := TagAvg('{84d630f4-6102-4afd-9d03-867ae3807e22};Gas Flow','t','*');
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
           <ConfigString>GasPricePerBTU := Convert('..\|Gas Price',"$/Btu");&#xD;&#xD;
-GasCost := '{74804c05-e6c0-4ff9-b89c-d4ab79557a74};Total Gas Consumed'*GasPricePerBTU;&#xD;&#xD;
-</ConfigString>
-          <VariableMapping>GasCost||Gas Cost;[GUID]||{2d1a3d2a-df5a-4466-b5e6-e4822e8b54f8};[GUID]||[UNSET];</VariableMapping>
+GasCost := '{3b5798f9-2fe9-43f8-8a0a-f4f232a9f172};Total Gas Consumed'*GasPricePerBTU;</ConfigString>
+          <VariableMapping>GasCost||Gas Cost;[GUID]||{55150615-c675-40f5-8e33-3d2c9d0d4ef6};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3552,15 +3422,14 @@ GasCost := '{74804c05-e6c0-4ff9-b89c-d4ab79557a74};Total Gas Consumed'*GasPriceP
         <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>EventFrame</AFPlugIn>
-          <ConfigString>EFTGUID=1a8ba81c-3d37-44e9-aa24-972b24e6f919;EFTNAME=OSIDemo_DownTime</ConfigString>
+          <ConfigString>EFTGUID=17aaacfb-bef7-4200-be01-eb7940ab6c60;EFTNAME=DownTime</ConfigString>
           <AFAnalysisRule>
             <AFPlugIn>PerformanceEquation</AFPlugIn>
-            <ConfigString>StartTrigger := '{41106d8b-aac2-40a8-a8f5-a0bcabc854ff};State'= "NoGasFlow";&#xD;&#xD;
-EndTrigger := '{41106d8b-aac2-40a8-a8f5-a0bcabc854ff};State'= "GasFlow";</ConfigString>
-          </AFAnalysisRule>
-          <AFAnalysisRule>
-            <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
-            <ConfigString>TimeTrueValue=0</ConfigString>
+            <ConfigString>@group("Start triggers")&#xD;
+StartTrigger := '{476dc20b-5bc6-4723-a41b-363338f67915};State'= "NoGasFlow";&#xD;
+&#xD;
+@group("End triggers")&#xD;
+EndTrigger := '{476dc20b-5bc6-4723-a41b-363338f67915};State'= "GasFlow";</ConfigString>
           </AFAnalysisRule>
         </AFAnalysisRule>
         <AFTimeRule>
@@ -3575,10 +3444,10 @@ EndTrigger := '{41106d8b-aac2-40a8-a8f5-a0bcabc854ff};State'= "GasFlow";</Config
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
           <ConfigString>State := If Minute('*') &gt;= 13 and  Minute('*') &lt;= 19 or Minute('*') &gt;= 33 and  Minute('*') &lt;= 39 or Minute('*') &gt;= 52 and  Minute('*') &lt;= 56 then "NoGasFlow" else "GasFlow";&#xD;&#xD;
-GasFlow := If '{cf40dabf-f7b2-4109-9839-a904a23f1eff};State' = "GasFlow" then Abs(Rand(.015,.017)) else 0;&#xD;&#xD;
-FaultCode := If Minute('*') &gt;= 23 and Minute('*') &lt;= 29 then 3 Else If Minute('*') &gt;= 33 and Minute('*') &lt;= 39 then 6 Else If Minute('*') &gt;= 42 and Minute('*') &lt;= 46 then 4 else PrevVal('{b4a9ecac-72f7-4546-9625-a244f7db4dbd};Fault Code', '*');&#xD;&#xD;
+GasFlow := If '{476dc20b-5bc6-4723-a41b-363338f67915};State' = "GasFlow" then Abs(Rand(.015,.017)) else 0;&#xD;&#xD;
+FaultCode := If Minute('*') &gt;= 23 and Minute('*') &lt;= 29 then 3 Else If Minute('*') &gt;= 33 and Minute('*') &lt;= 39 then 6 Else If Minute('*') &gt;= 42 and Minute('*') &lt;= 46 then 4 else PrevVal('{787d0d8a-0b7f-406c-8ff5-8be93ecc4691};Fault Code', '*');&#xD;&#xD;
 GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
-          <VariableMapping>FaultCode||Fault Code;[GUID]||{b4a9ecac-72f7-4546-9625-a244f7db4dbd};State||State;[GUID]||{cf40dabf-f7b2-4109-9839-a904a23f1eff};GasFlowUnit||Gas Flow;[GUID]||{84d630f4-6102-4afd-9d03-867ae3807e22};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>FaultCode||Fault Code;[GUID]||{787d0d8a-0b7f-406c-8ff5-8be93ecc4691};State||State;[GUID]||{476dc20b-5bc6-4723-a41b-363338f67915};GasFlowUnit||Gas Flow;[GUID]||{44ba8aeb-d599-4409-b381-914f6ac7752e};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Periodic</AFPlugIn>
@@ -3586,52 +3455,13 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
       </AFAnalysisTemplate>
     </AFElementTemplate>
     <AFElementTemplate>
-      <Name>OSIDemo_DownTime</Name>
-      <Description>Equipment Downtime</Description>
-      <Type>None</Type>
-      <InstanceType>EventFrame</InstanceType>
-      <AllowElementToExtend>false</AllowElementToExtend>
-      <DefaultAttribute>State</DefaultAttribute>
-      <NamingPattern>OSIDEMO_%ELEMENT%_DownTime_%STARTTIME:yyyy-MM-dd HH:mm:ss%</NamingPattern>
-      <AFElementCategoryRef>Downtime</AFElementCategoryRef>
-      <AFAttributeTemplate>
-        <Name>Duration</Name>
-        <Description>Duration of downtime event</Description>
-        <DefaultUOM>min</DefaultUOM>
-        <Type>Single</Type>
-        <Value type="Single">0</Value>
-        <DataReference>PI Point</DataReference>
-        <ConfigString>.\Elements[.]|State;TimeMethod=NotSupported;TimeRangeMethod=Count;UOM=s</ConfigString>
-        <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
-      </AFAttributeTemplate>
-      <AFAttributeTemplate>
-        <Name>Fault Code</Name>
-        <Description>Reason for Downtime</Description>
-        <Type>AFEnumerationValue</Type>
-        <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
-        <Value type="AFEnumerationValue">EnumerationSets[Fault Code]\Running State</Value>
-        <DataReference>PI Point</DataReference>
-        <ConfigString>.\Elements[.]|Fault Code;TimeRangeMethod=StartTime</ConfigString>
-        <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
-      </AFAttributeTemplate>
-      <AFAttributeTemplate>
-        <Name>State</Name>
-        <Description>State of running equipment</Description>
-        <Type>String</Type>
-        <Value type="String">0</Value>
-        <DataReference>PI Point</DataReference>
-        <ConfigString>.\Elements[.]|State;TimeRangeMethod=StartTime</ConfigString>
-        <AFAttributeCategoryRef>Availability</AFAttributeCategoryRef>
-      </AFAttributeTemplate>
-    </AFElementTemplate>
-    <AFElementTemplate>
-      <Name>OSIDemo_High Amperage</Name>
+      <Name>High Amperage</Name>
       <Description>Electrical High Amperage Downtime</Description>
       <Type>None</Type>
       <InstanceType>EventFrame</InstanceType>
       <AllowElementToExtend>false</AllowElementToExtend>
       <DefaultAttribute>Amps</DefaultAttribute>
-      <NamingPattern>OSIDEMO_%ELEMENT%_High Usage_%STARTTIME:yyyy-MM-dd HH:mm:ss%</NamingPattern>
+      <NamingPattern>%ELEMENT%_High Usage_%STARTTIME:yyyy-MM-dd HH:mm:ss%</NamingPattern>
       <AFElementCategoryRef>Downtime</AFElementCategoryRef>
       <AFAttributeTemplate>
         <Name>Amps</Name>
@@ -3720,7 +3550,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <Type>Single</Type>
         <Value type="Single">0</Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT Latitude FROM [OSIDemo_Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
+        <ConfigString>SELECT Latitude FROM [Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
         <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -3730,7 +3560,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <Type>Single</Type>
         <Value type="Single">0</Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT Longitude FROM [OSIDemo_Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
+        <ConfigString>SELECT Longitude FROM [Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
         <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -3739,7 +3569,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <Type>String</Type>
         <Value type="String">0</Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT [Physical Location] FROM [OSIDemo_Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
+        <ConfigString>SELECT [Physical Location] FROM [Asset Location] WHERE [Asset Location] = @[Asset Location]</ConfigString>
         <AFAttributeCategoryRef>Location</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -3857,7 +3687,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>ElectricalCost||Electrical Cost;[GUID]||{7f4cdee1-fa1e-4f4b-acf7-ca43acb296a1};SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Cost];Sum||Total Electrical Cost;[GUID]||{52aebdb8-efdc-4d1c-a5e5-0f2237cf8bb6};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>ElectricalCost||Electrical Cost;SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Cost];Sum||Total Electrical Cost;[GUID]||{66805721-c51b-478c-bc30-1128009f1ca0};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3870,7 +3700,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Downtime];Sum||Electrical Downtime;[GUID]||{3919d911-100d-46d6-b529-78ba4db7cf59};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Downtime];Sum||Electrical Downtime;[GUID]||{343eae3e-53e6-4477-83de-5070c878abc1};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3883,7 +3713,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Sum||Total Electrical Usage;[GUID]||{130e9803-b09d-4871-bba1-656ba1944f79};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Sum||Total Electrical Usage;[GUID]||{9a7aa655-2260-4a77-b5d3-c3ce748b425a};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3896,7 +3726,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Cost];Sum||Total Gas Cost;[GUID]||{7a72ce44-98b2-42e4-85a4-b9092c19c543};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Cost];Sum||Total Gas Cost;[GUID]||{d3adcb71-14d9-4b1c-8b87-adc8a8c5e091};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3909,7 +3739,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Usage];Sum||Total Gas Usage;[GUID]||{b3f0690d-abf3-4beb-a129-27ce98de05eb};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Usage];Sum||Total Gas Usage;[GUID]||{b4e69147-f782-4b8a-9448-53fae18e96b7};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3922,7 +3752,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Cost];Sum||Total Water Cost;[GUID]||{f0ac1d83-4c77-47cf-b134-95291040b8ef};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Cost];Sum||Total Water Cost;[GUID]||{f611be15-db04-4398-8a57-c89d806ca81e};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -3935,7 +3765,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Usage];Sum||Total Water Usage;[GUID]||{040eff3c-2be2-4a5e-9e55-02bc227bd1d5};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Usage];Sum||Total Water Usage;[GUID]||{c0a73941-7a06-4bdc-88fe-88ea9ea6467e};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -4026,7 +3856,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <Type>Single</Type>
         <Value type="Single">0</Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT [Flow Rate Factor] FROM [OSIDemo_Water Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+        <ConfigString>SELECT [Flow Rate Factor] FROM [Water Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
         <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -4036,7 +3866,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <Type>Single</Type>
         <Value type="Single">0</Value>
         <DataReference>Table Lookup</DataReference>
-        <ConfigString>SELECT [Max Flow] FROM [OSIDemo_Water Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
+        <ConfigString>SELECT [Max Flow] FROM [Water Specs] WHERE [Equipment Type] = @[Equipment Type]</ConfigString>
         <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -4135,10 +3965,10 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
           <ConfigString>State := If Minute('*') &gt;= 11 and  Minute('*') &lt;= 16 or Minute('*') &gt;= 31 and  Minute('*') &lt;= 35 or Minute('*') &gt;= 42 and Minute('*') &lt;= 46 then "NoWaterFlow" else "WaterFlow";&#xD;&#xD;
-WaterFlowRate := IF '{e7144a13-2559-43eb-b689-1972d73894f9};State' = "WaterFlow" then Abs (((Rand(.083,.171))*100)+8) else 0;&#xD;&#xD;
+WaterFlowRate := IF '{599d71a5-529d-467c-accc-36a5d70598a0};State' = "WaterFlow" then Abs (((Rand(.083,.171))*100)+8) else 0;&#xD;&#xD;
 WaterFlowRateUnit := Convert(WaterFlowRate,"US gal/min");&#xD;&#xD;
-FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Minute('*') &gt;= 30 and Minute('*') &lt;= 34 then 6 Else If Minute('*') &gt;= 41 and Minute('*') &lt;= 45 then 7 else PrevVal('{7798ef1d-f439-44a6-8b0a-63e676f2e66b};Fault Code', '*');</ConfigString>
-          <VariableMapping>State||State;[GUID]||{e7144a13-2559-43eb-b689-1972d73894f9};FaultCode||Fault Code;[GUID]||{7798ef1d-f439-44a6-8b0a-63e676f2e66b};WaterFlowRateUnit||Water Flow Rate;[GUID]||{3502cd77-71ea-41e7-96b4-b26236b8a4a2};[GUID]||[UNSET];</VariableMapping>
+FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Minute('*') &gt;= 30 and Minute('*') &lt;= 34 then 6 Else If Minute('*') &gt;= 41 and Minute('*') &lt;= 45 then 7 else PrevVal('{50ff3f9e-38ee-4898-bcca-f5311ca9a1aa};Fault Code', '*');</ConfigString>
+          <VariableMapping>State||State;[GUID]||{599d71a5-529d-467c-accc-36a5d70598a0};FaultCode||Fault Code;[GUID]||{50ff3f9e-38ee-4898-bcca-f5311ca9a1aa};WaterFlowRateUnit||Water Flow Rate;[GUID]||{c27e929b-bcf8-44d1-baf0-6ef283302526};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Periodic</AFPlugIn>
@@ -4151,8 +3981,8 @@ FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Mi
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>WaterCost := '{afbeb67e-441c-4120-85e5-7937d9753f55};Total Water Usage'*'..\|Water Price';</ConfigString>
-          <VariableMapping>WaterCost||Water Cost;[GUID]||{bdcd0123-6f58-40f8-9614-287d8c961d0c};[GUID]||[UNSET];</VariableMapping>
+          <ConfigString>WaterCost := '{a1f8ff96-9d8d-408d-b7d6-7990bce8a0f1};Total Water Usage'*'..\|Water Price';</ConfigString>
+          <VariableMapping>WaterCost||Water Cost;[GUID]||{34ac2dba-690b-4a6a-aa3b-ee858d95b2ab};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -4165,15 +3995,14 @@ FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Mi
         <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>EventFrame</AFPlugIn>
-          <ConfigString>EFTGUID=1a8ba81c-3d37-44e9-aa24-972b24e6f919;EFTNAME=OSIDemo_DownTime</ConfigString>
+          <ConfigString>EFTGUID=17aaacfb-bef7-4200-be01-eb7940ab6c60;EFTNAME=DownTime</ConfigString>
           <AFAnalysisRule>
             <AFPlugIn>PerformanceEquation</AFPlugIn>
-            <ConfigString>StartTrigger := '{451b0577-aba1-4257-9a2a-06458207a38c};State'="NoWaterFlow";&#xD;&#xD;
-EndTrigger := '{451b0577-aba1-4257-9a2a-06458207a38c};State'="WaterFlow";</ConfigString>
-          </AFAnalysisRule>
-          <AFAnalysisRule>
-            <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
-            <ConfigString>TimeTrueValue=0</ConfigString>
+            <ConfigString>@group("Start triggers")&#xD;
+StartTrigger := '{599d71a5-529d-467c-accc-36a5d70598a0};State'="NoWaterFlow";&#xD;
+&#xD;
+@group("End triggers")&#xD;
+EndTrigger := '{599d71a5-529d-467c-accc-36a5d70598a0};State'="WaterFlow";</ConfigString>
           </AFAnalysisRule>
         </AFAnalysisRule>
         <AFTimeRule>
@@ -4187,12 +4016,12 @@ EndTrigger := '{451b0577-aba1-4257-9a2a-06458207a38c};State'="WaterFlow";</Confi
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>WaterUsageRate := '{3502cd77-71ea-41e7-96b4-b26236b8a4a2};Water Flow Rate'*'{c33f8cfb-b9e3-42f2-9532-c6add56d4aab};Flow Rate Factor';&#xD;&#xD;
+          <ConfigString>WaterUsageRate := '{c27e929b-bcf8-44d1-baf0-6ef283302526};Water Flow Rate'*'{de7874af-7cd9-4ea9-a425-08b97fea1df0};Flow Rate Factor';&#xD;&#xD;
 WaterUsageRateUnit := Convert(WaterUsageRate,"US gal/min");&#xD;&#xD;
-TotalWaterUsage := TagTot('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rate|{2c0950b0-b196-4435-a73c-688161341dd0};To Days','t','*');&#xD;&#xD;
-PeakWaterFlow := TagMax('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rate','t','*');&#xD;&#xD;
-AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rate','t','*');</ConfigString>
-          <VariableMapping>Total Water||Gallons;Water Total||Gallons;AvgWaterFlow||Average Water Flow;[GUID]||{560b9df1-1913-41e1-814f-7a572ec47722};TotalWaterUsage||Total Water Usage;[GUID]||{afbeb67e-441c-4120-85e5-7937d9753f55};PeakWaterFlow||Peak Water Flow Rate;[GUID]||{66cd23b2-bc15-4647-b815-326a5ccb93b7};WaterUsageRateUnit||Adjusted Flow Rate;[GUID]||{852d864f-1d1a-49ee-9ded-116af3a37106};[GUID]||[UNSET];</VariableMapping>
+TotalWaterUsage := TagTot('{51eae948-707d-457a-943b-8d6a2c90adb7};Adjusted Flow Rate|{3cfa9fab-0532-48b3-9290-a5a216ebdf9d};To Days','t','*');&#xD;&#xD;
+PeakWaterFlow := TagMax('{51eae948-707d-457a-943b-8d6a2c90adb7};Adjusted Flow Rate','t','*');&#xD;&#xD;
+AvgWaterFlow := TagAvg('{51eae948-707d-457a-943b-8d6a2c90adb7};Adjusted Flow Rate','t','*');</ConfigString>
+          <VariableMapping>Total Water||Gallons;Water Total||Gallons;AvgWaterFlow||Average Water Flow;[GUID]||{5e386abf-3539-430b-94d8-1dd5df08dd15};TotalWaterUsage||Total Water Usage;[GUID]||{a1f8ff96-9d8d-408d-b7d6-7990bce8a0f1};PeakWaterFlow||Peak Water Flow Rate;[GUID]||{897455c6-9707-466e-8bf4-95f9a3f9032d};WaterUsageRateUnit||Adjusted Flow Rate;[GUID]||{51eae948-707d-457a-943b-8d6a2c90adb7};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -4432,7 +4261,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Electric Usage</Name>
-            <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+            <Description>Calculates Electrical Runtime, Usage and Downtime Duration</Description>
             <Template>Electric Usage</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4441,7 +4270,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Electrical Cost</Name>
-            <Description>Calculates Electrical Cost, units = US Dollar</Description>
+            <Description>Calculates Electrical Cost</Description>
             <Template>Electrical Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4459,9 +4288,9 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Amps and Fault Code</Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building1\Electric User1</AFElementRef>
             </Target>
@@ -4552,7 +4381,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Electric Usage</Name>
-            <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+            <Description>Calculates Electrical Runtime, Usage and Downtime Duration</Description>
             <Template>Electric Usage</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4561,7 +4390,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Electrical Cost</Name>
-            <Description>Calculates Electrical Cost, units = US Dollar</Description>
+            <Description>Calculates Electrical Cost</Description>
             <Template>Electrical Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4579,9 +4408,9 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Amps and Fault Code</Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building1\Electric User2</AFElementRef>
             </Target>
@@ -4659,7 +4488,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAttribute>
           <AFAnalysis>
             <Name>Gas Consumption</Name>
-            <Description>Calculates Gas Flow Time, Gas Consumed, Total Gas Consumed, and Maximum and Average Gas Flow</Description>
+            <Description>Calculates Gas Flow Time, Gas Energy Usage Rate, Total Gas Consumed and Peak and Average Gas Flow</Description>
             <Template>Gas Consumption</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4668,7 +4497,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Gas Cost</Name>
-            <Description>Calculates Gas Cost, units = US Dollar</Description>
+            <Description>Calculates Gas Cost</Description>
             <Template>Gas Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4686,9 +4515,9 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic feet per second), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Gas Flow and Fault Code </Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building1\Gas User1</AFElementRef>
             </Target>
@@ -4766,7 +4595,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAttribute>
           <AFAnalysis>
             <Name>Gas Consumption</Name>
-            <Description>Calculates Gas Flow Time (units = seconds), Gas Consumed (units= btu), Total Gas Consumed (units = btu), and Maximum and Average Gas Flow (units = cubic feet per second)</Description>
+            <Description>Calculates Gas Flow Time, Gas Energy Usage Rate, Total Gas Consumed and Peak and Average Gas Flow</Description>
             <Template>Gas Consumption</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4775,7 +4604,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Gas Cost</Name>
-            <Description>Calculates Gas Cost, units = US Dollar</Description>
+            <Description>Calculates Gas Cost</Description>
             <Template>Gas Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4793,9 +4622,9 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic feet per second), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Gas Flow and Fault Code </Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building1\Gas User2</AFElementRef>
             </Target>
@@ -4873,16 +4702,16 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAttribute>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Water Flow Rate (unit = US Gallons per minute), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Water Flow Rate and Fault Code</Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building1\Water User1</AFElementRef>
             </Target>
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Cost</Name>
-            <Description>Calculates Water Cost, units = US Dollar</Description>
+            <Description>Calculates Water Cost</Description>
             <Template>Water Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4891,7 +4720,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Downtime</Name>
-            <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+            <Description>Event Frame generation for Water Downtime</Description>
             <Template>Water Downtime</Template>
             <Status>Error</Status>
             <Target>
@@ -4900,7 +4729,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Usage</Name>
-            <Description>Random Data Generation for WaterFlowYime(units = second), Gallons (unit = US Gallons), WaterUsage (unit = US Gallons), MaxWaterFlow (unit = US Gallons), AvgWaterFlow (unit = US Gallons)</Description>
+            <Description>Random Data Generation for Water Usage Rate, Total Water Usage, Peak Water Flow, Avg Water Flow</Description>
             <Template>Water Usage</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4980,16 +4809,16 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAttribute>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Water Flow Rate (unit = US Gallons per minute), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Water Flow Rate and Fault Code</Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building1\Water User2</AFElementRef>
             </Target>
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Cost</Name>
-            <Description>Calculates Water Cost, units = US Dollar</Description>
+            <Description>Calculates Water Cost</Description>
             <Template>Water Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -4998,7 +4827,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Downtime</Name>
-            <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+            <Description>Event Frame generation for Water Downtime</Description>
             <Template>Water Downtime</Template>
             <Status>Error</Status>
             <Target>
@@ -5007,7 +4836,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Usage</Name>
-            <Description>Random Data Generation for WaterFlowYime(units = second), Gallons (unit = US Gallons), WaterUsage (unit = US Gallons), MaxWaterFlow (unit = US Gallons), AvgWaterFlow (unit = US Gallons)</Description>
+            <Description>Random Data Generation for Water Usage Rate, Total Water Usage, Peak Water Flow, Avg Water Flow</Description>
             <Template>Water Usage</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5017,7 +4846,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFElement>
         <AFAnalysis>
           <Name>Building Electrical Cost</Name>
-          <Description>Rollup Sum and Average Electrical Cost, units = US Dollar</Description>
+          <Description>Rollup Sum and Average Electrical Cost</Description>
           <Template>Building Electrical Cost</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5026,7 +4855,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Electrical Usage</Name>
-          <Description>Rollup Sum and Average Electrical Usage, units = killowatt hour</Description>
+          <Description>Rollup Sum and Average Electrical Usage</Description>
           <Template>Building Electrical Usage</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5035,7 +4864,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Gas Cost</Name>
-          <Description>Rollup Sum and Average Gas Cost, units = US Dollar</Description>
+          <Description>Rollup Sum and Average Gas Cost</Description>
           <Template>Building Gas Cost</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5044,7 +4873,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Gas Usage</Name>
-          <Description>Rollup Sum and Average Gas Usage, units = British Thermal Unit (btu)</Description>
+          <Description>Rollup Sum and Average Gas Usage</Description>
           <Template>Building Gas Usage</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5053,7 +4882,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Water Cost</Name>
-          <Description>Rollup Sum and Average Water Cost, units = US Dollar</Description>
+          <Description>Rollup Sum and Average Water Cost</Description>
           <Template>Building Water Cost</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5062,7 +4891,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Water Usage</Name>
-          <Description>Rollup Sum and Average Water Usage, units = US Gallon</Description>
+          <Description>Rollup Sum and Average Water Usage</Description>
           <Template>Building Water Usage</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5071,7 +4900,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Electrical Downtime</Name>
-          <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+          <Description>Rollup Sum Electrical Downtime</Description>
           <Template>Electrical Downtime</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5244,7 +5073,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Electric Usage</Name>
-            <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+            <Description>Calculates Electrical Runtime, Usage and Downtime Duration</Description>
             <Template>Electric Usage</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5253,7 +5082,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Electrical Cost</Name>
-            <Description>Calculates Electrical Cost, units = US Dollar</Description>
+            <Description>Calculates Electrical Cost</Description>
             <Template>Electrical Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5271,9 +5100,9 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Amps and Fault Code</Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building2\Electric User3</AFElementRef>
             </Target>
@@ -5364,7 +5193,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Electric Usage</Name>
-            <Description>Calculates Electrical Runtime (units = seconds), Usage (units = killowatt hours), and Downtime Duration (units = second)</Description>
+            <Description>Calculates Electrical Runtime, Usage and Downtime Duration</Description>
             <Template>Electric Usage</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5373,7 +5202,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Electrical Cost</Name>
-            <Description>Calculates Electrical Cost, units = US Dollar</Description>
+            <Description>Calculates Electrical Cost</Description>
             <Template>Electrical Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5391,9 +5220,9 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Amps (unit = amps), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Amps and Fault Code</Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building2\Electric User4</AFElementRef>
             </Target>
@@ -5471,7 +5300,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAttribute>
           <AFAnalysis>
             <Name>Gas Consumption</Name>
-            <Description>Calculates Gas Flow Time (units = seconds), Gas Consumed (units= btu), Total Gas Consumed (units = btu), and Maximum and Average Gas Flow (units = cubic feet per second)</Description>
+            <Description>Calculates Gas Flow Time, Gas Energy Usage Rate, Total Gas Consumed and Peak and Average Gas Flow</Description>
             <Template>Gas Consumption</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5480,7 +5309,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Gas Cost</Name>
-            <Description>Calculates Gas Cost, units = US Dollar</Description>
+            <Description>Calculates Gas Cost</Description>
             <Template>Gas Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5498,9 +5327,9 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic feet per second), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Gas Flow and Fault Code </Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building2\Gas User3</AFElementRef>
             </Target>
@@ -5578,7 +5407,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAttribute>
           <AFAnalysis>
             <Name>Gas Consumption</Name>
-            <Description>Calculates Gas Flow Time (units = seconds), Gas Consumed (units= btu), Total Gas Consumed (units = btu), and Maximum and Average Gas Flow (units = cubic feet per second)</Description>
+            <Description>Calculates Gas Flow Time, Gas Energy Usage Rate, Total Gas Consumed and Peak and Average Gas Flow</Description>
             <Template>Gas Consumption</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5587,7 +5416,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Gas Cost</Name>
-            <Description>Calculates Gas Cost, units = US Dollar</Description>
+            <Description>Calculates Gas Cost</Description>
             <Template>Gas Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5605,9 +5434,9 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Gas Flow (unit = cubic feet per second), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Gas Flow and Fault Code </Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building2\Gas User4</AFElementRef>
             </Target>
@@ -5685,16 +5514,16 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAttribute>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Water Flow Rate (unit = US Gallons per minute), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Water Flow Rate and Fault Code</Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building2\Water User3</AFElementRef>
             </Target>
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Cost</Name>
-            <Description>Calculates Water Cost, units = US Dollar</Description>
+            <Description>Calculates Water Cost</Description>
             <Template>Water Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5703,16 +5532,16 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Downtime</Name>
-            <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+            <Description>Event Frame generation for Water Downtime</Description>
             <Template>Water Downtime</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building2\Water User3</AFElementRef>
             </Target>
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Usage</Name>
-            <Description>Random Data Generation for WaterFlowYime(units = second), Gallons (unit = US Gallons), WaterUsage (unit = US Gallons), MaxWaterFlow (unit = US Gallons), AvgWaterFlow (unit = US Gallons)</Description>
+            <Description>Random Data Generation for Water Usage Rate, Total Water Usage, Peak Water Flow, Avg Water Flow</Description>
             <Template>Water Usage</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5792,16 +5621,16 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAttribute>
           <AFAnalysis>
             <Name>OSIDemo_Random Data</Name>
-            <Description>Random Data Generation for State (no units), Water Flow Rate (unit = US Gallons per minute), and Fault Code (no units)</Description>
+            <Description>Random Data Generation for State, Water Flow Rate and Fault Code</Description>
             <Template>OSIDemo_Random Data</Template>
-            <Status>Error</Status>
+            <Status>Enabled</Status>
             <Target>
               <AFElementRef>Plant\Building2\Water User4</AFElementRef>
             </Target>
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Cost</Name>
-            <Description>Calculates Water Cost, units = US Dollar</Description>
+            <Description>Calculates Water Cost</Description>
             <Template>Water Cost</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5810,7 +5639,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Downtime</Name>
-            <Description>Event Frame generation for Water Downtime, units = minutes</Description>
+            <Description>Event Frame generation for Water Downtime</Description>
             <Template>Water Downtime</Template>
             <Status>Error</Status>
             <Target>
@@ -5819,7 +5648,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           </AFAnalysis>
           <AFAnalysis>
             <Name>Water Usage</Name>
-            <Description>Random Data Generation for WaterFlowYime(units = second), Gallons (unit = US Gallons), WaterUsage (unit = US Gallons), MaxWaterFlow (unit = US Gallons), AvgWaterFlow (unit = US Gallons)</Description>
+            <Description>Random Data Generation for Water Usage Rate, Total Water Usage, Peak Water Flow, Avg Water Flow</Description>
             <Template>Water Usage</Template>
             <Status>Enabled</Status>
             <Target>
@@ -5829,7 +5658,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFElement>
         <AFAnalysis>
           <Name>Building Electrical Cost</Name>
-          <Description>Rollup Sum and Average Electrical Cost, units = US Dollar</Description>
+          <Description>Rollup Sum and Average Electrical Cost</Description>
           <Template>Building Electrical Cost</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5838,7 +5667,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Electrical Usage</Name>
-          <Description>Rollup Sum and Average Electrical Usage, units = killowatt hour</Description>
+          <Description>Rollup Sum and Average Electrical Usage</Description>
           <Template>Building Electrical Usage</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5847,7 +5676,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Gas Cost</Name>
-          <Description>Rollup Sum and Average Gas Cost, units = US Dollar</Description>
+          <Description>Rollup Sum and Average Gas Cost</Description>
           <Template>Building Gas Cost</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5856,7 +5685,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Gas Usage</Name>
-          <Description>Rollup Sum and Average Gas Usage, units = British Thermal Unit (btu)</Description>
+          <Description>Rollup Sum and Average Gas Usage</Description>
           <Template>Building Gas Usage</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5865,7 +5694,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Water Cost</Name>
-          <Description>Rollup Sum and Average Water Cost, units = US Dollar</Description>
+          <Description>Rollup Sum and Average Water Cost</Description>
           <Template>Building Water Cost</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5874,7 +5703,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Building Water Usage</Name>
-          <Description>Rollup Sum and Average Water Usage, units = US Gallon</Description>
+          <Description>Rollup Sum and Average Water Usage</Description>
           <Template>Building Water Usage</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5883,7 +5712,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAnalysis>
         <AFAnalysis>
           <Name>Electrical Downtime</Name>
-          <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+          <Description>Rollup Sum Electrical Downtime</Description>
           <Template>Electrical Downtime</Template>
           <Status>Enabled</Status>
           <Target>
@@ -5893,7 +5722,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
       </AFElement>
       <AFAnalysis>
         <Name>Electrical Cost</Name>
-        <Description>Rollup Sum Electrical Cost, units = US Dollar</Description>
+        <Description>Rollup Sum Electrical Cost</Description>
         <Template>Electrical Cost</Template>
         <Status>Enabled</Status>
         <Target>
@@ -5902,7 +5731,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
       </AFAnalysis>
       <AFAnalysis>
         <Name>Electrical Downtime</Name>
-        <Description>Rollup Sum Electrical Downtime, units = minute</Description>
+        <Description>Rollup Sum Electrical Downtime</Description>
         <Template>Electrical Downtime</Template>
         <Status>Enabled</Status>
         <Target>
@@ -5911,7 +5740,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
       </AFAnalysis>
       <AFAnalysis>
         <Name>Electrical Usage</Name>
-        <Description>Rollup Sum Electrical Usage, units = killowatt hour (kWh)</Description>
+        <Description>Rollup Sum Electrical Usage</Description>
         <Template>Electrical Usage</Template>
         <Status>Enabled</Status>
         <Target>
@@ -5920,7 +5749,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
       </AFAnalysis>
       <AFAnalysis>
         <Name>Gas Cost</Name>
-        <Description>Rollup Sum Gas Cost, units = US Dollar</Description>
+        <Description>Rollup Sum Gas Cost</Description>
         <Template>Gas Cost</Template>
         <Status>Enabled</Status>
         <Target>
@@ -5929,7 +5758,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
       </AFAnalysis>
       <AFAnalysis>
         <Name>Gas Usage</Name>
-        <Description>Rollup Sum Gas Usage, units = British Thermal Unit (btu)</Description>
+        <Description>Rollup Sum Gas Usage</Description>
         <Template>Gas Usage</Template>
         <Status>Enabled</Status>
         <Target>
@@ -5938,7 +5767,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
       </AFAnalysis>
       <AFAnalysis>
         <Name>Water Cost</Name>
-        <Description>Rollup Sum Water Cost, units = US Dollar</Description>
+        <Description>Rollup Sum Water Cost</Description>
         <Template>Water Cost</Template>
         <Status>Enabled</Status>
         <Target>
@@ -5947,7 +5776,7 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
       </AFAnalysis>
       <AFAnalysis>
         <Name>Water Usage</Name>
-        <Description>Rollup Sum Water Usage, units = US Gallon</Description>
+        <Description>Rollup Sum Water Usage</Description>
         <Template>Water Usage</Template>
         <Status>Enabled</Status>
         <Target>
