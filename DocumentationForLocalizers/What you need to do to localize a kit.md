@@ -37,14 +37,31 @@ If everything works great, you will need to run the "Reset to database" script t
 
 Import the latest version of the translation tables, this table is a long table that contains all currently verified translations. It also follows the guidelines set by the translation group, for example the word "PI Data Archive" is not actually translated. The table is located in this folder under the name `Translation.xml`.
 
-## Step 2: Grap all English strings into the translation database
+## Step 2 : Grap all English strings into the translation database
 
 All strings in the database need to be translated, This includes all names, all description, all entries in tables, enumeration sets and anything else you can think off. Thus we add in any new strings not already included in the translation table. The script is `GrabAllStrings.exe`. It prepopluates every entry with a translation from Google Translate.
 
 Now, that all new strings have been added to the database, you now need to translate everything in the database that has not been makred as "Check". Once this is done, please export the strings and email them to Jerome. To export the table, you can run the `ExportTranslationTable.exe` script.
 
-## Step 3: Create the new tag convention
+## Step 3 : Create the new tag convention
 
-Japanese characters cannot be included in tag name, thus the need for a system that will translate between Japanese and English. The new tag convention is done by running `ConvertTagNamingConvention.exe`
+Japanese characters cannot be included in tag name, thus the need for a system that will translate between Japanese and English. The new tag convention is done by running `ChangeTagNamingConvention.exe`
 
-## Step 4: Translate the database
+## Step 4 : Translate the database
+
+Now, we will translate every string that occurs into Japanese. This is done using the `Translate.exe` script.
+
+## Step 5 : Collect all used UOMs and industry research
+
+Import the UOM table and fill it with any new UOMS using `GrabAllUsedUOMs.exe`.
+Update all UOMs for your country. All per day rates need to remain per day rates.
+
+## Step 6 : Change currency
+
+
+## Step 7 : Deal with currency
+
+## Step 8 : Things that need to be answer manually
+
+Manually delete the UOMConversion table
+

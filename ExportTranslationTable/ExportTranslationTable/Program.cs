@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OSIsoft.AF;
+﻿using OSIsoft.AF;
 using OSIsoft.AF.Asset;
 
 namespace ExportTranslationTable
@@ -16,6 +11,8 @@ namespace ExportTranslationTable
             AFDatabase db = local.Databases.DefaultDatabase;
             AFTable translation = db.Tables["Translations"];
             local.ExportXml(translation, PIExportMode.AllReferences, @"..\translation.xml", null, null, null);
+            AFTable uomconversion = db.Tables["UOM Conversion"];
+            local.ExportXml(uomconversion, PIExportMode.AllReferences, @"..\uomConversion.xml", null, null, null);
         }
     }
 }

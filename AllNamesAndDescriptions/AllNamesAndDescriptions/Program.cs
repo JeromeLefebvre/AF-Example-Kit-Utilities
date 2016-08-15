@@ -24,7 +24,7 @@ namespace AllNamesAndDescriptions
         {
             PISystem system = new PISystems().DefaultPISystem;
             AFDatabase kitdb = system.Databases.DefaultDatabase;
-            CreateEnglishTable(kitdb);
+            fillEnglishTable(kitdb);
 
             kitdb.CheckIn();
         }
@@ -39,67 +39,62 @@ namespace AllNamesAndDescriptions
             return translated_text; 
         }
 
-        static void CreateEnglishTable(AFDatabase db)
+        static void fillEnglishTable(AFDatabase db)
         {
             AFTable translation = createOrReturnTranslationTable(db);
             DataTable dt = translation.Table;
             
-            // Get all elements and all attributes
             foreach(AFElement element in db.Elements)
-            {
                 storeAllElement(element, dt);
-                db.CheckIn();
-            }
-            // Get all tables
+            db.CheckIn();
+            
             foreach(AFTable table in db.Tables)
-            {
                 if (table != translation)
                     storeAllTableHeaders(table, dt);
-            }
+            
             db.CheckIn();
-            foreach (AFElementTemplate elemtemplate in db.ElementTemplates)
+            foreach (AFElementTemplate elem in db.ElementTemplates)
             {
-                insert(dt, elemtemplate.Name);
-                insert(dt, elemtemplate.NamingPattern);
+                addNameAndDescription(dt, elem, elem);
+                insert(dt, elem.NamingPattern);
             }
+            foreach (var analysis in db.AnalysisTemplates)
+                addNameAndDescription(dt, analysis, analysis);
             db.CheckIn();
             foreach (AFCategory category in db.AnalysisCategories)
-                storeCategory(category, dt);
+                addNameAndDescription(dt, category, category);
             foreach (AFCategory category in db.ElementCategories)
-                storeCategory(category, dt);
+                addNameAndDescription(dt, category, category);
             foreach (AFCategory category in db.AttributeCategories)
-                storeCategory(category, dt);
+                addNameAndDescription(dt, category, category);
             foreach (AFCategory category in db.TableCategories)
-                storeCategory(category, dt);
+                addNameAndDescription(dt, category, category);
+            foreach (AFCategory category in db.ReferenceTypeCategories)
+                addNameAndDescription(dt, category, category);
+            db.CheckIn();
         }
 
-        static void storeCategory(AFCategory category, DataTable dt)
-        {
-            insert(dt, category.Name);
-            insert(dt, category.Description);
-        }
         static void storeAllTableHeaders(AFTable table, DataTable dt)
         {
             foreach (DataColumn column in table.Table.Columns)
                 insert(dt, column.ColumnName);
+            foreach (DataRow row in table.Table.Rows)
+                foreach (var entry in row.ItemArray)
+                    insert(dt, entry.ToString());
         }
 
         static void storeAllElement(AFElement element, DataTable dt)
         {
-            AddElementInformation(dt, element);
+            addNameAndDescription(dt, element, element);
             foreach (AFAttribute attribute in element.Attributes)
-            {
                 storeAllAttribute(attribute, dt);
-            }
             foreach (AFElement child in element.Elements)
-            {
                 storeAllElement(child, dt);
-            }
         }
 
         static void storeAllAttribute(AFAttribute attr, DataTable dt)
         {
-            AddAttributeInformation(dt, attr);
+            addNameAndDescription(dt, attr, attr);
             foreach (AFAttribute attribute in attr.Attributes)
                 storeAllAttribute(attribute, dt);
         }
@@ -118,23 +113,16 @@ namespace AllNamesAndDescriptions
         static void addLanguageTitles(AFTable table)
         {
             DataTable datatable = new DataTable();
-
             datatable.Columns.Add("English", typeof(System.String));
             datatable.Columns.Add("Japanese", typeof(System.String));
-            datatable.Columns.Add("Chinese", typeof(System.String));
+            datatable.Columns.Add("Check", typeof(System.Boolean));
             table.Table = datatable;
         }
 
-        static void AddAttributeInformation(DataTable dt, AFAttribute attr)
+        static void addNameAndDescription(DataTable dt, IAFNamedObject namedObject, IAFObjectDescription describedObject)
         {
-            insert(dt, attr.Name);
-            insert(dt, attr.Description);
-        }
-
-        static void AddElementInformation(DataTable dt, AFElement elem)
-        {
-            insert(dt, elem.Name);
-            insert(dt, elem.Description);
+            insert(dt, namedObject.Name);
+            insert(dt, describedObject.Description);
         }
         static void insert(DataTable dt, string word)
         {
