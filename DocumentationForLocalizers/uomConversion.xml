@@ -1,29 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="AllReferences" PISystem="JLEFEBVRENEW" Database="Database105" Description="Utilities Management System Asset Based PI Example Kit" Created="2016-08-15T02:59:25.5365663Z" id="05b99324-1b6c-4b81-8c59-ddeb07e31f39" ParentKey="956eaad4-a065-4fc9-a98a-6c5849cd4a5f" ExportedObject="UOM Conversion" ExportedType="AFTable" Identity="Table" PIPersist="178 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\Tables[{05b99324-1b6c-4b81-8c59-ddeb07e31f39}]*JLEFEBVRENEW\Database105\Tables[UOM Conversion]">
-  <AFTable>
-    <id>05b99324-1b6c-4b81-8c59-ddeb07e31f39</id>
-    <Name>UOM Conversion</Name>
-    <Description>A table of all UOMs used in example kits, along with a prefered way they should be convereted. All entries are abbreviated form.</Description>
-    <ExternalPersist>false</ExternalPersist>
-    <Schema>
-<xs:schema id="UOM_x0020_ConversionDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-  <xs:element name="UOM_x0020_ConversionDataSet" msdata:IsDataSet="true" msdata:Locale="">
-    <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="UOM_x0020_Conversion">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Used_x0020_UOM" type="xs:string" minOccurs="0" />
-              <xs:element name="Japan" type="xs:string" minOccurs="0" />
-              <xs:element name="Australia" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-</xs:schema></Schema>
-    <DataTable><UOM_x0020_ConversionDataSet><UOM_x0020_Conversion><Used_x0020_UOM>$</Used_x0020_UOM><Japan>$</Japan><Australia>$</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>kWh</Used_x0020_UOM><Japan>kWh</Japan><Australia>kWh</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>Btu</Used_x0020_UOM><Japan>J</Japan><Australia>J</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>US gal</Used_x0020_UOM><Japan>m3</Japan><Australia>m3</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>min</Used_x0020_UOM><Japan>min</Japan><Australia>min</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>$/kWh</Used_x0020_UOM><Japan>$/kWh</Japan><Australia>$/kWh</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>$/MMBtu</Used_x0020_UOM><Japan>$/kWh</Japan><Australia>$/kWh</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>Btu/ft3</Used_x0020_UOM><Japan>J/m3</Japan><Australia>J/m3</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>$/US Gal</Used_x0020_UOM><Japan>$/m3</Japan><Australia>$/m3</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>A</Used_x0020_UOM><Japan>A</Japan><Australia>A</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>kW</Used_x0020_UOM><Japan>kW</Japan><Australia>kW</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>J/d</Used_x0020_UOM><Japan>J/d</Japan><Australia>J/d</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>h</Used_x0020_UOM><Japan>h</Japan><Australia>h</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>V</Used_x0020_UOM><Japan>V</Japan><Australia>V</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>ft3/s</Used_x0020_UOM><Japan>m3/s</Japan><Australia>m3/s</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>Btu/d</Used_x0020_UOM><Japan>W</Japan><Australia>W</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>Btu/h</Used_x0020_UOM><Japan>W</Japan><Australia>W</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>°</Used_x0020_UOM><Japan>°</Japan><Australia>°</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>bbl/d</Used_x0020_UOM><Japan>m3/s</Japan><Australia>m3/s</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>US gal/min</Used_x0020_UOM><Japan>l/min</Japan><Australia>l/min</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>Wh</Used_x0020_UOM><Japan>Wh</Japan><Australia>Wh</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>s</Used_x0020_UOM><Japan>s</Japan><Australia>s</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>W</Used_x0020_UOM><Japan>W</Japan><Australia>W</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>J</Used_x0020_UOM><Japan>J</Japan><Australia>J</Australia></UOM_x0020_Conversion><UOM_x0020_Conversion><Used_x0020_UOM>bbl</Used_x0020_UOM><Japan>m3</Japan><Australia>m3</Australia></UOM_x0020_Conversion></UOM_x0020_ConversionDataSet></DataTable>
-    <VersionID>6b6ebb34-d503-4750-88a3-6e5eaf8b5a7b</VersionID>
-  </AFTable>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="AllReferences" PISystem="JLEFEBVRENEW" Created="2016-08-21T20:38:22.4077623Z" id="705d2a73-06fe-4696-8840-bdc575f73adc" ParentKey="705d2a73-06fe-4696-8840-bdc575f73adc" ExportedObject="JLEFEBVRENEW" ExportedType="PISystem" Identity="System" PIPersist="95 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}*JLEFEBVRENEW">
+  <PISystem>
+    <id>705d2a73-06fe-4696-8840-bdc575f73adc</id>
+    <Name>JLEFEBVRENEW</Name>
+  </PISystem>
 </AF>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Database="Database124" Description="OSIDEMO - Random data is used - Utilities Management System Asset Based PI Example Kit" Created="2016-08-21T20:32:27.6549401Z" id="0cd89bfd-b3cd-432c-8cbe-07278c6f04fb" ParentKey="705d2a73-06fe-4696-8840-bdc575f73adc" ExportedObject="Database124" ExportedType="AFDatabase" Identity="Database" PIPersist="147 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\{0cd89bfd-b3cd-432c-8cbe-07278c6f04fb}*JLEFEBVRENEW\Database124">
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Database="Database125" Description="OSIDEMO - Random data is used - Utilities Management System Asset Based PI Example Kit" Created="2016-08-21T20:38:14.6227623Z" id="cffaf8a3-1ebc-4386-a4c2-48485db3d230" ParentKey="705d2a73-06fe-4696-8840-bdc575f73adc" ExportedObject="Database125" ExportedType="AFDatabase" Identity="Database" PIPersist="147 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\{cffaf8a3-1ebc-4386-a4c2-48485db3d230}*JLEFEBVRENEW\Database125">
   <AFDatabase>
-    <Name>Database124</Name>
+    <Name>Database125</Name>
     <Description>OSIDEMO - Random data is used - Utilities Management System Asset Based PI Example Kit</Description>
     <AFExtendedProperty>
       <Name>Version</Name>
@@ -716,7 +716,7 @@
         <Description>Reason for downtime</Description>
         <Type>AFEnumerationValue</Type>
         <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
-        <Value type="AFEnumerationValue">0af5f7a2-0420-49c3-b19a-f335aa80d3f4?0?Running State</Value>
+        <Value type="AFEnumerationValue">c332ca91-47fe-45ca-858f-59662d67d5a2?0?Running State</Value>
         <DataReference>PI Point</DataReference>
         <ConfigString>.\Elements[.]|Fault Code;TimeRangeMethod=StartTime</ConfigString>
         <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
@@ -905,7 +905,7 @@
         <Description>The current fault code if any</Description>
         <Type>AFEnumerationValue</Type>
         <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
-        <Value type="AFEnumerationValue">0af5f7a2-0420-49c3-b19a-f335aa80d3f4?0?Running State</Value>
+        <Value type="AFEnumerationValue">c332ca91-47fe-45ca-858f-59662d67d5a2?0?Running State</Value>
         <DataReference>PI Point</DataReference>
         <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointtype=String;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
         <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
