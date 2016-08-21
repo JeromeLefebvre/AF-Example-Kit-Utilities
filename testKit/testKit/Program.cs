@@ -31,6 +31,7 @@ namespace testKit
                     if (attr.DataReference != null)
                         attr.DataReference.CreateConfig();
             StopService("PIAnalysisManager", 10000);
+            
             StartService("PIAnalysisManager", 10000);
         }
 
