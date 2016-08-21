@@ -24,17 +24,25 @@ namespace testKit
             archiveAttr = db.Elements["PI Data Archive"].Attributes["名"];
             if (archiveAttr != null)
                 archiveAttr.SetValue(new AFValue(dataArchive.Name));
-
             db.CheckIn();
             foreach (var elem in db.Elements)
-                foreach (var attr in elem.Attributes)
-                    if (attr.DataReference != null)
-                        attr.DataReference.CreateConfig();
+                createConfig(elem);
+            db.CheckIn();
+
             StopService("PIAnalysisManager", 10000);
             
             StartService("PIAnalysisManager", 10000);
         }
 
+        public static void createConfig(AFElement elem)
+        {
+            foreach (var attr in elem.Attributes)
+                if (attr.DataReference != null)
+                    attr.DataReference.CreateConfig();
+            foreach (var child in elem.Elements)
+                createConfig(child);
+            elem.CheckIn();
+        }
         public static void StopService(string serviceName, int timeoutMilliseconds)
         {
             ServiceController service = new ServiceController(serviceName);

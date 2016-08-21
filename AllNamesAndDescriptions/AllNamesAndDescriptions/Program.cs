@@ -79,6 +79,7 @@ namespace AllNamesAndDescriptions
 
         static void storeAllTableHeaders(AFTable table, DataTable dt)
         {
+            addNameAndDescription(dt, table, table);
             foreach (DataColumn column in table.Table.Columns)
                 insert(dt, column.ColumnName);
             foreach (DataRow row in table.Table.Rows)
