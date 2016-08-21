@@ -10,14 +10,17 @@ using Google.Apis.Translate.v2;
 using Google.Apis.Translate.v2.Data;
 using Google.Apis.Services;
 using static Google.Apis.Translate.v2.TranslationsResource;
+using System.Text;
+using System.IO;
 
 namespace AllNamesAndDescriptions
 {
     class Program
     {
+        public static string keyPath = @"c:\apikey.txt";
         private static TranslateService service = new TranslateService(new BaseClientService.Initializer()
         {
-            ApiKey = "", // your API key, that you get from Google Developer Console
+            ApiKey = File.ReadAllText(keyPath), // your API key, that you get from Google Developer Console
                                                                 //ApplicationName = "jlefebvrenew" // your application name, that you get form Google Developer Console
         });
         static void Main(string[] args)
@@ -36,22 +39,22 @@ namespace AllNamesAndDescriptions
             request.Source = "en";
             TranslationsListResponse response = request.Execute();
             String translated_text = response.Translations[0].TranslatedText;
-            return translated_text; 
+            return translated_text;
         }
 
         static void fillEnglishTable(AFDatabase db)
         {
             AFTable translation = createOrReturnTranslationTable(db);
             DataTable dt = translation.Table;
-            
-            foreach(AFElement element in db.Elements)
+
+            foreach (AFElement element in db.Elements)
                 storeAllElement(element, dt);
             db.CheckIn();
-            
-            foreach(AFTable table in db.Tables)
+
+            foreach (AFTable table in db.Tables)
                 if (table != translation)
                     storeAllTableHeaders(table, dt);
-            
+
             db.CheckIn();
             foreach (AFElementTemplate elem in db.ElementTemplates)
             {
@@ -80,7 +83,8 @@ namespace AllNamesAndDescriptions
                 insert(dt, column.ColumnName);
             foreach (DataRow row in table.Table.Rows)
                 foreach (var entry in row.ItemArray)
-                    insert(dt, entry.ToString());
+                    if (entry is string)
+                        insert(dt, entry.ToString());
         }
 
         static void storeAllElement(AFElement element, DataTable dt)
@@ -130,7 +134,8 @@ namespace AllNamesAndDescriptions
             {
                 DataRow row = dt.NewRow();
                 row["English"] = word;
-                if (word != "") { 
+                if (word != "")
+                {
                     row["Japanese"] = translate(word, "ja");
                 }
                 dt.Rows.Add(row);
