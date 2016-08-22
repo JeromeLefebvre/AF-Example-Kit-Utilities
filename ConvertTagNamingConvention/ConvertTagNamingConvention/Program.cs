@@ -15,9 +15,11 @@ namespace ConvertTagNamingConvention
 
         public static bool convertTagNaming(AFDatabase db)
         {
+            AFCategory tagnameCategory = db.AttributeCategories["Tagname"];
             foreach (AFElementTemplate template in db.ElementTemplates)
             {
                 int depth = lookUpDepth(template);
+
                 foreach (AFAttributeTemplate attr in template.AttributeTemplates)
                 {
                     AFAttributeTemplate child = attr.AttributeTemplates["Tagname"];
@@ -32,6 +34,7 @@ namespace ConvertTagNamingConvention
                     child.IsHidden = true;
 
                     AFAttributeTemplate attributelookup = child.AttributeTemplates.Add("属性の英語名");
+                    attributelookup.Categories.Add(tagnameCategory);
                     attributelookup.DataReferencePlugIn = db.PISystem.DataReferencePlugIns["Table Lookup"];
                     attributelookup.Description = "属性の名前を英語に翻訳する";
                     attributelookup.DataReference.ConfigString = @"SELECT English FROM Translations WHERE Japanese = '%..|..|attribute%';RWM=%..|..|Attribute%";
@@ -44,6 +47,7 @@ namespace ConvertTagNamingConvention
                     for(int i = 0; i <= depth; i++) {
                         configString = $@"'.|{attributeName}';""."";" + configString;
                         AFAttributeTemplate elementLookup = child.AttributeTemplates.Add(attributeName);
+                        elementLookup.Categories.Add(tagnameCategory);
                         elementLookup.Description = description;
                         elementLookup.DataReferencePlugIn = db.PISystem.DataReferencePlugIns["Table Lookup"];
                         elementLookup.DataReference.ConfigString = $"SELECT English FROM Translations WHERE Japanese = '%{elementField}';RWM=%{elementField}";
