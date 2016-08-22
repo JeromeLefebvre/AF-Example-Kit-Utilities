@@ -75,6 +75,16 @@ namespace AllNamesAndDescriptions
             foreach (AFCategory category in db.ReferenceTypeCategories)
                 addNameAndDescription(dt, category, category);
             db.CheckIn();
+
+            foreach (var enumSet in db.EnumerationSets)
+                storeEnumerationSet(enumSet, dt);
+        }
+
+        static void storeEnumerationSet(AFEnumerationSet enumSet, DataTable dt)
+        {
+            addNameAndDescription(dt, enumSet, enumSet);
+            foreach (var row in enumSet)
+                addNameAndDescription(dt, row, row);
         }
 
         static void storeAllTableHeaders(AFTable table, DataTable dt)

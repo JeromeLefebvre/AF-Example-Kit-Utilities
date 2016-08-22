@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-08-21T21:36:47.2390648Z" id="b3ddad93-0b80-4b52-84a6-106354777b22" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Power" ExportedType="UOMClass" Identity="UOMClass" PIPersist="189 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\UOMDatabase\UOMClasses[{b3ddad93-0b80-4b52-84a6-106354777b22}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Power]">
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-08-22T01:56:57.2687469Z" id="b3ddad93-0b80-4b52-84a6-106354777b22" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Power" ExportedType="UOMClass" Identity="UOMClass" PIPersist="189 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\UOMDatabase\UOMClasses[{b3ddad93-0b80-4b52-84a6-106354777b22}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Power]">
   <UOMClass>
     <Name>Power</Name>
     <CanonicalUOM>watt</CanonicalUOM>
