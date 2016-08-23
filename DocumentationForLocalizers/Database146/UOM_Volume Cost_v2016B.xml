@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-08-22T05:53:48.9907238Z" id="3946e332-ed28-4c24-b3d2-a44e9abaae1e" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Volume Cost" ExportedType="UOMClass" Identity="UOMClass" PIPersist="195 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\UOMDatabase\UOMClasses[{3946e332-ed28-4c24-b3d2-a44e9abaae1e}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Volume Cost]">
+  <UOMClass>
+    <Name>Volume Cost</Name>
+    <Description>Oil Fuel Cost</Description>
+    <CanonicalUOM>$/m3</CanonicalUOM>
+    <CanonicalAbbr>$/m3</CanonicalAbbr>
+  </UOMClass>
+  <UOM>
+    <Name>$/m3</Name>
+    <Abbreviation>$/m3</Abbreviation>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>¢/US Gal</Name>
+    <Abbreviation>¢/US Gal</Abbreviation>
+    <RefFactor>2.64172052358148</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>¢/Gal</Name>
+    <Abbreviation>¢/Gal</Abbreviation>
+    <RefFactor>2.64172052358148</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/US Gal</Name>
+    <Abbreviation>$/US Gal</Abbreviation>
+    <RefFactor>264.172052358148</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/MMCF</Name>
+    <Abbreviation>$/MMCF</Abbreviation>
+    <RefFactor>3.53146667214886E-05</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/MCF</Name>
+    <Abbreviation>$/MCF</Abbreviation>
+    <RefFactor>0.0353146667214886</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/KCF</Name>
+    <Abbreviation>$/KCF</Abbreviation>
+    <RefFactor>0.0353146667214886</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/Gal</Name>
+    <Abbreviation>$/Gal</Abbreviation>
+    <RefFactor>264.172052358148</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/ft3</Name>
+    <Abbreviation>$/ft3</Abbreviation>
+    <RefFactor>35.3146667214886</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/bbl</Name>
+    <Abbreviation>$/bbl</Abbreviation>
+    <RefFactor>6.28981077043211</RefFactor>
+    <RefUOM>$/m3</RefUOM>
+    <Class>Volume Cost</Class>
+  </UOM>
+</AF>
