@@ -1,6 +1,5 @@
 ﻿using OSIsoft.AF;
 using OSIsoft.AF.Asset;
-using System.Collections.Generic;
 
 namespace ConvertTagNamingConvention
 {

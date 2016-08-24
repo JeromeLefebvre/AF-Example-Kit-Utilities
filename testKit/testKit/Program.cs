@@ -10,6 +10,7 @@ using OSIsoft.AF.PI;
 using OSIsoft.AF.Time;
 using OSIsoft.AF.Analysis;
 using OSIsoft.AF.Data;
+using System.Threading;
 
 namespace testKit
 {
@@ -21,6 +22,7 @@ namespace testKit
             var db = system.Databases.DefaultDatabase;
             var dataArchive = new PIServers().DefaultPIServer;
 
+            StopService("PIAnalysisManager", 10000);
             var archiveAttr = db.Elements["PI Data Archive"].Attributes["Name"];
             if (archiveAttr != null)
                 archiveAttr.SetValue(new AFValue(dataArchive.Name));
@@ -32,12 +34,11 @@ namespace testKit
                 createConfig(elem);
             db.CheckIn();
 
-            StopService("PIAnalysisManager", 10000);
-            
-            StartService("PIAnalysisManager", 10000);
-
+            Thread.Sleep(1000);
             foreach (var category in new List<string> { "Random Data", "Usage", "Cost", "Downtime" })
-                ProgrammaticAnalysisRecalculation(system, db, db.AnalysisCategories["Random Data"]);
+                ProgrammaticAnalysisRecalculation(system, db, db.AnalysisCategories[category]);
+
+            StartService("PIAnalysisManager", 10000);
         }
 
         public static void createConfig(AFElement elem)
@@ -91,13 +92,14 @@ namespace testKit
             var recalculationTimeStamps = new List<AFTime>();
             for (int i = 0; i < 24; i++)
             {
-                recalculationTimeStamps.Add(new AFTime(DateTime.Today.Subtract(TimeSpan.FromDays(3)) + TimeSpan.FromHours(i)));
+                recalculationTimeStamps.Add(new AFTime(DateTime.Today.Subtract(TimeSpan.FromDays(1)) + TimeSpan.FromDays(i) + TimeSpan.FromSeconds(2)));
             }
 
 
             AFNamedCollectionList<AFAnalysis> analysislist;
             analysislist = AFAnalysis.FindAnalyses(database, null, null, null, category, null, null, AFStatus.None, AFSortField.ID, AFSortOrder.Ascending, 0, 1000);
-
+            Console.WriteLine(category.Name);
+            Console.WriteLine(analysislist.Count);
 
             foreach (var afAnalysis in analysislist)
             {
@@ -108,6 +110,7 @@ namespace testKit
 
                 // we insert our new values  
                 AFListData.UpdateValues(results, AFUpdateOption.Replace);
+                
             }
 
         }
@@ -129,7 +132,7 @@ namespace testKit
             var state = new AFAnalysisRuleState(analysisConfiguration);
             foreach (var time in times)
             {
-                Console.WriteLine("Evaluating for {0}", time);
+                //Console.WriteLine("Evaluating for {0}", time);
                 state.Reset();
                 state.SetExecutionTimeAndPopulateInputs(time);
                 analysis.AnalysisRule.Run(state);
