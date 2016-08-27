@@ -47,6 +47,7 @@ namespace AllNamesAndDescriptions
             AFTable translation = createOrReturnTranslationTable(db);
             DataTable dt = translation.Table;
 
+            insert(dt, db.Description);
             foreach (AFElement element in db.Elements)
                 storeAllElement(element, dt);
             db.CheckIn();

@@ -89,10 +89,10 @@ namespace GrabAllUsedUOMs
 
         static void insert(UOM uom, DataTable dt)
         {
-            if (!dt.AsEnumerable().Any(row => uom.Abbreviation == row.Field<String>("Used UOM")))
+            if (!dt.AsEnumerable().Any(row => uom.Abbreviation == row.Field<String>("UsedUOM")))
             {
                 DataRow row = dt.NewRow();
-                row["Used UOM"] = uom.Abbreviation;
+                row["UsedUOM"] = uom.Abbreviation;
                 row["Japan"] = uom.Class.CanonicalUOM.Abbreviation;
                 dt.Rows.Add(row);
             }

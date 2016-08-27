@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Database="Database147" Description="OSIDEMO - Random data is used - Utilities Management System Asset Based PI Example Kit" Created="2016-08-24T01:24:47.1829158Z" id="dbf31c87-b0e7-44a3-808c-b2437c204b4c" ParentKey="705d2a73-06fe-4696-8840-bdc575f73adc" ExportedObject="Database147" ExportedType="AFDatabase" Identity="Database" PIPersist="147 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\{dbf31c87-b0e7-44a3-808c-b2437c204b4c}*JLEFEBVRENEW\Database147">
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Database="Database171" Description="OSIDEMO - Random data is used - Utilities Management System Asset Based PI Example Kit" Created="2016-08-27T21:43:45.6605363Z" id="84aaae44-ea4a-455c-a3f7-64d6afa54708" ParentKey="705d2a73-06fe-4696-8840-bdc575f73adc" ExportedObject="Database171" ExportedType="AFDatabase" Identity="Database" PIPersist="147 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\{84aaae44-ea4a-455c-a3f7-64d6afa54708}*JLEFEBVRENEW\Database171">
   <AFDatabase>
-    <Name>Database147</Name>
+    <Name>Database171</Name>
     <Description>OSIDEMO - Random data is used - Utilities Management System Asset Based PI Example Kit</Description>
     <AFExtendedProperty>
       <Name>Version</Name>
@@ -79,6 +79,12 @@
       <Name>Specifications</Name>
       <Description>Tables that contain information regarding the specifications of the various assets.</Description>
     </AFTableCategory>
+    <AFTableConnection>
+      <Name>TableConnection1</Name>
+      <DataAdapter>System.Data.OleDb.OleDbDataAdapter</DataAdapter>
+      <Connection />
+      <ImpersonateUser>true</ImpersonateUser>
+    </AFTableConnection>
     <AFTable>
       <Name>Asset Location</Name>
       <Description>A table containing the geographical location of each Plant</Description>
@@ -435,14 +441,6 @@
         </AFAttributeTemplate>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
-        <Name>BTU Factor</Name>
-        <Description>Building gas BTU factor</Description>
-        <IsConfigurationItem>true</IsConfigurationItem>
-        <Type>Single</Type>
-        <Value type="Single">1.028</Value>
-        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
-      </AFAttributeTemplate>
-      <AFAttributeTemplate>
         <Name>Electrical downtime</Name>
         <Description>Building downtime in minutes</Description>
         <DefaultUOM>min</DefaultUOM>
@@ -481,11 +479,19 @@
       </AFAttributeTemplate>
       <AFAttributeTemplate>
         <Name>Heat Content</Name>
-        <Description>Building heat content of natural gas </Description>
+        <Description>Heat content of 100% natural gas </Description>
         <IsConfigurationItem>true</IsConfigurationItem>
         <DefaultUOM>Btu/ft3</DefaultUOM>
         <Type>Single</Type>
         <Value type="Single">1032</Value>
+        <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Mixed Gas Energy Factor</Name>
+        <Description>Energy content factor of the natural gas mixture</Description>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>Single</Type>
+        <Value type="Single">1.028</Value>
         <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
       </AFAttributeTemplate>
       <AFAttributeTemplate>
@@ -618,7 +624,7 @@
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Sum||Total Electrical Cost;[GUID]||{50f56469-975a-4bc6-8800-d0363b2ef5a0};Average||Average Electric Cost;[GUID]||{f1d061eb-5e44-4cc9-85a0-355f1645eb0a};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Sum||Total Electrical Cost;[GUID]||{375ab8e2-7c79-4ed6-84b2-02c14b3683d3};Average||Average Electric Cost;[GUID]||{3c971354-59ff-4bea-bd35-9d7b5a886cc6};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -631,7 +637,7 @@
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Average||Average Electrical Usage;[GUID]||{8d1577f1-943d-4ba9-9769-692944899497};Sum||Total Electrical Usage;[GUID]||{c0ed8f50-f58f-4019-a27d-a98d165217f5};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Average||Average Electrical Usage;[GUID]||{9fbd3cc7-6f05-4e56-86b2-a682cd21a8f2};Sum||Total Electrical Usage;[GUID]||{a1bae339-9c65-446e-a6e0-9d4ae89c91a6};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -644,7 +650,7 @@
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Usage];Sum||Total Gas Cost;[GUID]||{c5bd1ff6-4c9e-4613-9c03-3ba53279106c};Average||Average Gas Cost;[GUID]||{559e6b08-8653-489c-97c4-edab6f6fc083};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Usage];Sum||Total Gas Cost;[GUID]||{5c3d6db1-d77c-4af6-9f96-c0fe447b5318};Average||Average Gas Cost;[GUID]||{8c2eb852-359f-4030-9f67-3b08dcadc46d};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -657,7 +663,7 @@
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Usage];Average||Average Gas Usage;[GUID]||{a4e8bfb5-5fe0-4229-b96a-60cd4fb8c788};Sum||Total Gas Usage;[GUID]||{9593b2f6-be9e-4b39-b1c1-db8e13fd53de};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Usage];Average||Average Gas Usage;[GUID]||{ea4ac65d-06de-41f7-9d80-f7c05daa5351};Sum||Total Gas Usage;[GUID]||{bf937a7a-06e0-4ada-a68c-286f115c4370};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -670,7 +676,7 @@
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Cost];Sum||Total Water Cost;[GUID]||{ddc4dc8f-e3ad-479b-b0a6-95821a20b5a1};Average||Average Water Cost;[GUID]||{b5d2b80e-b50f-4048-9fe5-8b105d028e7c};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Cost];Sum||Total Water Cost;[GUID]||{c0ada4f0-bc7d-4637-b49f-673d2cb8e820};Average||Average Water Cost;[GUID]||{29a5c387-5638-46dc-ace2-bac8ab94f9e0};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -683,7 +689,7 @@
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Usage];Average||Average Water Usage;[GUID]||{101ffbbf-337a-472c-bdde-f0726f69778e};Sum||Total Water Usage;[GUID]||{1ddd629c-80cb-4fea-909d-31a0e4b820aa};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Usage];Average||Average Water Usage;[GUID]||{4ab6d5db-b472-419b-8fee-b3b4b2b251a0};Sum||Total Water Usage;[GUID]||{04e1a106-151e-4c7c-ad22-08c05d2dd007};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -696,7 +702,7 @@
         <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Downtime Duration];Sum||Electrical Downtime;[GUID]||{ada99a23-a26a-4ea0-a055-d2678235e40a};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Downtime Duration];Sum||Electrical downtime;[GUID]||{b3c45475-c6be-4724-90bd-f787a578f265};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -727,7 +733,7 @@
         <Description>Reason for downtime</Description>
         <Type>AFEnumerationValue</Type>
         <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
-        <Value type="AFEnumerationValue">cafe165c-6be9-43c5-be34-ef78d36c1471?0?Running State</Value>
+        <Value type="AFEnumerationValue">921fd224-b257-4559-98cc-794293ea3589?0?Running State</Value>
         <DataReference>PI Point</DataReference>
         <ConfigString>.\Elements[.]|Fault Code;TimeRangeMethod=StartTime</ConfigString>
         <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
@@ -823,8 +829,7 @@
       </AFExtendedProperty>
       <AFExtendedProperty>
         <Name>Override</Name>
-        <Type>Object</Type>
-        <Value />
+        <Value type="AFElement">Plant\Building1\Electric User1</Value>
       </AFExtendedProperty>
       <AFElementCategoryRef>Equipment</AFElementCategoryRef>
       <AFAttributeTemplate>
@@ -917,7 +922,7 @@
         <Description>The current fault code if any</Description>
         <Type>AFEnumerationValue</Type>
         <TypeQualifier type="AFObject">EnumerationSets[Fault Code]</TypeQualifier>
-        <Value type="AFEnumerationValue">cafe165c-6be9-43c5-be34-ef78d36c1471?0?Running State</Value>
+        <Value type="AFEnumerationValue">921fd224-b257-4559-98cc-794293ea3589?0?Running State</Value>
         <DataReference>PI Point</DataReference>
         <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointtype=String;pointsource=OSIDemo_AFAnalysis;exdesc=PI AF UMS Kit</ConfigString>
         <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
@@ -1042,16 +1047,16 @@
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>RunTime := TimeEq('{26e1adde-16b0-4495-9f3f-e4412fea0430};State','t','*',"Power");&#xD;
+          <ConfigString>RunTime := TimeEq('{bc3affd3-8088-4ccf-8b2c-dbb7ad1ede48};State','t','*',"Power");&#xD;
 RunTimeUnits := Convert(RunTime,"s");&#xD;
-ElectricalPower := '{7746406c-8ba0-4df0-be51-f2d4786bc074};Amps'*'{4ad49fdd-e773-4234-b9e4-07dd9ef47575};Voltage'; //Rate of Electrical Energy consumed&#xD;
+ElectricalPower := '{fd2b7e45-ca57-4692-9a11-2458e49794f0};Amps'*'{4c69458d-f685-489a-9a58-18a9aecc97b9};Voltage'; //Rate of Electrical Energy consumed&#xD;
 ElectricalPowerUnits := Convert(ElectricalPower,"W");&#xD;
-ElectricalUsage := TagTot('{ce070eea-30dd-4666-bcfb-dc35f96f9371};Current Electricity Load|{ef1a26da-3c30-46cf-878f-607852e494bd};To Days', 't', '*'); //Total Energy Usage so far between 00:00 today and now&#xD;
-MaxPower := TagMax('{ce070eea-30dd-4666-bcfb-dc35f96f9371};Current Electricity Load','t','*');&#xD;
-AvgPower := TagAvg('{ce070eea-30dd-4666-bcfb-dc35f96f9371};Current Electricity Load','t','*');&#xD;
-DowntimeDuration := TimeEq('{26e1adde-16b0-4495-9f3f-e4412fea0430};State','t','*',"NoPower");&#xD;
+ElectricalUsage := IF '*'='t' then 0 else TagTot('{61889d58-3901-496e-953e-aa5e374c2c8a};Current Electricity Load|{43734ec5-8b8a-440d-94d7-deda287b11ff};To Days','t', '*'); //Total Energy Usage so far between 00:00 today and now&#xD;
+MaxPower := If '*'='t' then '{61889d58-3901-496e-953e-aa5e374c2c8a};Current Electricity Load' else TagMax('{61889d58-3901-496e-953e-aa5e374c2c8a};Current Electricity Load','t','*');&#xD;
+AvgPower := If '*'='t' then '{61889d58-3901-496e-953e-aa5e374c2c8a};Current Electricity Load' else TagAvg('{61889d58-3901-496e-953e-aa5e374c2c8a};Current Electricity Load','t','*');&#xD;
+DowntimeDuration := TimeEq('{bc3affd3-8088-4ccf-8b2c-dbb7ad1ede48};State','t','*',"NoPower");&#xD;
 DowntimeDurationUnits := Convert(DowntimeDuration,"s");</ConfigString>
-          <VariableMapping>Energy 1H||Kilowatts Cost 1 Hour;Energy Cost 1H||Kilowatts Cost 1 Hour;CurrentDayEnergyUsage||KilowattHours;CurrentDayEnergyCost||Electrical Cost;[GUID]||{b18070d5-9e66-4914-9a37-9e93cd960014};SearchCriteria||Attributes;RunTimeUnits||RunTime;[GUID]||{427984b1-1a93-4eac-8fe9-1bc908c0bdeb};DowntimeDurationUnits||Downtime Duration;[GUID]||{f598e950-70e2-436b-ab34-a54a3955672e};MaxPower||Peak Power Load;[GUID]||{26aeffcf-8da4-4816-bc47-6730ba5ef4fd};AvgPower||Average Power Load;[GUID]||{665c8eae-e3f4-4fee-82c5-e69b956f6ca1};ElectricalPowerUnits||Current Electricity Load;[GUID]||{ce070eea-30dd-4666-bcfb-dc35f96f9371};ElectricalUsage||Total Electrical Usage;[GUID]||{744be81f-4746-4877-bb3a-f9cda5f064a0};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>Energy 1H||Kilowatts Cost 1 Hour;Energy Cost 1H||Kilowatts Cost 1 Hour;CurrentDayEnergyUsage||KilowattHours;CurrentDayEnergyCost||Electrical Cost;SearchCriteria||Attributes;RunTimeUnits||RunTime;[GUID]||{58e008d1-9dce-4688-a086-6b886e1937df};DowntimeDurationUnits||Downtime Duration;[GUID]||{dbc0815e-3c63-4827-8d34-7bcf5646e31e};MaxPower||Peak Power Load;[GUID]||{22e8998f-542d-4b51-a256-06b9f108c18e};AvgPower||Average Power Load;[GUID]||{56f43391-4d41-42e1-9b70-5d4e303ac139};ElectricalPowerUnits||Current Electricity Load;[GUID]||{61889d58-3901-496e-953e-aa5e374c2c8a};ElectricalUsage||Total Electrical Usage;[GUID]||{01472c64-3df8-4507-a716-197a5efa71e5};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1064,8 +1069,8 @@ DowntimeDurationUnits := Convert(DowntimeDuration,"s");</ConfigString>
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>ElectricalCost := '{744be81f-4746-4877-bb3a-f9cda5f064a0};Total Electrical Usage'*'..\|Electricity Price';</ConfigString>
-          <VariableMapping>Electrical Cost||Electrical Cost;[GUID]||{b18070d5-9e66-4914-9a37-9e93cd960014};ElectricalCost||Total Electrical Cost;[GUID]||{d0dd2e1a-489b-4e10-8ccf-da0eace4f01d};[GUID]||[UNSET];</VariableMapping>
+          <ConfigString>ElectricalCost := '{01472c64-3df8-4507-a716-197a5efa71e5};Total Electrical Usage'*'..\|Electricity Price';</ConfigString>
+          <VariableMapping>Electrical Cost||Electrical Cost;ElectricalCost||Total Electrical Cost;[GUID]||{9e72012f-49d1-403d-8858-4b52c8b6d49e};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1081,11 +1086,8 @@ DowntimeDurationUnits := Convert(DowntimeDuration,"s");</ConfigString>
           <ConfigString>EFTGUID=bc4045b1-2bb4-4d99-b041-dbe24e643125;EFTNAME=DownTime</ConfigString>
           <AFAnalysisRule>
             <AFPlugIn>PerformanceEquation</AFPlugIn>
-            <ConfigString>@group("Start triggers")&#xD;
-StartTrigger := '{101a3355-ca30-463d-8a36-18a6dd86f64c};State'= "NoPower";&#xD;
-&#xD;
-@group("End triggers")&#xD;
-EndTrigger := '{101a3355-ca30-463d-8a36-18a6dd86f64c};State'= "Power";</ConfigString>
+            <ConfigString>StartTrigger := '{bc3affd3-8088-4ccf-8b2c-dbb7ad1ede48};State'= "NoPower";&#xD;
+EndTrigger := '{bc3affd3-8088-4ccf-8b2c-dbb7ad1ede48};State'= "Power";</ConfigString>
           </AFAnalysisRule>
         </AFAnalysisRule>
         <AFTimeRule>
@@ -1102,11 +1104,8 @@ EndTrigger := '{101a3355-ca30-463d-8a36-18a6dd86f64c};State'= "Power";</ConfigSt
           <ConfigString>EFTGUID=1f98c2d9-9876-4e9e-be60-4eaff628e818;EFTNAME=High Amperage</ConfigString>
           <AFAnalysisRule>
             <AFPlugIn>PerformanceEquation</AFPlugIn>
-            <ConfigString>@group("Start triggers") @timetrue("30") @timetruetype("clock")&#xD;
-StartTrigger := '{82dce32d-c8bf-4bd1-b760-cc6c41a9d1ff};Amps'&gt; 180;&#xD;
-&#xD;
-@group("End triggers")&#xD;
-EndTrigger := '{82dce32d-c8bf-4bd1-b760-cc6c41a9d1ff};Amps'&lt; 180;</ConfigString>
+            <ConfigString>StartTrigger := '{fd2b7e45-ca57-4692-9a11-2458e49794f0};Amps'&gt; 180;&#xD;
+EndTrigger := '{fd2b7e45-ca57-4692-9a11-2458e49794f0};Amps'&lt; 180;</ConfigString>
           </AFAnalysisRule>
         </AFAnalysisRule>
         <AFTimeRule>
@@ -1121,9 +1120,9 @@ EndTrigger := '{82dce32d-c8bf-4bd1-b760-cc6c41a9d1ff};Amps'&lt; 180;</ConfigStri
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
           <ConfigString>State := If Minute('*') &gt;= 15 and  Minute('*') &lt;= 20 or Minute('*') &gt;= 45 and  Minute('*') &lt;= 50 then "NoPower" else "Power";&#xD;
-Amps := If '{694da010-fb53-4e6a-be37-ff2f529dcda7};State'= "Power" then Abs ((Rand(1.25,1.26))*20) else 0;&#xD;
+Amps := If '{bc3affd3-8088-4ccf-8b2c-dbb7ad1ede48};State'= "Power" then Abs ((Rand(1.25,1.26))*20) else 0;&#xD;
 FaultCode := If Minute('*') &gt;= 15 and Minute('*') &lt;= 20 then "Turbine overload" Else If Minute('*') &gt;= 45 and Minute('*') &lt;= 50 then "Overload" else "Running State";</ConfigString>
-          <VariableMapping>Amps||Amps;[GUID]||{4cff0b79-78ce-4b41-90d8-570eabcfb1a1};State||State;[GUID]||{694da010-fb53-4e6a-be37-ff2f529dcda7};FaultCode||Fault Code;[GUID]||{0ce5be62-185c-4349-b6bb-95f15c3c1e31};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>Amps||Amps;[GUID]||{fd2b7e45-ca57-4692-9a11-2458e49794f0};State||State;[GUID]||{bc3affd3-8088-4ccf-8b2c-dbb7ad1ede48};FaultCode||Fault Code;[GUID]||{7179bfc5-dd63-41ff-b0d9-54ff926a791e};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Periodic</AFPlugIn>
@@ -1144,8 +1143,7 @@ FaultCode := If Minute('*') &gt;= 15 and Minute('*') &lt;= 20 then "Turbine over
       </AFExtendedProperty>
       <AFExtendedProperty>
         <Name>Override</Name>
-        <Type>Object</Type>
-        <Value />
+        <Value type="AFElement">Plant\Building1\Gas User1</Value>
       </AFExtendedProperty>
       <AFElementCategoryRef>Equipment</AFElementCategoryRef>
       <AFAttributeTemplate>
@@ -1340,15 +1338,15 @@ FaultCode := If Minute('*') &gt;= 15 and Minute('*') &lt;= 20 then "Turbine over
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>GasFlowTime := TimeEq('{cf40dabf-f7b2-4109-9839-a904a23f1eff};State','t','*',"GasFlow");&#xD;
+          <ConfigString>GasFlowTime := TimeEq('{d197ee6c-0630-41ff-9671-d80ddc9a3fc9};State','t','*',"GasFlow");&#xD;
 GasFlowTimeUnits := Convert(GasFlowTime,"s");&#xD;
-GasEnergyUsageRate := '{84d630f4-6102-4afd-9d03-867ae3807e22};Gas Flow'*'{66b0d11b-2f64-48fe-b12f-ffda92229c91};Pressure Factor'*'..\|BTU Factor'*'..\|Heat Content'*3600; //Gas energy usage rate as a prodcut of Gas Flow, Pressure Factor, BTU Factor, and Heat Content in Btu/h&#xD;
+GasEnergyUsageRate := '{f33f2c1a-27fa-44d2-b734-9c7928f65a6e};Gas Flow'*'{1929803a-add3-4696-923c-00f0e6396f9a};Pressure Factor'*'..\|Mixed Gas Energy Factor'*'..\|Heat Content'*3600; //Gas energy usage rate as a prodcut of Gas Flow, Pressure Factor, BTU Factor, and Heat Content in Btu/h&#xD;
 GasEnergyUsageRateUnits := Convert(GasEnergyUsageRate, "Btu/h");&#xD;
-TotalGasConsumed := TagTot('{c54e408e-9fa5-4663-82e9-d26c65028e56};Gas Energy Usage Rate|{d29dae94-131f-4c20-a186-c4d14135d43e};To Days','t','*');&#xD;
+TotalGasConsumed := If '*'='t' then 0 else TagTot('{e9860c39-b319-4cc1-884d-224f114e56da};Gas Energy Usage Rate|{e2dc9e9d-2cc5-4f53-8bd2-57d9c71b6c56};To Days','t','*');&#xD;
 TotalGasConsumedUnits := Convert(TotalGasConsumed,"Btu");&#xD;
-PeakGasFlow := TagMax('{84d630f4-6102-4afd-9d03-867ae3807e22};Gas Flow','t','*');&#xD;
-AvgGasFlow := TagAvg('{84d630f4-6102-4afd-9d03-867ae3807e22};Gas Flow','t','*');</ConfigString>
-          <VariableMapping>AvgGasFlow||Average Gas Flow;[GUID]||{5771fdb4-454d-406a-92b3-4cb857b7639f};PeakGasFlow||Peak Gas Flow;[GUID]||{ac9f0be6-1076-4107-aef7-b638d425ec2a};GasEnergyUsageRateUnits||Gas Energy Usage Rate;[GUID]||{c54e408e-9fa5-4663-82e9-d26c65028e56};GasFlowTimeUnits||Gas Flow time;[GUID]||{2faca2c4-91d3-4b06-bd17-3230b25881e4};TotalGasConsumedUnits||Total Gas Usage;[GUID]||{c5526d74-099f-4a20-a1fc-6602f451481b};[GUID]||[UNSET];</VariableMapping>
+PeakGasFlow := If '*'='t' then '{f33f2c1a-27fa-44d2-b734-9c7928f65a6e};Gas Flow' else TagMax('{f33f2c1a-27fa-44d2-b734-9c7928f65a6e};Gas Flow','t','*');&#xD;
+AvgGasFlow := If '*'='t' then '{f33f2c1a-27fa-44d2-b734-9c7928f65a6e};Gas Flow' else TagAvg('{f33f2c1a-27fa-44d2-b734-9c7928f65a6e};Gas Flow','t','*');</ConfigString>
+          <VariableMapping>AvgGasFlow||Average Gas Flow;[GUID]||{2842f5d7-fc2f-4490-bf57-b3f615c15fe3};PeakGasFlow||Peak Gas Flow;[GUID]||{9501b971-fb5a-4251-871d-a7332460e65d};GasEnergyUsageRateUnits||Gas Energy Usage Rate;[GUID]||{e9860c39-b319-4cc1-884d-224f114e56da};GasFlowTimeUnits||Gas Flow time;[GUID]||{36df25d0-9c76-4799-b72d-f57d442f4b7d};TotalGasConsumedUnits||Total Gas Usage;[GUID]||{27123fe0-c51a-404f-961e-a2c865f24e94};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1362,8 +1360,8 @@ AvgGasFlow := TagAvg('{84d630f4-6102-4afd-9d03-867ae3807e22};Gas Flow','t','*');
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
           <ConfigString>GasPricePerBTU := Convert('..\|Gas Price',"$/Btu");&#xD;
-GasCost := '{c5526d74-099f-4a20-a1fc-6602f451481b};Total Gas Usage'*GasPricePerBTU;</ConfigString>
-          <VariableMapping>GasCost||Total Gas Cost;[GUID]||{0dc757ad-d77b-4998-8c63-0749c975e997};[GUID]||[UNSET];</VariableMapping>
+GasCost := '{27123fe0-c51a-404f-961e-a2c865f24e94};Total Gas Usage'*GasPricePerBTU;</ConfigString>
+          <VariableMapping>GasCost||Total Gas Cost;[GUID]||{7ee98ea2-17b8-4955-b87a-8d05987b0299};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1376,14 +1374,11 @@ GasCost := '{c5526d74-099f-4a20-a1fc-6602f451481b};Total Gas Usage'*GasPricePerB
         <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>EventFrame</AFPlugIn>
-          <ConfigString>EFTGUID=bc4045b1-2bb4-4d99-b041-dbe24e643125;EFTNAME=DownTime</ConfigString>
+          <ConfigString>EFTGUID=c14553cd-d8a8-456a-a8f1-a38b18046c70;EFTNAME=DownTime</ConfigString>
           <AFAnalysisRule>
             <AFPlugIn>PerformanceEquation</AFPlugIn>
-            <ConfigString>@group("Start triggers")&#xD;
-StartTrigger := '{6f431d3e-2228-429d-bd1a-eeaf5011df27};State'= "NoGasFlow";&#xD;
-&#xD;
-@group("End triggers")&#xD;
-EndTrigger := '{6f431d3e-2228-429d-bd1a-eeaf5011df27};State'= "GasFlow";</ConfigString>
+            <ConfigString>StartTrigger := '{d197ee6c-0630-41ff-9671-d80ddc9a3fc9};State'= "NoGasFlow";&#xD;
+EndTrigger := '{d197ee6c-0630-41ff-9671-d80ddc9a3fc9};State'= "GasFlow";</ConfigString>
           </AFAnalysisRule>
         </AFAnalysisRule>
         <AFTimeRule>
@@ -1398,10 +1393,10 @@ EndTrigger := '{6f431d3e-2228-429d-bd1a-eeaf5011df27};State'= "GasFlow";</Config
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
           <ConfigString>State := If Minute('*') &gt;= 13 and  Minute('*') &lt;= 19 or Minute('*') &gt;= 33 and  Minute('*') &lt;= 39 or Minute('*') &gt;= 52 and  Minute('*') &lt;= 56 then "NoGasFlow" else "GasFlow";&#xD;
-GasFlow := If '{cf40dabf-f7b2-4109-9839-a904a23f1eff};State' = "GasFlow" then Abs(Rand(.015,.017)) else 0;&#xD;
-FaultCode := If Minute('*') &gt;= 23 and Minute('*') &lt;= 29 then 3 Else If Minute('*') &gt;= 33 and Minute('*') &lt;= 39 then 6 Else If Minute('*') &gt;= 42 and Minute('*') &lt;= 46 then 4 else PrevVal('{b4a9ecac-72f7-4546-9625-a244f7db4dbd};Fault Code', '*');&#xD;
+GasFlow := If '{d197ee6c-0630-41ff-9671-d80ddc9a3fc9};State' = "GasFlow" then Abs(Rand(.015,.017)) else 0;&#xD;
+FaultCode := If Minute('*') &gt;= 23 and Minute('*') &lt;= 29 then 3 Else If Minute('*') &gt;= 33 and Minute('*') &lt;= 39 then 6 Else If Minute('*') &gt;= 42 and Minute('*') &lt;= 46 then 4 else PrevVal('{1af74c4a-bc41-4eb5-8381-708472097b72};Fault Code', '*');&#xD;
 GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
-          <VariableMapping>FaultCode||Fault Code;[GUID]||{b4a9ecac-72f7-4546-9625-a244f7db4dbd};State||State;[GUID]||{cf40dabf-f7b2-4109-9839-a904a23f1eff};GasFlowUnit||Gas Flow;[GUID]||{84d630f4-6102-4afd-9d03-867ae3807e22};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>FaultCode||Fault Code;[GUID]||{1af74c4a-bc41-4eb5-8381-708472097b72};State||State;[GUID]||{d197ee6c-0630-41ff-9671-d80ddc9a3fc9};GasFlowUnit||Gas Flow;[GUID]||{f33f2c1a-27fa-44d2-b734-9c7928f65a6e};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Periodic</AFPlugIn>
@@ -1650,7 +1645,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>ElectricalCost||Electrical Cost;[GUID]||{7f4cdee1-fa1e-4f4b-acf7-ca43acb296a1};SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Cost];Sum||Total Electrical Cost;[GUID]||{52aebdb8-efdc-4d1c-a5e5-0f2237cf8bb6};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>ElectricalCost||Electrical Cost;SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Cost];Sum||Total Electrical Cost;[GUID]||{361e1b3a-8cd8-4de4-9e7c-7c357921f2e3};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1663,7 +1658,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Downtime];Sum||Electrical Downtime;[GUID]||{3919d911-100d-46d6-b529-78ba4db7cf59};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Electrical Downtime];Sum||Electrical Downtime;[GUID]||{0f856964-cd7d-41c5-b141-49eb4b33686b};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1676,7 +1671,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Sum||Total Electrical Usage;[GUID]||{130e9803-b09d-4871-bba1-656ba1944f79};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Electrical Usage];Sum||Total Electrical Usage;[GUID]||{1d2c7323-728e-49d7-aa20-3c9e5235d345};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1689,7 +1684,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Cost];Sum||Total Gas Cost;[GUID]||{7a72ce44-98b2-42e4-85a4-b9092c19c543};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Cost];Sum||Total Gas Cost;[GUID]||{6f5d5d2f-1c73-4cc1-b7e3-a435e7094952};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1702,7 +1697,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Usage];Sum||Total Gas Usage;[GUID]||{b3f0690d-abf3-4beb-a129-27ce98de05eb};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Gas Usage];Sum||Total Gas Usage;[GUID]||{295aab55-d333-48b5-963e-474a45f4590c};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1715,7 +1710,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Cost];Sum||Total Water Cost;[GUID]||{f0ac1d83-4c77-47cf-b134-95291040b8ef};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Cost];Sum||Total Water Cost;[GUID]||{a827a6d5-50d3-4432-9a0e-caa77e569cac};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1728,7 +1723,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>Rollup</AFPlugIn>
-          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Usage];Sum||Total Water Usage;[GUID]||{040eff3c-2be2-4a5e-9e55-02bc227bd1d5};[GUID]||[UNSET];</VariableMapping>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Total Water Usage];Sum||Total Water Usage;[GUID]||{4da504f9-be70-4d2d-bda0-9a912d4b1760};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1749,8 +1744,7 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
       </AFExtendedProperty>
       <AFExtendedProperty>
         <Name>Override</Name>
-        <Type>Object</Type>
-        <Value />
+        <Value type="AFElement">Plant\Building1\Water User1</Value>
       </AFExtendedProperty>
       <AFElementCategoryRef>Equipment</AFElementCategoryRef>
       <AFAttributeTemplate>
@@ -1937,10 +1931,10 @@ GasFlowUnit := Convert(GasFlow, "ft3/s");</ConfigString>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
           <ConfigString>State := If Minute('*') &gt;= 11 and  Minute('*') &lt;= 16 or Minute('*') &gt;= 31 and  Minute('*') &lt;= 35 or Minute('*') &gt;= 42 and Minute('*') &lt;= 46 then "NoWaterFlow" else "WaterFlow";&#xD;
-WaterFlowRate := IF '{e7144a13-2559-43eb-b689-1972d73894f9};State' = "WaterFlow" then Abs (((Rand(.083,.171))*100)+8) else 0;&#xD;
+WaterFlowRate := If '{218f670c-96a4-4d87-9af7-9af5c59eaecc};State' = "WaterFlow" then Abs (((Rand(.083,.171))*100)+8) else 0;&#xD;
 WaterFlowRateUnit := Convert(WaterFlowRate,"US gal/min");&#xD;
-FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Minute('*') &gt;= 30 and Minute('*') &lt;= 34 then 6 Else If Minute('*') &gt;= 41 and Minute('*') &lt;= 45 then 7 else PrevVal('{7798ef1d-f439-44a6-8b0a-63e676f2e66b};Fault Code', '*');</ConfigString>
-          <VariableMapping>State||State;[GUID]||{e7144a13-2559-43eb-b689-1972d73894f9};FaultCode||Fault Code;[GUID]||{7798ef1d-f439-44a6-8b0a-63e676f2e66b};WaterFlowRateUnit||Water Flow Rate;[GUID]||{3502cd77-71ea-41e7-96b4-b26236b8a4a2};[GUID]||[UNSET];</VariableMapping>
+FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Minute('*') &gt;= 30 and Minute('*') &lt;= 34 then 6 Else If Minute('*') &gt;= 41 and Minute('*') &lt;= 45 then 7 else PrevVal('{2f5060f3-a388-43a3-b4d0-4c92b184f2a9};Fault Code', '*');</ConfigString>
+          <VariableMapping>State||State;[GUID]||{218f670c-96a4-4d87-9af7-9af5c59eaecc};FaultCode||Fault Code;[GUID]||{2f5060f3-a388-43a3-b4d0-4c92b184f2a9};WaterFlowRateUnit||Water Flow Rate;[GUID]||{1967ba4f-5492-41ee-b85b-87887db18e72};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Periodic</AFPlugIn>
@@ -1953,8 +1947,8 @@ FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Mi
         <AFAnalysisCategoryRef>Cost</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>WaterCost := '{afbeb67e-441c-4120-85e5-7937d9753f55};Total Water Usage'*'..\|Water Price';</ConfigString>
-          <VariableMapping>WaterCost||Total Water Cost;[GUID]||{d767e0d7-48af-42c2-9eba-384fcd9eeea8};[GUID]||[UNSET];</VariableMapping>
+          <ConfigString>WaterCost := '{afb159c7-5b25-47e3-8652-d8ce486a816b};Total Water Usage'*'..\|Water Price';</ConfigString>
+          <VariableMapping>WaterCost||Total Water Cost;[GUID]||{3329f88c-6ee9-4dd9-813c-16ba3c032cb8};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -1970,11 +1964,8 @@ FaultCode := If Minute('*') &gt;= 10 and  Minute('*') &lt;= 15 then 5 Else If Mi
           <ConfigString>EFTGUID=bc4045b1-2bb4-4d99-b041-dbe24e643125;EFTNAME=DownTime</ConfigString>
           <AFAnalysisRule>
             <AFPlugIn>PerformanceEquation</AFPlugIn>
-            <ConfigString>@group("Start triggers")&#xD;
-StartTrigger := '{a73c05a1-caa8-4180-8f98-9ec8e955065a};State'="NoWaterFlow";&#xD;
-&#xD;
-@group("End triggers")&#xD;
-EndTrigger := '{a73c05a1-caa8-4180-8f98-9ec8e955065a};State'="WaterFlow";</ConfigString>
+            <ConfigString>StartTrigger := '{218f670c-96a4-4d87-9af7-9af5c59eaecc};State'="NoWaterFlow";&#xD;
+EndTrigger := '{218f670c-96a4-4d87-9af7-9af5c59eaecc};State'="WaterFlow";</ConfigString>
           </AFAnalysisRule>
         </AFAnalysisRule>
         <AFTimeRule>
@@ -1988,12 +1979,12 @@ EndTrigger := '{a73c05a1-caa8-4180-8f98-9ec8e955065a};State'="WaterFlow";</Confi
         <AFAnalysisCategoryRef>Usage</AFAnalysisCategoryRef>
         <AFAnalysisRule>
           <AFPlugIn>PerformanceEquation</AFPlugIn>
-          <ConfigString>WaterUsageRate := '{3502cd77-71ea-41e7-96b4-b26236b8a4a2};Water Flow Rate'*'{c33f8cfb-b9e3-42f2-9532-c6add56d4aab};Flow Rate Factor';&#xD;
+          <ConfigString>WaterUsageRate := '{1967ba4f-5492-41ee-b85b-87887db18e72};Water Flow Rate'*'{7a0608d3-d5d1-4c66-80a6-34d8e6b2c5a3};Flow Rate Factor';&#xD;
 WaterUsageRateUnit := Convert(WaterUsageRate,"US gal/min");&#xD;
-TotalWaterUsage := TagTot('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rate|{2c0950b0-b196-4435-a73c-688161341dd0};To Days','t','*');&#xD;
-PeakWaterFlow := TagMax('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rate','t','*');&#xD;
-AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rate','t','*');</ConfigString>
-          <VariableMapping>Total Water||Gallons;Water Total||Gallons;AvgWaterFlow||Average Water Flow;[GUID]||{560b9df1-1913-41e1-814f-7a572ec47722};TotalWaterUsage||Total Water Usage;[GUID]||{afbeb67e-441c-4120-85e5-7937d9753f55};PeakWaterFlow||Peak Water Flow Rate;[GUID]||{66cd23b2-bc15-4647-b815-326a5ccb93b7};WaterUsageRateUnit||Adjusted Flow Rate;[GUID]||{852d864f-1d1a-49ee-9ded-116af3a37106};[GUID]||[UNSET];</VariableMapping>
+TotalWaterUsage := If '*'='t' then 0 else TagTot('{9a2bae7b-332c-4ad1-b304-c07649544e0d};Adjusted Flow Rate|{48e4e6b3-f9b5-4a54-b587-da03a7c14b9e};To Days','t','*');&#xD;
+PeakWaterFlow := If '*'='t' then '{9a2bae7b-332c-4ad1-b304-c07649544e0d};Adjusted Flow Rate' else TagMax('{9a2bae7b-332c-4ad1-b304-c07649544e0d};Adjusted Flow Rate','t','*');&#xD;
+AvgWaterFlow := If '*'='t' then '{9a2bae7b-332c-4ad1-b304-c07649544e0d};Adjusted Flow Rate' else TagAvg('{9a2bae7b-332c-4ad1-b304-c07649544e0d};Adjusted Flow Rate','t','*');</ConfigString>
+          <VariableMapping>Total Water||Gallons;Water Total||Gallons;AvgWaterFlow||Average Water Flow;[GUID]||{8c8f767f-c977-40b4-9d8d-e39a25dd7b05};TotalWaterUsage||Total Water Usage;[GUID]||{afb159c7-5b25-47e3-8652-d8ce486a816b};PeakWaterFlow||Peak Water Flow Rate;[GUID]||{ad300696-2ec0-4bb3-a486-eac0d5529ec4};WaterUsageRateUnit||Adjusted Flow Rate;[GUID]||{9a2bae7b-332c-4ad1-b304-c07649544e0d};[GUID]||[UNSET];</VariableMapping>
         </AFAnalysisRule>
         <AFTimeRule>
           <AFPlugIn>Natural</AFPlugIn>
@@ -2101,10 +2092,6 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
         </AFAttribute>
         <AFAttribute>
-          <Name>BTU Factor</Name>
-          <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
-        </AFAttribute>
-        <AFAttribute>
           <Name>Electrical downtime</Name>
           <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
         </AFAttribute>
@@ -2118,6 +2105,10 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAttribute>
         <AFAttribute>
           <Name>Heat Content</Name>
+          <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Mixed Gas Energy Factor</Name>
           <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
         </AFAttribute>
         <AFAttribute>
@@ -2913,10 +2904,6 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
           <AFAttributeCategoryRef>Usage</AFAttributeCategoryRef>
         </AFAttribute>
         <AFAttribute>
-          <Name>BTU Factor</Name>
-          <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
-        </AFAttribute>
-        <AFAttribute>
           <Name>Electrical downtime</Name>
           <AFAttributeCategoryRef>Downtime</AFAttributeCategoryRef>
         </AFAttribute>
@@ -2930,6 +2917,10 @@ AvgWaterFlow := TagAvg('{852d864f-1d1a-49ee-9ded-116af3a37106};Adjusted Flow Rat
         </AFAttribute>
         <AFAttribute>
           <Name>Heat Content</Name>
+          <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Mixed Gas Energy Factor</Name>
           <AFAttributeCategoryRef>Utilities Price</AFAttributeCategoryRef>
         </AFAttribute>
         <AFAttribute>
