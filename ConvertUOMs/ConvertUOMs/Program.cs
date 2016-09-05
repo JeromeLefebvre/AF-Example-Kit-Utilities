@@ -39,17 +39,20 @@ namespace ConvertUOMs
         static void convertAttribute(AFAttributeTemplate attr)
         {
             foreach (var child in attr.AttributeTemplates)
-                convertAttribute(child);
+               convertAttribute(child);
 
             attr.DefaultUOM = convert(attr.DefaultUOM);
-            if (attr.DataReferencePlugIn.Name == "PI Point")
-                attr.DataReference.UOM = convert(attr.DataReference.UOM);
-
-            if (attr.DataReferencePlugIn.Name == "Table Lookup")
+            if (attr.DataReferencePlugIn != null)
             {
-                // Create a table look object and use its method to grab the uom
+                if (attr.DataReferencePlugIn.Name == "PI Point")
+                    attr.DataReference.UOM = convert(attr.DataReference.UOM);
+
+                if (attr.DataReferencePlugIn.Name == "Table Lookup")
+                {
+                    // Create a table look object and use its method to grab the uom
+                }
             }
-                
+            
 
             attr.ElementTemplate.CheckIn();
         }

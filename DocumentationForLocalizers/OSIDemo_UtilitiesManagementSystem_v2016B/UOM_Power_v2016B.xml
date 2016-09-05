@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-08-27T21:43:46.90977Z" id="b3ddad93-0b80-4b52-84a6-106354777b22" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Power" ExportedType="UOMClass" Identity="UOMClass" PIPersist="189 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\UOMDatabase\UOMClasses[{b3ddad93-0b80-4b52-84a6-106354777b22}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Power]">
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="AFKIT-CLEAN" Created="2016-09-05T07:49:46.6884026Z" id="b3ddad93-0b80-4b52-84a6-106354777b22" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Power" ExportedType="UOMClass" Identity="UOMClass" PIPersist="188 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{879ff101-a614-4ee4-84a2-cf56a2c361af}\UOMDatabase\UOMClasses[{b3ddad93-0b80-4b52-84a6-106354777b22}]*AFKIT-CLEAN\UOMDatabase\UOMClasses[Power]">
   <UOMClass>
     <Name>Power</Name>
     <CanonicalUOM>watt</CanonicalUOM>
@@ -44,31 +44,9 @@
     <Class>Power</Class>
   </UOM>
   <UOM>
-    <Name>joule per day</Name>
-    <Abbreviation>J/d</Abbreviation>
-    <RefFactor>1.15740740740741E-05</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
     <Name>British thermal unit per day</Name>
     <Abbreviation>Btu/d</Abbreviation>
     <RefFactor>0.012211294590509259</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>gigawatt</Name>
-    <Abbreviation>GW</Abbreviation>
-    <RefFactor>1000000000</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>megawatt</Name>
-    <Abbreviation>MW</Abbreviation>
-    <Description>Generated Power</Description>
-    <RefFactor>1000000</RefFactor>
     <RefUOM>watt</RefUOM>
     <Class>Power</Class>
   </UOM>
@@ -131,6 +109,21 @@
     <Name>million calorie per hour</Name>
     <Abbreviation>MMcal/h</Abbreviation>
     <RefFactor>1163</RefFactor>
+    <RefUOM>watt</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>megawatt</Name>
+    <Abbreviation>MW</Abbreviation>
+    <Description>Generated Power</Description>
+    <RefFactor>1000000</RefFactor>
+    <RefUOM>watt</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>gigawatt</Name>
+    <Abbreviation>GW</Abbreviation>
+    <RefFactor>1000000000</RefFactor>
     <RefUOM>watt</RefUOM>
     <Class>Power</Class>
   </UOM>

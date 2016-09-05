@@ -29,8 +29,7 @@ namespace ResetToTemplate
         public static void resetElement(AFElement elem)
         {
             foreach(AFAttribute attr in elem.Attributes)
-                if (!attr.Template.IsConfigurationItem)
-                    resetAttribute(attr);
+               resetAttribute(attr);
             foreach (AFElement child in elem.Elements)
                 resetElement(child);
             foreach (AFAnalysis analysis in elem.Analyses)
@@ -39,7 +38,10 @@ namespace ResetToTemplate
         }
         public static void resetAttribute(AFAttribute attr)
         {
-            attr.ResetToTemplate();
+            if (!attr.IsConfigurationItem)
+                attr.ResetToTemplate();
+            //if (attr.DataReference != null && attr.DataReferencePlugIn.Name == "PI Point")
+            //    attr.DataReference.CreateConfig();
             foreach(AFAttribute childAttr in attr.Attributes)
                 resetAttribute(childAttr);
         }

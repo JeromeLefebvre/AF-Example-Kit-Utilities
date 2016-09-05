@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-08-27T21:43:46.9277824Z" id="7d5868c6-1d2d-4a0b-ba9e-0f182163292f" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Volume Cost" ExportedType="UOMClass" Identity="UOMClass" PIPersist="195 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{705d2a73-06fe-4696-8840-bdc575f73adc}\UOMDatabase\UOMClasses[{7d5868c6-1d2d-4a0b-ba9e-0f182163292f}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Volume Cost]">
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="AFKIT-CLEAN" Created="2016-09-05T07:49:46.714421Z" id="f3e52420-3ff5-4d26-b696-1f9b5bbe4c2b" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Volume Cost" ExportedType="UOMClass" Identity="UOMClass" PIPersist="194 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{879ff101-a614-4ee4-84a2-cf56a2c361af}\UOMDatabase\UOMClasses[{f3e52420-3ff5-4d26-b696-1f9b5bbe4c2b}]*AFKIT-CLEAN\UOMDatabase\UOMClasses[Volume Cost]">
   <UOMClass>
     <Name>Volume Cost</Name>
     <Description>Oil Fuel Cost</Description>

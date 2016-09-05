@@ -1,6 +1,4 @@
-﻿using System;
-using OSIsoft.AF;
-using OSIsoft.AF.Analysis;
+﻿using OSIsoft.AF;
 
 namespace FIxAnalaysisMapping
 {
@@ -8,18 +6,16 @@ namespace FIxAnalaysisMapping
     {
         static void Main(string[] args)
         {
-            PISystem local = new PISystems().DefaultPISystem;
-            AFDatabase db = local.Databases.DefaultDatabase;
+            var db = new PISystems().DefaultPISystem.Databases.DefaultDatabase;
             fixAnalysis(db);
         }
-        public static bool fixAnalysis(AFDatabase db)
+        public static void fixAnalysis(AFDatabase db)
         {
-            foreach (AFAnalysisTemplate analysis in db.AnalysisTemplates)
+            foreach (var analysis in db.AnalysisTemplates)
             {
                 analysis.AnalysisRule.RefreshConfigurationAndVariableMapping();
                 analysis.CheckIn();
             }
-            return true;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ExportKitScript
 
             pisystem.ExportXml(db, PIExportMode.NoUniqueID, $"{directoryPath}\\OSIDemo_Utilities Management System_{version}.xml", null, null, null);
 
-            foreach (var UOMClassName in new string[] { "Power", "Energy Cost", "Volume Cost", "US Currency", "Energy per Volume" }) {
+            foreach (var UOMClassName in new string[] { "Power", "Energy Cost", "Volume Cost", "Volume Flow Rate", "US Currency", "Energy per Volume" }) {
                 var UOMClass = pisystem.UOMDatabase.UOMClasses[UOMClassName];
                 pisystem.ExportXml(UOMClass, PIExportMode.NoUniqueID, $"{directoryPath}\\UOM_{UOMClass.Name}_{version}.xml", null, null, null);
             }
