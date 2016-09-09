@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="AFKIT-CLEAN" Created="2016-09-05T07:49:46.7044136Z" id="e77ce37c-5d1f-4577-96d1-f67c56854fca" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Energy Cost" ExportedType="UOMClass" Identity="UOMClass" PIPersist="194 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{879ff101-a614-4ee4-84a2-cf56a2c361af}\UOMDatabase\UOMClasses[{e77ce37c-5d1f-4577-96d1-f67c56854fca}]*AFKIT-CLEAN\UOMDatabase\UOMClasses[Energy Cost]">
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-09-09T08:19:39.1624729Z" id="118fb502-8d36-4710-81b5-ee3f71d7484d" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Energy Cost" ExportedType="UOMClass" Identity="UOMClass" PIPersist="195 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{f9c322c2-354c-426e-8983-31863cebaf06}\UOMDatabase\UOMClasses[{118fb502-8d36-4710-81b5-ee3f71d7484d}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Energy Cost]">
   <UOMClass>
     <Name>Energy Cost</Name>
     <Description>Dollars per Btu</Description>
@@ -47,17 +47,17 @@
     <Class>Energy Cost</Class>
   </UOM>
   <UOM>
-    <Name>$/MMBtu</Name>
-    <Abbreviation>$/MMBtu</Abbreviation>
-    <RefFactor>9.47817120313317E-10</RefFactor>
-    <RefUOM>$/J</RefUOM>
-    <Class>Energy Cost</Class>
-  </UOM>
-  <UOM>
     <Name>$/MWh</Name>
     <Abbreviation>$/MWh</Abbreviation>
     <Description>Dollars per MWh</Description>
     <RefFactor>2.77777777777778E-10</RefFactor>
+    <RefUOM>$/J</RefUOM>
+    <Class>Energy Cost</Class>
+  </UOM>
+  <UOM>
+    <Name>$/MMBtu</Name>
+    <Abbreviation>$/MMBtu</Abbreviation>
+    <RefFactor>9.47817120313317E-10</RefFactor>
     <RefUOM>$/J</RefUOM>
     <Class>Energy Cost</Class>
   </UOM>

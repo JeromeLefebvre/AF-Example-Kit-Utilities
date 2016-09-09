@@ -41,8 +41,14 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="OSIsoft.AF.Analysis.AnalysisRule.EventFrame">
+      <HintPath>..\..\..\..\..\..\..\Program Files\PIPC\Analytics\Plugins\OSIsoft.AF.Analysis.AnalysisRule.EventFrame.dll</HintPath>
+    </Reference>
     <Reference Include="OSIsoft.AF.Analysis.AnalysisRule.Rollup">
       <HintPath>..\..\..\..\..\..\..\Program Files\PIPC\Analytics\Plugins\OSIsoft.AF.Analysis.AnalysisRule.Rollup.dll</HintPath>
+    </Reference>
+    <Reference Include="OSIsoft.AF.Asset.DataReference.PIPoint">
+      <HintPath>..\..\..\..\..\..\..\ProgramData\OSIsoft\AF\PlugIns\4.0\OSIsoft.AF.Asset.DataReference.PIPoint.dll</HintPath>
     </Reference>
     <Reference Include="OSIsoft.AF.Asset.DataReference.TableLookup">
       <HintPath>..\..\..\..\..\..\..\Program Files\PIPC\AF\PlugIns\OSIsoft.AF.Asset.DataReference.TableLookup.dll</HintPath>

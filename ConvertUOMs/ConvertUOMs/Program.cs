@@ -30,10 +30,28 @@ namespace ConvertUOMs
 
         static void convertAllAttributes(AFDatabase db)
         {
+            /*
+            foreach (var elem in db.ElementTemplates)
+                foreach (var child in elem.AttributeTemplates)
+                    convertConfigurationAttribute(child);  */
+
+            /*foreach (var elem in db.Elements)
+                switchValueOfConfigurationItem(elem);      */
+
             foreach (var elem in db.ElementTemplates)
                 foreach (var attr in elem.AttributeTemplates)
                     convertAttribute(attr);
+
             db.CheckIn();
+        }
+
+        static void convertConfigurationAttribute(AFAttributeTemplate attr)
+        {
+            foreach (var child in attr.AttributeTemplates)
+                convertConfigurationAttribute(child);
+            if (attr.IsConfigurationItem)
+                attr.DefaultUOM = convert(attr.DefaultUOM);
+            attr.ElementTemplate.CheckIn();
         }
 
         static void convertAttribute(AFAttributeTemplate attr)
@@ -52,11 +70,29 @@ namespace ConvertUOMs
                     // Create a table look object and use its method to grab the uom
                 }
             }
-            
-
             attr.ElementTemplate.CheckIn();
         }
-        static UOM convert(UOM initialUOM, string kitName = "Japan")
+        static void switchValueOfConfigurationItem(AFElement elem)
+        {
+            foreach (var child in elem.Attributes)
+                switchValueOfConfigurationItem(child);
+            foreach (var child in elem.Elements)
+                switchValueOfConfigurationItem(child);
+        }
+
+        static void switchValueOfConfigurationItem(AFAttribute attr)
+        {
+            foreach (var child in attr.Attributes)
+                switchValueOfConfigurationItem(child);
+            if (attr.Template.IsConfigurationItem)
+            {
+                UOM uom = convert(attr.DefaultUOM);
+                double newValue = uom.Convert(attr.GetValue().ValueAsDouble(), attr.DefaultUOM);
+                attr.SetValue(new AFValue(newValue));
+            }
+            attr.Database.CheckIn();
+        }
+        static UOM convert(UOM initialUOM, string kitName = "日本")
         {
             try
             {

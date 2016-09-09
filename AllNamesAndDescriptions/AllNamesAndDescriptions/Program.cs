@@ -20,7 +20,8 @@ namespace AllNamesAndDescriptions
         public static string keyPath = @"c:\apikey.txt";
         private static TranslateService service = new TranslateService(new BaseClientService.Initializer()
         {
-            ApiKey = File.ReadAllText(keyPath), // your API key, that you get from Google Developer Console
+            //ApiKey = File.ReadAllText(keyPath), // your API key, that you get from Google Developer Console
+            ApiKey = "AIzaSyDwFN_wQqfrf_m79ek8UAraSYA2rRbRohI",
             ApplicationName = "jlefebvrenew" // your application name, that you get form Google Developer Console
         });
         static void Main(string[] args)
@@ -53,7 +54,7 @@ namespace AllNamesAndDescriptions
             db.CheckIn();
 
             foreach (AFTable table in db.Tables)
-                if (table != translation)
+                if (table != translation && table.Name != "UOM Conversion")
                     storeAllTableHeaders(table, dt);
 
             db.CheckIn();
