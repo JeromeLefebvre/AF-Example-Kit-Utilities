@@ -30,10 +30,11 @@ namespace ConvertUOMs
 
         static void convertAllAttributes(AFDatabase db)
         {
+            
             /*
             foreach (var elem in db.ElementTemplates)
                 foreach (var child in elem.AttributeTemplates)
-                    convertConfigurationAttribute(child);  */
+                    convertConfigurationAttribute(child);        */
 
             /*foreach (var elem in db.Elements)
                 switchValueOfConfigurationItem(elem);      */
