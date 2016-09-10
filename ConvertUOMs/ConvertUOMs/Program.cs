@@ -8,6 +8,7 @@ using OSIsoft.AF.Asset;
 using OSIsoft.AF.Analysis;
 using System.Data;
 using OSIsoft.AF.UnitsOfMeasure;
+using System.Text.RegularExpressions;
 
 namespace ConvertUOMs
 {
@@ -15,10 +16,12 @@ namespace ConvertUOMs
     {
         static public DataTable dt;
         static public PISystem system;
+        static public UOMDatabase UOMdb;
         static void Main(string[] args)
         {
             system = new PISystems().DefaultPISystem;
             var db = system.Databases.DefaultDatabase;
+            UOMdb = system.UOMDatabase;
             convertdb(db);
         }
 
@@ -43,7 +46,27 @@ namespace ConvertUOMs
                 foreach (var attr in elem.AttributeTemplates)
                     convertAttribute(attr);
 
+            foreach (var analysis in db.AnalysisTemplates)
+                if (analysis.AnalysisRulePlugIn.Name == "PerformanceEquation")
+                    convertAnalysis(analysis);      
             db.CheckIn();
+        }
+
+        static void convertAnalysis(AFAnalysisTemplate analysis)
+        {
+
+            string configString = analysis.AnalysisRule.ConfigString;
+
+            foreach (Match match in Regex.Matches(configString, "\"(?<uom>.*?)\""))
+            {
+
+                var oldUOM = UOMdb.UOMs[match.Groups["uom"].Value];
+                var newUOM = convert(oldUOM);
+                if (newUOM != null)
+                    configString = configString.Replace(match.Groups["uom"].Value, newUOM.Abbreviation);
+            }
+            analysis.AnalysisRule.ConfigString = configString;
+            analysis.CheckIn();
         }
 
         static void convertConfigurationAttribute(AFAttributeTemplate attr)
@@ -93,7 +116,7 @@ namespace ConvertUOMs
             }
             attr.Database.CheckIn();
         }
-        static UOM convert(UOM initialUOM, string kitName = "日本")
+        static UOM convert(UOM initialUOM, string kitName = "Japan")
         {
             try
             {
