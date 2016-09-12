@@ -35,11 +35,12 @@ namespace ConvertUOMs
         {
             
             /*
+             * If the configuration item is not the template value, conversion occurs automactially
             foreach (var elem in db.ElementTemplates)
                 foreach (var child in elem.AttributeTemplates)
-                    convertConfigurationAttribute(child);        */
+                    convertConfigurationAttribute(child);
 
-            /*foreach (var elem in db.Elements)
+            foreach (var elem in db.Elements)
                 switchValueOfConfigurationItem(elem);      */
 
             foreach (var elem in db.ElementTemplates)
@@ -48,7 +49,7 @@ namespace ConvertUOMs
 
             foreach (var analysis in db.AnalysisTemplates)
                 if (analysis.AnalysisRulePlugIn.Name == "PerformanceEquation")
-                    convertAnalysis(analysis);      
+                    convertAnalysis(analysis);
             db.CheckIn();
         }
 
