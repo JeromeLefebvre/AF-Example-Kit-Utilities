@@ -13,7 +13,11 @@ namespace FIxAnalaysisMapping
         {
             foreach (var analysis in db.AnalysisTemplates)
             {
-                analysis.AnalysisRule.RefreshConfigurationAndVariableMapping();
+                if (analysis.AnalysisRulePlugIn.Name == "PerformanceEquation")
+                    analysis.AnalysisRule.RefreshConfigurationAndVariableMapping();
+                if (analysis.AnalysisRulePlugIn.Name == "EventFrame")
+                    foreach (var rule in analysis.AnalysisRule.AnalysisRules)
+                        rule.RefreshConfigurationAndVariableMapping();
                 analysis.CheckIn();
             }
         }
