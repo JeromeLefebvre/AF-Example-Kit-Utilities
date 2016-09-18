@@ -13,7 +13,7 @@ namespace FIxAnalaysisMapping
         {
             foreach (var analysis in db.AnalysisTemplates)
             {
-                if (analysis.AnalysisRulePlugIn.Name == "PerformanceEquation")
+                if (analysis.AnalysisRulePlugIn.Name == "PerformanceEquation" || analysis.AnalysisRulePlugIn.Name == "Rollup")
                     analysis.AnalysisRule.RefreshConfigurationAndVariableMapping();
                 if (analysis.AnalysisRulePlugIn.Name == "EventFrame")
                     foreach (var rule in analysis.AnalysisRule.AnalysisRules)
