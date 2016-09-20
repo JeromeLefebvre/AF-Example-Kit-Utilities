@@ -25,7 +25,16 @@ namespace GrabAllUsedUOMs
         static AFTable createUOMTable(AFDatabase db)
         {
             AFTable table = db.Tables["UOM Conversion"];
-            // TODO: IF it does not exist, write code to create it.
+            if (table == null)
+            {
+                table = db.Tables.Add("UOM Conversion");
+                DataTable datatable = new DataTable();
+                datatable.Columns.Add("UOM", typeof(System.String));
+                datatable.Columns.Add("Japan", typeof(System.String));
+                table.Table = datatable;
+
+                db.CheckIn();
+            }
             return table;
         }
         static void getAllUOMUsed(AFDatabase db)
@@ -41,7 +50,7 @@ namespace GrabAllUsedUOMs
             List<string> uoms = new List<string>();
             if (analysis.AnalysisRulePlugIn.Name == "PerformanceEquation")
                 parseForAllUOMs(analysis.AnalysisRule.ConfigString, ref uoms);
-            
+
             //foreach(var rule in analysis.AnalysisRule)
         }
 
