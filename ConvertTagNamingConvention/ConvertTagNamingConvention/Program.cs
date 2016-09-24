@@ -1,5 +1,7 @@
 ﻿using OSIsoft.AF;
 using OSIsoft.AF.Asset;
+using System.Data;
+using System.Linq;
 
 namespace ConvertTagNamingConvention
 {
@@ -8,8 +10,8 @@ namespace ConvertTagNamingConvention
         const string tagname = "Tagname";
         static void Main(string[] args)
         {
-            PISystem local = new PISystems().DefaultPISystem;
-            AFDatabase db = local.Databases.DefaultDatabase;
+            PISystem system = new PISystems().DefaultPISystem;
+            AFDatabase db = system.Databases.DefaultDatabase;
             convertTagNaming(db);
         }
 
@@ -26,10 +28,10 @@ namespace ConvertTagNamingConvention
                 foreach (AFAttributeTemplate attr in template.AttributeTemplates)
                 {
                     AFAttributeTemplate child = attr.AttributeTemplates[tagname];
-                    attr.ConfigString = attr.ConfigString.Replace(tagname, "タグ名");
-
+                    
                     if (child == null)
                         continue;
+                    attr.ConfigString = attr.ConfigString.Replace(tagname, "タグ名");
 
                     child.Name = "タグ名";
                     child.Description = "属性のタグ名";
@@ -60,14 +62,10 @@ namespace ConvertTagNamingConvention
                         description = "親の" + description;
                         elementField = @"..\" + elementField;
                     }
-                    child.ConfigString = @"OSIDEMO_;" + configString;
+                    child.ConfigString = @"OSIDEMO_;" + configString + @";""."";%..|AttributeID%";
                 }
             }
-            // Not easy to directly access a PI Point Data refence's TagName property from the AFAttributeTemplate
-            // Thus, working around it by doing a string replace
-            string xml = db.PISystem.ExportXml(db, PIExportMode.AllReferences);
-            xml = xml.Replace(" | tagname", "|タグ名");
-            db.PISystem.ImportXml(db, PIImportMode.AllowUpdate, xml);
+
             db.CheckIn();
             return true;
         }
@@ -76,7 +74,7 @@ namespace ConvertTagNamingConvention
         {
             try
             {
-                var elements = template.FindInstantiatedElements(false, AFSortField.Name, AFSortOrder.Ascending, 1);
+                var elements = template.FindInstantiatedElements(true, AFSortField.Name, AFSortOrder.Ascending, 1);
                 var element = (AFElement)elements[0];
                 var parents = 0;
                 while (element.Parent != null)

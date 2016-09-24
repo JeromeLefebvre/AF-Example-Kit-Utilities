@@ -38,7 +38,7 @@ namespace ResetToTemplate
         }
         public static void resetAttribute(AFAttribute attr)
         {
-            if (!attr.IsConfigurationItem && !attr.Template.IsConfigurationItem)
+            if (!attr.IsConfigurationItem && attr.Template != null && !attr.Template.IsConfigurationItem)
                 attr.ResetToTemplate();
             //if (attr.DataReference != null && attr.DataReferencePlugIn.Name == "PI Point")
             //    attr.DataReference.CreateConfig();
