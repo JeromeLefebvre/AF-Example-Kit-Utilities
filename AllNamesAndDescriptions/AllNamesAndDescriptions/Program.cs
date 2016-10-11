@@ -10,8 +10,9 @@ using Google.Apis.Translate.v2;
 using Google.Apis.Translate.v2.Data;
 using Google.Apis.Services;
 using static Google.Apis.Translate.v2.TranslationsResource;
-using System.Text;
 using System.IO;
+using OSIsoft.AF.Analysis;
+using System.Text.RegularExpressions;
 
 namespace AllNamesAndDescriptions
 {
@@ -20,8 +21,7 @@ namespace AllNamesAndDescriptions
         public static string keyPath = @"c:\apikey.txt";
         private static TranslateService service = new TranslateService(new BaseClientService.Initializer()
         {
-            //ApiKey = File.ReadAllText(keyPath), // your API key, that you get from Google Developer Console
-            ApiKey = "",
+            ApiKey = File.ReadAllText(keyPath), // your API key, that you get from Google Developer Console
             ApplicationName = "jlefebvrenew" // your application name, that you get form Google Developer Console
         });
         static void Main(string[] args)
@@ -41,6 +41,14 @@ namespace AllNamesAndDescriptions
             TranslationsListResponse response = request.Execute();
             String translated_text = response.Translations[0].TranslatedText;
             return translated_text;
+        }
+
+        static void addCodeComments(AFAnalysisTemplate analysis, DataTable dt)
+        {
+            string configString = analysis.AnalysisRule.ConfigString;
+            Regex rgx = new Regex(@"\/\*(?<comment>.*?)\*\/");
+            foreach (Match match in Regex.Matches(configString, @"\/\*(?<comment>.*?)\*\/"))
+                insert(dt, match.Groups["comment"].Value);
         }
 
         static void fillEnglishTable(AFDatabase db)
@@ -64,7 +72,11 @@ namespace AllNamesAndDescriptions
                 insert(dt, elem.NamingPattern);
             }
             foreach (var analysis in db.AnalysisTemplates)
+            {
                 addNameAndDescription(dt, analysis, analysis);
+                if (analysis.AnalysisRulePlugIn.Name == "PerformanceEquation")
+                    addCodeComments(analysis, dt);
+            }
             db.CheckIn();
             foreach (AFCategory category in db.AnalysisCategories)
                 addNameAndDescription(dt, category, category);
