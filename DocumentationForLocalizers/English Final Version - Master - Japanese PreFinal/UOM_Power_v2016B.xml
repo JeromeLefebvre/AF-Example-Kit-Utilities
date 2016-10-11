@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-09-16T07:13:02.2876951Z" id="b3ddad93-0b80-4b52-84a6-106354777b22" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Power" ExportedType="UOMClass" Identity="UOMClass" PIPersist="189 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{f9c322c2-354c-426e-8983-31863cebaf06}\UOMDatabase\UOMClasses[{b3ddad93-0b80-4b52-84a6-106354777b22}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Power]">
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="ATAKEZAKIE6440" Created="2016-09-30T01:55:16.5475917Z" id="b3ddad93-0b80-4b52-84a6-106354777b22" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Power" ExportedType="UOMClass" Identity="UOMClass" PIPersist="191 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{84e246e3-5f02-460b-b7d9-9eea386a83e3}\UOMDatabase\UOMClasses[{b3ddad93-0b80-4b52-84a6-106354777b22}]*ATAKEZAKIE6440\UOMDatabase\UOMClasses[Power]">
   <UOMClass>
     <Name>Power</Name>
     <CanonicalUOM>watt</CanonicalUOM>
@@ -20,63 +20,6 @@
   <UOM>
     <Name>watt</Name>
     <Abbreviation>W</Abbreviation>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>volt-ampere reactive</Name>
-    <Abbreviation>VAR</Abbreviation>
-    <Description>Reactive Power</Description>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>megavolt-ampere reactive</Name>
-    <Abbreviation>MVAR</Abbreviation>
-    <RefFactor>1000000</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>kilovolt-ampere reactive</Name>
-    <Abbreviation>kVAR</Abbreviation>
-    <RefFactor>1000</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>joule per hour</Name>
-    <Abbreviation>J/h</Abbreviation>
-    <RefFactor>1.1574074074074074E-05</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>joule per day</Name>
-    <Abbreviation>J/d</Abbreviation>
-    <RefFactor>1.15740740740741E-05</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>British thermal unit per day</Name>
-    <Abbreviation>Btu/d</Abbreviation>
-    <RefFactor>0.012211294590509259</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>gigawatt</Name>
-    <Abbreviation>GW</Abbreviation>
-    <RefFactor>1000000000</RefFactor>
-    <RefUOM>watt</RefUOM>
-    <Class>Power</Class>
-  </UOM>
-  <UOM>
-    <Name>megawatt</Name>
-    <Abbreviation>MW</Abbreviation>
-    <Description>Generated Power</Description>
-    <RefFactor>1000000</RefFactor>
-    <RefUOM>watt</RefUOM>
     <Class>Power</Class>
   </UOM>
   <UOM>
@@ -142,10 +85,64 @@
     <Class>Power</Class>
   </UOM>
   <UOM>
+    <Name>MW</Name>
+    <Abbreviation>MW</Abbreviation>
+    <Description>MW</Description>
+    <RefFactor>1000</RefFactor>
+    <RefUOM>kilowatt</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>gigawatt</Name>
+    <Abbreviation>GW</Abbreviation>
+    <RefFactor>1000000000</RefFactor>
+    <RefUOM>watt</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
     <Name>British thermal unit per second</Name>
     <Abbreviation>Btu/s</Abbreviation>
     <RefFactor>3600</RefFactor>
     <RefUOM>British thermal unit per hour</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>UOM1</Name>
+    <Abbreviation>UOM1</Abbreviation>
+    <RefUOM>watt</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>mm/MWhr</Name>
+    <Abbreviation>mm/MWhr</Abbreviation>
+    <RefUOM>UOM1</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>No.</Name>
+    <Abbreviation>No.</Abbreviation>
+    <RefUOM>UOM1</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>joule per hour</Name>
+    <Abbreviation>J/h</Abbreviation>
+    <RefFactor>1.1574074074074074E-05</RefFactor>
+    <RefUOM>watt</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>joule per day</Name>
+    <Abbreviation>J/d</Abbreviation>
+    <RefFactor>1.15740740740741E-05</RefFactor>
+    <RefUOM>watt</RefUOM>
+    <Class>Power</Class>
+  </UOM>
+  <UOM>
+    <Name>British thermal unit per day</Name>
+    <Abbreviation>Btu/d</Abbreviation>
+    <RefFactor>0.012211294590509259</RefFactor>
+    <RefUOM>watt</RefUOM>
     <Class>Power</Class>
   </UOM>
 </AF>

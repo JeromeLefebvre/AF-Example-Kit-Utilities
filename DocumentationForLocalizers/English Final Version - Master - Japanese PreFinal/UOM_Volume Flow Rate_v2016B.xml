@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="ATAKEZAKIE6440" Created="2016-09-30T01:55:16.5686076Z" id="3d767ab7-aef4-4414-a271-407bdb12aad3" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Volume Flow Rate" ExportedType="UOMClass" Identity="UOMClass" PIPersist="202 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{84e246e3-5f02-460b-b7d9-9eea386a83e3}\UOMDatabase\UOMClasses[{3d767ab7-aef4-4414-a271-407bdb12aad3}]*ATAKEZAKIE6440\UOMDatabase\UOMClasses[Volume Flow Rate]">
+  <UOMClass>
+    <Name>Volume Flow Rate</Name>
+    <CanonicalUOM>cubic meter per second</CanonicalUOM>
+    <CanonicalAbbr>m3/s</CanonicalAbbr>
+    <UOMBaseClass>
+      <Name>Length</Name>
+      <BasePower>3</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Time</Name>
+      <BasePower>-1</BasePower>
+    </UOMBaseClass>
+  </UOMClass>
+  <UOM>
+    <Name>cubic meter per second</Name>
+    <Abbreviation>m3/s</Abbreviation>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>barrel per day</Name>
+    <Abbreviation>bbl/d</Abbreviation>
+    <RefFactor>1.84013072833333E-06</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>cubic centimeter per second</Name>
+    <Abbreviation>cm3/s</Abbreviation>
+    <RefFactor>1E-06</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>cubic foot per second</Name>
+    <Abbreviation>ft3/s</Abbreviation>
+    <RefFactor>0.028316846592</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>cubic meter per hour</Name>
+    <Abbreviation>m3/h</Abbreviation>
+    <RefFactor>0.000277777777777778</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>Imperial gallon per minute</Name>
+    <Abbreviation>Imp gal/min</Abbreviation>
+    <RefFactor>7.57681666666663E-05</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>liter per second</Name>
+    <Abbreviation>L/s</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>US gallon per minute</Name>
+    <Abbreviation>US gal/min</Abbreviation>
+    <RefFactor>6.30901964E-05</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>barrel per day2</Name>
+    <Abbreviation>B/D</Abbreviation>
+    <RefFormulaFrom>bbl/d</RefFormulaFrom>
+    <RefFormulaTo>B/D</RefFormulaTo>
+    <RefUOM>barrel per day</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>barrels oil per day</Name>
+    <Abbreviation>bopd</Abbreviation>
+    <Description>42gal/bbl</Description>
+    <RefFactor>1.83912037037033E-06</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>cubic centimeter per minute</Name>
+    <Abbreviation>cm3/min</Abbreviation>
+    <RefFactor>0.0166666666666667</RefFactor>
+    <RefUOM>cubic centimeter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>cubit foot per minute</Name>
+    <Abbreviation>cf/m</Abbreviation>
+    <RefFactor>0.0166666666666667</RefFactor>
+    <RefUOM>cubic foot per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>cubic foot per hour</Name>
+    <Abbreviation>cf/h</Abbreviation>
+    <RefFactor>0.0166666666666667</RefFactor>
+    <RefUOM>cubit foot per minute</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>cubic foot per minute</Name>
+    <Abbreviation>ft3/min</Abbreviation>
+    <Description>SCFM</Description>
+    <RefFactor>60</RefFactor>
+    <RefUOM>cubic foot per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>Cubic meter per day</Name>
+    <Abbreviation>m3/d</Abbreviation>
+    <RefFactor>0.0416666666666667</RefFactor>
+    <RefUOM>cubic meter per hour</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>Gallons per minute</Name>
+    <Abbreviation>gpm</Abbreviation>
+    <RefUOM>US gallon per minute</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>Gallons per Day</Name>
+    <Abbreviation>gpd</Abbreviation>
+    <RefFormulaFrom>gpm * 1440</RefFormulaFrom>
+    <RefFormulaTo>gpd / 1440</RefFormulaTo>
+    <RefUOM>Gallons per minute</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>Gallons per year</Name>
+    <Abbreviation>gpy</Abbreviation>
+    <RefFormulaFrom>gpd * 365</RefFormulaFrom>
+    <RefFormulaTo>gpy / 365</RefFormulaTo>
+    <RefUOM>Gallons per Day</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>liter per hour</Name>
+    <Abbreviation>L/h</Abbreviation>
+    <RefFactor>2.77777777777778E-07</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>liter per minute</Name>
+    <Abbreviation>L/min</Abbreviation>
+    <RefFactor>1.66666666666667E-05</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>Milliliter per Second</Name>
+    <Abbreviation>ml/s</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>liter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>million barrels oil per day</Name>
+    <Abbreviation>mmbopd</Abbreviation>
+    <RefFactor>1000000</RefFactor>
+    <RefUOM>barrels oil per day</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>million barrels per day</Name>
+    <Abbreviation>mmbd</Abbreviation>
+    <RefFactor>1000000</RefFactor>
+    <RefUOM>barrel per day</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>million cubic feet per day</Name>
+    <Abbreviation>mmcfd</Abbreviation>
+    <Description>million cubic feet per day</Description>
+    <RefFactor>0.028316846592</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>million cubic foot per hour</Name>
+    <Abbreviation>Mft3/h</Abbreviation>
+    <RefFactor>1000000</RefFactor>
+    <RefUOM>cubic foot per hour</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>Million gallons per year</Name>
+    <Abbreviation>mgy</Abbreviation>
+    <RefFactor>1000000</RefFactor>
+    <RefUOM>Gallons per year</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>million standard cubic feet per day (US conditions)</Name>
+    <Abbreviation>mmscfd</Abbreviation>
+    <Description>Million Standard Cubic Feet Per Day</Description>
+    <RefFactor>0.32774128</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>million standard cubic feet per hour</Name>
+    <Abbreviation>mmscfh</Abbreviation>
+    <Description>million standard cubic feet per hour</Description>
+    <RefFactor>0.041666666666666664</RefFactor>
+    <RefUOM>million standard cubic feet per day (US conditions)</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>milliter per minute</Name>
+    <Abbreviation>mL/min</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>liter per minute</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>standard cubic feet per day</Name>
+    <Abbreviation>SCFD</Abbreviation>
+    <Description>standard may or may not imply 60 degrees F and 14.7 psi.</Description>
+    <RefFactor>1.15741E-05</RefFactor>
+    <RefUOM>cubic foot per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>standard cubic feet per hour</Name>
+    <Abbreviation>SCFH</Abbreviation>
+    <Description>standard may or may not mean at 60 degrees F and 14.7 psi.</Description>
+    <RefFactor>0.00027777777777777778</RefFactor>
+    <RefUOM>cubic foot per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>thousand barrel per day</Name>
+    <Abbreviation>kbbl/d</Abbreviation>
+    <RefFactor>0.00184013072</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>thousand barrels per day</Name>
+    <Abbreviation>mbd</Abbreviation>
+    <Description>mbd</Description>
+    <RefFactor>1000</RefFactor>
+    <RefUOM>barrel per day</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>thousand cubic feet per second</Name>
+    <Abbreviation>kft3/s</Abbreviation>
+    <RefFactor>1000</RefFactor>
+    <RefUOM>cubic foot per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>thousand standard cubic feet per day</Name>
+    <Abbreviation>MSCFD</Abbreviation>
+    <Description>standard may or may not imply 60 degress F and 14.7 psi.</Description>
+    <RefFactor>1000</RefFactor>
+    <RefUOM>standard cubic feet per day</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>thousand standard cubic feet per hour</Name>
+    <Abbreviation>MSCFH</Abbreviation>
+    <Description>standard may or may not imply 60 degress F and 14.7 psi.</Description>
+    <RefFactor>1000</RefFactor>
+    <RefUOM>standard cubic feet per hour</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>US gallon per day</Name>
+    <Abbreviation>US gal/day</Abbreviation>
+    <RefFactor>0.00069444444444444447</RefFactor>
+    <RefUOM>US gallon per minute</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>US gallon per hour</Name>
+    <Abbreviation>US gal/hr</Abbreviation>
+    <RefFactor>0.016666666666666666</RefFactor>
+    <RefUOM>US gallon per minute</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>US thousand gallons per minute</Name>
+    <Abbreviation>US MGPM</Abbreviation>
+    <Description>US MGPM</Description>
+    <RefFactor>1000</RefFactor>
+    <RefUOM>US gallon per minute</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>liter per day</Name>
+    <Abbreviation>L/d</Abbreviation>
+    <RefFactor>1.15740740740741E-08</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>kiloliter per second</Name>
+    <Abbreviation>kL/s</Abbreviation>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>kiloliter per minute</Name>
+    <Abbreviation>kL/min</Abbreviation>
+    <RefFactor>0.016666666666666666</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>kiloliter per hour</Name>
+    <Abbreviation>kL/h</Abbreviation>
+    <RefFactor>0.000277777777777778</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+  <UOM>
+    <Name>kiloliter per day</Name>
+    <Abbreviation>kL/d</Abbreviation>
+    <RefFactor>1.15740740740741E-05</RefFactor>
+    <RefUOM>cubic meter per second</RefUOM>
+    <Class>Volume Flow Rate</Class>
+  </UOM>
+</AF>

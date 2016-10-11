@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.2.7626" ExportMode="NoUniqueID" PISystem="ATAKEZAKIE6440" Created="2016-09-30T01:55:16.575612Z" id="9bf0eb07-6112-4855-9ae3-75abfda35814" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="US Currency" ExportedType="UOMClass" Identity="UOMClass" PIPersist="197 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{84e246e3-5f02-460b-b7d9-9eea386a83e3}\UOMDatabase\UOMClasses[{9bf0eb07-6112-4855-9ae3-75abfda35814}]*ATAKEZAKIE6440\UOMDatabase\UOMClasses[US Currency]">
+  <UOMClass>
+    <Name>US Currency</Name>
+    <Description>Money</Description>
+    <CanonicalUOM>$</CanonicalUOM>
+    <CanonicalAbbr>$</CanonicalAbbr>
+  </UOMClass>
+  <UOM>
+    <Name>$</Name>
+    <Abbreviation>$</Abbreviation>
+    <Class>US Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>bolivares</Name>
+    <Abbreviation>bs</Abbreviation>
+    <RefFactor>0.12</RefFactor>
+    <RefUOM>$</RefUOM>
+    <Class>US Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>USDollar</Name>
+    <Abbreviation>US$</Abbreviation>
+    <RefUOM>$</RefUOM>
+    <Class>US Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>¢</Name>
+    <Abbreviation>¢</Abbreviation>
+    <RefFactor>0.01</RefFactor>
+    <RefUOM>$</RefUOM>
+    <Class>US Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>€</Name>
+    <Abbreviation>€</Abbreviation>
+    <RefUOM>$</RefUOM>
+    <Class>US Currency</Class>
+  </UOM>
+</AF>

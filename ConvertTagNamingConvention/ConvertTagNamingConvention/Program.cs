@@ -7,7 +7,7 @@ namespace ConvertTagNamingConvention
 {
     class Program
     {
-        const string tagname = "Tagname";
+        const string tagname = "TagName";
         static void Main(string[] args)
         {
             PISystem system = new PISystems().DefaultPISystem;

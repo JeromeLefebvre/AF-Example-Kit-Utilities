@@ -6,3 +6,11 @@ c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToY
 c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.csprojResolveAssemblyReference.cache
 c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.exe
 c:\users\jlefebvre\documents\visual studio 2015\Projects\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.pdb
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\ConvertToYen.exe.config
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.exe
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.pdb
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\obj\Debug\ConvertToYen.csprojResolveAssemblyReference.cache
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\ConvertToYen.exe
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\ConvertToYen.pdb
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\OSIsoft.AFSDK.dll
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\OSIsoft.AFSDK.xml

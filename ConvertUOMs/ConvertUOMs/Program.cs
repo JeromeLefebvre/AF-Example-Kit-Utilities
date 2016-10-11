@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Text.RegularExpressions;
 using OSIsoft.AF;
 using OSIsoft.AF.Asset;
 using OSIsoft.AF.Analysis;
-using System.Data;
 using OSIsoft.AF.UnitsOfMeasure;
-using System.Text.RegularExpressions;
 
 namespace ConvertUOMs
 {
@@ -17,32 +13,18 @@ namespace ConvertUOMs
         static public DataTable dt;
         static public PISystem system;
         static public UOMDatabase UOMdb;
+        // This needs to be read from an argument
+        static public string kitName = "Japan";
         static void Main(string[] args)
         {
             system = new PISystems().DefaultPISystem;
             var db = system.Databases.DefaultDatabase;
             UOMdb = system.UOMDatabase;
-            convertdb(db);
-        }
-
-        public static void convertdb(AFDatabase db)
-        {
             dt = db.Tables["UOM Conversion"].Table;
-            convertAllAttributes(db);
+            convertAttributesAndAnalysis(db);
         }
-
-        static void convertAllAttributes(AFDatabase db)
+        static void convertAttributesAndAnalysis(AFDatabase db)
         {
-            
-            /*
-             * If the configuration item is not the template value, conversion occurs automactially
-            foreach (var elem in db.ElementTemplates)
-                foreach (var child in elem.AttributeTemplates)
-                    convertConfigurationAttribute(child);
-
-            foreach (var elem in db.Elements)
-                switchValueOfConfigurationItem(elem);      */
-
             foreach (var elem in db.ElementTemplates)
                 foreach (var attr in elem.AttributeTemplates)
                     convertAttribute(attr);
@@ -55,30 +37,21 @@ namespace ConvertUOMs
 
         static void convertAnalysis(AFAnalysisTemplate analysis)
         {
-
-            string configString = analysis.AnalysisRule.ConfigString;
+            var configString = analysis.AnalysisRule.ConfigString;
 
             foreach (Match match in Regex.Matches(configString, "\"(?<uom>.*?)\""))
             {
 
                 var oldUOM = UOMdb.UOMs[match.Groups["uom"].Value];
+                // We differentiate if what is found is an UOM by checking if it exists in the UOM database
+                if (oldUOM == null)
+                    continue;
                 var newUOM = convert(oldUOM);
-                if (newUOM != null)
-                    configString = configString.Replace(match.Groups["uom"].Value, newUOM.Abbreviation);
+                configString = configString.Replace(match.Groups["uom"].Value, newUOM.Abbreviation);
             }
             analysis.AnalysisRule.ConfigString = configString;
             analysis.CheckIn();
         }
-
-        static void convertConfigurationAttribute(AFAttributeTemplate attr)
-        {
-            foreach (var child in attr.AttributeTemplates)
-                convertConfigurationAttribute(child);
-            if (attr.IsConfigurationItem)
-                attr.DefaultUOM = convert(attr.DefaultUOM);
-            attr.ElementTemplate.CheckIn();
-        }
-
         static void convertAttribute(AFAttributeTemplate attr)
         {
             foreach (var child in attr.AttributeTemplates)
@@ -97,27 +70,7 @@ namespace ConvertUOMs
             }
             attr.ElementTemplate.CheckIn();
         }
-        static void switchValueOfConfigurationItem(AFElement elem)
-        {
-            foreach (var child in elem.Attributes)
-                switchValueOfConfigurationItem(child);
-            foreach (var child in elem.Elements)
-                switchValueOfConfigurationItem(child);
-        }
-
-        static void switchValueOfConfigurationItem(AFAttribute attr)
-        {
-            foreach (var child in attr.Attributes)
-                switchValueOfConfigurationItem(child);
-            if (attr.Template.IsConfigurationItem)
-            {
-                UOM uom = convert(attr.DefaultUOM);
-                double newValue = uom.Convert(attr.GetValue().ValueAsDouble(), attr.DefaultUOM);
-                attr.SetValue(new AFValue(newValue));
-            }
-            attr.Database.CheckIn();
-        }
-        static UOM convert(UOM initialUOM, string kitName = "Japan")
+        static UOM convert(UOM initialUOM)
         {
             try
             {
