@@ -19,6 +19,7 @@ namespace AllNamesAndDescriptions
     class Program
     {
         public static string keyPath = @"c:\apikey.txt";
+        public static HashSet<string> usedWords = new HashSet<string>();
         private static TranslateService service = new TranslateService(new BaseClientService.Initializer()
         {
             ApiKey = File.ReadAllText(keyPath), // your API key, that you get from Google Developer Console
@@ -92,6 +93,16 @@ namespace AllNamesAndDescriptions
 
             foreach (var enumSet in db.EnumerationSets)
                 storeEnumerationSet(enumSet, dt);
+
+            removeUnused(dt);
+        }
+
+        static void removeUnused(DataTable dt)
+        {
+            var results = dt.AsEnumerable().Where(i => !usedWords.Contains(i["English"]));
+            Console.WriteLine("The following lines are in the database but not used");
+            foreach (var result in results)
+                Console.WriteLine(result.ItemArray.GetValue(0));
         }
 
         static void storeEnumerationSet(AFEnumerationSet enumSet, DataTable dt)
@@ -165,6 +176,7 @@ namespace AllNamesAndDescriptions
                 }
                 dt.Rows.Add(row);
             }
+            usedWords.Add(word);
         }
     }
 }
