@@ -62,7 +62,7 @@ namespace AllNamesAndDescriptions
             db.CheckIn();
 
             foreach (AFTable table in db.Tables)
-                if (table != translation && table.Name != "UOM Conversion")
+                if (table != translation && table.Name != "UOM Conversion" && table.Name != "Currency Conversion")
                     storeAllTableHeaders(table, dt);
 
             db.CheckIn();
