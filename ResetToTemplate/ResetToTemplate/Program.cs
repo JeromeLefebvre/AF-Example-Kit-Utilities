@@ -24,6 +24,7 @@ namespace ResetToTemplate
 
             foreach(AFElement elem in db.Elements)
                 resetElement(elem);
+
             return true;
         }
         public static void resetElement(AFElement elem)
@@ -48,6 +49,7 @@ namespace ResetToTemplate
         public static void resetAnalysis(AFAnalysis analysis)
         {
             analysis.Description = analysis.Template.Description;
+            analysis.ResetToTemplate();
             analysis.CheckIn();
         }
     }
