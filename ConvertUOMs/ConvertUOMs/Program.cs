@@ -57,7 +57,15 @@ namespace ConvertUOMs
             foreach (var child in attr.AttributeTemplates)
                convertAttribute(child);
 
-            attr.DefaultUOM = convert(attr.DefaultUOM);
+            try
+            {
+                attr.DefaultUOM = convert(attr.DefaultUOM);
+            }
+            // occurs for example when trying to change the UOMs of Location attributes.
+            catch(System.InvalidOperationException)
+            {
+
+            }
             if (attr.DataReferencePlugIn != null)
             {
                 if (attr.DataReferencePlugIn.Name == "PI Point")
