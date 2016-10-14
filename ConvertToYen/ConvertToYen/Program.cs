@@ -1,26 +1,57 @@
-﻿using OSIsoft.AF;
+﻿using System;
+using System.Data;
+using System.Text.RegularExpressions;
+using System.Collections.Generic;
+
+using OSIsoft.AF;
 using OSIsoft.AF.Analysis;
 using OSIsoft.AF.Asset;
 using OSIsoft.AF.UnitsOfMeasure;
-using System;
-using System.Data;
-using System.Text.RegularExpressions;
-using System.Linq;
-using System.Collections.Generic;
+
+using CommandLine;
+using CommandLine.Text;
 
 namespace ConvertFromAmericanCurrency
 {
+    class Options
+    {
+        [Option('r', "rate", Required = true, DefaultValue =100,
+          HelpText = "The currency rate from currency to US Dollar")]
+        public double rate { get; set; }
+
+        [Option('c', "currency", Required = true, DefaultValue="JP",
+          HelpText = "The country code for the currency us, JP, KR, etc. http://www.1728.org/countries.htm.")]
+        public string currency { get; set; }
+
+        [ParserState]
+        public IParserState LastParserState { get; set; }
+
+        [HelpOption]
+        public string GetUsage()
+        {
+            return HelpText.AutoBuild(this,
+              (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
+        }
+    }
+
     class Program
     {
         static public DataTable dt;
         static public PISystem system;
         static public UOMDatabase UOMdb;
         // The following arugment need to be read from an argument
-        static public string kitName = "JP";
+        static public string currency = "JP";
         static public double rate = 99.9;
 
         static void Main(string[] args)
         {
+            var options = new Options();
+            if (CommandLine.Parser.Default.ParseArguments(args, options))
+            {
+                // Command values are available here
+                currency = options.currency;
+                rate = options.rate;
+            }
             system = new PISystems().DefaultPISystem;
             var db = system.Databases.DefaultDatabase;
             UOMdb = system.UOMDatabase;
@@ -112,7 +143,7 @@ namespace ConvertFromAmericanCurrency
             try
             {
                 DataRow[] result = dt.Select($"US  = '{initialUOM.Abbreviation}'");
-                return system.UOMDatabase.UOMs[(string)result[0]["JP"]];
+                return system.UOMDatabase.UOMs[(string)result[0][currency]];
             }
             catch (Exception e)
             {

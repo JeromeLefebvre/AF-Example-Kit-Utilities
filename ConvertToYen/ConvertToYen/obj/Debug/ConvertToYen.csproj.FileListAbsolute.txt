@@ -14,3 +14,5 @@ C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\Conver
 C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\ConvertToYen.pdb
 C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\OSIsoft.AFSDK.dll
 C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\OSIsoft.AFSDK.xml
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\CommandLine.dll
+C:\Users\jlefebvre\Documents\GitHub\AF-Example-Kit-Utilities\ConvertToYen\ConvertToYen\bin\Debug\CommandLine.xml
