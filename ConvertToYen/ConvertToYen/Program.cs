@@ -16,11 +16,11 @@ namespace ConvertFromAmericanCurrency
     class Options
     {
         [Option('r', "rate", Required = true, DefaultValue =100,
-          HelpText = "The currency rate from currency to US Dollar")]
+          HelpText = "The currency rate from currency to USD Dollar")]
         public double rate { get; set; }
 
-        [Option('c', "currency", Required = true, DefaultValue="JP",
-          HelpText = "The country code for the currency us, JP, KR, etc. http://www.1728.org/countries.htm.")]
+        [Option('c', "currency", Required = true, DefaultValue="JPY",
+          HelpText = "The country code for the currency us, JPY, CAD, etc. http://www.xe.com/symbols.php")]
         public string currency { get; set; }
 
         [ParserState]
@@ -142,7 +142,7 @@ namespace ConvertFromAmericanCurrency
         {
             try
             {
-                DataRow[] result = dt.Select($"US  = '{initialUOM.Abbreviation}'");
+                DataRow[] result = dt.Select($"USD  = '{initialUOM.Abbreviation}'");
                 return system.UOMDatabase.UOMs[(string)result[0][currency]];
             }
             catch (Exception e)

@@ -5,22 +5,47 @@ using OSIsoft.AF;
 using OSIsoft.AF.Asset;
 using OSIsoft.AF.Analysis;
 using OSIsoft.AF.UnitsOfMeasure;
+using CommandLine;
+using CommandLine.Text;
 
 namespace ConvertUOMs
 {
     class Program
     {
+        class Options
+        {
+            [Option('u', "UOMGrouping", Required = true, DefaultValue = "Japan",
+              HelpText = "The UOM Grouping to which to conver to")]
+            public string uomgrouping { get; set; }
+
+            [ParserState]
+            public IParserState LastParserState { get; set; }
+
+            [HelpOption]
+            public string GetUsage()
+            {
+                return HelpText.AutoBuild(this,
+                  (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
+            }
+        }
+
         static public DataTable dt;
         static public PISystem system;
         static public UOMDatabase UOMdb;
         // This needs to be read from an argument
-        static public string kitName = "Japan";
+        static public string uomgrouping;
         static void Main(string[] args)
         {
+            var options = new Options();
+            if (CommandLine.Parser.Default.ParseArguments(args, options))
+            {
+                // Command values are available here
+                uomgrouping = options.uomgrouping;
+            }
             system = new PISystems().DefaultPISystem;
             var db = system.Databases.DefaultDatabase;
             UOMdb = system.UOMDatabase;
-            dt = db.Tables["UOM Conversion"].Table;
+            dt = db.Tables["UOM Groupings"].Table;
             convertAttributesAndAnalysis(db);
         }
         static void convertAttributesAndAnalysis(AFDatabase db)
@@ -83,7 +108,7 @@ namespace ConvertUOMs
             try
             {
                 DataRow[] result = dt.Select($"UOM  = '{initialUOM.Abbreviation}'");
-                return system.UOMDatabase.UOMs[(string)result[0][kitName]];
+                return system.UOMDatabase.UOMs[(string)result[0][uomgrouping]];
             }
             catch (Exception e)
             {
