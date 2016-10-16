@@ -1,24 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.IO;
+using System.Text.RegularExpressions;
+
 using OSIsoft.AF.Asset;
 using OSIsoft.AF;
-using System.Data;
+using OSIsoft.AF.Analysis;
+
 using Google.Apis.Translate.v2;
 using Google.Apis.Translate.v2.Data;
 using Google.Apis.Services;
 using static Google.Apis.Translate.v2.TranslationsResource;
-using System.IO;
-using OSIsoft.AF.Analysis;
-using System.Text.RegularExpressions;
+
+using CommandLine;
+using CommandLine.Text;
 
 namespace AllNamesAndDescriptions
 {
     class Program
     {
+
+        class Options
+        {
+            [Option('l', "language", Required = true, DefaultValue = "ko",
+              HelpText = "The language to translate to")]
+            public string language { get; set; }
+
+            [ParserState]
+            public IParserState LastParserState { get; set; }
+
+            [HelpOption]
+            public string GetUsage()
+            {
+                return HelpText.AutoBuild(this,
+                  (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
+            }
+        }
+
         public static string keyPath = @"c:\apikey.txt";
+        public static string language;
+
+
         public static HashSet<string> usedWords = new HashSet<string>();
         private static TranslateService service = new TranslateService(new BaseClientService.Initializer()
         {
@@ -27,6 +51,12 @@ namespace AllNamesAndDescriptions
         });
         static void Main(string[] args)
         {
+            var options = new Options();
+            if (CommandLine.Parser.Default.ParseArguments(args, options))
+            {
+                // Command values are available here
+                language = options.language;
+            }
             PISystem system = new PISystems().DefaultPISystem;
             AFDatabase kitdb = system.Databases.DefaultDatabase;
             fillEnglishTable(kitdb);
@@ -63,7 +93,7 @@ namespace AllNamesAndDescriptions
             db.CheckIn();
 
             foreach (AFTable table in db.Tables)
-                if (table != translation && table.Name != "UOM Conversion" && table.Name != "Currency Conversion")
+                if (!table.Name.StartsWith("Translations_")  && table.Name != "UOM Groupings" && table.Name != "Currency Conversion")
                     storeAllTableHeaders(table, dt);
 
             db.CheckIn();
@@ -99,7 +129,7 @@ namespace AllNamesAndDescriptions
 
         static void removeUnused(DataTable dt)
         {
-            var results = dt.AsEnumerable().Where(i => !usedWords.Contains(i["English"]));
+            var results = dt.AsEnumerable().Where(i => !usedWords.Contains(i["en"]));
             Console.WriteLine("The following lines are in the database but not used");
             foreach (var result in results)
                 Console.WriteLine(result.ItemArray.GetValue(0));
@@ -141,10 +171,10 @@ namespace AllNamesAndDescriptions
 
         static AFTable createOrReturnTranslationTable(AFDatabase db)
         {
-            AFTable translations = db.Tables["Translations"];
+            AFTable translations = db.Tables[$"Translations_{language}"];
             if (translations == null)
             {
-                translations = db.Tables.Add("Translations");
+                translations = db.Tables.Add($"Translations_{language}");
                 addLanguageTitles(translations);
                 db.CheckIn();
             }
@@ -153,9 +183,9 @@ namespace AllNamesAndDescriptions
         static void addLanguageTitles(AFTable table)
         {
             DataTable datatable = new DataTable();
-            datatable.Columns.Add("English", typeof(System.String));
-            datatable.Columns.Add("Japanese", typeof(System.String));
-            datatable.Columns.Add("Check", typeof(System.Boolean));
+            datatable.Columns.Add("en", typeof(System.String));
+            datatable.Columns.Add(language, typeof(System.String));
+            datatable.Columns.Add($"{language}_Check", typeof(System.Boolean));
             table.Table = datatable;
         }
 
@@ -166,13 +196,13 @@ namespace AllNamesAndDescriptions
         }
         static void insert(DataTable dt, string word)
         {
-            if (!dt.AsEnumerable().Any(row => word == row.Field<String>("English")))
+            if (!dt.AsEnumerable().Any(row => word == row.Field<String>("en")))
             {
                 DataRow row = dt.NewRow();
-                row["English"] = word;
+                row["en"] = word;
                 if (word != "")
                 {
-                    row["Japanese"] = translate(word, "ja");
+                    row[language] = translate(word, language);
                 }
                 dt.Rows.Add(row);
             }

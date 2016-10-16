@@ -1,21 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Text.RegularExpressions;
+
 using OSIsoft.AF;
 using OSIsoft.AF.Asset;
 using OSIsoft.AF.UnitsOfMeasure;
-using System.Data;
 using OSIsoft.AF.Analysis;
-using System.Text.RegularExpressions;
+
+using CommandLine;
+using CommandLine.Text;
+
 
 namespace GrabAllUsedUOMs
 {
     class Program
     {
+        class Options
+        {
+            [Option('u', "UOMGrouping", Required = false, DefaultValue = "Japan",
+              HelpText = "The UOM Grouping to use")]
+            public string uomgrouping { get; set; }
+
+            [ParserState]
+            public IParserState LastParserState { get; set; }
+
+            [HelpOption]
+            public string GetUsage()
+            {
+                return HelpText.AutoBuild(this,
+                  (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
+            }
+        }
+
+        public static string uomgrouping;
         static void Main(string[] args)
         {
+            var options = new Options();
+            if (CommandLine.Parser.Default.ParseArguments(args, options))
+            {
+                // Command values are available here
+                uomgrouping = options.uomgrouping;
+            }
             PISystem system = new PISystems().DefaultPISystem;
             AFDatabase db = system.Databases.DefaultDatabase;
             getAllUOMUsed(db);
@@ -24,13 +51,13 @@ namespace GrabAllUsedUOMs
 
         static AFTable createUOMTable(AFDatabase db)
         {
-            AFTable table = db.Tables["UOM Conversion"];
+            AFTable table = db.Tables["UOM Groupings"];
             if (table == null)
             {
-                table = db.Tables.Add("UOM Conversion");
+                table = db.Tables.Add("UOM Groupings");
                 DataTable datatable = new DataTable();
                 datatable.Columns.Add("UOM", typeof(System.String));
-                datatable.Columns.Add("Japan", typeof(System.String));
+                datatable.Columns.Add(uomgrouping, typeof(System.String));
                 table.Table = datatable;
 
                 db.CheckIn();
@@ -98,11 +125,11 @@ namespace GrabAllUsedUOMs
 
         static void insert(UOM uom, DataTable dt)
         {
-            if (!dt.AsEnumerable().Any(row => uom.Abbreviation == row.Field<String>("UOM")))
+            if (!dt.AsEnumerable().Any(row => uom.Abbreviation == row.Field<String>("Original")))
             {
                 DataRow row = dt.NewRow();
                 row["UOM"] = uom.Abbreviation;
-                row["Japan"] = uom.Class.CanonicalUOM.Abbreviation;
+                row[uomgrouping] = uom.Class.CanonicalUOM.Abbreviation;
                 dt.Rows.Add(row);
             }
         }

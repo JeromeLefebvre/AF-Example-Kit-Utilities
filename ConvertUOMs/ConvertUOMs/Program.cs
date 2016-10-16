@@ -16,7 +16,7 @@ namespace ConvertUOMs
         {
             [Option('u', "UOMGrouping", Required = true, DefaultValue = "Japan",
               HelpText = "The UOM Grouping to which to conver to")]
-            public string uomgrouping { get; set; }
+            public string uomgrouping { get; }
 
             [ParserState]
             public IParserState LastParserState { get; set; }
@@ -42,6 +42,7 @@ namespace ConvertUOMs
                 // Command values are available here
                 uomgrouping = options.uomgrouping;
             }
+            uomgrouping = "Japan";
             system = new PISystems().DefaultPISystem;
             var db = system.Databases.DefaultDatabase;
             UOMdb = system.UOMDatabase;
@@ -107,7 +108,7 @@ namespace ConvertUOMs
         {
             try
             {
-                DataRow[] result = dt.Select($"UOM  = '{initialUOM.Abbreviation}'");
+                DataRow[] result = dt.Select($"Original  = '{initialUOM.Abbreviation}'");
                 return system.UOMDatabase.UOMs[(string)result[0][uomgrouping]];
             }
             catch (Exception e)
