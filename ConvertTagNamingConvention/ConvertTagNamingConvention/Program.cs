@@ -56,23 +56,23 @@ namespace ConvertTagNamingConvention
                     
                     if (child == null)
                         continue;
-                    attr.ConfigString = attr.ConfigString.Replace(tagname, "タグ名");
+                    //attr.ConfigString = attr.ConfigString.Replace(tagname, "タグ名");
 
-                    child.Name = "タグ名";
-                    child.Description = "属性のタグ名";
-                    string configString = @"'.|属性の英語名';";
+                    child.Name = tagname;
+                    child.Description = "The name of the attribute";
+                    string configString = @"'.|The English Name of the Attribute';";
                     child.IsHidden = true;
 
-                    AFAttributeTemplate attributelookup = child.AttributeTemplates.Add("属性の英語名");
+                    AFAttributeTemplate attributelookup = child.AttributeTemplates.Add("The English Name of the Attribute");
                     attributelookup.Categories.Add(tagnameCategory);
                     attributelookup.DataReferencePlugIn = db.PISystem.DataReferencePlugIns["Table Lookup"];
-                    attributelookup.Description = "属性の名前を英語に翻訳する";
+                    attributelookup.Description = "The English translation of the attribute's name";
                     var dummy = $" Translations_{language}";
                     attributelookup.DataReference.ConfigString = $"SELECT en FROM [Translations_{language}] WHERE {language} = '%..|..|attribute%';RWM=%..|..|Attribute%";
                     attributelookup.IsHidden = true;
 
-                    string attributeName = "エレメントの英語名";
-                    string description = "エレメントの名前を英語に翻訳する";
+                    string attributeName = "The English name of the Element";
+                    string description = "The English translation of the element's name";
                     string elementField = "Element%";
 
                     for (int i = 0; i <= depth; i++)
@@ -84,8 +84,12 @@ namespace ConvertTagNamingConvention
                         elementLookup.DataReferencePlugIn = db.PISystem.DataReferencePlugIns["Table Lookup"];
                         elementLookup.DataReference.ConfigString = $"SELECT en FROM [Translations_{language}] WHERE {language} = '%{elementField}';RWM=%{elementField}";
                         elementLookup.IsHidden = true;
-                        attributeName = "親の" + attributeName;
-                        description = "親の" + description;
+                        if (attributeName.Contains("Parent"))
+                            attributeName = attributeName.Replace("Parent", "Great-Parent");
+                        else
+                            attributeName = attributeName.Replace("Element", "Parent Element");
+                        
+                        // description = "親の" + description;
                         elementField = @"..\" + elementField;
                     }
                     child.ConfigString = @"OSIDEMO_;" + configString + @";""."";%..|AttributeID%";
