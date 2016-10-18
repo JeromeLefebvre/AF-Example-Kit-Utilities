@@ -33,21 +33,27 @@ namespace ConvertUOMs
         static public PISystem system;
         static public UOMDatabase UOMdb;
         // This needs to be read from an argument
-        static public string uomgrouping;
+        static public string uomgrouping = "Japan";
         static void Main(string[] args)
         {
-            var options = new Options();
-            if (CommandLine.Parser.Default.ParseArguments(args, options))
+            try
             {
-                // Command values are available here
-                uomgrouping = options.uomgrouping;
+                var options = new Options();
+                if (CommandLine.Parser.Default.ParseArguments(args, options))
+                {
+                    // Command values are available here
+                    uomgrouping = options.uomgrouping;
+                }
+                system = new PISystems().DefaultPISystem;
+                var db = system.Databases.DefaultDatabase;
+                UOMdb = system.UOMDatabase;
+                dt = db.Tables["UOM Groupings"].Table;
+                convertAttributesAndAnalysis(db);
             }
-            uomgrouping = "Japan";
-            system = new PISystems().DefaultPISystem;
-            var db = system.Databases.DefaultDatabase;
-            UOMdb = system.UOMDatabase;
-            dt = db.Tables["UOM Groupings"].Table;
-            convertAttributesAndAnalysis(db);
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         static void convertAttributesAndAnalysis(AFDatabase db)
         {
@@ -81,14 +87,14 @@ namespace ConvertUOMs
         static void convertAttribute(AFAttributeTemplate attr)
         {
             foreach (var child in attr.AttributeTemplates)
-               convertAttribute(child);
+                convertAttribute(child);
 
             try
             {
                 attr.DefaultUOM = convert(attr.DefaultUOM);
             }
             // occurs for example when trying to change the UOMs of Location attributes.
-            catch(System.InvalidOperationException)
+            catch (System.InvalidOperationException)
             {
 
             }
