@@ -19,7 +19,7 @@ namespace GrabAllUsedUOMs
     {
         class Options
         {
-            [Option('u', "UOMGrouping", Required = false, DefaultValue = "Japan",
+            [Option('u', "UOMGrouping", Required = false, DefaultValue = "Metric",
               HelpText = "The UOM Grouping to use")]
             public string uomgrouping { get; set; }
 
@@ -34,7 +34,7 @@ namespace GrabAllUsedUOMs
             }
         }
 
-        public static string uomgrouping;
+        public static string uomgrouping = "Metric";
         static void Main(string[] args)
         {
             var options = new Options();
@@ -56,7 +56,7 @@ namespace GrabAllUsedUOMs
             {
                 table = db.Tables.Add("UOM Groupings");
                 DataTable datatable = new DataTable();
-                datatable.Columns.Add("UOM", typeof(System.String));
+                datatable.Columns.Add("Original", typeof(System.String));
                 datatable.Columns.Add(uomgrouping, typeof(System.String));
                 table.Table = datatable;
 
@@ -128,7 +128,7 @@ namespace GrabAllUsedUOMs
             if (!dt.AsEnumerable().Any(row => uom.Abbreviation == row.Field<String>("Original")))
             {
                 DataRow row = dt.NewRow();
-                row["UOM"] = uom.Abbreviation;
+                row["Original"] = uom.Abbreviation;
                 row[uomgrouping] = uom.Class.CanonicalUOM.Abbreviation;
                 dt.Rows.Add(row);
             }

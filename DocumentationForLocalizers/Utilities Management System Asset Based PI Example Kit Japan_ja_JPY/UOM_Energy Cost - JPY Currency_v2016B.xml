@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.5.7759" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-10-18T04:19:30.9068681Z" id="8e98f0c3-1463-4891-bfa5-f0bb1bf9ffdc" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Energy Cost - JPY Currency" ExportedType="UOMClass" Identity="UOMClass" PIPersist="210 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{f9c322c2-354c-426e-8983-31863cebaf06}\UOMDatabase\UOMClasses[{8e98f0c3-1463-4891-bfa5-f0bb1bf9ffdc}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Energy Cost - JPY Currency]">
+  <UOMClass>
+    <Name>Energy Cost - JPY Currency</Name>
+    <Description>Dollars per Btu</Description>
+    <CanonicalUOM>円/J</CanonicalUOM>
+    <CanonicalAbbr>円/J</CanonicalAbbr>
+    <UOMBaseClass>
+      <Name>JPY Currency</Name>
+      <BasePower>1</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Length</Name>
+      <BasePower>-2</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Mass</Name>
+      <BasePower>-1</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Time</Name>
+      <BasePower>2</BasePower>
+    </UOMBaseClass>
+  </UOMClass>
+  <UOM>
+    <Name>円/J</Name>
+    <Abbreviation>円/J</Abbreviation>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>円/kJ</Name>
+    <Abbreviation>円/kJ</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>円/J</RefUOM>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>円/MJ</Name>
+    <Abbreviation>円/MJ</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>円/kJ</RefUOM>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>円/Btu</Name>
+    <Abbreviation>円/Btu</Abbreviation>
+    <RefFactor>0.00094781339</RefFactor>
+    <RefUOM>円/J</RefUOM>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>円/MMBtu</Name>
+    <Abbreviation>円/MMBtu</Abbreviation>
+    <RefFactor>1E-06</RefFactor>
+    <RefUOM>円/Btu</RefUOM>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>円/Ws</Name>
+    <Abbreviation>円/Ws</Abbreviation>
+    <RefUOM>円/J</RefUOM>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>円/Wh</Name>
+    <Abbreviation>円/Wh</Abbreviation>
+    <RefFactor>0.000277777777777778</RefFactor>
+    <RefUOM>円/Ws</RefUOM>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>円/kWh</Name>
+    <Abbreviation>円/kWh</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>円/Wh</RefUOM>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>円/MWh</Name>
+    <Abbreviation>円/MWh</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>円/kWh</RefUOM>
+    <Class>Energy Cost - JPY Currency</Class>
+  </UOM>
+</AF>

@@ -36,24 +36,19 @@ namespace ConvertUOMs
         static public string uomgrouping = "Japan";
         static void Main(string[] args)
         {
-            try
+
+            var options = new Options();
+            if (CommandLine.Parser.Default.ParseArguments(args, options))
             {
-                var options = new Options();
-                if (CommandLine.Parser.Default.ParseArguments(args, options))
-                {
-                    // Command values are available here
-                    uomgrouping = options.uomgrouping;
-                }
-                system = new PISystems().DefaultPISystem;
-                var db = system.Databases.DefaultDatabase;
-                UOMdb = system.UOMDatabase;
-                dt = db.Tables["UOM Groupings"].Table;
-                convertAttributesAndAnalysis(db);
+                // Command values are available here
+                uomgrouping = options.uomgrouping;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            system = new PISystems().DefaultPISystem;
+            var db = system.Databases.DefaultDatabase;
+            UOMdb = system.UOMDatabase;
+            dt = db.Tables["UOM Groupings"].Table;
+            convertAttributesAndAnalysis(db);
+
         }
         static void convertAttributesAndAnalysis(AFDatabase db)
         {

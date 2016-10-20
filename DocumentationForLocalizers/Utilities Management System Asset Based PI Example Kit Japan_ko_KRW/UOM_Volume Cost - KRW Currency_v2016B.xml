@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.5.7759" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-10-18T05:30:12.7410073Z" id="f62acf59-2e2f-466e-9ce2-a7983ff41728" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Volume Cost - KRW Currency" ExportedType="UOMClass" Identity="UOMClass" PIPersist="210 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{f9c322c2-354c-426e-8983-31863cebaf06}\UOMDatabase\UOMClasses[{f62acf59-2e2f-466e-9ce2-a7983ff41728}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Volume Cost - KRW Currency]">
+  <UOMClass>
+    <Name>Volume Cost - KRW Currency</Name>
+    <CanonicalUOM>₩/m3</CanonicalUOM>
+    <CanonicalAbbr>₩/m3</CanonicalAbbr>
+    <UOMBaseClass>
+      <Name>JPY Currency</Name>
+      <BasePower>1</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Length</Name>
+      <BasePower>-3</BasePower>
+    </UOMBaseClass>
+  </UOMClass>
+  <UOM>
+    <Name>₩/m3</Name>
+    <Abbreviation>₩/m3</Abbreviation>
+    <Class>Volume Cost - KRW Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>₩/L</Name>
+    <Abbreviation>₩/L</Abbreviation>
+    <RefFactor>1000</RefFactor>
+    <RefUOM>₩/m3</RefUOM>
+    <Class>Volume Cost - KRW Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>₩/US Gal</Name>
+    <Abbreviation>₩/US Gal</Abbreviation>
+    <RefFactor>264.172052358148</RefFactor>
+    <RefUOM>₩/m3</RefUOM>
+    <Class>Volume Cost - KRW Currency</Class>
+  </UOM>
+</AF>
