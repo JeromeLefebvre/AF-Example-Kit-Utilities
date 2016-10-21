@@ -14,7 +14,7 @@ namespace ConvertUOMs
     {
         class Options
         {
-            [Option('u', "UOMGrouping", Required = true, DefaultValue = "Japan",
+            [Option('u', "UOMGrouping", Required = true, DefaultValue = "Metric",
               HelpText = "The UOM Grouping to which to conver to")]
             public string uomgrouping { get; }
 
@@ -33,7 +33,7 @@ namespace ConvertUOMs
         static public PISystem system;
         static public UOMDatabase UOMdb;
         // This needs to be read from an argument
-        static public string uomgrouping = "Japan";
+        static public string uomgrouping = "Metric";
         static void Main(string[] args)
         {
 
@@ -43,6 +43,7 @@ namespace ConvertUOMs
                 // Command values are available here
                 uomgrouping = options.uomgrouping;
             }
+            
             system = new PISystems().DefaultPISystem;
             var db = system.Databases.DefaultDatabase;
             UOMdb = system.UOMDatabase;
