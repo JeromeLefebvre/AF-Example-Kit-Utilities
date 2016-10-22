@@ -1,5 +1,7 @@
 ﻿using OSIsoft.AF;
 using OSIsoft.AF.Analysis;
+using OSIsoft.AF.Search;
+
 
 namespace TurnOffAnalyses
 {
@@ -8,8 +10,8 @@ namespace TurnOffAnalyses
         static void Main(string[] args)
         {
             var db = new PISystems().DefaultPISystem.Databases.DefaultDatabase;
-            var analyses = AFAnalysis.FindAnalyses(db, "*", AFSearchField.Name, AFSortField.Name, AFSortOrder.Ascending, int.MaxValue);
-            foreach (var analysis in analyses)
+            var analyses = new AFAnalysisSearch(db, "allAnalyses", "*");
+            foreach (var analysis in analyses.FindAnalyses())
                 analysis.SetStatus(AFStatus.Disabled);
         }
     }
