@@ -16,7 +16,7 @@ namespace ConvertUOMs
         {
             [Option('u', "UOMGrouping", Required = true, DefaultValue = "Metric",
               HelpText = "The UOM Grouping to which to conver to")]
-            public string uomgrouping { get; }
+            public string uomgrouping { get; set; }
 
             [ParserState]
             public IParserState LastParserState { get; set; }
