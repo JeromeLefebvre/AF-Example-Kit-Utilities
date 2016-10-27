@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.5.7759" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-10-24T08:29:07.1182994Z" id="6afb5c48-0083-46a4-b6c1-9535ef62cf86" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Energy Cost - CAD Currency" ExportedType="UOMClass" Identity="UOMClass" PIPersist="210 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{f9c322c2-354c-426e-8983-31863cebaf06}\UOMDatabase\UOMClasses[{6afb5c48-0083-46a4-b6c1-9535ef62cf86}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Energy Cost - CAD Currency]">
+  <UOMClass>
+    <Name>Energy Cost - CAD Currency</Name>
+    <CanonicalUOM>Can$/J</CanonicalUOM>
+    <CanonicalAbbr>Can$/J</CanonicalAbbr>
+    <UOMBaseClass>
+      <Name>CAD Currency</Name>
+      <BasePower>1</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Length</Name>
+      <BasePower>-2</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Mass</Name>
+      <BasePower>-1</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Time</Name>
+      <BasePower>2</BasePower>
+    </UOMBaseClass>
+  </UOMClass>
+  <UOM>
+    <Name>Can$/J</Name>
+    <Abbreviation>Can$/J</Abbreviation>
+    <Class>Energy Cost - CAD Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>Can$/btu</Name>
+    <Abbreviation>Can$/btu</Abbreviation>
+    <RefFactor>1055.06</RefFactor>
+    <RefUOM>Can$/J</RefUOM>
+    <Class>Energy Cost - CAD Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>Can$/kWh</Name>
+    <Abbreviation>Can$/kWh</Abbreviation>
+    <RefFactor>360000</RefFactor>
+    <RefUOM>Can$/J</RefUOM>
+    <Class>Energy Cost - CAD Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>Can$/W</Name>
+    <Abbreviation>Can$/W</Abbreviation>
+    <RefUOM>Can$/J</RefUOM>
+    <Class>Energy Cost - CAD Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>Can$/kJ</Name>
+    <Abbreviation>Can$/kJ</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>Can$/J</RefUOM>
+    <Class>Energy Cost - CAD Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>Can$/MJ</Name>
+    <Abbreviation>Can$/MJ</Abbreviation>
+    <RefFactor>0.001</RefFactor>
+    <RefUOM>Can$/kJ</RefUOM>
+    <Class>Energy Cost - CAD Currency</Class>
+  </UOM>
+</AF>

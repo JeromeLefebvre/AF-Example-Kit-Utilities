@@ -71,7 +71,13 @@ namespace AllNamesAndDescriptions
             request.Source = "en";
             TranslationsListResponse response = request.Execute();
             String translated_text = response.Translations[0].TranslatedText;
-            return translated_text;
+            return switchSingleQuoteToCurlyClosingQuote(translated_text);
+        }
+
+        public static string switchSingleQuoteToCurlyClosingQuote(string word)
+        {
+            string newString = word.Replace("&#39;", "’");
+            return newString;
         }
 
         static void addCodeComments(AFAnalysisTemplate analysis, DataTable dt)

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.5.7759" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-10-24T08:29:07.1263052Z" id="4ad8b9ad-6ec2-490e-9f11-a0a11b1d6fc5" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Volume Cost - CAD Currency" ExportedType="UOMClass" Identity="UOMClass" PIPersist="210 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{f9c322c2-354c-426e-8983-31863cebaf06}\UOMDatabase\UOMClasses[{4ad8b9ad-6ec2-490e-9f11-a0a11b1d6fc5}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[Volume Cost - CAD Currency]">
+  <UOMClass>
+    <Name>Volume Cost - CAD Currency</Name>
+    <CanonicalUOM>Can$/m3</CanonicalUOM>
+    <CanonicalAbbr>Can$/m3</CanonicalAbbr>
+    <UOMBaseClass>
+      <Name>CAD Currency</Name>
+      <BasePower>1</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Length</Name>
+      <BasePower>-3</BasePower>
+    </UOMBaseClass>
+  </UOMClass>
+  <UOM>
+    <Name>Can$/m3</Name>
+    <Abbreviation>Can$/m3</Abbreviation>
+    <Class>Volume Cost - CAD Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>Can$/L</Name>
+    <Abbreviation>Can$/L</Abbreviation>
+    <RefFactor>1000</RefFactor>
+    <RefUOM>Can$/m3</RefUOM>
+    <Class>Volume Cost - CAD Currency</Class>
+  </UOM>
+  <UOM>
+    <Name>Can$/US Gal</Name>
+    <Abbreviation>Can$/US Gal</Abbreviation>
+    <RefFactor>264.172052358148</RefFactor>
+    <RefUOM>Can$/m3</RefUOM>
+    <Class>Volume Cost - CAD Currency</Class>
+  </UOM>
+</AF>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.8.5.7759" ExportMode="NoUniqueID" PISystem="JLEFEBVRENEW" Created="2016-10-24T08:29:07.1413155Z" id="87d880cf-0dc1-4988-bc41-61201708cde5" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="CAD Currency" ExportedType="UOMClass" Identity="UOMClass" PIPersist="196 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{f9c322c2-354c-426e-8983-31863cebaf06}\UOMDatabase\UOMClasses[{87d880cf-0dc1-4988-bc41-61201708cde5}]*JLEFEBVRENEW\UOMDatabase\UOMClasses[CAD Currency]">
+  <UOMClass>
+    <Name>CAD Currency</Name>
+    <CanonicalUOM>Can$</CanonicalUOM>
+    <CanonicalAbbr>Can$</CanonicalAbbr>
+  </UOMClass>
+  <UOM>
+    <Name>Can$</Name>
+    <Abbreviation>Can$</Abbreviation>
+    <Class>CAD Currency</Class>
+  </UOM>
+</AF>
